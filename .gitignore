@@ -11,12 +11,13 @@ credentials/
 media/
 characters/*.png
 characters/*.jpg
-productions/**/audio/
-productions/**/background/
-productions/**/visuals/
-productions/**/final/
-productions/**/output/
-productions/**/qc/
+productions/**/audio*/
+productions/**/background*/
+productions/**/visuals*/
+productions/**/final*/
+productions/**/output*/
+productions/**/qc*/
+productions/**/sfx/
 
 # OS junk
 .DS_Store

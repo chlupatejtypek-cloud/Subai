@@ -170,7 +170,7 @@ canonical Stiles model sheet and public ID live in [`characters/stiles.md`](char
 
 `FISH_API_KEY` is stored in local gitignored `.env` and the encrypted Actions secret of the
 same name. Authentication was verified against `https://api.fish.audio`. During vertical test
-mode, use Fish instead of ElevenLabs after the owner selects a voice/reference ID.
+mode, use Fish instead of ElevenLabs. Approved defaults are recorded in `channel.md`: Slax for the male explainer, Paula for the female counterpoint, and speed 1.05.
 
 Prefer the timestamp streaming endpoint because it returns provider alignment together with
 the audio, avoiding a separate ASR alignment pass:
@@ -185,15 +185,14 @@ python3 tools/fish-tts-with-timestamps.py \
   --output productions/<folder>/audio/narration.opus
 ```
 
-The tool writes `narration.opus.timestamps.json`. Use those timestamps for one-word captions.
-Do not guess a voice ID: shortlist/audition voices and record the approved `fish_reference_id`
-in `channel.md` first.
+The tool writes `narration.opus.timestamps.json`. Fish S2.1 supports `[bracket]` natural-language expression cues; use them sparingly, normally one compatible direction per sentence. For multi-voice dialogue, synthesize each tagged line with its assigned reference, concatenate decoded PCM with short pauses, and offset each provider alignment by the measured segment duration. Render captions only through `tools/render-word-captions.py` and the locked `config/caption-style.json`; never redefine the style in a production script.
 
-### Agnes AI first-frame animation
+### Agnes AI scene animation
 
-During vertical testing, animate the first story image into a short hook clip with Agnes Video
-2.5. The source image must first have a public Cloudinary HTTPS URL. `AGNES_API_KEY` lives
+During vertical testing, up to 10 story-specific source scenes may be attempted as Agnes clips when each has a meaningful safely isolated environmental action. The source images must first have public Cloudinary HTTPS URLs. `AGNES_API_KEY` lives
 only in local `.env` or the encrypted Actions secret of the same name—never in git.
+
+For each attempted scene, default to Agnes Video 2.5; use the documented fallback below when required.
 
 ```bash
 set -a; source .env; set +a
@@ -205,9 +204,7 @@ python3 tools/agnes-image-to-video.py \
 ```
 
 The API is asynchronous; the tool creates a task, polls by `video_id`, downloads the finished
-MP4 and writes non-secret metadata beside it. Default polling is **15 seconds**—three-second
-polling produced HTTP 429 in a real run. Use `--resume-id VIDEO_ID` after a polling/network
-failure; never create a duplicate generation merely because status retrieval failed.
+MP4 and writes non-secret metadata beside it. Default polling is **15 seconds**—three-second polling produced HTTP 429. Free-tier task creation is effectively sequential: concurrent generation attempts caused HTTP 429, so create one task at a time and allow a short cooldown. Use `--resume-id VIDEO_ID` after a polling/network failure; never create a duplicate generation merely because status retrieval failed.
 
 Default to `agnes-video-2.5`. If it rejects task creation with `insufficient_user_quota`, one
 fallback attempt with `--model agnes-video-v2.0` is allowed; the tool automatically switches
@@ -220,10 +217,7 @@ redesign the still instead of generating pointless motion. Avoid `breathing`, `t
 `weight shift`: those terms caused subject merging. Inspect every result frame-by-frame for
 morphing, extra limbs, vanished objects, text artifacts and unwanted camera movement. Try at
 most twice total.
-If only a very short prefix passes QC, it may be used as a subtle forward/reverse micro-motion
-loop, but document that honestly; otherwise use the static first-frame fallback. The accepted
-Agnes clip replaces only the first static segment and its duration must be reflected in the
-story-driven edit plan.
+If a scene fails QC, use its rich source still with a composition-aware editorial push, pull or lateral pan. Multiple Agnes clips may be retained, but only individually passed clips enter the timeline. The opening clip alone receives the standardized post-production 100%→105% quick punch and return to 100%; Agnes generation itself always remains fixed-camera.
 
 ### Arena workspace media cleanup
 

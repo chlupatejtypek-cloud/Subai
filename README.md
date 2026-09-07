@@ -126,7 +126,7 @@ No research dumps, no scripts, no voiceover, no audio, no downloading, no publis
 
 ## Current test-production contract (v3.0)
 
-For psychology Shorts, research and benchmark notes live in `research.md`; plain narration lives in `narration.txt`; Fish Audio Slax generates Opus plus native timestamps; the first source image is animated by Agnes for 97 frames with a fixed camera; all subsequent images receive a composition-aware push, pull or lateral pan; captions use one Fish-aligned word at a time; and the 1080×1920 result is uploaded to Cloudinary before disposable media cleanup. See the latest production folder for a working render implementation.
+For psychology Shorts, research and benchmark notes live in `research.md`; dialogue uses approved Fish voices Slax and Paula at speed 1.05 with restrained S2.1 expression tags and provider timestamps. Generate up to 10 rich, layered source scenes and attempt fixed-camera 97-frame Agnes animation where the scene has safe environmental action; only individually passed clips enter the timeline, while failed clips fall back to controlled moving stills. The hook receives the standardized post-production punch zoom. Captions must be rendered from `config/caption-style.json` through `tools/render-word-captions.py`. Add only sparse scene-motivated SFX, upload the 1080×1920 final to Cloudinary, then clean disposable media.
 
 ## Legacy Step 4 — ElevenLabs multi-voice (parked during testing)
 

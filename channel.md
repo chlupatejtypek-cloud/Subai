@@ -12,19 +12,21 @@ tts:
   test_provider: fish_audio
   fish_model: s2.1-pro-free
   fish_reference_id: c5f56a6cc2ec4fa8920cb4c5889a3fb7  # Slax — calm measured male educational narrator
+  fish_secondary_reference_id: c2623f0c075b4492ac367989aee1576f  # Paula — articulate professional female educator
+  speed: 1.05
   model: unset           # ElevenLabs model used only after test mode ends
   voices:
     narrator: unset      # ElevenLabs voice_id — Stiles, masculine, warm storyteller (en-US)
     secondary: unset     # ElevenLabs voice_id — Jessie, feminine, expressive (en-US)
     extras: []           # optional extra voices, added per video only with owner approval
-plan_version: "3.0"
+plan_version: "3.1"
 production_mode: "vertical-test"
 test_constraints:
   canvas: "1080x1920"
   max_duration_seconds: 40
   max_generated_images: 10
   elevenlabs_tts: false
-  first_frame_animation: "Agnes image-to-video, 97 frames / about 4 seconds, fixed camera, meaningful scene action"
+  animation: "up to 10 Agnes attempts at 97 frames / ~4 seconds; fixed generated camera; retain passed clips only; post-production punch on hook"
   captions: "one word at a time; word-aligned; 60 px; no background box"
 created: 2026-09-07
 updated: 2026-09-07
@@ -74,9 +76,11 @@ These rules override the older long-form defaults until the owner explicitly end
 - **Hard duration cap:** **40 seconds**. Aim for 35–40 seconds, never silently exceed 40.
 - **Word budget:** normally 85–110 spoken words; measure the actual narration before rendering.
 - **Visual budget:** at most 10 generated images; usually 6–8 is enough for 40 seconds.
-- **Animated hook:** the assistant first generates a story-specific hook image, uploads it to Cloudinary, then animates it with Agnes image-to-video for **97 frames / about 4 seconds at 24 fps**. Agnes itself must use a **fixed camera with no zoom, pull-out or pan**. The generated hook must contain a safe, meaningful non-camera action—e.g. a door opening, a shadow crossing, a flashlight sweep, rain, dust, or light changing. If the planned frame has no meaningful action, do not waste an Agnes generation; redesign the first frame. Preserve Stiles, composition, anatomy and line style. Replace the first static edit segment with the accepted four-second clip. If Agnes fails creative QC twice, use the static frame.
-- **Narration during tests:** **do not call ElevenLabs**. Use Fish Audio (`s2.1-pro-free`) after selecting a `fish_reference_id`. Prefer `/v1/tts/stream/with-timestamp` so one-word captions use provider timestamps directly; if no Fish voice is selected, stop and ask rather than guessing.
-- **Story rhythm:** hook in the first 1–2 seconds, a visual/story change every 3–6 seconds, payoff before second 35, short CTA/question only if time remains.
+- **Agnes clips:** generate up to **10 story-specific source scenes** for a ≤40 s test and, when each frame offers a safely isolated environmental action, attempt a **97-frame / ~4 s** Agnes clip. Agnes camera must remain fixed: no generated zoom, pan, dolly or reframing. Preserve Stiles anatomy and scene composition. Inspect first/middle/last frames at minimum; any body morphing, disappearance, major re-composition or camera drift fails QC and that scene falls back to its rich still with controlled editorial motion. Never include a failed clip merely to reach a count.
+- **Hook punch:** the only standard camera-motion exception is post-production, not Agnes generation: start at 100%, punch quickly to about 105% in ~0.23 s, then ease back to 100% by the end of the four-second opening clip.
+- **Narration during tests:** **do not call ElevenLabs**. Use Fish Audio `s2.1-pro-free` at default speed **1.05** with provider timestamps. Default dialogue balance is roughly 65–70% Slax (male explainer) and 30–35% Paula (female viewer question, inner thought or concise counterpoint), avoiding long uninterrupted monologues. Use restrained S2.1 `[bracket]` expression cues—normally one clear cue per sentence and never conflicting stacks.
+- **Story rhythm:** hook in the first 1–2 seconds, a visual/story change about every 4 seconds, payoff before second 36, short CTA/question only if time remains.
+- **Sound design:** use Fish expression tags for vocal performance and at most 3–5 restrained scene-motivated SFX (e.g. intro whoosh, phone click, mechanism hit, completion chime). Keep them below dialogue; never add a sound to every word. Fish lists separate cinematic SFX generation as a platform capability, but the current repository client covers TTS only, so do not send SFX prompts to `/v1/tts`.
 - **Character reference:** Stiles must match [`characters/stiles.md`](characters/stiles.md).
 
 The former 6–10 minute 16:9 format is parked for later; do not use it during vertical testing.
@@ -137,9 +141,10 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 ## 11. Visual identity
 
 - **Canvas (test mode):** 9:16 vertical, 1080×1920. Flat pastel/neutral backgrounds; thin black stick figures. Stiles must match [`characters/stiles.md`](characters/stiles.md); Jessie retains her ponytail and equally minimal proportions.
-- **Motion and editing:** Agnes hook footage does **not** receive an editorial zoom. Every later static image gets exactly one composition-aware motion preset: **(A)** slow 3–5% push-in, **(B)** slow 3–5% pull-out, or **(C)** pre-scale to roughly 105–110% and drift gently left-to-right or right-to-left. Never leave a still perfectly static, never combine aggressive zoom and pan, and keep the subject inside safe framing. Images must depict what narration discusses at that moment. Never divide duration into equal intervals; cut on meaningful words, reveals and action beats.
+- **Composition:** premium minimalism must not become emptiness. Fill scenes with relevant foreground, midground and background elements, closer framing, lighting depth, props and character interaction. Reserve only a narrow caption-safe lane; never ask the image model for a large empty caption area or panel.
+- **Motion and editing:** apply the standardized intro punch to the first accepted Agnes clip. Other accepted Agnes clips receive no additional camera motion. Every fallback still gets exactly one composition-aware preset: **(A)** slow 3–5% push-in, **(B)** slow 3–5% pull-out, or **(C)** pre-scale to roughly 105–110% and drift gently left-to-right or right-to-left.
 - **Background:** clean generated scene art is preferred during testing. Ambient third-party footage is optional and must never distract from the figures.
-- **Captions:** exactly **one word visible at a time**, synchronized to measured word-level timestamps from the final audio. Center horizontally around **64% of frame height** (slightly below center), default **60 px** at 1080×1920. Use bold white type, with selected hook/reveal words in warm yellow, and only a restrained dark outline/shadow—**no black rectangle/background box**. Each word should pop smoothly (`~78% → 108% → 100%`) with a very short soft fade. Never estimate timing from character count; run speech alignment against the actual final audio, then map recognized timestamps back to the approved script.
+- **Captions:** the only approved style is central preset [`config/caption-style.json`](config/caption-style.json), currently `stiles-word-pop-v1`. Render through `tools/render-word-captions.py`; production scripts must not redefine appearance. It locks DejaVu Sans Bold 60 px, `(540,1230)`, white with selected warm-yellow words, 3 px dark outline, 1 px shadow, no box, uppercase, and pop `78% → 108% → 100%`. Use provider-native Fish timestamps and enforce zero overlaps / exactly one visible word.
 - **Thumbnails:** bold stickman moment from the video + ≤ 5 words; consistent palette; honest to the content.
 - **Intro/outro:** no separate 4-second sting during ≤40 s tests; the hook starts immediately.
 
@@ -190,3 +195,4 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 - **2026-09-07** — v2.4: Agnes prompt experiment used a 49-frame locked-storyboard clip to reduce morphing; this was useful for diagnosis but is superseded by v2.5.
 - **2026-09-07** — v2.5: clarified final motion language: Agnes hook is 97 frames / ~4 s with a fixed camera and meaningful scene action—no zoom. Editorial motion applies only to subsequent stills via push-in, pull-out, or gentle lateral pan. Fish Audio connected for non-ElevenLabs test narration and provider-native timestamp alignment.
 - **2026-09-07** — v3.0: channel pivoted from Reddit/true-story retellings to research-led everyday psychology. Added evidence and benchmark rules, psychology pillars, an education-not-diagnosis boundary, and approved Fish voice Slax. First test: *Why Procrastination Feels Like Relief*.
+- **2026-09-07** — v3.1: locked subtitle appearance in a central preset; added Paula as a second Fish voice, 1.05 speed and restrained expression tags/SFX. Raised visual target to 10 richer scenes, added a standardized post-production intro punch, and retained only Agnes clips that pass camera/anatomy QC.

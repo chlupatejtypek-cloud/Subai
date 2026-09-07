@@ -1,0 +1,18 @@
+{
+  "id": "stiles-word-pop-v1",
+  "canvas": {"width": 1080, "height": 1920},
+  "font": "DejaVu Sans",
+  "font_size": 60,
+  "bold": true,
+  "position": {"x": 540, "y": 1230},
+  "primary_ass": "&H00FFFFFF",
+  "highlight_ass": "&H0049D8FF",
+  "outline_ass": "&H800E1720",
+  "outline_px": 3,
+  "shadow_px": 1,
+  "background_box": false,
+  "uppercase": true,
+  "pop": {"start_scale": 78, "overshoot_scale": 108, "settle_scale": 100, "overshoot_ms": 85, "settle_ms": 165, "start_alpha_ass": "&H30&"},
+  "exactly_one_word": true,
+  "minimum_word_ms": 80
+}
