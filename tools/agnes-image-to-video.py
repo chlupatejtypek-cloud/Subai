@@ -77,6 +77,7 @@ def main() -> int:
     parser.add_argument("--seconds", type=int, default=4, choices=range(4, 13), metavar="4..12")
     parser.add_argument("--aspect-ratio", default="9:16")
     parser.add_argument("--model", default="agnes-video-2.5")
+    parser.add_argument("--num-frames", type=int, help="V2.0 only; must follow 8n+1 and be <=441")
     parser.add_argument("--poll-seconds", type=float, default=15.0)
     parser.add_argument("--timeout", type=int, default=1200)
     parser.add_argument("--resume-id", help="Resume/poll an existing video_id without creating another task")
@@ -91,9 +92,10 @@ def main() -> int:
     base = os.environ.get("AGNES_API_BASE", "https://apihub.agnes-ai.com/v1").rstrip("/")
     if args.model == "agnes-video-v2.0":
         # V2.0 uses the older frame-based image-to-video request shape.
-        # 97 follows the required 8n+1 rule and is ~4 seconds at 24 fps.
-        frames = min(441, max(97, args.seconds * 24 + 1))
-        frames = ((frames - 1) // 8) * 8 + 1
+        # Short 8n+1 clips reduce long-horizon character drift on stylized art.
+        frames = args.num_frames if args.num_frames is not None else min(441, max(97, args.seconds * 24 + 1))
+        if frames > 441 or frames < 9 or (frames - 1) % 8:
+            parser.error("--num-frames for V2.0 must be 9..441 and follow 8n+1")
         width, height = (432, 768) if args.aspect_ratio == "9:16" else (1152, 768)
         payload = {
             "model": args.model,

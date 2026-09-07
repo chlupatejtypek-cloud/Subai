@@ -188,8 +188,14 @@ failure; never create a duplicate generation merely because status retrieval fai
 
 Default to `agnes-video-2.5`. If it rejects task creation with `insufficient_user_quota`, one
 fallback attempt with `--model agnes-video-v2.0` is allowed; the tool automatically switches
-to its frame-based request format. Inspect the result frame-by-frame for character morphing,
-extra limbs, vanished objects, text artifacts and unwanted camera cuts. Try at most twice total.
+to its frame-based request format. For stylized stickman art, prefer `--num-frames 49` (~2 s)
+to reduce long-horizon drift. Begin the prompt with `LOCKED STORYBOARD FRAME`, explicitly
+state that visible figures/legs belong to separate people when relevant, freeze all character
+anatomy, and animate only environmental details such as dust/light plus a camera push. Avoid
+body-motion terms such as `breathing`, `trembling`, and `weight shift`: they caused Agnes to
+rebuild the character and merge subjects in a real test. Inspect the result frame-by-frame for
+character morphing, extra limbs, vanished objects, text artifacts and unwanted camera cuts.
+Try at most twice total.
 If only a very short prefix passes QC, it may be used as a subtle forward/reverse micro-motion
 loop, but document that honestly; otherwise use the static first-frame fallback. The accepted
 Agnes clip replaces only the first static segment and its duration must be reflected in the
