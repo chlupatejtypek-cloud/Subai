@@ -52,6 +52,7 @@ Only steps marked ✅ are fully specified. The others are designed together with
 | `channel.md` | The single channel plan — **StilesGuy** (identity, pillars, voices, rules) |
 | `productions/` | One folder per video (scripts + generated audio/background) — see [`productions/README.md`](productions/README.md) |
 | `.github/workflows/fetch-background.yml` | GitHub Actions job that downloads background clips from YouTube (yt-dlp) |
+| `.github/workflows/test-elevenlabs.yml` | One-click key check + test TTS (key passed as a run input, never stored) |
 | `.env` | Local secrets (ElevenLabs key) — **never committed** |
 | `.env.example` | Template for `.env` |
 
@@ -137,7 +138,7 @@ NARRATOR: "Mom," I said, "you worry too much."
 
 - `.env` at repo root contains `ELEVENLABS_API_KEY` (owner pastes the key; the agent writes it into `.env` and **never echoes it back in full**).
 - Voice IDs live in the `tts.voices` frontmatter of [`channel.md`](channel.md).
-  - If they are `unset`, the agent lists ElevenLabs voices (`GET https://api.elevenlabs.io/v1/voices`), shortlists **two** consistent English (en-US) voices — a masculine warm storyteller for `narrator`, a feminine expressive voice for `secondary` — and confirms the shortlist with the owner before writing the chosen IDs into `channel.md` (the actual voice samples may be auditioned if the owner wants).
+  - If they are `unset`, the agent lists ElevenLabs voices via the **`Test ElevenLabs Key`** workflow (or directly if the sandbox can reach the API), shortlists **two** consistent English (en-US) voices — a masculine warm storyteller for `narrator`, a feminine expressive voice for `secondary` — and confirms the shortlist with the owner before writing the chosen IDs into `channel.md` (the actual voice samples may be auditioned if the owner wants).
 
 ### 4.3 · Generate per-line audio
 
@@ -234,7 +235,22 @@ The owner and the agent design these one at a time. Until then the agent stays i
 - **This repo is public.** Committing a key = publishing it. Never do it.
 - The **ElevenLabs API key** lives in **`.env`** at the repo root (gitignored — see `.env.example`). The agent reads it from there for API calls; the owner can paste the key in chat and the agent stores it into `.env` without printing it back.
 - **GitHub Actions secrets** are the right place for anything a workflow needs later (e.g. YouTube upload) — set via `gh secret set NAME` / repo settings.
-- Current status: ElevenLabs = once `.env` exists → `ready`; YouTube upload = not set up yet.
+- Current status: ElevenLabs = `.env` exists → `ready`; YouTube upload = not set up yet.
+
+### 🔑 Verifying the ElevenLabs key
+
+The agent's sandbox may not reach `api.elevenlabs.io` directly (egress is restricted to GitHub in some environments). Whenever the key needs proofing — or a voice needs listing — run the **`Test ElevenLabs Key`** workflow from the Actions tab (or via `gh workflow run test-elevenlabs.yml`) and pass the key as the `api_key` input. The key travels only inside that run and is never written to the repo. Usage:
+
+```bash
+# from a session that has push access and egress to api.github.com:
+gh workflow run test-elevenlabs.yml --ref <current-branch> \
+  -f api_key="sk_..." -f text="Subai is ready. This is a voice test for Stiles." \
+  -f voice_id="pNInz6obpgDQGcFmaJgB"
+gh run watch $(gh run list --workflow test-elevenlabs.yml --limit 1 --json databaseId -q '.[0].databaseId') --exit-status
+gh run download <run-id> -n elevenlabs-test-audio -D media/
+```
+
+The workflow reports the account tier + remaining characters, lists the first voices, and uploads a short synthesized sample as an artifact.
 
 ---
 

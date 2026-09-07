@@ -4,7 +4,7 @@ name: "StilesGuy"
 status: active
 content_language: en-US
 credentials:
-  elevenlabs: pending    # none | pending | ready  (ready once .env has the key)
+  elevenlabs: ready      # none | pending | ready  (key stored in .env — verified via GH Actions test)
   youtube: none          # none | pending | connected (future, Step 9)
 tts:
   provider: elevenlabs
@@ -159,3 +159,4 @@ Animated-stickman storytelling channel in English. Simple stick figures act out 
 ## Changelog
 
 - **2026-09-07** — v2.0: rebuilt around one channel, **StilesGuy** (stickman true-story channel; Stiles + Jessie); two default ElevenLabs voices; steps 4 (voiceover) and 5 (YouTube background via GitHub Actions) added to the pipeline.
+- **2026-09-07** — v2.1: ElevenLabs API key stored in local `.env` (gitignored — repo is public); `elevenlabs: ready`. On-sandbox verification blocked by egress restrictions → confirm via `Test ElevenLabs Key` workflow once it runs on the default branch.

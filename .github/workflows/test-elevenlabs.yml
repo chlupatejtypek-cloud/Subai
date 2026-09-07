@@ -1,0 +1,84 @@
+name: Test ElevenLabs Key
+
+on:
+  workflow_dispatch:
+    inputs:
+      api_key:
+        description: 'ElevenLabs API key (sk_...) — passed at run time, never stored'
+        required: true
+      text:
+        description: 'Short line to synthesize as a test'
+        required: false
+        default: 'Subai is ready. This is a voice test for Stiles.'
+      voice_id:
+        description: 'ElevenLabs voice ID to try (optional)'
+        required: false
+        default: 'pNInz6obpgDQGcFmaJgB'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check API key (subscription + voices)
+        env:
+          XI: ${{ inputs.api_key }}
+        run: |
+          echo "== GET /v1/user/subscription =="
+          code=$(curl -s -m 30 -o /tmp/sub.json -w '%{http_code}' \
+            https://api.elevenlabs.io/v1/user/subscription -H "xi-api-key: $XI")
+          echo "HTTP: $code"
+          if [ "$code" = "200" ]; then
+            python3 - <<'EOF'
+import json
+d = json.load(open('/tmp/sub.json'))
+print('tier:', d.get('tier'))
+print('characters used:', d.get('character_count'), '/', d.get('character_limit'))
+EOF
+          else
+            echo "Response body:"; head -c 500 /tmp/sub.json; echo
+            echo "INVALID_OR_BLOCKED"
+            exit 1
+          fi
+          echo "== GET /v1/voices =="
+          vcode=$(curl -s -m 30 -o /tmp/voices.json -w '%{http_code}' \
+            https://api.elevenlabs.io/v1/voices -H "xi-api-key: $XI")
+          echo "HTTP: $vcode"
+          python3 - <<'EOF'
+import json
+try:
+    d = json.load(open('/tmp/voices.json'))
+    vs = d.get('voices', [])
+    print('voices available:', len(vs))
+    for v in vs[:10]:
+        lbl = v.get('labels', {})
+        print(' -', v['voice_id'], '|', v['name'], '|', lbl.get('gender'), lbl.get('accent'))
+except Exception as e:
+    print('parse error:', e)
+EOF
+
+      - name: Synthesize a test line (optional TTS)
+        if: ${{ inputs.voice_id != '' }}
+        env:
+          XI: ${{ inputs.api_key }}
+          VOICE: ${{ inputs.voice_id }}
+          TEXT: ${{ inputs.text }}
+        run: |
+          code=$(curl -s -m 60 -o voice-test.mp3 -w '%{http_code}' \
+            -X POST "https://api.elevenlabs.io/v1/text-to-speech/${VOICE}" \
+            -H "xi-api-key: $XI" \
+            -H "Content-Type: application/json" \
+            -d "{\"text\": $(python3 -c "import json,sys;print(json.dumps(sys.argv[1]))" "$TEXT"), \
+                 \"model_id\": \"eleven_multilingual_v2\", \
+                 \"voice_settings\": {\"stability\": 0.4, \"similarity_boost\": 0.8}}")
+          echo "TTS HTTP: $code"
+          test "$code" = "200" || { echo "TTS failed:"; head -c 500 voice-test.mp3; exit 1; }
+          ls -la voice-test.mp3
+
+      - name: Upload test audio
+        if: ${{ inputs.voice_id != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: elevenlabs-test-audio
+          path: voice-test.mp3
+          if-no-files-found: warn
+          retention-days: 7
