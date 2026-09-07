@@ -1,20 +1,18 @@
-# YouTube connection (interactive, no automatic publishing)
+# YouTube account connection
 
-Owner requested agent-side account connection after approving the spotlight-effect video.
+## Verified connection — 2026-09-07
+- Owner completed Google OAuth consent with `youtube.upload` and `youtube.readonly`.
+- A subsequent live channels.list(mine=true) request returned HTTP 200.
+- Connected channel: **Chlupatej Typek** (`UCcWp-VFQ1zzI8Bl3n7krB6w`).
+- This is the authenticated channel; do not assume it is a different Stiles Psychology channel.
+- Access and refresh tokens are stored only in `.git/credentials`, mode 600. This JSON file is excluded from workspace snapshots, never tracked in Git. Do not configure git credential-store to use it.
+- OAuth client configuration remains in gitignored `credentials/youtube-client.json`.
+- The owner requested removal of the connection webpage. Its server was stopped and its source was deleted from the current branch. No authorization code or token is recorded here.
 
-## Connect
-- Enable YouTube Data API v3 in the Google Cloud project.
-- Configure OAuth consent. If External/Testing, add the owner's Google account as a test user.
-- Put the owner-provided desktop OAuth client JSON in gitignored `credentials/youtube-client.json`, mode 600.
-- Run `python tools/youtube-connect.py`; open its live port 8080 preview.
-- Owner signs in directly with Google and selects the intended channel. Requested scopes: `youtube.upload` and `youtube.readonly` (channel verification).
-- Google redirects to `http://localhost:8765/` on the owner's computer. No local listener is expected. Copy the entire failed-loopback callback URL into the connector form, NEVER chat or public logs. This uses the desktop client's loopback redirect and an authorization-code exchange with PKCE and state, not the retired OAuth OOB redirect.
-- The agent exchanges the code, validates granted scopes, then verifies the channel via channels.list(mine=true).
-- Token goes to `.git/credentials`, mode 600, outside Git tracking and excluded from workspace snapshots. This file contains JSON, not a Git credential-helper record; do not configure git credential-store to use it.
-- The current connector's state/PKCE verifier are in memory. Restarting it requires a new authorization attempt. Tokens are not guaranteed to survive environment replacement. No secrets in git, Cloudinary, generated reports or chat.
-- After successful connection, stop the connector. Revoke access in the owner's Google account when no longer needed.
+## Future authorization
+The owner prefers a direct Google authorization link in chat rather than a separate form. Explain that a callback URL contains a short-lived sensitive code; never repeat or store it in project files or logs. Retain state and PKCE verifier securely for the exchange, validate state, and use only Google's OAuth token endpoint. A fresh login will be required if the environment loses its token files. Testing-mode refresh tokens for these scopes can expire after seven days.
 
-## Before uploading
-Connection alone is not approval to upload or publish. Confirm the verified channel, video, metadata and visibility with the owner. Prefer private upload for review, then explicit publication approval. Upload support will use the connected account and refresh tokens only against Google's token endpoint.
+## Upload/publication gate
+Connection alone does not upload or publish anything. Confirm the intended channel, video, metadata and visibility with the owner. Prefer a private test upload followed by explicit publication approval. An unverified YouTube API project may be restricted to private uploads and may require audit before public uploads.
 
-Testing-mode OAuth refresh tokens for these scopes may expire after seven days. Unverified YouTube API projects can be restricted to private uploads; an API audit may be required for public uploads. Do not promise unattended indefinite publishing until project and channel restrictions are checked.
+No video has been uploaded by this connection workflow. Upload tooling is still to be implemented/tested.
