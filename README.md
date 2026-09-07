@@ -31,8 +31,8 @@ The agent treats this manual as **inspiration, not 100% strict law**: it follows
 ## 🗺️ The pipeline (overview)
 
 > **🧪 Current vertical test mode (v2.2):** until the owner explicitly ends testing, each video is
-> 9:16, no longer than 40 seconds, uses at most 10 generated images, does not generate new
-> ElevenLabs TTS, and shows exactly one word of captions at a time below frame center with no
+> 9:16, no longer than 40 seconds, uses at most 10 generated images, uses Fish Audio rather than
+> ElevenLabs for test narration after voice approval, and shows exactly one word of captions at a time below frame center with no
 > background box. The precise settings and canonical Stiles reference are in
 > [`channel.md`](channel.md) and [`characters/stiles.md`](characters/stiles.md). These rules
 > override older long-form examples elsewhere in this playbook.

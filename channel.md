@@ -4,23 +4,27 @@ name: "StilesGuy"
 status: active
 content_language: en-US
 credentials:
-  elevenlabs: ready      # none | pending | ready  (key stored in .env — verified via GH Actions test)
+  elevenlabs: ready      # parked during vertical testing
+  fish_audio: ready      # API key verified; encrypted Actions secret + local gitignored .env
   youtube: none          # none | pending | connected (future, Step 9)
 tts:
-  provider: elevenlabs
-  model: unset           # e.g. current default ElevenLabs quality model — agent picks & records
+  provider: elevenlabs   # parked production provider
+  test_provider: fish_audio
+  fish_model: s2.1-pro-free
+  fish_reference_id: unset
+  model: unset           # ElevenLabs model used only after test mode ends
   voices:
     narrator: unset      # ElevenLabs voice_id — Stiles, masculine, warm storyteller (en-US)
     secondary: unset     # ElevenLabs voice_id — Jessie, feminine, expressive (en-US)
     extras: []           # optional extra voices, added per video only with owner approval
-plan_version: "2.4"
+plan_version: "2.5"
 production_mode: "vertical-test"
 test_constraints:
   canvas: "1080x1920"
   max_duration_seconds: 40
   max_generated_images: 10
   elevenlabs_tts: false
-  first_frame_animation: "Agnes image-to-video, prefer 49 frames / about 2 seconds for stickman stability"
+  first_frame_animation: "Agnes image-to-video, 97 frames / about 4 seconds, fixed camera, meaningful scene action"
   captions: "one word at a time; word-aligned; 60 px; no background box"
 created: 2026-09-07
 updated: 2026-09-07
@@ -69,8 +73,8 @@ These rules override the older long-form defaults until the owner explicitly end
 - **Hard duration cap:** **40 seconds**. Aim for 35–40 seconds, never silently exceed 40.
 - **Word budget:** normally 85–110 spoken words; measure the actual narration before rendering.
 - **Visual budget:** at most 10 generated images; usually 6–8 is enough for 40 seconds.
-- **Animated hook:** the first generated story image is uploaded to Cloudinary, then animated with Agnes image-to-video. For stickman stability, prefer a short 49-frame (~2 s at 24 fps) locked-storyboard clip. Preserve Stiles, composition and line style; freeze character anatomy and request environmental motion plus a controlled camera push. Replace the first static edit segment with the returned clip. If Agnes fails twice, fall back to the static image rather than blocking the full production.
-- **Narration during tests:** **do not call ElevenLabs**. Use a non-ElevenLabs test voice approved for that test, or stop and ask what narration source to use.
+- **Animated hook:** the assistant first generates a story-specific hook image, uploads it to Cloudinary, then animates it with Agnes image-to-video for **97 frames / about 4 seconds at 24 fps**. Agnes itself must use a **fixed camera with no zoom, pull-out or pan**. The generated hook must contain a safe, meaningful non-camera action—e.g. a door opening, a shadow crossing, a flashlight sweep, rain, dust, or light changing. If the planned frame has no meaningful action, do not waste an Agnes generation; redesign the first frame. Preserve Stiles, composition, anatomy and line style. Replace the first static edit segment with the accepted four-second clip. If Agnes fails creative QC twice, use the static frame.
+- **Narration during tests:** **do not call ElevenLabs**. Use Fish Audio (`s2.1-pro-free`) after selecting a `fish_reference_id`. Prefer `/v1/tts/stream/with-timestamp` so one-word captions use provider timestamps directly; if no Fish voice is selected, stop and ask rather than guessing.
 - **Story rhythm:** hook in the first 1–2 seconds, a visual/story change every 3–6 seconds, payoff before second 35, short CTA/question only if time remains.
 - **Character reference:** Stiles must match [`characters/stiles.md`](characters/stiles.md).
 
@@ -131,7 +135,7 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 ## 11. Visual identity
 
 - **Canvas (test mode):** 9:16 vertical, 1080×1920. Flat pastel/neutral backgrounds; thin black stick figures. Stiles must match [`characters/stiles.md`](characters/stiles.md); Jessie retains her ponytail and equally minimal proportions.
-- **Motion and editing:** every otherwise-static image receives a clearly perceptible but gentle **3–5% zoom** over its full screen time, alternating between push-in and pull-out where composition allows. Never leave a still perfectly static. Images must depict what the narration is discussing at that moment. Never divide the duration into equal image intervals; cut on meaningful words, reveals and action beats. Short high-impact shots may last ~1.5–3 s, while context shots may hold ~4–7 s when the audio supports them.
+- **Motion and editing:** Agnes hook footage does **not** receive an editorial zoom. Every later static image gets exactly one composition-aware motion preset: **(A)** slow 3–5% push-in, **(B)** slow 3–5% pull-out, or **(C)** pre-scale to roughly 105–110% and drift gently left-to-right or right-to-left. Never leave a still perfectly static, never combine aggressive zoom and pan, and keep the subject inside safe framing. Images must depict what narration discusses at that moment. Never divide duration into equal intervals; cut on meaningful words, reveals and action beats.
 - **Background:** clean generated scene art is preferred during testing. Ambient third-party footage is optional and must never distract from the figures.
 - **Captions:** exactly **one word visible at a time**, synchronized to measured word-level timestamps from the final audio. Center horizontally around **64% of frame height** (slightly below center), default **60 px** at 1080×1920. Use bold white type, with selected hook/reveal words in warm yellow, and only a restrained dark outline/shadow—**no black rectangle/background box**. Each word should pop smoothly (`~78% → 108% → 100%`) with a very short soft fade. Never estimate timing from character count; run speech alignment against the actual final audio, then map recognized timestamps back to the approved script.
 - **Thumbnails:** bold stickman moment from the video + ≤ 5 words; consistent palette; honest to the content.
@@ -181,4 +185,5 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 - **2026-09-07** — v2.1: ElevenLabs API key stored in local `.env` (gitignored — repo is public); `elevenlabs: ready`. On-sandbox verification blocked by egress restrictions → confirm via `Test ElevenLabs Key` workflow once it runs on the default branch.
 - **2026-09-07** — v2.2: vertical test mode enabled: ≤40 seconds, ≤10 generated images, no new ElevenLabs TTS during tests, and word-level captions (one word at a time, below center, no background box). Canonical Stiles front/back T-pose stored on Cloudinary and documented in `characters/stiles.md`.
 - **2026-09-07** — v2.3: captions increased from 54 px to 60 px. Future tests animate the first hook image with Agnes image-to-video, using a Cloudinary first-frame URL and falling back to the static frame after two failures.
-- **2026-09-07** — v2.4: Agnes prompt lessons from live tests: prefer a 49-frame (~2 s) locked-storyboard hook for stickman art; freeze characters and animate environment/camera only. Static images now receive a clearly visible but gentle 3–5% push-in or pull-out instead of appearing perfectly still.
+- **2026-09-07** — v2.4: Agnes prompt experiment used a 49-frame locked-storyboard clip to reduce morphing; this was useful for diagnosis but is superseded by v2.5.
+- **2026-09-07** — v2.5: clarified final motion language: Agnes hook is 97 frames / ~4 s with a fixed camera and meaningful scene action—no zoom. Editorial motion applies only to subsequent stills via push-in, pull-out, or gentle lateral pan. Fish Audio connected for non-ElevenLabs test narration and provider-native timestamp alignment.
