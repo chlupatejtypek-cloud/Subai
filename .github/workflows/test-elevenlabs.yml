@@ -4,8 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       api_key:
-        description: 'ElevenLabs API key (sk_...) — passed at run time, never stored'
-        required: true
+        description: 'ElevenLabs API key (sk_...) — leave blank to use the stored repo secret ELEVENLABS_API_KEY'
+        required: false
+        default: ''
       text:
         description: 'Short line to synthesize as a test'
         required: false
@@ -18,10 +19,20 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      XI: ${{ inputs.api_key != '' && inputs.api_key || secrets.ELEVENLABS_API_KEY }}
+      VOICE: ${{ inputs.voice_id }}
+      TEXT: ${{ inputs.text }}
     steps:
+      - name: Fail early if no API key is available
+        run: |
+          if [ -z "$XI" ]; then
+            echo "::error::No API key. Pass the 'api_key' input, or store the repo secret ELEVENLABS_API_KEY."
+            exit 1
+          fi
+          echo "API key source resolved (length: ${#XI})."
+
       - name: Check API key (subscription + voices)
-        env:
-          XI: ${{ inputs.api_key }}
         run: |
           echo "== GET /v1/user/subscription =="
           code=$(curl -s -m 30 -o /tmp/sub.json -w '%{http_code}' \
@@ -29,11 +40,11 @@ jobs:
           echo "HTTP: $code"
           if [ "$code" = "200" ]; then
             python3 - <<'EOF'
-import json
-d = json.load(open('/tmp/sub.json'))
-print('tier:', d.get('tier'))
-print('characters used:', d.get('character_count'), '/', d.get('character_limit'))
-EOF
+          import json
+          d = json.load(open('/tmp/sub.json'))
+          print('tier:', d.get('tier'))
+          print('characters used:', d.get('character_count'), '/', d.get('character_limit'))
+          EOF
           else
             echo "Response body:"; head -c 500 /tmp/sub.json; echo
             echo "INVALID_OR_BLOCKED"
@@ -44,24 +55,20 @@ EOF
             https://api.elevenlabs.io/v1/voices -H "xi-api-key: $XI")
           echo "HTTP: $vcode"
           python3 - <<'EOF'
-import json
-try:
-    d = json.load(open('/tmp/voices.json'))
-    vs = d.get('voices', [])
-    print('voices available:', len(vs))
-    for v in vs[:10]:
-        lbl = v.get('labels', {})
-        print(' -', v['voice_id'], '|', v['name'], '|', lbl.get('gender'), lbl.get('accent'))
-except Exception as e:
-    print('parse error:', e)
-EOF
+          import json
+          try:
+              d = json.load(open('/tmp/voices.json'))
+              vs = d.get('voices', [])
+              print('voices available:', len(vs))
+              for v in vs[:10]:
+                  lbl = v.get('labels', {})
+                  print(' -', v['voice_id'], '|', v['name'], '|', lbl.get('gender'), lbl.get('accent'))
+          except Exception as e:
+              print('parse error:', e)
+          EOF
 
       - name: Synthesize a test line (optional TTS)
         if: ${{ inputs.voice_id != '' }}
-        env:
-          XI: ${{ inputs.api_key }}
-          VOICE: ${{ inputs.voice_id }}
-          TEXT: ${{ inputs.text }}
         run: |
           code=$(curl -s -m 60 -o voice-test.mp3 -w '%{http_code}' \
             -X POST "https://api.elevenlabs.io/v1/text-to-speech/${VOICE}" \

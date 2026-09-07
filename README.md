@@ -21,6 +21,11 @@ The agent treats this manual as **inspiration, not 100% strict law**: it follows
 7. **Secrets never go into git.** This repo is **public**. API keys live in `.env` (root, gitignored) or in GitHub Actions secrets — never in committed files. (Details: [Credentials & secrets](#-credentials--secrets).)
 8. **Go step by step.** Do not jump ahead to the voiceover or to visuals while the manual only asked for a topic.
 
+> **🤖 Agents:** before you assume you can push to this repo, read [`AGENT.md`](AGENT.md).
+> It explains how write access actually works here (credentials are handed over per session —
+> there is deliberately no token stored in the repo), how to configure `git push` with a PAT
+> without hitting the usual auth error, and how the ElevenLabs key is handled.
+
 ---
 
 ## 🗺️ The pipeline (overview)
