@@ -1,0 +1,78 @@
+name: Fetch Background Video
+
+on:
+  workflow_dispatch:
+    inputs:
+      query:
+        description: 'YouTube search query (used when no URL is given)'
+        required: false
+        default: 'rain on window background loop no copyright'
+      url:
+        description: 'Direct YouTube URL to download (overrides query)'
+        required: false
+      max_duration:
+        description: 'Trim the clip to this many seconds'
+        required: false
+        default: '60'
+      height:
+        description: 'Maximum vertical resolution (720 or 1080)'
+        required: false
+        default: '720'
+      artifact_name:
+        description: 'Name of the uploaded artifact'
+        required: false
+        default: 'background-clip'
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install tools (yt-dlp + ffmpeg)
+        run: |
+          python3 -m pip install --quiet --upgrade yt-dlp
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Download clip with yt-dlp
+        env:
+          QUERY: ${{ inputs.query }}
+          URL: ${{ inputs.url }}
+          HEIGHT: ${{ inputs.height }}
+        run: |
+          if [ -n "$URL" ]; then
+            TARGET="$URL"
+          else
+            TARGET="ytsearch1:${QUERY}"
+          fi
+          echo "Downloading from: $TARGET"
+          yt-dlp \
+            --no-playlist \
+            -f "bv*[height<=${HEIGHT}][ext=mp4]+ba[ext=m4a]/bv*[height<=${HEIGHT}]/b[ext=mp4]/b" \
+            --merge-output-format mp4 \
+            --no-overwrites \
+            -o "clip.%(ext)s" \
+            "$TARGET"
+
+      - name: Trim & compress to background.mp4
+        env:
+          MAX_DURATION: ${{ inputs.max_duration }}
+        run: |
+          ls -la
+          test -f clip.mp4 || { echo "Download did not produce clip.mp4"; exit 1; }
+          ffmpeg -y -i clip.mp4 -t "${MAX_DURATION}" \
+            -c:v libx264 -preset veryfast -crf 25 \
+            -c:a aac -b:a 128k \
+            -movflags +faststart \
+            background.mp4
+
+      - name: Verify output
+        run: |
+          test -s background.mp4 || { echo "background.mp4 is missing or empty"; exit 1; }
+          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 background.mp4
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.artifact_name }}
+          path: background.mp4
+          if-no-files-found: error
+          retention-days: 14

@@ -1,42 +1,46 @@
 # 🎬 Subai
 
-> **A living playbook that turns an AI agent into a faceless YouTube studio.**
+> **One channel. One stickman story studio. Fully run by an AI agent.**
 
-Subai is your YouTube sidekick: it helps you grow your channels ("subs") with AI. This repository is the instruction manual the agent reads when you hand it to it. It walks the agent through the **complete automation of a YouTube channel** — from choosing a channel and picking a video topic all the way to publishing (and later, analyzing results).
+Subai is the playbook for **StilesGuy** — a faceless, English-language YouTube channel where **stick figures tell real, wild true-life stories** (Reddit-thread gold, plot twists, wild encounters, satisfying comebacks). The star stickman is **Stiles**; his sidekick is **Jessie**.
 
-The agent treats this manual as **inspiration, not 100% strict law**: it should follow it, but when reality conflicts with it, it adapts, says what it changed, and keeps going.
+This repository is the instruction manual the agent reads when it is dropped into a session. It walks the agent through the complete automation — from picking a video topic, through the script and the AI voiceover (ElevenLabs, multiple voices), all the way to grabbing background footage and (in future steps) the final animated video.
+
+The agent treats this manual as **inspiration, not 100% strict law**: it follows it, but when reality conflicts with it, it adapts, tells the owner what it changed, and keeps going.
 
 ---
 
 ## ⚡ Golden rules (read first)
 
-1. **"Subai is ready."** — Every fresh session that works with this repo starts with this exact sentence, then the agent proceeds to **Step 1**.
-2. **Content is always in English** unless a channel profile says otherwise. Talking *to the owner* happens in the language the owner uses.
-3. **Inspiration, not law.** If a step is unclear, outdated, or conflicts with what the owner asks — improvise sensibly, and *tell the owner what you did*.
-4. **When in doubt, ask.** Guessing about the channel, the topic, money, or credentials is worse than one short question.
-5. **Never invent facts, numbers, or sources.** Facts must be verifiable; when you are not sure, phrase it honestly ("historians believe…", "one theory is…") and list sources in the description later.
-6. **Secrets never go into the repository.** Tokens, keys, and credentials are handled outside git (see [Credentials](#-credentials--secrets-policy)).
-7. **Go step by step.** Do not jump ahead to a full script, voiceover, or publishing when the manual only asked you to pick a topic.
+1. **"Subai is ready."** — Every fresh session on this repo starts with this exact sentence. Then the agent follows **Step 1**.
+2. **One channel.** This repo is about **StilesGuy** only — see [`channel.md`](channel.md). No other channels are managed here.
+3. **English, always.** All channel content — ideas, titles, scripts, narration — is **English (en-US)**. Talking *to the owner* happens in whatever language the owner uses.
+4. **Inspiration, not law.** If a step is unclear or conflicts with the owner's request, improvise sensibly — and tell the owner what you did.
+5. **When in doubt, ask.** Guessing about the topic, the story, the source, or money is worse than one short question.
+6. **Never invent.** Real-story channel: facts, stories, quotes and sources must be real. Adapted Reddit stories stay anonymous, keep their source link, and are never presented as "verified news".
+7. **Secrets never go into git.** This repo is **public**. API keys live in `.env` (root, gitignored) or in GitHub Actions secrets — never in committed files. (Details: [Credentials & secrets](#-credentials--secrets).)
+8. **Go step by step.** Do not jump ahead to the voiceover or to visuals while the manual only asked for a topic.
 
 ---
 
-## 🗺️ The full pipeline (overview)
+## 🗺️ The pipeline (overview)
 
-This is the whole journey this playbook will eventually describe. Only **Step 1 is fully specified today** — the rest is a roadmap the owner and the agent will design and fill in together.
+Only steps marked ✅ are fully specified. The others are designed together with the owner, one at a time.
 
 | # | Step | Status |
 |---|------|--------|
-| 1 | **Channels & topic pick** — find/create a channel, confirm its plan, offer video topics | ✅ **LIVE** (fully described below) |
-| 2 | Research & outline | 🚧 to be designed |
-| 3 | Script (English, per the channel's style) | 🚧 to be designed |
-| 4 | Voiceover (AI voice) | 🚧 to be designed |
-| 5 | Visuals & edit (b-roll, images, subtitles) | 🚧 to be designed |
-| 6 | Packaging: title, thumbnail, description, tags | 🚧 to be designed |
-| 7 | Review & approval with the owner | 🚧 to be designed |
-| 8 | Publish & schedule (per-channel credentials) | 🚧 to be designed |
-| 9 | Analytics & iteration (feed results back into the plan) | 🚧 to be designed |
+| 1 | **Topic pick** — 5 suggestions + custom option, per the channel plan | ✅ **LIVE** |
+| 2 | Research & outline (source story → brief) | 🔜 next to design |
+| 3 | Script — speaker-tagged, ready for voices | 🔜 next to design (output contract defined below) |
+| 4 | **Voiceover** — ElevenLabs, multi-voice, merged into one audio, slightly sped up | ✅ **LIVE** |
+| 5 | **Background footage** — YouTube clips pulled via GitHub Actions | ✅ **LIVE** |
+| 6 | Animation & visuals — Stiles & Jessie stick figures | 🔜 to design |
+| 7 | Packaging — title, thumbnail, description | 🔜 to design |
+| 8 | Assembly, review & owner approval | 🔜 to design |
+| 9 | Publish to YouTube | 🔜 to design |
+| 10 | Analytics & iteration | 🔜 to design |
 
-> ⚠️ While Steps 2–9 are still "🚧 to be designed", the agent **must not silently improvise a whole production pipeline**. It may sketch ideas when the owner asks, but the production steps themselves get defined one by one — together with the owner — before they become part of this manual.
+> ⚠️ While a step is still 🔜, the agent **must not silently improvise the whole production**. It may sketch ideas when the owner asks, but each step becomes part of this manual only after it is designed together.
 
 ---
 
@@ -44,96 +48,202 @@ This is the whole journey this playbook will eventually describe. Only **Step 1 
 
 | Path | What it is |
 |------|------------|
-| `README.md` | This playbook — what the agent follows |
-| `channels/default.md` | The **default channel** (a fully thought-out plan) |
-| `channels/README.md` | How channels are stored, selected, and created (template) |
-| `.gitignore` | Keeps secrets and junk out of the repo |
+| `README.md` | This playbook |
+| `channel.md` | The single channel plan — **StilesGuy** (identity, pillars, voices, rules) |
+| `productions/` | One folder per video (scripts + generated audio/background) — see [`productions/README.md`](productions/README.md) |
+| `.github/workflows/fetch-background.yml` | GitHub Actions job that downloads background clips from YouTube (yt-dlp) |
+| `.env` | Local secrets (ElevenLabs key) — **never committed** |
+| `.env.example` | Template for `.env` |
 
 ---
 
-## 🪜 Step 1 — Channels & topic pick (LIVE)
-
-Step 1 has four parts. The agent does all of them **in order** at the start of a session where this repo is the working context — unless the owner immediately asks for something else specific (then the owner's request wins and this flow is offered afterwards).
+## 🪜 Step 1 — Topic pick (LIVE)
 
 ### 1.0 · The opening line
 
-The very first thing the agent says in a fresh session is exactly:
+The agent's first words in a fresh session are exactly:
 
 > **Subai is ready.**
 
-Then it moves on to the channel check.
+### 1.1 · Read the plan
 
-### 1.1 · Find the channels
+1. Read [`channel.md`](channel.md) — the whole plan (identity, pillars, voices, rules). This is the owner's current intent; if it looks stale, say so in one line.
+2. Tell the owner in 2–3 sentences: channel = **StilesGuy**, videos = English animated stickman stories, and that all output will be in English.
 
-1. Look into the **`channels/`** folder and list the channel profiles found there (files like `channels/*.md`).
-2. Decide which channel this session works on:
-   - If the owner already named a channel (by id or name) → use that one.
-   - Else if exactly one profile is `status: active` → use that one.
-   - Else if `channels/default.md` exists and is active → use it as the default.
-   - If several are active and none was named → ask the owner which one to use.
-   - If there is no channel at all → say so and offer to create one from the template in [`channels/README.md`](channels/README.md).
-3. Tell the owner the result in 2–3 sentences: *which channel is active, in one line what its plan is, and that all output will be in English.*
+### 1.2 · Topic trigger
 
-> The full storage convention (fields, naming, how to add channels) lives in [`channels/README.md`](channels/README.md).
-
-### 1.2 · Working channel & topic trigger
-
-- **If the owner gave a topic** (or a task that implies one): treat it as the chosen topic, restate it as a crisp English working title + angle, confirm, and finish Step 1.
-- **If the owner gave no topic and no other instruction** (they just dropped the repo, said *"go"*, *"make a video"*, etc.): the agent focuses on the **active/default channel** and immediately makes the **topic offer** (1.3).
+- **Owner gave a topic/story/source** (a YouTube comment, "make a video about X", a Reddit thread link…): treat it as chosen, restate it as a crisp English working title + angle, and finish Step 1.
+- **Owner gave nothing** (just "go" / "make a video"): make the **topic offer** below for the channel's default pillars.
+- **Owner asks for ideas later**, mid-session: same topic offer, refreshed.
 
 ### 1.3 · The topic offer — 5 suggestions + 1 custom
 
-The agent proposes **exactly five video topic ideas**, tailored to the channel's plan in `channels/default.md` (pillars, audience, format). If the agent has web tools, it may ground 1–2 ideas in what is currently trending *in that niche*; otherwise all five are evergreen.
+The agent proposes **exactly five topic ideas** following the topic recipe and pillars in [`channel.md`](channel.md). Each idea must:
 
-Each idea must:
-
-- be **specific and concrete** (a real curiosity gap, not "5 amazing facts"),
-- support the channel's target length (~7–10 min for the default channel),
-- be **verifiable** — claims can be backed by real sources,
-- have **one clear takeaway** the viewer remembers,
-- fit one of the channel's content pillars (rotate pillars across the five ideas — no pillar three times),
-- avoid banned topics from the channel plan (e.g. unfounded conspiracy claims, graphic content).
+- be **specific and concrete** (one story / one thread / one "can you believe this happened" angle),
+- support the channel's target length (6–10 min),
+- be **real** — a public, linkable story thread or an owner-provided story,
+- have **one clear takeaway or emotion** (twist, laugh, chill, "justice!"),
+- rotate across the pillars (no pillar three times),
+- pass the banned-topics list in the channel plan.
 
 **Presentation format** (numbered, English titles, one-liner each):
 
-> Here are **5 topic ideas for Curiosity Vault** (content will be in English):
+> Here are **5 topic ideas for StilesGuy** (English content):
 >
-> 1. **Why Do We Clink Glasses?** — The 2,000-year-old toast nobody agrees on, from sacrificial ritual to "spilling into each other's cups". *(Pillar: Untold Origins · evergreen · ~8 min)*
+> 1. **The Roommate Who Wasn't Real** — A Reddit user lived with a "roommate" for months… then found out nobody else had ever seen him. *(Pillar: Plot Twists · source: r/AskReddit thread)*
 > 2. **…**
 > 3. **…**
 > 4. **…**
 > 5. **…**
-> 6. ✍️ **Custom topic** — type your own idea and I'll turn it into a video brief.
+> 6. ✍️ **Custom topic** — type your own idea (or paste a story/thread) and I'll turn it into a video brief.
 
 ### 1.4 · After the pick
 
-- Wait for the owner's choice. Do **not** start writing a full script yet.
-- Lock in a **working title** (English, ≤ 60 characters), the **angle / hook**, and the **pillar**.
-- Summarize the brief in a few lines and tell the owner what would happen next once Steps 2+ are designed (outline → script → voice → visuals → …).
-- If the owner picked option 6 (custom), help shape their raw idea into a concrete working title and angle before closing Step 1.
+- Wait for the owner's choice. Do **not** start the outline or the script yet.
+- Lock a **working title** (English, ≤ 60 chars), the **angle/hook**, and the **pillar**; record them in the production folder (`productions/<date>-<slug>/brief.md`).
+- Tell the owner what happens next once Steps 2–3 are designed (outline → speaker-tagged script → Step 4 voiceover).
+- If the owner chose option 6, help shape the raw idea into a concrete title + angle first.
 
-### 🚫 What Step 1 is NOT for
+### 🚫 Step 1 is NOT for
 
-- No full scripts, no research dumps, no voiceover, no editing, no publishing.
-- No credentials handling, no logins, no API keys.
-- No invented facts — an idea must survive a simple fact-check before it is offered.
+No research dumps, no scripts, no voiceover, no audio, no downloading, no publishing.
 
 ---
 
-## 🔐 Credentials & secrets policy
+## Step 4 — Voiceover: ElevenLabs multi-voice → one audio (LIVE)
 
-- Channel profiles only ever store a **status** (`none | pending | connected`) — never keys or tokens.
-- Real credentials (YouTube API upload, OAuth refresh tokens, etc.) will be introduced together with **Step 8 (Publish & schedule)**. They will live outside git (e.g. environment variables / local secret files) and `.gitignore` already blocks the common secret file patterns.
-- The agent never asks the owner to paste secrets into the repository or into chat.
+> Trigger: this step starts when the owner approves the **script** (`productions/<folder>/script.md`, speaker-tagged as defined in Step 3's contract below) and says "make the audio" (or the equivalent). It does **not** start from a bare topic.
+
+### 4.1 · Input contract — the speaker-tagged script
+
+The script is Markdown, one line per spoken line, each prefixed with a speaker tag. The agent parses **in order** and speaks only tagged lines; everything else in the file is direction/metadata for later steps.
+
+```markdown
+# The Roommate Who Wasn't Real   (working title)
+
+NARRATOR: I moved into a new apartment in August. Cheap rent, weird vibes, whatever.
+JESSIE: So you never met the landlord?
+NARRATOR: Not once. And that should've been my first red flag.
+EXTRA-MOM: (a 50-something woman, warm but worried)
+NARRATOR: "Mom," I said, "you worry too much."
+```
+
+- Tags allowed: `NARRATOR` (Stiles — always), `JESSIE` (always available), `EXTRA-*` (only if the script header declares them and the owner approved extra voices).
+- One paragraph per line to speak. Sound-effect placeholders `[SFX …]` are ignored by Step 4 (used by visuals later).
+- Step 4 output: one audio file, no silence gaps beyond short natural pauses.
+
+### 4.2 · Prerequisites
+
+- `.env` at repo root contains `ELEVENLABS_API_KEY` (owner pastes the key; the agent writes it into `.env` and **never echoes it back in full**).
+- Voice IDs live in the `tts.voices` frontmatter of [`channel.md`](channel.md).
+  - If they are `unset`, the agent lists ElevenLabs voices (`GET https://api.elevenlabs.io/v1/voices`), shortlists **two** consistent English (en-US) voices — a masculine warm storyteller for `narrator`, a feminine expressive voice for `secondary` — and confirms the shortlist with the owner before writing the chosen IDs into `channel.md` (the actual voice samples may be auditioned if the owner wants).
+
+### 4.3 · Generate per-line audio
+
+1. For each tagged line in order, call ElevenLabs TTS:
+   `POST https://api.elevenlabs.io/v1/text-to-speech/<voice_id>` with `model_id` (current default / fastest quality model), `text` = the line (strip the tag), and `voice_settings` in a sensible storytelling ballpark: `stability ≈ 0.35–0.5`, `similarity_boost ≈ 0.75–0.85`.
+2. Save segments as `productions/<folder>/audio/segments/001-narrator.mp3`, `002-jessie.mp3`, … (3-digit order prefix).
+3. Handle API limits politely: retry with backoff on 429/5xx; if a line fails repeatedly, stop and tell the owner.
+4. **Never re-generate a finished line just to change pacing** — pacing is fixed in step 4.4; fix pacing at the script stage instead.
+
+### 4.4 · Merge into one audio, then speed it up slightly
+
+1. Concatenate segments in order with short **~150–250 ms pauses** between lines (natural rhythm) → `audio/voiceover_raw.mp3`. Example with ffmpeg (concat demuxer with silent gaps, or `apad`/silence insertion between segments).
+2. Apply a **slight speed-up that keeps the pitch** (`atempo`), default **1.07**, allowed range **1.05–1.12** — TTS reads a touch slow; the tiny boost adds energy and shortens the video. → `audio/voiceover.mp3`.
+3. Optional polish: loudness normalize toward ≈ −16 LUFS (`loudnorm`).
+4. The owner may ask for a different tempo once; afterwards this number is reused for the whole video.
+
+### 4.5 · Sanity checks (all must pass)
+
+- [ ] Every tagged line has a segment, in the right order (compare count + speaker sequence vs script).
+- [ ] No empty/broken segments (file size sane, `ffprobe` parses each).
+- [ ] Final file exists; duration ≈ expected (words ÷ pace × 60, ± 10 %).
+- [ ] `voiceover.mp3` plays start to end; no clipping, no robot artifacts on the audition spot-check.
+- [ ] Report to the owner: file path, final duration, tempo used, per-voice line counts.
+
+**Output:** `productions/<folder>/audio/voiceover.mp3` — the single narration track that Step 5's background and Step 6's animation will sit on.
+
+---
+
+## Step 5 — Background footage from YouTube via GitHub Actions (LIVE)
+
+> Why GitHub Actions: the agent's sandbox cannot reliably download YouTube videos itself. So downloads run on a **GitHub Actions runner** (yt-dlp), and the agent pulls the finished clip back into the repo folder.
+
+### 5.1 · What we download
+
+Short **ambient / "satisfying" background clips** that sit *behind* the stickman scenes (subtle b-roll: rain on a window, night city timelapse, a cozy fireplace, a train at dusk…). The animation and the narration are the content — the background only sets the mood. One clip per scene mood is enough; keep them short (15–90 s).
+
+Rules:
+- Prefer **explicitly free-to-use** sources: add `no copyright` / `royalty-free` / `free to use` keywords to the search, or use a URL the owner provides.
+- Never present the clip itself as the video's content; never keep talking/watermarked audio in it; keep a note of the clip's source link in the production folder for credit.
+- If a clip is questionable, skip it and pick another — mood is replaceable, rights issues are not.
+
+### 5.2 · The workflow
+
+The repo ships `.github/workflows/fetch-background.yml` (manual trigger, inputs: `query` or `url`, `max_duration`, `height`, `artifact_name`).
+
+The agent runs it like this (from the repo, on this working branch — pass `--ref` so the workflow exists on the ref being run):
+
+```bash
+# search-based
+gh workflow run fetch-background.yml --ref arena/01a07a66-subai \
+  -f query="rain on window background loop no copyright" \
+  -f max_duration=45 -f height=720
+
+# or a specific URL
+gh workflow run fetch-background.yml --ref arena/01a07a66-subai \
+  -f url="https://www.youtube.com/watch?v=..." -f max_duration=60
+
+# watch until it finishes
+gh run watch $(gh run list --workflow fetch-background.yml --limit 1 --json databaseId -q '.[0].databaseId') --exit-status
+
+# pull the clip into the production folder
+gh run download <run-id> -n background-clip -D productions/<folder>/background/
+```
+
+(The exact branch name comes from the current session; `--ref` must point at the branch that contains the workflow file.)
+
+### 5.3 · Verify before use
+
+- [ ] `background/clip.mp4` exists, > ~100 KB, duration ≥ the scene needs (`ffprobe`).
+- [ ] No loud/talking audio or watermarks visible on a spot check.
+- [ ] Source link recorded in the production folder.
+- If the download fails twice with different queries, stop and tell the owner (runner network or YouTube blocking) — do not silently skip backgrounds or hotlink other videos.
+
+---
+
+## Steps 2–3 & 6–10 (🔜 to be designed)
+
+| Step | What it will cover |
+|---|---|
+| **2 · Research & outline** | From chosen topic/source → verified story beats, structure, source links, ~30 % of the work done before writing |
+| **3 · Script** | English master script per [`channel.md`](channel.md) §script rules, **speaker-tagged** exactly as Step 4.1 needs it |
+| **6 · Animation & visuals** | Rendering Stiles & Jessie as stick figures, scene direction from the script, placing background clips, captions |
+| **7 · Packaging** | Title (≤ 60 chars), thumbnail (StilesGuy style), description with source links |
+| **8 · Assembly & review** | Final render, quality checklist from the channel plan, owner approval round |
+| **9 · Publish** | Upload to YouTube (needs the owner's YouTube/Google credentials — handled outside git) |
+| **10 · Analytics** | Retention, CTR, comments → feed back into topic offers |
+
+The owner and the agent design these one at a time. Until then the agent stays inside the LIVE steps.
+
+---
+
+## 🔐 Credentials & secrets
+
+- **This repo is public.** Committing a key = publishing it. Never do it.
+- The **ElevenLabs API key** lives in **`.env`** at the repo root (gitignored — see `.env.example`). The agent reads it from there for API calls; the owner can paste the key in chat and the agent stores it into `.env` without printing it back.
+- **GitHub Actions secrets** are the right place for anything a workflow needs later (e.g. YouTube upload) — set via `gh secret set NAME` / repo settings.
+- Current status: ElevenLabs = once `.env` exists → `ready`; YouTube upload = not set up yet.
 
 ---
 
 ## ✏️ How this playbook grows
 
-- The owner and the agent design the remaining steps (2–9) one at a time; each gets a detailed section like Step 1 before it becomes "LIVE".
-- When a step changes, update its status in the [pipeline table](#-the-full-pipeline-overview) and bump `plan_version` in affected channel profiles.
+- Steps get designed with the owner one at a time and flip from 🔜 to ✅ LIVE when specified in detail here.
+- When a step changes, update the [pipeline table](#-the-pipeline-overview) and bump `plan_version` in [`channel.md`](channel.md) (with a changelog line).
 - Keep sections concrete: what the agent does, in what order, what it must not do, and what the output looks like.
 
 ---
 
-*Subai — grow your subs with AI. 🤖📈*
+*Subai — one stickman, endless stories. 🤖🎨*

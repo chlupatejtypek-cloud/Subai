@@ -1,11 +1,18 @@
-# Secrets — never commit any of these
+# Secrets — never commit (repo is public!)
+.env
+.env.*
+!.env.example
 credentials/
 *.token
 *.secret
 *.key
-.env
-.env.*
-!.env.example
+
+# Generated media & working artifacts
+media/
+productions/**/audio/
+productions/**/background/
+productions/**/visuals/
+productions/**/final/
 
 # OS junk
 .DS_Store
