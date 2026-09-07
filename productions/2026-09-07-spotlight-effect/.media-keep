@@ -1,4 +1,7 @@
-output/spotlight-effect-final.mp4
+# Preserve originals and pending revision material; omit only regenerable older SFX.
 audio/adam.mp3
 audio/alignment.json
 audio/words-original.json
+output/concat.txt
+visuals/hook-agnes.mp4
+visuals/hook-agnes.mp4.json

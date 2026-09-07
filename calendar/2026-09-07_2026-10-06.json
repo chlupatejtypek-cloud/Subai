@@ -92,7 +92,7 @@
       "scheduled_at": "2026-09-07T23:00:00+02:00",
       "publish_at_utc": "2026-09-07T21:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "ready",
+      "status": "blocked",
       "research_status": "verified",
       "research_sources": [
         "https://www.rug.nl/staff/n.koudenburg/koudenburgetal.2011.pdf",
@@ -112,7 +112,7 @@
         "captions_aligned": true,
         "captions_no_overlap": true,
         "audio_verified": true,
-        "visual_review_passed": true,
+        "visual_review_passed": false,
         "rights_verified": true,
         "reviewed_by": "agent: primary research, rendered 15-shot contact sheet, independent ASR, technical audio/caption checks; see qa.md for limitations",
         "reviewed_at": "2026-09-07T21:02:54.149708+00:00",
@@ -127,7 +127,8 @@
         "reason": "Original slot missed during production and QA; minimum-lead gate already closed",
         "action_required": "Explicit future reschedule or item-specific immediate-publication decision",
         "original_slot_retained": true
-      }
+      },
+      "owner_review": "Owner rejected excessive near-duplicate image changes. Preserve preview but do not publish this edit. Requires editorial revision under VISUAL-EDITORIAL.md."
     },
     {
       "id": "SP-20260907-3",

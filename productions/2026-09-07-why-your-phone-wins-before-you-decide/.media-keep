@@ -1,4 +1,16 @@
-output/phone-checking-final.mp4
+# Preserve originals and pending revision material; omit only regenerable older SFX.
+audio/asr-qc.json
+audio/loudness.json
 audio/narration.opus
-audio/words.json
 audio/narration.opus.timestamps.json
+audio/words.json
+output/concat.txt
+v2/audio/after-silence.log
+v2/audio/asr-qc.json
+v2/audio/loudness-qc.log
+v2/audio/loudness.json
+v2/audio/narration-v2.wav
+v2/audio/silence-detection.log
+v2/audio/words.json
+v2/output/concat.txt
+visuals/hook-agnes.mp4.json

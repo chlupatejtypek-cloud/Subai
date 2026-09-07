@@ -86,13 +86,13 @@
         "width": 1080,
         "height": 1920,
         "fps": 30,
-        "max_seconds": 40,
+        "max_seconds": 60,
         "max_generated_images": 15,
         "background_music": false,
-        "target_unique_images": 15,
-        "extra_images_policy": "Owner explicitly requested ten agent-generated images PLUS five attempted Agnes AI stills on 2026-09-07. Agnes POST /v1/images/generations, model agnes-image-2.0-flash, reference inputs in extra_body.image, verified with five HTTP 200 generations. Use accepted images only; disclose failures or rejected art, never silently replace providers.",
-        "agent_generated_images": 10,
-        "agnes_still_attempts": 5
+        "target_unique_images": null,
+        "extra_images_policy": "Supersedes fixed 10+5 request after owner reviewed the silence video. Agent and Agnes generators remain available; no mandatory provider count. Existing 15-image cap is a safety ceiling, NOT a target; record per-production planned/accepted/used counts.",
+        "image_planning": "Derive source-image count from researched script beats and timed storyboard, not a fixed generation quota. Reuse the exact scene asset for continuity; use UI/motion to reveal new information. No near-duplicate regenerated scenes.",
+        "motion_graphics": "Hyperframes under evaluation: optional purposeful charts/cards/diagrams, styled to Stiles and synchronized to narration; not yet production-tested."
       },
       "publishing": {
         "enabled": true,

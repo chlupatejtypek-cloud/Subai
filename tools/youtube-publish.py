@@ -70,7 +70,7 @@ def download(item,path,c):
  if sha.hexdigest()!=item['asset_sha256']:raise ValueError('Final asset checksum mismatch')
  probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(path)]))
  v=next(x for x in probe['streams'] if x['codec_type']=='video');audio=any(x['codec_type']=='audio' for x in probe['streams']);duration=float(probe['format']['duration']);num,den=map(float,v['r_frame_rate'].split('/'))
- if v['width']!=1080 or v['height']!=1920 or abs(num/den-30)>.01 or not audio or not 0<duration<=40.001:raise ValueError('Final file failed technical QC')
+ if v['width']!=1080 or v['height']!=1920 or abs(num/den-30)>.01 or not audio or not 0<duration<=float(c['format']['max_seconds'])+.001:raise ValueError('Final file failed technical QC')
  if abs(duration-float(item['duration_seconds']))>.1:raise ValueError('Duration does not match signed-off final')
  return total
 def upload(item,c,token,path,size,immediate=False):
