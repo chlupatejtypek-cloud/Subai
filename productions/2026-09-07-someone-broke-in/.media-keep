@@ -1,0 +1,18 @@
+# Local media still required while the Agnes V3 render is pending.
+# Remove entries only after their Cloudinary replacement/result is HTTP-verified.
+audio/test-v2-final.mp3
+final/someone-broke-in-test-v2.mp4
+visuals/hook-v3-first-frame.png
+visuals/scene-01.png
+visuals/scene-02.png
+visuals/scene-03.png
+visuals/scene-04.png
+visuals/scene-05.png
+visuals/scene-06.png
+visuals/scene-07.png
+visuals/scene-08.png
+visuals/scene-09.png
+visuals/scene-10.png
+visuals/test-v2-captions.ass
+visuals/test-v2-edit-plan.json
+visuals/test-v2-word-timing.json

@@ -186,6 +186,30 @@ MP4 and writes non-secret metadata beside it. Inspect for character morphing, ex
 text artifacts and unwanted camera cuts. Try at most twice. The Agnes clip replaces only the
 first static segment; its duration must be reflected in the story-driven edit plan.
 
+### Arena workspace media cleanup
+
+Arena's workspace disk is finite. Generated images, audio segments, QC frames and old renders
+must not accumulate across productions.
+
+1. Upload durable results (canonical character references, accepted hook frames/clips and final
+   videos) to Cloudinary with `tools/upload-cloudinary.sh`.
+2. Record each versioned URL and public ID in the production's `cloudinary.md`.
+3. Fetch every recorded URL and require HTTP 200 **before deleting the local source**.
+4. List media still needed by pending work in `productions/<folder>/.media-keep`.
+5. Preview cleanup, inspect the list, then apply it:
+
+```bash
+python3 tools/cleanup-production.py productions/<folder>
+python3 tools/cleanup-production.py productions/<folder> --apply
+```
+
+The cleanup tool only considers untracked, gitignored files and never deletes tracked briefs,
+scripts or reports. Keep the newest local final long enough to present/review it. Once its
+Cloudinary copy is accepted, remove it from `.media-keep` and clean it too. Delete superseded
+character PNGs from `characters/` after their canonical Cloudinary URLs are documented.
+Never delete an input while an asynchronous Agnes task still depends on its public URL or a
+local final assembly still depends on the file.
+
 ---
 
 ## 5. House rules for agents working here
