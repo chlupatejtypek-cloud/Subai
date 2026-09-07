@@ -11,7 +11,8 @@ tts:
   provider: fish_audio
   model: s2.1-pro-free
   reference_id: fb7ec16ca51a45a5a4db881244d7990a
-  speed: 1.0
+  generation_speed: 1.0
+  edit_speed: 1.06
   secondary_voice: null
 updated: "2026-09-07"
 ---
@@ -45,14 +46,14 @@ Before scripting, record at least one primary/peer-reviewed source and one acces
 Inspect relevant Shorts for pacing where accessible; never fabricate performance data or copy scripts, distinctive creative assets or footage. Document inaccessible benchmarks. No invented statistics, pop-neuroscience certainty, deterministic body-language diagnosis, manipulative "dark psychology", mental-health labeling or treatment promises.
 
 ## Production specification
-- 1080x1920, 9:16, 30fps, **no more than 40 seconds**; normally 35–40s, ~85–110 spoken words measured after synthesis.
-- Up to 10 original source illustrations. Rich foreground/midground/background; every edge full bleed. No white/cream matte, side strip, border or lower panel. Never prompt for a "caption-safe area/lane".
+- 1080x1920, 9:16, 30fps, **no more than 40 seconds**; normally ~85–110 spoken words measured after synthesis. Do not pad a naturally shorter edit to 35 seconds.
+- Target **10 distinct original source illustrations**, used once per scene where practical, with roughly 2–3 second visual changes. Additional Agnes stills are permitted when a beat genuinely needs them, but require an explicit recorded budget/QA adjustment; the default publisher budget remains ten. Rich foreground/midground/background; every edge full bleed. No white/cream matte, side strip, border or lower panel. Never prompt for a "caption-safe area/lane".
 - Supply canonical Stiles reference for all generated scenes. Inspect anatomy, composition, objects, text artifacts and feet. Run `tools/full-bleed-check.py` before Cloudinary/Agnes.
 - Agnes: only useful isolated environmental motion, fixed camera, 97 frames/~4s. Default 2.5; on insufficient quota one v2.0 fallback. At most two attempts per scene. Reject morphing/drift; never use a failed clip merely to hit a count. Other scenes use one gentle push, pull or lateral drift. First accepted Agnes hook gets the post-production 100%→105% punch and return; no extra motion on other accepted clips.
 - Hook in 1–2s; meaningful change roughly every 4s; one mechanism, one concrete landing/action.
 
 ## Current narration — Fish Audio
-**Default reference: `fb7ec16ca51a45a5a4db881244d7990a`**, provider metadata title "WNBA VOICEOVER". Voice metadata GET succeeded on 2026-09-07; this setup did not spend credits synthesizing a sample. Use `s2.1-pro-free` with provider-native timestamps and native speed 1.0 until the new voice is reviewed.
+**Default reference: `fb7ec16ca51a45a5a4db881244d7990a`**, provider metadata title "WNBA VOICEOVER". Voice metadata GET succeeded on 2026-09-07; this setup did not spend credits synthesizing a sample. Use `s2.1-pro-free` with provider-native timestamps and generate at native speed 1.0. Owner feedback on the first Fish video: remove long dead gaps and apply a **1.06× pitch-preserving edit**. First detect real silence; shorten pauses over roughly 0.42s toward 0.28s without clipping phonemes. Remap timestamps after silence removal AND tempo change. Keep short natural pauses; do not flatten all breaths. Normalize script line breaks to spaces before new synthesis.
 
 `tools/fish-tts-with-timestamps.py` now reads the channel registry for its default reference. Do not silently change models/voices on an error; stop and report. Save alignment with the narration, then convert to flat word timing and use the central caption renderer. Generate each finalized script once; use existing audio for edit revisions.
 

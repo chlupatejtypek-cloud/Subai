@@ -62,7 +62,7 @@
         "reference_metadata_check": "HTTP 200, 2026-09-07; no paid synthesis during setup",
         "secret_name": "FISH_API_KEY",
         "generation_speed": 1.0,
-        "edit_speed": 1.0,
+        "edit_speed": 1.06,
         "secondary_voice": null,
         "fallback_policy": "fail closed; never silently switch provider or voice",
         "previous_adam": {
@@ -71,8 +71,15 @@
           "edit_speed": 1.05,
           "status": "parked"
         },
-        "speed_note": "The previous +5% request applied to Adam. New Fish voice starts at native speed until reviewed.",
-        "production_synthesis_check": "Successful Fish synthesis of 92 words on 2026-09-07; native alignment and independent ASR match all words."
+        "speed_note": "Owner requested shorter pauses and slightly faster Fish delivery on 2026-09-07. Default future edit 1.06x pitch-preserving; generate native speed and avoid applying acceleration twice.",
+        "production_synthesis_check": "Successful Fish synthesis of 92 words on 2026-09-07; native alignment and independent ASR match all words.",
+        "pause_edit": {
+          "enabled": true,
+          "detect_minimum_pause_seconds": 0.42,
+          "target_retained_silence_seconds": 0.28,
+          "phoneme_protection": "Cut only inside measured silence intersecting native inter-word gaps; preserve word edges and map timestamps",
+          "review_required": "ASR word completeness + listening/owner review; never delete arbitrary low-volume speech"
+        }
       },
       "format": {
         "width": 1080,
@@ -80,7 +87,9 @@
         "fps": 30,
         "max_seconds": 40,
         "max_generated_images": 10,
-        "background_music": false
+        "background_music": false,
+        "target_unique_images": 10,
+        "extra_images_policy": "Owner permits additional Agnes stills if needed. Current base validator budget remains ten accepted source images; if extras are actually used, explicitly document/review the increased production budget. Agnes still-image endpoint is not yet verified; do not mistake image-to-video for still generation."
       },
       "publishing": {
         "enabled": true,

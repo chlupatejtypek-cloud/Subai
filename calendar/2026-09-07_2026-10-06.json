@@ -67,7 +67,20 @@
       "actual_publication_mode": "immediate_public_requested",
       "actual_published_at": "2026-09-07T20:23:58Z",
       "publication_verified_at": "2026-09-07T20:24:11.909609+00:00",
-      "youtube_processing_status": "succeeded"
+      "youtube_processing_status": "succeeded",
+      "revisions": [
+        {
+          "version": "v2",
+          "status": "awaiting_owner_review",
+          "asset_url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788813516/subai/productions/stiles-psychology/2026-09-07-phone-checking/v2/phone-checking-v2.mp4",
+          "asset_sha256": "e3b46b12d11956ad9876667e323b88153a0c6c055bd95a5d7e4a0c0ddb126c54",
+          "duration_seconds": 26.7,
+          "source_images": 10,
+          "tempo": 1.06,
+          "created_at": "2026-09-07T20:38:38.490793+00:00",
+          "youtube_video_id": null
+        }
+      ]
     },
     {
       "id": "SP-20260907-2",

@@ -1,0 +1,21 @@
+{
+  "version": "v2",
+  "status": "awaiting_owner_review",
+  "duration_seconds": 26.7,
+  "previous_video_duration_seconds": 32.8,
+  "source_images": 10,
+  "image_generation_calls_succeeded": 10,
+  "extra_generation_attempts": "Two repair requests rejected by per-turn image tool limit; no additional images generated. Corrections performed locally.",
+  "silence_removed_seconds": 4.4572291667,
+  "tempo": 1.06,
+  "longest_detected_pause_after_seconds": 0.358437,
+  "asr_exact_word_match": true,
+  "words": 92,
+  "caption_events": 92,
+  "captions_nonoverlapping": true,
+  "lufs_integrated": -16.45,
+  "true_peak_dbtp": -1.89,
+  "asset_url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788813516/subai/productions/stiles-psychology/2026-09-07-phone-checking/v2/phone-checking-v2.mp4",
+  "sha256": "e3b46b12d11956ad9876667e323b88153a0c6c055bd95a5d7e4a0c0ddb126c54",
+  "youtube_action": "none; existing public video OYEY9ZKOitA unchanged"
+}

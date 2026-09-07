@@ -43,6 +43,8 @@ def main() -> int:
     text = args.text if args.text is not None else args.text_file.read_text().strip()
     if not text:
         parser.error("input text is empty")
+    # Editorial line breaks are not paragraph-pause instructions for TTS.
+    text = " ".join(text.split())
 
     payload = {
         "text": text,
