@@ -52,3 +52,6 @@ Owner-run `tools/configure-automation-secrets.py` requires `.env` loaded into en
 - No new Google consent for unrelated scopes, automatic account renaming, deletions, comments or channel changes.
 - On error: fail closed, report in Actions, preserve ledger. Do not lower QA, switch voices, backdate dates or upload duplicates.
 - Revoke/rotate compromised credentials at their provider, then reprovision Actions and rebuild handoff. Old publicly accessible ciphertext versions may remain cached; replacing the latest file does not revoke old tokens.
+
+## Owner-authorized immediate release
+For an explicit owner request to publish a specific video now, record the item's `publication_override` (`mode: immediate_public`, `authorized_by: owner`, date/reason) without rewriting its historical planned slot. With all normal content/technical QA passed and status `ready`, use `tools/youtube-publish.py --execute --commit-state --publish-now-id ITEM_ID`. This uploads with public visibility and omits `publishAt`. The default scheduled workflow remains unchanged. The immediate response is recorded as `uploaded_public_pending_processing` or `uploaded_private`; only a subsequent videos.list status/processing verification can mark it `published`. Never treat a private/API-restricted upload as a public success, or upload it again as a workaround.

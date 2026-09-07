@@ -73,8 +73,10 @@ def download(item,path,c):
  if v['width']!=1080 or v['height']!=1920 or abs(num/den-30)>.01 or not audio or not 0<duration<=40.001:raise ValueError('Final file failed technical QC')
  if abs(duration-float(item['duration_seconds']))>.1:raise ValueError('Duration does not match signed-off final')
  return total
-def upload(item,c,token,path,size):
+def upload(item,c,token,path,size,immediate=False):
  body={'snippet':{'title':item['title'],'description':item['description'],'categoryId':c['youtube']['category_id'],'defaultLanguage':c['language'],'defaultAudioLanguage':c['language']},'status':{'privacyStatus':'private','publishAt':item['publish_at_utc'],'selfDeclaredMadeForKids':c['youtube']['made_for_kids'],'containsSyntheticMedia':True}}
+ if immediate:
+  body['status']['privacyStatus']='public';body['status'].pop('publishAt',None)
  headers={'Authorization':'Bearer '+token,'Content-Type':'application/json','X-Upload-Content-Type':'video/mp4','X-Upload-Content-Length':str(size)}
  r=requests.post('https://www.googleapis.com/upload/youtube/v3/videos',params={'uploadType':'resumable','part':'snippet,status'},headers=headers,json=body,timeout=45)
  if r.status_code not in (200,201):raise ValueError('Upload initialization HTTP '+str(r.status_code))
@@ -88,10 +90,18 @@ def upload(item,c,token,path,size):
  return result
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--calendar',default='calendar/2026-09-07_2026-10-06.json');ap.add_argument('--execute',action='store_true');ap.add_argument('--commit-state',action='store_true');ap.add_argument('--verify-auth',action='store_true');args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--calendar',default='calendar/2026-09-07_2026-10-06.json');ap.add_argument('--execute',action='store_true');ap.add_argument('--commit-state',action='store_true');ap.add_argument('--verify-auth',action='store_true');ap.add_argument('--publish-now-id',help='Explicit owner-authorized immediate public item; requires --execute');args=ap.parse_args()
  path=ROOT/args.calendar;data=read(path);c,cloud=config(data['channel_id']);t=now()
  if args.verify_auth:access_token(c);print('OAuth refresh + channel ID verification passed');return
- candidates=[x for x in data['items'] if eligible(x,c,t)];late=[x for x in data['items'] if x['status'] in ('planned','researching','scripted','producing','ready') and dt(x['publish_at_utc'])<t]
+ immediate=bool(args.publish_now_id)
+ if immediate:
+  if not args.execute:raise ValueError('Immediate publication requires --execute and a recorded owner override')
+  candidates=[x for x in data['items'] if x['id']==args.publish_now_id]
+  if len(candidates)!=1 or candidates[0]['status']!='ready':raise ValueError('Immediate item missing, not ready or already uploaded')
+  override=candidates[0].get('publication_override',{})
+  if override.get('mode')!='immediate_public' or override.get('authorized_by')!='owner':raise ValueError('No explicit owner immediate-publication authorization recorded')
+ else:candidates=[x for x in data['items'] if eligible(x,c,t)]
+ late=[x for x in data['items'] if x['status'] in ('planned','researching','scripted','producing','ready') and dt(x['publish_at_utc'])<t]
  print(json.dumps({'planned_items':len(data['items']),'ready_in_window':[x['id'] for x in candidates],'overdue':[x['id'] for x in late],'ambiguous_uploads':[x['id'] for x in data['items'] if x['status'] in ('upload_started','needs_reconciliation')],'mode':'execute' if args.execute else 'dry_run'}))
  for item in candidates:
   validate(item,c,cloud)
@@ -100,13 +110,16 @@ def main():
   with tempfile.TemporaryDirectory() as tmp:
    video=Path(tmp)/'video.mp4';size=download(item,video,c)
    # Recheck timing after downloads; never silently publish an overdue video immediately.
-   if not eligible(item,c,now()):raise ValueError('Scheduling window elapsed during preflight')
+   if not immediate and not eligible(item,c,now()):raise ValueError('Scheduling window elapsed during preflight')
    item['status']='upload_started';item['upload_started_at']=now().isoformat()
    persist(path,data,'publish: reserve '+item['id']+' before upload',args.commit_state)
    try:
-    result=upload(item,c,token,video,size);item['youtube_video_id']=result['id'];item['youtube_url']='https://www.youtube.com/watch?v='+result['id']
+    result=upload(item,c,token,video,size,immediate=immediate);item['youtube_video_id']=result['id'];item['youtube_url']='https://www.youtube.com/watch?v='+result['id']
     status=result.get('status',{});item['api_returned_publish_at']=status.get('publishAt');item['api_returned_privacy']=status.get('privacyStatus');item['uploaded_at']=now().isoformat()
-    item['status']='scheduled' if status.get('publishAt') and dt(status['publishAt'])==dt(item['publish_at_utc']) and status.get('privacyStatus')=='private' else 'needs_reconciliation'
+    if immediate:
+     item['status']='uploaded_public_pending_processing' if status.get('privacyStatus')=='public' else 'uploaded_private'
+     item['actual_publication_mode']='immediate_public_requested'
+    else:item['status']='scheduled' if status.get('publishAt') and dt(status['publishAt'])==dt(item['publish_at_utc']) and status.get('privacyStatus')=='private' else 'needs_reconciliation'
     persist(path,data,'publish: record '+item['id']+' '+item['status'],args.commit_state)
    except Exception:
     item['status']='needs_reconciliation';item['error']='Upload was attempted but completion/scheduling is uncertain. Inspect the channel before any retry.'

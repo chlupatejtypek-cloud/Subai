@@ -1,0 +1,22 @@
+{
+  "research_verified": true,
+  "script_verified": true,
+  "voice_verified": true,
+  "character_verified": true,
+  "full_bleed": true,
+  "captions_aligned": true,
+  "captions_no_overlap": true,
+  "audio_verified": true,
+  "visual_review_passed": true,
+  "rights_verified": true,
+  "reviewed_by": "Arena agent; source and final contact-sheet inspection, native timing, independent ASR and ffmpeg checks",
+  "reviewed_at": "2026-09-07T20:22:59.208437+00:00",
+  "source_image_count": 7,
+  "voice_provider": "fish_audio",
+  "voice_reference_id": "fb7ec16ca51a45a5a4db881244d7990a",
+  "asr_words_match": true,
+  "asr_word_count": 92,
+  "lufs_integrated": -16.42,
+  "true_peak_dbtp": -1.77,
+  "visual_review_scope": "All 7 source images, 8 rejected Agnes samples, 11 final timeline samples; not human realtime playback"
+}

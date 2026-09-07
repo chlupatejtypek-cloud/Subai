@@ -18,10 +18,30 @@ class AutomationTests(unittest.TestCase):
  def test_ambiguous_cannot_retry(self):
   item=dict(self.data['items'][0]);item['status']='needs_reconciliation';item['publish_at_utc']=(p.now()+timedelta(hours=2)).isoformat();self.assertFalse(p.eligible(item,self.c,p.now()))
  def test_unverified_content_blocked(self):
-  with self.assertRaises(ValueError):p.validate(self.data['items'][0],self.c,self.cloud)
+  item=dict(self.data['items'][0]);item['research_status']='pending'
+  with self.assertRaises(ValueError):p.validate(item,self.c,self.cloud)
  def test_new_voice(self):
   self.assertEqual(self.c['voice']['provider'],'fish_audio');self.assertEqual(self.c['voice']['reference_id'],'fb7ec16ca51a45a5a4db881244d7990a')
  def test_no_plaintext_secret_fields(self):
   d=p.read(ROOT/'config/channels.json');text=json.dumps(d)
   for prefix in ('ghp_','ya29.','-----BEGIN PRIVATE KEY-----'):self.assertNotIn(prefix,text)
 if __name__=='__main__':unittest.main()
+
+class UploadModeTests(unittest.TestCase):
+ def check_mode(self,immediate):
+  from unittest.mock import patch,MagicMock
+  import tempfile
+  c,_=p.config('stiles-psychology')
+  item={'title':'A Test Title','description':'Educational example.','publish_at_utc':'2026-10-01T12:00:00Z'}
+  init=MagicMock(status_code=200,headers={'Location':'https://www.googleapis.com/upload/test-session'})
+  done=MagicMock(status_code=200);done.json.return_value={'id':'test-id','status':{'privacyStatus':'public' if immediate else 'private'}}
+  with tempfile.TemporaryDirectory() as tmp:
+   path=Path(tmp)/'v.mp4';path.write_bytes(b'x')
+   with patch.object(p.requests,'post',return_value=init) as post,patch.object(p.requests,'put',return_value=done):
+    result=p.upload(item,c,'TEST-NOT-A-TOKEN',path,1,immediate=immediate)
+    sent=post.call_args.kwargs['json']['status']
+    self.assertEqual(sent['privacyStatus'],'public' if immediate else 'private')
+    self.assertEqual('publishAt' in sent,not immediate)
+    self.assertEqual(result['id'],'test-id')
+ def test_immediate_omits_schedule(self):self.check_mode(True)
+ def test_default_keeps_private_schedule(self):self.check_mode(False)
