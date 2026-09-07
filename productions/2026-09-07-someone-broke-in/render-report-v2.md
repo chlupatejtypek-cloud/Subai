@@ -7,7 +7,7 @@
 - Canvas: **1080×1920**, 30 fps
 - Video: H.264
 - Audio: AAC mono, based on an Arena non-ElevenLabs test voice
-- File size: 4,627,425 bytes
+- File size: 4,700,956 bytes
 - Script: `script-test-v2.md` — 102 words
 
 ## Caption implementation
@@ -18,7 +18,7 @@
 - Lightweight Vosk ASR returned exactly 102 timestamps. Five recognition substitutions were corrected by mapping those timestamps one-to-one back to the approved 102-word script.
 - First word begins at 0.270 s; final word ends at 39.090 s.
 - Position: `(540, 1235)`, approximately 64% of frame height.
-- Style: 54 px bold white, restrained outline/shadow, no background box.
+- Style: 60 px bold white, restrained outline/shadow, no background box.
 - Hook/reveal words use warm yellow.
 - Animation per word: 78% scale → 108% → 100%, with a soft 25/55 ms fade.
 

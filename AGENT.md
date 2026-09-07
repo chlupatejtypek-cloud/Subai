@@ -166,6 +166,26 @@ The uploader prints only non-secret response metadata and the final HTTPS URL. V
 returned URL with HTTP 200 before recording it in a character/production document. The
 canonical Stiles model sheet and public ID live in [`characters/stiles.md`](characters/stiles.md).
 
+### Agnes AI first-frame animation
+
+During vertical testing, animate the first story image into a short hook clip with Agnes Video
+2.5. The source image must first have a public Cloudinary HTTPS URL. `AGNES_API_KEY` lives
+only in local `.env` or the encrypted Actions secret of the same name—never in git.
+
+```bash
+set -a; source .env; set +a
+python3 tools/agnes-image-to-video.py \
+  --image-url "https://res.cloudinary.com/.../first-frame.png" \
+  --prompt "Preserve the exact stickman design and composition. Subtle breathing and trembling, gentle light movement, slow controlled camera push, no morphing, no new limbs, no text." \
+  --seconds 4 \
+  --output productions/<folder>/visuals/hook-agnes.mp4
+```
+
+The API is asynchronous; the tool creates a task, polls by `video_id`, downloads the finished
+MP4 and writes non-secret metadata beside it. Inspect for character morphing, extra limbs,
+text artifacts and unwanted camera cuts. Try at most twice. The Agnes clip replaces only the
+first static segment; its duration must be reflected in the story-driven edit plan.
+
 ---
 
 ## 5. House rules for agents working here
