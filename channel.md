@@ -15,6 +15,7 @@ tts:
     narrator: pNInz6obpgDQGcFmaJgB  # Adam — permanent main voice
     secondary: cgSgspJ2msm6clMCkdW9  # Jessica — optional, max 1–2 purposeful questions
     extras: []
+  edit_speed: 1.05  # owner approved +5% pacing for future videos; preserve pitch
   background_music: false
   sfx: "intro whoosh plus 1–3 subtle motivated effects"
 plan_version: "3.3"
@@ -132,7 +133,7 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 - `NARRATOR` (Stiles): ElevenLabs premade **Adam** (`pNInz6obpgDQGcFmaJgB`) is the permanent main voice. Reuse it in every Short unless the owner explicitly changes it.
 - `JESSICA`: ElevenLabs premade Jessica (`cgSgspJ2msm6clMCkdW9`) is optional and used only for one or at most two concise viewer questions—not continuous dialogue and not necessarily every video.
 - Start with `eleven_multilingual_v2`; record final settings after the narrator audition. Generate only from an approved script.
-- Pace primarily through writing; a small pitch-preserving edit speed-up is allowed after synthesis. Never regenerate completed narration merely to make it faster.
+- Owner update after the spotlight-effect Short: future Adam narration uses a modest **1.05× pitch-preserving edit speed-up**. Divide provider timestamps by 1.05 before caption rendering and remap scene timings. Do not alter the already accepted spotlight-effect video. Never regenerate completed narration merely to make it faster.
 - Chosen narrator ID and stable settings must remain in frontmatter so later videos sound the same.
 
 ## 11. Visual identity
