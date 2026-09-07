@@ -1,0 +1,24 @@
+# Secrets — never commit (repo is public!)
+.env
+.env.*
+!.env.example
+credentials/
+*.token
+*.secret
+*.key
+
+# Generated media & working artifacts
+media/
+productions/**/audio/
+productions/**/background/
+productions/**/visuals/
+productions/**/final/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
