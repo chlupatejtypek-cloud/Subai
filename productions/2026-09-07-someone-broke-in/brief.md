@@ -62,12 +62,14 @@ Mounting unease → claustrophobic suspense → relief with a lasting chill.
 
 ## Target format
 
-- One main story
-- Target runtime: 7–8 minutes
-- Target script: approximately 1,150–1,300 spoken words
-- Speakers: `NARRATOR` (Stiles) + `JESSIE`
-- No extra voice required
-- Likely background moods: dark rainy/suburban exterior, dim hallway, attic/roof ambience
+- One condensed main story
+- Canvas: vertical 9:16
+- Target runtime: 2:30–3:00
+- Target script: approximately 430–500 spoken words
+- Primary speaker: `NARRATOR` (Stiles), ElevenLabs Adam (`pNInz6obpgDQGcFmaJgB`)
+- Jessie may appear visually, but v1 does not require a second TTS voice
+- Maximum 10 generated stickman scene images, animated with camera motion and caption emphasis
+- Likely background moods: dark suburban exterior, dim hallway, attic/roof ambience
 
 ## Pipeline gate
 
