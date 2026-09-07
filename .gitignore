@@ -9,6 +9,8 @@ credentials/
 
 # Generated media & working artifacts
 media/
+characters/*.png
+characters/*.jpg
 productions/**/audio/
 productions/**/background/
 productions/**/visuals/

@@ -1,10 +1,12 @@
 ---
 id: "stiles"
 status: "canonical-test-reference"
-reference_version: "v1"
-cloudinary_public_id: "subai/characters/stiles-tpose-front-back-v1"
-cloudinary_url: "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795048/subai/characters/stiles-tpose-front-back-v1.png"
-format: "PNG 768x1376"
+reference_version: "v2"
+cloudinary_public_id: "subai/characters/stiles-turnaround-v2"
+cloudinary_url: "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795817/subai/characters/stiles-turnaround-v2.png"
+front_reference_url: "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795815/subai/characters/stiles-front-tpose-v2.png"
+back_reference_url: "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795816/subai/characters/stiles-back-tpose-v2.png"
+format: "combined PNG 2048x1024; separate views 1024x1024"
 updated: "2026-09-07"
 ---
 
@@ -12,7 +14,14 @@ updated: "2026-09-07"
 
 Use this model sheet as the strict character reference for every newly generated Stiles image during the test phase:
 
-![Stiles front/back T-pose](https://res.cloudinary.com/e5cjysjx/image/upload/v1788795048/subai/characters/stiles-tpose-front-back-v1.png)
+![Stiles front/back T-pose](https://res.cloudinary.com/e5cjysjx/image/upload/v1788795817/subai/characters/stiles-turnaround-v2.png)
+
+Separate unambiguous model views:
+
+- [Front T-pose v2](https://res.cloudinary.com/e5cjysjx/image/upload/v1788795815/subai/characters/stiles-front-tpose-v2.png)
+- [Back T-pose v2 — both arms fully visible](https://res.cloudinary.com/e5cjysjx/image/upload/v1788795816/subai/characters/stiles-back-tpose-v2.png)
+
+> v1 is retired: the back-view left arm was visually ambiguous because it overlapped toward the front figure. Always use v2.
 
 ## Required visual traits
 

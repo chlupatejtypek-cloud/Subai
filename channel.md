@@ -129,9 +129,9 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 ## 11. Visual identity
 
 - **Canvas (test mode):** 9:16 vertical, 1080×1920. Flat pastel/neutral backgrounds; thin black stick figures. Stiles must match [`characters/stiles.md`](characters/stiles.md); Jessie retains her ponytail and equally minimal proportions.
-- **Motion:** subtle — idle bobbing, walk cycles, head turns and slow camera moves. In a ≤40 s test, change the visual beat every 3–6 seconds.
+- **Motion and editing:** subtle character/camera motion, but story-driven cuts. Images must depict what the narration is discussing at that moment. Never divide the duration into equal image intervals; cut on meaningful words, reveals and action beats. Short high-impact shots may last ~1.5–3 s, while context shots may hold ~4–7 s when the audio supports them.
 - **Background:** clean generated scene art is preferred during testing. Ambient third-party footage is optional and must never distract from the figures.
-- **Captions:** exactly **one word visible at a time**, synchronized to measured word-level timestamps from the final audio. Center horizontally with the baseline around **62–66% of frame height** (slightly below center), approximately **48–58 px** at 1080×1920. Use bold white/warm-white type with a restrained dark outline or shadow, but **no black rectangle/background box**. Never estimate word timing from character count; align against the actual audio.
+- **Captions:** exactly **one word visible at a time**, synchronized to measured word-level timestamps from the final audio. Center horizontally around **64% of frame height** (slightly below center), default **54 px** at 1080×1920. Use bold white type, with selected hook/reveal words in warm yellow, and only a restrained dark outline/shadow—**no black rectangle/background box**. Each word should pop smoothly (`~78% → 108% → 100%`) with a very short soft fade. Never estimate timing from character count; run speech alignment against the actual final audio, then map recognized timestamps back to the approved script.
 - **Thumbnails:** bold stickman moment from the video + ≤ 5 words; consistent palette; honest to the content.
 - **Intro/outro:** no separate 4-second sting during ≤40 s tests; the hook starts immediately.
 
