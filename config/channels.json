@@ -40,7 +40,15 @@
         "public_upload_project_audit": "unknown; cannot infer from channel status or successful OAuth",
         "consent_screen_mode": "unknown; Testing mode may expire refresh tokens after 7 days",
         "category_id": "27",
-        "made_for_kids": false
+        "made_for_kids": false,
+        "public_upload_smoke_test": {
+          "video_id": "OYEY9ZKOitA",
+          "url": "https://www.youtube.com/shorts/OYEY9ZKOitA",
+          "verified_at": "2026-09-07T20:24:11.909609+00:00",
+          "privacy_status": "public",
+          "upload_status": "processed",
+          "processing_status": "succeeded"
+        }
       },
       "cloudinary_account": "primary",
       "cloudinary_folder": "subai/productions/stiles-psychology",
@@ -63,7 +71,8 @@
           "edit_speed": 1.05,
           "status": "parked"
         },
-        "speed_note": "The previous +5% request applied to Adam. New Fish voice starts at native speed until reviewed."
+        "speed_note": "The previous +5% request applied to Adam. New Fish voice starts at native speed until reviewed.",
+        "production_synthesis_check": "Successful Fish synthesis of 92 words on 2026-09-07; native alignment and independent ASR match all words."
       },
       "format": {
         "width": 1080,

@@ -19,7 +19,7 @@
       "scheduled_at": "2026-09-07T22:30:00+02:00",
       "publish_at_utc": "2026-09-07T20:30:00Z",
       "timezone": "Europe/Prague",
-      "status": "uploaded_public_pending_processing",
+      "status": "published",
       "research_status": "verified",
       "research_sources": [
         "https://researchportal.helsinki.fi/en/publications/habits-make-smartphone-use-more-pervasive/",
@@ -64,7 +64,10 @@
       "api_returned_publish_at": null,
       "api_returned_privacy": "public",
       "uploaded_at": "2026-09-07T20:23:33.131561+00:00",
-      "actual_publication_mode": "immediate_public_requested"
+      "actual_publication_mode": "immediate_public_requested",
+      "actual_published_at": "2026-09-07T20:23:58Z",
+      "publication_verified_at": "2026-09-07T20:24:11.909609+00:00",
+      "youtube_processing_status": "succeeded"
     },
     {
       "id": "SP-20260907-2",

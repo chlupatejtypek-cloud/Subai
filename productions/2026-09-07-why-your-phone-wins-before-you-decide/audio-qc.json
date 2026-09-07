@@ -1,0 +1,8 @@
+{
+  "asr_model": "faster-whisper base.en int8",
+  "transcript": "you unlocked your phone. But what were you going to check? Sometimes, there wasn't a plan. Researchers call brief, repeated looks at your phone a checking habit. A quiet moment can become the cue. A quick look brings new information and that can reinforce another check. So this isn't always a willpower contest. Try changing the setup. For your next work block, put the phone out of sight and out of reach. Not a cure, just one less easy invitation. Give the next check a reason, instead of letting the pause decide.",
+  "token_sequence_similarity": 1.0,
+  "expected_words": 92,
+  "transcribed_words": 92,
+  "comparison": "ASR corroboration, not a human listening review"
+}

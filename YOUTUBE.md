@@ -16,3 +16,6 @@ The owner prefers a direct Google authorization link in chat rather than a separ
 Connection alone does not upload or publish anything. Confirm the intended channel, video, metadata and visibility with the owner. Prefer a private test upload followed by explicit publication approval. An unverified YouTube API project may be restricted to private uploads and may require audit before public uploads.
 
 No video has been uploaded by the connection/configuration workflows. The guarded scheduled uploader is now implemented in `tools/youtube-publish.py`; see `AUTOMATION.md`. OAuth refresh and identity verification passed; actual video-upload/publication eligibility still needs a real test. The owner authorized automatic publication of QA-passed items in the new 90-video calendar.
+
+## First public upload confirmed
+On 2026-09-07T20:24:11.909609+00:00, video `OYEY9ZKOitA` was verified via videos.list as public, processed and processing succeeded on the registered channel. See the phone-checking production publish-report.md. This supersedes earlier "no test upload yet" status; formal project audit and OAuth consent-screen mode are still not inferred.

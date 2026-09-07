@@ -1,0 +1,34 @@
+{
+  "id": "OYEY9ZKOitA",
+  "title": "Why Your Phone Wins Before You Decide",
+  "channelId": "UCcWp-VFQ1zzI8Bl3n7krB6w",
+  "publishedAt": "2026-09-07T20:23:58Z",
+  "status": {
+    "uploadStatus": "processed",
+    "privacyStatus": "public",
+    "license": "youtube",
+    "embeddable": true,
+    "publicStatsViewable": true,
+    "madeForKids": false,
+    "selfDeclaredMadeForKids": false
+  },
+  "processingDetails": {
+    "processingStatus": "succeeded",
+    "fileDetailsAvailability": "available",
+    "processingIssuesAvailability": "available",
+    "tagSuggestionsAvailability": "inProgress",
+    "editorSuggestionsAvailability": "inProgress",
+    "thumbnailsAvailability": "inProgress"
+  },
+  "contentDetails": {
+    "duration": "PT33S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false,
+    "contentRating": {},
+    "projection": "rectangular",
+    "hasCustomThumbnail": false
+  },
+  "verified_at": "2026-09-07T20:24:11.909609+00:00"
+}
