@@ -1,0 +1,91 @@
+id,date,time_Europe_Prague,publish_at_UTC,title,mechanism_to_research,proposed_action,status
+SP-20260907-1,2026-09-07,22:30,2026-09-07T20:30:00Z,Why Your Phone Wins Before You Decide,cue-triggered checking,Move the phone out of sight,planned
+SP-20260907-2,2026-09-07,23:00,2026-09-07T21:00:00Z,Why Awkward Silence Feels So Long,self-focused attention during pauses,Let one pause finish before filling it,planned
+SP-20260907-3,2026-09-07,23:30,2026-09-07T21:30:00Z,Why the First Price Changes the Next One,numerical anchoring,Set a budget before seeing offers,planned
+SP-20260908-1,2026-09-08,15:00,2026-09-08T13:00:00Z,Why Switching Tasks Leaves You Stuck,attention residue,Finish a small stopping point before switching,planned
+SP-20260908-2,2026-09-08,19:00,2026-09-08T17:00:00Z,Why Avoiding a Worry Feels Like Relief,short-term relief reinforces avoidance,Notice the relief without treating it as a solution,planned
+SP-20260908-3,2026-09-08,23:00,2026-09-08T21:00:00Z,Why You Believe a Claim You Have Heard Before,illusory truth and familiarity,Check evidence rather than repetition,planned
+SP-20260909-1,2026-09-09,15:00,2026-09-09T13:00:00Z,Why a Tiny First Step Helps You Start,reducing task-initiation friction,Define a two-minute opening action,planned
+SP-20260909-2,2026-09-09,19:00,2026-09-09T17:00:00Z,Why Everyone Else Looks More Confident,limited access to others uncertainty,Separate visible behavior from guessed confidence,planned
+SP-20260909-3,2026-09-09,23:00,2026-09-09T21:00:00Z,Why Losing Ten Dollars Feels So Different,context-dependent loss aversion,Compare the same choice in gains and losses,planned
+SP-20260910-1,2026-09-10,15:00,2026-09-10T13:00:00Z,Why Plans Work Better With a When,implementation intentions,Write one if-then plan,planned
+SP-20260910-2,2026-09-10,19:00,2026-09-10T17:00:00Z,Why Naming a Feeling Can Help,affect labeling with modest evidence,Use one precise emotion word,planned
+SP-20260910-3,2026-09-10,23:00,2026-09-10T21:00:00Z,Why You Remember the Worst Part of a Review,negative information weighting,List the full feedback before interpreting it,planned
+SP-20260911-1,2026-09-11,15:00,2026-09-11T13:00:00Z,Why an Unfinished Task Keeps Returning,goal activation and planning,Write the next concrete action,planned
+SP-20260911-2,2026-09-11,19:00,2026-09-11T17:00:00Z,Why Asking a Follow-Up Question Matters,responsive questions and interpersonal liking,Ask about what someone just said,planned
+SP-20260911-3,2026-09-11,23:00,2026-09-11T21:00:00Z,Why Three Options Can Change Your Favorite,decoy and context effects,Compare the features you actually need,planned
+SP-20260912-1,2026-09-12,15:00,2026-09-12T13:00:00Z,Why Notifications Interrupt Without a Reply,attention capture from alerts,Silence one nonessential notification,planned
+SP-20260912-2,2026-09-12,19:00,2026-09-12T17:00:00Z,Why Pushing a Thought Away Can Backfire,ironic mental control,Notice the thought without arguing with it,planned
+SP-20260912-3,2026-09-12,23:00,2026-09-12T21:00:00Z,Why You Trust Your First Impression,primacy and updating,Look deliberately for one counterexample,planned
+SP-20260913-1,2026-09-13,15:00,2026-09-13T13:00:00Z,Why Familiar Places Trigger Old Habits,context-dependent automaticity,Change one cue in the environment,planned
+SP-20260913-2,2026-09-13,19:00,2026-09-13T17:00:00Z,Why You Assume They Meant It Personally,attribution under uncertainty,Generate a situational explanation,planned
+SP-20260913-3,2026-09-13,23:00,2026-09-13T21:00:00Z,Why You Keep Paying for a Bad Decision,sunk cost effect,Ask what you would choose starting today,planned
+SP-20260914-1,2026-09-14,15:00,2026-09-14T13:00:00Z,Why Rereading Can Feel Like Learning,fluency versus retrieval,Close the notes and recall one idea,planned
+SP-20260914-2,2026-09-14,19:00,2026-09-14T17:00:00Z,Why You Replay a Conversation at Night,repetitive post-event thinking,Distinguish a new lesson from another replay,planned
+SP-20260914-3,2026-09-14,23:00,2026-09-14T21:00:00Z,Why Discounts Make Urgency Feel Real,scarcity framing,Delay a nonessential purchase until tomorrow,planned
+SP-20260915-1,2026-09-15,15:00,2026-09-15T13:00:00Z,Why Breaks Can Help Before You Feel Done,recovery from sustained attention,Plan one brief intentional break,planned
+SP-20260915-2,2026-09-15,19:00,2026-09-15T17:00:00Z,Why Specific Thanks Land Better,perceived responsiveness in gratitude,Name what the person did and why it mattered,planned
+SP-20260915-3,2026-09-15,23:00,2026-09-15T21:00:00Z,Why a Coin Toss Still Feels Predictable,gamblers fallacy for independent events,Check whether the events are actually independent,planned
+SP-20260916-1,2026-09-16,15:00,2026-09-16T13:00:00Z,Why a Clear Finish Line Helps You Work,goal specificity and feedback,Define what done looks like,planned
+SP-20260916-2,2026-09-16,19:00,2026-09-16T17:00:00Z,Why Being Nervous Feels So Visible,illusion of transparency,Do not equate an internal feeling with visible evidence,planned
+SP-20260916-3,2026-09-16,23:00,2026-09-16T21:00:00Z,Why More Choices Sometimes Feel Worse,choice overload depends on context,Choose two criteria before comparing,planned
+SP-20260917-1,2026-09-17,15:00,2026-09-17T13:00:00Z,Why Your Future Self Gets All the Work,present bias in effort allocation,Make tomorrows first action smaller today,planned
+SP-20260917-2,2026-09-17,19:00,2026-09-17T17:00:00Z,Why Advice Arrives Before Listening,mismatched support needs,Ask whether they want ideas or listening,planned
+SP-20260917-3,2026-09-17,23:00,2026-09-17T21:00:00Z,Why a Vivid Story Beats a Bigger Number,availability and vividness,Check the base rate as well as the story,planned
+SP-20260918-1,2026-09-18,15:00,2026-09-18T13:00:00Z,Why One Tab Turns Into Twenty,goal switching and open loops,Keep a parking list for later tabs,planned
+SP-20260918-2,2026-09-18,19:00,2026-09-18T17:00:00Z,Why Sleepy You Takes Things Differently,sleep and emotional reactivity,Postpone a nonurgent heated reply,planned
+SP-20260918-3,2026-09-18,23:00,2026-09-18T21:00:00Z,Why You See Patterns in Random Streaks,pattern perception in random sequences,Compare with a longer sample,planned
+SP-20260919-1,2026-09-19,15:00,2026-09-19T13:00:00Z,Why Small Rewards Keep You Checking,reinforcement and variable outcomes,Choose specific check-in times,planned
+SP-20260919-2,2026-09-19,19:00,2026-09-19T17:00:00Z,Why You Think Everyone Agrees With You,false consensus effect,Ask a neutral question outside your usual circle,planned
+SP-20260919-3,2026-09-19,23:00,2026-09-19T21:00:00Z,Why a Free Extra Can Change the Deal,zero-price effect,Include the time and effort costs,planned
+SP-20260920-1,2026-09-20,15:00,2026-09-20T13:00:00Z,Why Your To-Do List Needs a Next Action,vague goals and action planning,Replace a project label with one verb,planned
+SP-20260920-2,2026-09-20,19:00,2026-09-20T17:00:00Z,Why a Short Walk May Change a Stuck Idea,walking and divergent thinking evidence,Try a short safe walk for brainstorming,planned
+SP-20260920-3,2026-09-20,23:00,2026-09-20T21:00:00Z,Why You Remember the Ending So Strongly,peak-end evaluation in bounded experiences,Review the whole experience not just its ending,planned
+SP-20260921-1,2026-09-21,15:00,2026-09-21T13:00:00Z,Why Starting Again Beats Starting Perfectly,all-or-nothing framing and goal recovery,Resume with a small action after a lapse,planned
+SP-20260921-2,2026-09-21,19:00,2026-09-21T17:00:00Z,Why We Mirror Each Others Expressions,behavioral mimicry with context limits,Observe without treating mimicry as proof of attraction,planned
+SP-20260921-3,2026-09-21,23:00,2026-09-21T21:00:00Z,Why You Favor Something You Built,effort-linked valuation and IKEA effect,Compare it against an external criterion,planned
+SP-20260922-1,2026-09-22,15:00,2026-09-22T13:00:00Z,Why Your Brain Fills in a Missing Detail,reconstructive memory,Label uncertainty when recalling an event,planned
+SP-20260922-2,2026-09-22,19:00,2026-09-22T17:00:00Z,Why Uncertainty Can Be Harder Than Bad News,uncertainty and anticipation,Separate what is known from what is pending,planned
+SP-20260922-3,2026-09-22,23:00,2026-09-22T21:00:00Z,Why a Label Changes What You Notice,categorization directs attention,Describe behavior before applying a label,planned
+SP-20260923-1,2026-09-23,15:00,2026-09-23T13:00:00Z,Why Spacing Practice Beats One Long Session,spacing effect in learning,Schedule a later retrieval attempt,planned
+SP-20260923-2,2026-09-23,19:00,2026-09-23T17:00:00Z,Why a Phone on the Table Can Send a Signal,perceived attention and conversation context,Put the phone away for one conversation,planned
+SP-20260923-3,2026-09-23,23:00,2026-09-23T21:00:00Z,Why You Rate Your Past Self Unfairly,hindsight bias,Record what you knew before the outcome,planned
+SP-20260924-1,2026-09-24,15:00,2026-09-24T13:00:00Z,Why You Underestimate How Long Things Take,planning fallacy,Compare with a similar completed task,planned
+SP-20260924-2,2026-09-24,19:00,2026-09-24T17:00:00Z,Why Self-Criticism Is Not the Only Motivator,self-compassion and motivation evidence,Use a constructive next-step statement,planned
+SP-20260924-3,2026-09-24,23:00,2026-09-24T21:00:00Z,Why You Notice Your New Car Everywhere,selective attention and frequency illusion,Distinguish noticing more from occurrence increasing,planned
+SP-20260925-1,2026-09-25,15:00,2026-09-25T13:00:00Z,Why Interruptions Make Restarting Hard,resumption lag and memory for goals,Leave a one-line restart note,planned
+SP-20260925-2,2026-09-25,19:00,2026-09-25T17:00:00Z,Why People Read the Same Text Differently,missing tone cues in text,Ask rather than assume the intended tone,planned
+SP-20260925-3,2026-09-25,23:00,2026-09-25T21:00:00Z,Why an Average Can Hide the Whole Story,distribution neglect,Ask what the range and sample look like,planned
+SP-20260926-1,2026-09-26,15:00,2026-09-26T13:00:00Z,Why Checking Progress Can Help a Goal,progress monitoring,Track one behavior not ten outcomes,planned
+SP-20260926-2,2026-09-26,19:00,2026-09-26T17:00:00Z,Why Waiting for Motivation Can Stall You,behavioral initiation versus mood,Set a small start cue regardless of enthusiasm,planned
+SP-20260926-3,2026-09-26,23:00,2026-09-26T21:00:00Z,Why Owning It Makes It Feel More Valuable,endowment effect with contextual limits,Compare willingness to buy with willingness to sell,planned
+SP-20260927-1,2026-09-27,15:00,2026-09-27T13:00:00Z,Why We Forget an Intention at the Wrong Time,prospective memory and cues,Put a reminder where the action happens,planned
+SP-20260927-2,2026-09-27,19:00,2026-09-27T17:00:00Z,Why Feeling Left Out Changes Your Focus,belonging threats and attention,Check an ambiguous situation before concluding rejection,planned
+SP-20260927-3,2026-09-27,23:00,2026-09-27T21:00:00Z,Why You Prefer the Default Option,status quo and default effects,Compare the default with one alternative,planned
+SP-20260928-1,2026-09-28,15:00,2026-09-28T13:00:00Z,Why Easy Reading Can Feel More True,processing fluency and judgment,Separate clarity of wording from strength of evidence,planned
+SP-20260928-2,2026-09-28,19:00,2026-09-28T17:00:00Z,Why One Kind Message Can Matter,underestimating appreciation,Send a specific sincere message,planned
+SP-20260928-3,2026-09-28,23:00,2026-09-28T21:00:00Z,Why Your Estimate Follows the First Number,anchoring under uncertainty,Make an independent estimate first,planned
+SP-20260929-1,2026-09-29,15:00,2026-09-29T13:00:00Z,Why a Short Review Beats Another Highlight,retrieval practice versus passive marking,Answer one question without notes,planned
+SP-20260929-2,2026-09-29,19:00,2026-09-29T17:00:00Z,Why Comparing Yourself Upward Feels Different,social comparison and context,Choose a comparison relevant to your own goal,planned
+SP-20260929-3,2026-09-29,23:00,2026-09-29T21:00:00Z,Why a Risk Feels Bigger When You Can Picture It,affect heuristic and vividness,Compare absolute probabilities,planned
+SP-20260930-1,2026-09-30,15:00,2026-09-30T13:00:00Z,Why You Remember Where You Learned It,context-dependent retrieval,Practice retrieving in more than one setting,planned
+SP-20260930-2,2026-09-30,19:00,2026-09-30T17:00:00Z,Why Saying No Can Feel Like a Bigger Deal,overestimating interpersonal costs of refusal,Use a brief respectful refusal without mind reading,planned
+SP-20260930-3,2026-09-30,23:00,2026-09-30T21:00:00Z,Why a Near Miss Can Feel Like a Win,near-miss effects in gambling tasks,Treat a miss as a miss not progress toward chance,planned
+SP-20261001-1,2026-10-01,15:00,2026-10-01T13:00:00Z,Why a Habit Needs a Stable Cue,cue repetition and habit formation,Repeat one small action after the same event,planned
+SP-20261001-2,2026-10-01,19:00,2026-10-01T17:00:00Z,Why Stress Can Narrow Your Attention,stress attention and task context,Slow a nonurgent choice and list the options,planned
+SP-20261001-3,2026-10-01,23:00,2026-10-01T21:00:00Z,Why Expertise Does Not Erase Every Bias,domain-specific skill versus general judgment,Use a checklist in an unfamiliar domain,planned
+SP-20261002-1,2026-10-02,15:00,2026-10-02T13:00:00Z,Why Tomorrow Sounds Easier Than Today,temporal distance and abstract planning,Imagine tomorrows actual calendar,planned
+SP-20261002-2,2026-10-02,19:00,2026-10-02T17:00:00Z,Why We Misread a Quiet Person,dispositional attribution with little evidence,Do not infer a trait from one quiet moment,planned
+SP-20261002-3,2026-10-02,23:00,2026-10-02T21:00:00Z,Why You Search for Evidence You Already Like,confirmation bias,Ask what finding would change your mind,planned
+SP-20261003-1,2026-10-03,15:00,2026-10-03T13:00:00Z,Why a Checklist Helps Even When You Know,external memory and execution support,Write the few steps most often missed,planned
+SP-20261003-2,2026-10-03,19:00,2026-10-03T17:00:00Z,Why Remembering Good Moments Takes Effort,attention allocation and deliberate recall,Record one specific positive event,planned
+SP-20261003-3,2026-10-03,23:00,2026-10-03T21:00:00Z,Why Small Samples Tell Dramatic Stories,sampling variability,Look for sample size before a conclusion,planned
+SP-20261004-1,2026-10-04,15:00,2026-10-04T13:00:00Z,Why Explaining an Idea Reveals the Gaps,illusion of explanatory depth,Explain each step in plain language,planned
+SP-20261004-2,2026-10-04,19:00,2026-10-04T17:00:00Z,Why Giving Advice to Yourself Is Harder,psychological distance and reasoning,Ask what you would tell a friend in the same situation,planned
+SP-20261004-3,2026-10-04,23:00,2026-10-04T21:00:00Z,Why a Familiar Face Feels More Trustworthy,mere exposure with boundary conditions,Keep familiarity separate from evidence of reliability,planned
+SP-20261005-1,2026-10-05,15:00,2026-10-05T13:00:00Z,Why Rest Is Not the Same as Scrolling,recovery activities and attentional demand,Try one break without another feed,planned
+SP-20261005-2,2026-10-05,19:00,2026-10-05T17:00:00Z,Why Repairing a Small Misunderstanding Helps,responsive relationship repair,State what you meant and invite their perspective,planned
+SP-20261005-3,2026-10-05,23:00,2026-10-05T21:00:00Z,Why a Prediction Needs a Range,overprecision and uncertainty,Give a range and name an uncertainty,planned
+SP-20261006-1,2026-10-06,15:00,2026-10-06T13:00:00Z,Why a Plan Needs Room for Real Life,coping planning and obstacles,Write one backup action for a likely obstacle,planned
+SP-20261006-2,2026-10-06,19:00,2026-10-06T17:00:00Z,Why Your Feelings Are Data Not a Verdict,emotion-informed judgment versus certainty,Pair the feeling with observable facts,planned
+SP-20261006-3,2026-10-06,23:00,2026-10-06T21:00:00Z,Why Good Decisions Can Have Bad Outcomes,outcome bias,Evaluate the process using what was known then,planned

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-07",
+  "credential_policy": "Public metadata only. Secret values are in GitHub Actions secrets and the encrypted transfer bundle, never in this file.",
+  "cloudinary_accounts": {
+    "primary": {
+      "cloud_name": "e5cjysjx",
+      "purpose": "Durable original artwork, final videos and encrypted handoff bundle",
+      "api_key_secret": "CLOUDINARY_API_KEY",
+      "api_secret_secret": "CLOUDINARY_API_SECRET",
+      "cloud_name_secret": "CLOUDINARY_CLOUD_NAME",
+      "asset_root": "subai",
+      "transfer_public_id": "subai/private-transfer/subai-agent-bootstrap-v1.enc",
+      "transfer_resource_type": "raw",
+      "transfer_delivery": "public ciphertext; never plaintext credentials"
+    }
+  },
+  "channels": [
+    {
+      "id": "stiles-psychology",
+      "brand_name": "Stiles Psychology",
+      "active": true,
+      "language": "en-US",
+      "timezone": "Europe/Prague",
+      "youtube": {
+        "channel_id": "UCcWp-VFQ1zzI8Bl3n7krB6w",
+        "authenticated_display_name": "Chlupatej Typek",
+        "url": "https://www.youtube.com/channel/UCcWp-VFQ1zzI8Bl3n7krB6w",
+        "verified_on": "2026-09-07",
+        "oauth_refresh_test": "HTTP 200",
+        "google_account_email": null,
+        "email_note": "Not requested or needed; OAuth is verified by channel ID, not by an assumed Google email.",
+        "oauth_client_id_secret": "YOUTUBE_STILES_CLIENT_ID",
+        "oauth_client_secret_secret": "YOUTUBE_STILES_CLIENT_SECRET",
+        "oauth_refresh_token_secret": "YOUTUBE_STILES_REFRESH_TOKEN",
+        "scopes": [
+          "https://www.googleapis.com/auth/youtube.upload",
+          "https://www.googleapis.com/auth/youtube.readonly"
+        ],
+        "public_upload_project_audit": "unknown; cannot infer from channel status or successful OAuth",
+        "consent_screen_mode": "unknown; Testing mode may expire refresh tokens after 7 days",
+        "category_id": "27",
+        "made_for_kids": false
+      },
+      "cloudinary_account": "primary",
+      "cloudinary_folder": "subai/productions/stiles-psychology",
+      "character_reference": "characters/stiles.md",
+      "caption_style": "config/caption-style.json",
+      "voice": {
+        "provider": "fish_audio",
+        "reference_id": "fb7ec16ca51a45a5a4db881244d7990a",
+        "provider_model_title": "WNBA VOICEOVER",
+        "model": "s2.1-pro-free",
+        "reference_metadata_check": "HTTP 200, 2026-09-07; no paid synthesis during setup",
+        "secret_name": "FISH_API_KEY",
+        "generation_speed": 1.0,
+        "edit_speed": 1.0,
+        "secondary_voice": null,
+        "fallback_policy": "fail closed; never silently switch provider or voice",
+        "previous_adam": {
+          "provider": "elevenlabs",
+          "voice_id": "pNInz6obpgDQGcFmaJgB",
+          "edit_speed": 1.05,
+          "status": "parked"
+        },
+        "speed_note": "The previous +5% request applied to Adam. New Fish voice starts at native speed until reviewed."
+      },
+      "format": {
+        "width": 1080,
+        "height": 1920,
+        "fps": 30,
+        "max_seconds": 40,
+        "max_generated_images": 10,
+        "background_music": false
+      },
+      "publishing": {
+        "enabled": true,
+        "owner_authorized_automatic_publication": "2026-09-07",
+        "manual_approval_per_video": false,
+        "quality_gate_required": true,
+        "daily_target": 3,
+        "regular_local_slots": [
+          "15:00",
+          "19:00",
+          "23:00"
+        ],
+        "initial_evening_slots": [
+          "22:30",
+          "23:00",
+          "23:30"
+        ],
+        "schedule_lookahead_hours": 48,
+        "minimum_lead_minutes": 30,
+        "visibility": "private with future publishAt -> public",
+        "missed_slot_policy": "mark/report overdue; do not backdate or dump overdue videos in a burst",
+        "calendar": "calendar/2026-09-07_2026-10-06.json",
+        "generation_mode": "agent production; publisher only uploads completed QA-passed assets",
+        "unattended_generation": false
+      }
+    }
+  ]
+}

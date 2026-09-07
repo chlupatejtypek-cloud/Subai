@@ -1,3 +1,5 @@
+> **CURRENT POLICY — v4.0 (2026-09-07):** Read `config/channels.json`, `channel.md`, `AUTOMATION.md` and the calendar first. The owner now selected **Fish Audio `fb7ec16ca51a45a5a4db881244d7990a`**, 3 videos/day, 7 Sep–6 Oct, with automatic publication AFTER QA. Earlier permanent-Adam, new-audition, weekly-cadence and per-script approval instructions below are historical and superseded for this calendar. No secrets in public files. Generation still requires an agent production run; the scheduled publisher never fabricates assets or reviews.
+
 # 🤖 AGENT.md — how an AI agent gets write access to this repo
 
 > **Read this first if you are an AI agent dropped into a fresh session on this repo.**
@@ -166,9 +168,9 @@ The uploader prints only non-secret response metadata and the final HTTPS URL. V
 returned URL with HTTP 200 before recording it in a character/production document. The
 canonical Stiles model sheet and public ID live in [`characters/stiles.md`](characters/stiles.md).
 
-### Fish Audio test narration
+### Fish Audio production narration
 
-`FISH_API_KEY` remains stored in local gitignored `.env` and the encrypted Actions secret, but Fish narration is **parked** after voice-quality testing. Current productions use ElevenLabs. **Adam** (`pNInz6obpgDQGcFmaJgB`) is the permanent main narrator and carries almost all speech. Premade Jessica (`cgSgspJ2msm6clMCkdW9`) is optional and may ask only 1–2 purposeful questions. Do not alternate speakers sentence-by-sentence. Do not generate paid narration until the script is approved.
+`FISH_API_KEY` lives in local gitignored `.env` and encrypted Actions secrets. Default reference is **fb7ec16ca51a45a5a4db881244d7990a** from `config/channels.json`. Adam/ElevenLabs are parked; no silent fallback. Owner authorized scheduled production without separate per-script approval, but research and script QA must pass before synthesis. Generate once per finalized script and preserve native alignment.
 
 Prefer the timestamp streaming endpoint because it returns provider alignment together with
 the audio, avoiding a separate ASR alignment pass:

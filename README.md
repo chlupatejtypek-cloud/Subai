@@ -1,3 +1,5 @@
+> **CURRENT POLICY — v4.0 (2026-09-07):** Read `config/channels.json`, `channel.md`, `AUTOMATION.md` and the calendar first. The owner now selected **Fish Audio `fb7ec16ca51a45a5a4db881244d7990a`**, 3 videos/day, 7 Sep–6 Oct, with automatic publication AFTER QA. Earlier permanent-Adam, new-audition, weekly-cadence and per-script approval instructions below are historical and superseded for this calendar. No secrets in public files. Generation still requires an agent production run; the scheduled publisher never fabricates assets or reviews.
+
 # 🎬 Subai
 
 > **One channel. One research-led stickman psychology studio. Fully run by an AI agent.**
@@ -13,13 +15,13 @@ The agent treats this manual as **inspiration, not 100% strict law**: it follows
 ## ⚡ Golden rules (read first)
 
 1. **"Subai is ready."** — Every fresh session on this repo starts with this exact sentence. Then the agent follows **Step 1**.
-2. **One channel.** This repo is about **Stiles Psychology** only — see [`channel.md`](channel.md). No other channels are managed here.
+2. **Channel registry.** `config/channels.json` holds every managed channel and its connected accounts. Currently only Stiles Psychology is active.
 3. **English, always.** All channel content — ideas, titles, scripts, narration — is **English (en-US)**. Talking *to the owner* happens in whatever language the owner uses.
 4. **Inspiration, not law.** If a step is unclear or conflicts with the owner's request, improvise sensibly — and tell the owner what you did.
 5. **When in doubt, ask.** Guessing about the topic, the story, the source, or money is worse than one short question.
 6. **Research before scripting.** Every psychological mechanism needs a recorded credible source. Never invent statistics, diagnoses, clinical promises or dopamine/neuroscience certainty.
 7. **Secrets never go into git.** This repo is **public**. API keys live in `.env` (root, gitignored) or in GitHub Actions secrets — never in committed files. (Details: [Credentials & secrets](#-credentials--secrets).)
-8. **Go step by step.** Do not jump ahead to the voiceover or to visuals while the manual only asked for a topic.
+8. **Follow the authorized scope.** For the approved 90-video calendar, proceed through research, script, Fish narration, visuals and QA without repeating manual approval questions. For unrelated requests, do not exceed the requested step.
 
 > **🤖 Agents:** before you assume you can push to this repo, read [`AGENT.md`](AGENT.md).
 > It explains how write access actually works here (credentials are handed over per session —

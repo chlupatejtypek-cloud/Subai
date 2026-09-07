@@ -1,0 +1,54 @@
+name: Publish ready calendar videos
+on:
+  schedule:
+    - cron: '17,47 * * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Dry run, verify account, or upload QA-passed ready assets
+        type: choice
+        options: [dry-run, verify-auth, execute]
+        default: dry-run
+permissions:
+  contents: write
+concurrency:
+  group: subai-calendar-publisher
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r automation/requirements.txt
+      - name: Ensure media validation tool
+        run: command -v ffprobe || (sudo apt-get update -qq && sudo apt-get install -y ffmpeg)
+      - name: Validate registry and calendar
+        run: python -m unittest discover -s tests -v
+      - name: Publish or inspect
+        env:
+          YOUTUBE_STILES_CLIENT_ID: ${{ secrets.YOUTUBE_STILES_CLIENT_ID }}
+          YOUTUBE_STILES_CLIENT_SECRET: ${{ secrets.YOUTUBE_STILES_CLIENT_SECRET }}
+          YOUTUBE_STILES_REFRESH_TOKEN: ${{ secrets.YOUTUBE_STILES_REFRESH_TOKEN }}
+          EVENT_NAME: ${{ github.event_name }}
+          MODE: ${{ inputs.mode }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "$MODE" = "verify-auth" ]; then
+            python tools/youtube-publish.py --verify-auth
+          elif [ "$EVENT_NAME" = "schedule" ] || [ "$MODE" = "execute" ]; then
+            python tools/youtube-publish.py --execute --commit-state
+          else
+            python tools/youtube-publish.py
+          fi
+      - name: Calendar summary
+        if: always()
+        run: |
+          python tools/calendar-report.py >> "$GITHUB_STEP_SUMMARY"

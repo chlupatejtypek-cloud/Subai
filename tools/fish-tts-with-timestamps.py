@@ -23,12 +23,19 @@ def main() -> int:
     source.add_argument("--text")
     source.add_argument("--text-file", type=Path)
     parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--reference-id", help="Fish Audio voice/reference model ID")
+    parser.add_argument("--reference-id", help="Explicit override; defaults to the channel registry voice")
+    parser.add_argument("--channel", default="stiles-psychology")
     parser.add_argument("--model", default="s2.1-pro-free")
     parser.add_argument("--format", choices=("opus", "mp3", "wav"), default="opus")
     parser.add_argument("--speed", type=float, default=1.0)
     parser.add_argument("--latency", choices=("normal", "balanced"), default="normal")
     args = parser.parse_args()
+
+    registry = json.loads((Path(__file__).resolve().parents[1] / "config/channels.json").read_text())
+    channel = next((c for c in registry["channels"] if c["id"] == args.channel), None)
+    if channel is None or channel["voice"]["provider"] != "fish_audio":
+        parser.error("Channel not found or not configured for Fish Audio")
+    args.reference_id = args.reference_id or channel["voice"]["reference_id"]
 
     key = os.environ.get("FISH_API_KEY", "").strip()
     if not key:
