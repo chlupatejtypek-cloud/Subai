@@ -92,7 +92,7 @@
         "target_unique_images": null,
         "extra_images_policy": "Supersedes fixed 10+5 request after owner reviewed the silence video. Agent and Agnes generators remain available; no mandatory provider count. Existing 15-image cap is a safety ceiling, NOT a target; record per-production planned/accepted/used counts.",
         "image_planning": "Derive source-image count from researched script beats and timed storyboard, not a fixed generation quota. Reuse the exact scene asset for continuity; use UI/motion to reveal new information. No near-duplicate regenerated scenes.",
-        "motion_graphics": "Hyperframes under evaluation: optional purposeful charts/cards/diagrams, styled to Stiles and synchronized to narration; not yet production-tested."
+        "motion_graphics": "Hyperframes 0.8.31 locally rendered in silence hyperframes-v2 (1080x1920/30fps); use optional purposeful charts/cards/diagrams, styled to Stiles and synchronized to narration. See HYPERFRAMES.md; owner review of first treatment pending."
       },
       "publishing": {
         "enabled": true,

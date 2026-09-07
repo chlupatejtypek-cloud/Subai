@@ -1,0 +1,33 @@
+{
+  "duration": 41.3,
+  "unique_illustrations": 2,
+  "new_image_generations": 0,
+  "reuse": "Exact approved source cafe 01 and study 04, not new variants",
+  "phases": [
+    {
+      "name": "hook",
+      "start": 0,
+      "end": 4.0
+    },
+    {
+      "name": "study and sourced dot plot",
+      "start": 4.0,
+      "end": 16.966666666666665
+    },
+    {
+      "name": "interpretation and caveat",
+      "start": 16.966666666666665,
+      "end": 27.5
+    },
+    {
+      "name": "fact versus guess cards",
+      "start": 27.5,
+      "end": 35.766666666666666
+    },
+    {
+      "name": "same cafe and follow-up",
+      "start": 35.766666666666666,
+      "end": 41.3
+    }
+  ]
+}

@@ -128,7 +128,27 @@
         "action_required": "Explicit future reschedule or item-specific immediate-publication decision",
         "original_slot_retained": true
       },
-      "owner_review": "Owner rejected excessive near-duplicate image changes. Preserve preview but do not publish this edit. Requires editorial revision under VISUAL-EDITORIAL.md."
+      "owner_review": "Original 15-image edit rejected. New Hyperframes revision prepared for owner review; do not publish the rejected original or backdate its missed slot.",
+      "revisions": [
+        {
+          "version": "hyperframes-v2",
+          "title": "A Pause Is Not a Verdict",
+          "status": "awaiting_owner_review",
+          "production_path": "productions/2026-09-07-why-awkward-silence-feels-so-long/hyperframes-v2",
+          "asset_url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788817627/subai/productions/stiles-psychology/2026-09-07-awkward-silence/hyperframes-v2/silence-hyperframes-final.mp4",
+          "asset_sha256": "068b07705935d85a22dbe00dd64e5047e04b4bf6d4490a1a5adc8845d03092f3",
+          "duration_seconds": 41.3,
+          "source_images": 2,
+          "semantic_phases": 5,
+          "renderer": "Hyperframes 0.8.31 + FFmpeg finishing",
+          "voice_provider": "fish_audio",
+          "voice_reference_id": "fb7ec16ca51a45a5a4db881244d7990a",
+          "narration_requests": 1,
+          "youtube_video_id": null,
+          "created_at": "2026-09-07T21:49:58.715916+00:00",
+          "qa_path": "productions/2026-09-07-why-awkward-silence-feels-so-long/hyperframes-v2/qa.md"
+        }
+      ]
     },
     {
       "id": "SP-20260907-3",

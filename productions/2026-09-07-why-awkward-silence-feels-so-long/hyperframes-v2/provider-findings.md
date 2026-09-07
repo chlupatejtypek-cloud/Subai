@@ -1,0 +1,12 @@
+# Provider capability checks
+
+## Fish Audio
+Configured service is api.fish.audio, NOT the similarly named fishaudio.org multi-provider site. Reviewed https://docs.fish.audio/llms.txt and fetched https://docs.fish.audio/api-reference/openapi.json (29 paths; full path list in fish-api-check.json). No dedicated SFX generation or SFX catalogue/search endpoint found in the published official REST schema. Voice model search is not a sound-effect catalogue. No unsupported SFX endpoint was invented, and no speech request pretending to be a whoosh was charged. This is a documented-capability finding, not proof that future/undocumented capabilities cannot exist. Fish is used for one narration request.
+
+## Searchable sound libraries
+Zoom in / zoom out / whoosh search: https://pixabay.com/sound-effects/search/zoom/ and https://pixabay.com/sound-effects/search/zooming/ . These are discovered search results, not downloaded or individually license-audited assets for this render.
+Actually downloaded: Kenney Interface Sounds, https://kenney.nl/assets/interface-sounds . Asset page and included License.txt explicitly identify CC0. Local library /home/user/sfx-library/kenney-interface contains the OGGs. Selected gentle UI cues can be mixed quietly; retain the license and exact source names. Original procedural zoom-in/out whooshes may supplement them, clearly labelled as original synthesis, NOT Fish output.
+
+## Agnes video
+Prior production logs: model 2.5 POST returned HTTP 403 insufficient_user_quota. This was a quota rejection, not demonstrated bad prompting. Model v2.0 produced a video but introduced anatomical/character drift; it failed creative QA rather than the API call. Five still-image requests subsequently succeeded, so image access does not establish video quota.
+Current docs checked: https://wiki.agnes-ai.com/en/docs/agnes-video-v25 and https://agnes-ai.com/en/docs/tokenplan . Video has separate duration quotas/RPM and 2.5 docs list duration-based pricing. Public plan docs use differing 2.5-flash/v2.0 names; do not infer our key's subscription/remaining paid balance from those tables. Need account-side quota/entitlement confirmation to distinguish no paid entitlement from exhausted credits. No subscription purchase, repeated charged probe, or claim of a fixed reset time. This revision uses deterministic Hyperframes motion rather than risky character video generation.

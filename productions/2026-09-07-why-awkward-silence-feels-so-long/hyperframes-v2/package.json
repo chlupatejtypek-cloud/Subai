@@ -1,0 +1,9 @@
+{
+  "name": "stiles-silence-hyperframes",
+  "private": true,
+  "devDependencies": {
+    "hyperframes": "0.8.31",
+    "gsap": "3.15.0",
+    "node": "22.23.2"
+  }
+}
