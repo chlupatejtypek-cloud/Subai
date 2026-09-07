@@ -145,6 +145,27 @@ env:
 Secrets are **write-only** through the API — you can list their names but never read their
 values back. That is why an agent still needs the key pasted in-session for local TTS.
 
+### Cloudinary image/video uploads
+
+Cloudinary is configured for generated assets:
+
+| Setting | Location |
+|---|---|
+| Cloud name | Actions variable `CLOUDINARY_CLOUD_NAME` / local `.env` |
+| API key | Actions variable `CLOUDINARY_API_KEY` / local `.env` |
+| API secret | encrypted Actions secret `CLOUDINARY_API_SECRET` / local gitignored `.env` |
+
+Never commit the API secret. For a local upload, load `.env` and use the signed uploader:
+
+```bash
+set -a; source .env; set +a
+tools/upload-cloudinary.sh IMAGE PUBLIC_ID subai/characters
+```
+
+The uploader prints only non-secret response metadata and the final HTTPS URL. Verify the
+returned URL with HTTP 200 before recording it in a character/production document. The
+canonical Stiles model sheet and public ID live in [`characters/stiles.md`](characters/stiles.md).
+
 ---
 
 ## 5. House rules for agents working here

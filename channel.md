@@ -13,7 +13,14 @@ tts:
     narrator: unset      # ElevenLabs voice_id — Stiles, masculine, warm storyteller (en-US)
     secondary: unset     # ElevenLabs voice_id — Jessie, feminine, expressive (en-US)
     extras: []           # optional extra voices, added per video only with owner approval
-plan_version: "2.0"
+plan_version: "2.2"
+production_mode: "vertical-test"
+test_constraints:
+  canvas: "1080x1920"
+  max_duration_seconds: 40
+  max_generated_images: 10
+  elevenlabs_tts: false
+  captions: "one word at a time; word-aligned; no background box"
 created: 2026-09-07
 updated: 2026-09-07
 ---
@@ -53,11 +60,19 @@ Animated-stickman storytelling channel in English. Simple stick figures act out 
 
 ## 4. Format & length
 
-- **Target:** 6–10 minutes per video.
-- **Default structure:** one main story (~7–9 min) OR a themed set of 3 shorter stories (~8–10 min).
-- **Word budget:** ≈ 1,050–1,500 words for 7–9 min after the ~1.07× speed-up of Step 4 (source narration ≈ 155–165 wpm before tempo).
-- **Always:** English narration + styled captions, chapters in the description, clean 4-second sting intro/outro.
-- **Pacing:** one clear beat every 30–60 s; dialogue in short lines (TTS reads short lines better).
+### Current mode: vertical testing (owner decision, 2026-09-07)
+
+These rules override the older long-form defaults until the owner explicitly ends testing:
+
+- **Canvas:** vertical 9:16, final render 1080×1920 at 30 fps.
+- **Hard duration cap:** **40 seconds**. Aim for 35–40 seconds, never silently exceed 40.
+- **Word budget:** normally 85–110 spoken words; measure the actual narration before rendering.
+- **Visual budget:** at most 10 generated images; usually 6–8 is enough for 40 seconds.
+- **Narration during tests:** **do not call ElevenLabs**. Use a non-ElevenLabs test voice approved for that test, or stop and ask what narration source to use.
+- **Story rhythm:** hook in the first 1–2 seconds, a visual/story change every 3–6 seconds, payoff before second 35, short CTA/question only if time remains.
+- **Character reference:** Stiles must match [`characters/stiles.md`](characters/stiles.md).
+
+The former 6–10 minute 16:9 format is parked for later; do not use it during vertical testing.
 
 ## 5. Cadence
 
@@ -101,7 +116,9 @@ Animated-stickman storytelling channel in English. Simple stick figures act out 
 | **The turn** | ~last third | The reveal — payoff of the title's promise. |
 | **Landing** | last 30 s | Quick recap, one comment question, subscribe CTA. |
 
-## 10. Voice direction (ElevenLabs)
+## 10. Voice direction
+
+> **Vertical test override:** do not generate new ElevenLabs audio during testing. The voice qualities below remain the creative target, but use a non-ElevenLabs test voice selected for the run. Save ElevenLabs credits until the owner ends test mode.
 
 - `NARRATOR` (Stiles): masculine, warm, curious storyteller; slightly amused; never shouty; en-US.
 - `JESSIE`: feminine, expressive, quicker; can do deadpan, skeptic, and "oh no" energy; en-US.
@@ -111,12 +128,12 @@ Animated-stickman storytelling channel in English. Simple stick figures act out 
 
 ## 11. Visual identity
 
-- **Canvas:** 16:9, flat pastel/neutral backgrounds per scene mood; thin black stick figures (Stiles: round head + smile; Jessie: ponytail) with simple, readable poses.
-- **Motion:** subtle — idle bobbing, walk cycles, head turns, zooms on reaction; the story is told by narration + captions, not by fancy animation.
-- **Background:** optional ambient clip (README Step 5) softly darkened/blurred behind mood scenes, or clean flat color — never distracting from the figures.
-- **Captions:** styled, keyword emphasis; speaker-colored labels when needed (Stiles/Jessie).
-- **Thumbnails:** bold stickman moment from the video + ≤ 5 words; consistent palette (e.g. white bg + red/black strokes); honest to the content.
-- **Intro/outro:** ≤ 4 s sting with the tagline; end screen with next-video teaser.
+- **Canvas (test mode):** 9:16 vertical, 1080×1920. Flat pastel/neutral backgrounds; thin black stick figures. Stiles must match [`characters/stiles.md`](characters/stiles.md); Jessie retains her ponytail and equally minimal proportions.
+- **Motion:** subtle — idle bobbing, walk cycles, head turns and slow camera moves. In a ≤40 s test, change the visual beat every 3–6 seconds.
+- **Background:** clean generated scene art is preferred during testing. Ambient third-party footage is optional and must never distract from the figures.
+- **Captions:** exactly **one word visible at a time**, synchronized to measured word-level timestamps from the final audio. Center horizontally with the baseline around **62–66% of frame height** (slightly below center), approximately **48–58 px** at 1080×1920. Use bold white/warm-white type with a restrained dark outline or shadow, but **no black rectangle/background box**. Never estimate word timing from character count; align against the actual audio.
+- **Thumbnails:** bold stickman moment from the video + ≤ 5 words; consistent palette; honest to the content.
+- **Intro/outro:** no separate 4-second sting during ≤40 s tests; the hook starts immediately.
 
 ## 12. Packaging (used from Step 7 onward)
 
@@ -160,3 +177,4 @@ Animated-stickman storytelling channel in English. Simple stick figures act out 
 
 - **2026-09-07** — v2.0: rebuilt around one channel, **StilesGuy** (stickman true-story channel; Stiles + Jessie); two default ElevenLabs voices; steps 4 (voiceover) and 5 (YouTube background via GitHub Actions) added to the pipeline.
 - **2026-09-07** — v2.1: ElevenLabs API key stored in local `.env` (gitignored — repo is public); `elevenlabs: ready`. On-sandbox verification blocked by egress restrictions → confirm via `Test ElevenLabs Key` workflow once it runs on the default branch.
+- **2026-09-07** — v2.2: vertical test mode enabled: ≤40 seconds, ≤10 generated images, no new ElevenLabs TTS during tests, and word-level captions (one word at a time, below center, no background box). Canonical Stiles front/back T-pose stored on Cloudinary and documented in `characters/stiles.md`.
