@@ -182,9 +182,18 @@ python3 tools/agnes-image-to-video.py \
 ```
 
 The API is asynchronous; the tool creates a task, polls by `video_id`, downloads the finished
-MP4 and writes non-secret metadata beside it. Inspect for character morphing, extra limbs,
-text artifacts and unwanted camera cuts. Try at most twice. The Agnes clip replaces only the
-first static segment; its duration must be reflected in the story-driven edit plan.
+MP4 and writes non-secret metadata beside it. Default polling is **15 seconds**—three-second
+polling produced HTTP 429 in a real run. Use `--resume-id VIDEO_ID` after a polling/network
+failure; never create a duplicate generation merely because status retrieval failed.
+
+Default to `agnes-video-2.5`. If it rejects task creation with `insufficient_user_quota`, one
+fallback attempt with `--model agnes-video-v2.0` is allowed; the tool automatically switches
+to its frame-based request format. Inspect the result frame-by-frame for character morphing,
+extra limbs, vanished objects, text artifacts and unwanted camera cuts. Try at most twice total.
+If only a very short prefix passes QC, it may be used as a subtle forward/reverse micro-motion
+loop, but document that honestly; otherwise use the static first-frame fallback. The accepted
+Agnes clip replaces only the first static segment and its duration must be reflected in the
+story-driven edit plan.
 
 ### Arena workspace media cleanup
 

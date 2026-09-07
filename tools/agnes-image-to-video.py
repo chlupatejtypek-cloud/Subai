@@ -77,8 +77,9 @@ def main() -> int:
     parser.add_argument("--seconds", type=int, default=4, choices=range(4, 13), metavar="4..12")
     parser.add_argument("--aspect-ratio", default="9:16")
     parser.add_argument("--model", default="agnes-video-2.5")
-    parser.add_argument("--poll-seconds", type=float, default=3.0)
+    parser.add_argument("--poll-seconds", type=float, default=15.0)
     parser.add_argument("--timeout", type=int, default=1200)
+    parser.add_argument("--resume-id", help="Resume/poll an existing video_id without creating another task")
     args = parser.parse_args()
 
     key = os.environ.get("AGNES_API_KEY", "").strip()
@@ -88,21 +89,43 @@ def main() -> int:
         parser.error("--image-url must be a public HTTPS URL (upload it to Cloudinary first)")
 
     base = os.environ.get("AGNES_API_BASE", "https://apihub.agnes-ai.com/v1").rstrip("/")
-    payload = {
-        "model": args.model,
-        "prompt": args.prompt,
-        "seconds": str(args.seconds),
-        "mode": "keyframe",
-        "size": "720P",
-        "aspect_ratio": args.aspect_ratio,
-        "first_frame": args.image_url,
-        "n": 1,
-    }
-    created = request_json("POST", f"{base}/videos", key, payload)
-    video_id = created.get("video_id") or created.get("id")
-    if not video_id:
-        raise RuntimeError("Agnes create response had no video_id/id: " + json.dumps(created)[:1000])
-    print(f"task_created={video_id}", flush=True)
+    if args.model == "agnes-video-v2.0":
+        # V2.0 uses the older frame-based image-to-video request shape.
+        # 97 follows the required 8n+1 rule and is ~4 seconds at 24 fps.
+        frames = min(441, max(97, args.seconds * 24 + 1))
+        frames = ((frames - 1) // 8) * 8 + 1
+        width, height = (432, 768) if args.aspect_ratio == "9:16" else (1152, 768)
+        payload = {
+            "model": args.model,
+            "prompt": args.prompt,
+            "image": args.image_url,
+            "mode": "ti2vid",
+            "width": width,
+            "height": height,
+            "num_frames": frames,
+            "frame_rate": 24,
+        }
+    else:
+        payload = {
+            "model": args.model,
+            "prompt": args.prompt,
+            "seconds": str(args.seconds),
+            "mode": "keyframe",
+            "size": "720P",
+            "aspect_ratio": args.aspect_ratio,
+            "first_frame": args.image_url,
+            "n": 1,
+        }
+    if args.resume_id:
+        video_id = args.resume_id
+        created = {"video_id": video_id, "status": "processing"}
+        print(f"task_resumed={video_id}", flush=True)
+    else:
+        created = request_json("POST", f"{base}/videos", key, payload)
+        video_id = created.get("video_id") or created.get("id")
+        if not video_id:
+            raise RuntimeError("Agnes create response had no video_id/id: " + json.dumps(created)[:1000])
+        print(f"task_created={video_id}", flush=True)
 
     deadline = time.monotonic() + args.timeout
     latest = created
@@ -114,7 +137,14 @@ def main() -> int:
             raise RuntimeError("Agnes task failed: " + json.dumps(latest)[:1500])
         time.sleep(args.poll_seconds)
         query = urllib.parse.urlencode({"video_id": video_id, "model_name": args.model})
-        latest = request_json("GET", f"https://apihub.agnes-ai.com/agnesapi?{query}", key)
+        try:
+            latest = request_json("GET", f"https://apihub.agnes-ai.com/agnesapi?{query}", key)
+        except RuntimeError as exc:
+            if "HTTP 429" in str(exc):
+                print("status=rate_limited backoff=30s", flush=True)
+                time.sleep(30)
+                continue
+            raise
         progress = latest.get("progress")
         print(f"status={latest.get('status', 'unknown')} progress={progress if progress is not None else '?'}", flush=True)
     else:
