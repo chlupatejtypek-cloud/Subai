@@ -31,8 +31,8 @@ The agent treats this manual as **inspiration, not 100% strict law**: it follows
 ## 🗺️ The pipeline (overview)
 
 > **🧪 Current vertical psychology test mode (v3.0):** until the owner explicitly ends testing, each video is
-> 9:16, no longer than 40 seconds, uses at most 10 generated images, uses Fish Audio rather than
-> ElevenLabs for test narration after voice approval, and shows exactly one word of captions at a time below frame center with no
+> 9:16, no longer than 40 seconds, uses at most 10 generated images, uses one approved ElevenLabs
+> male narrator with Jessica limited to 1–2 purposeful questions, and shows exactly one word of captions at a time below frame center with no
 > background box. The precise settings and canonical Stiles reference are in
 > [`channel.md`](channel.md) and [`characters/stiles.md`](characters/stiles.md). These rules
 > override older long-form examples elsewhere in this playbook.
@@ -44,7 +44,7 @@ Only steps marked ✅ are fully specified. The others are designed together with
 | 1 | **Topic pick** — 5 suggestions + custom option, per the channel plan | ✅ **LIVE** |
 | 2 | **Research & benchmark** — primary evidence plus comparable successful Shorts | ✅ **LIVE** |
 | 3 | **Script** — one mechanism, ≤40 seconds, evidence-informed action | ✅ **LIVE** |
-| 4 | **Voiceover** — Fish Audio Slax with native word timestamps; ElevenLabs parked | ✅ **LIVE** |
+| 4 | **Voiceover** — ElevenLabs, one dominant narrator; Jessica only 1–2 purposeful questions | ✅ **LIVE** |
 | 5 | **Visual plan** — ≤10 generated Stiles scenes mapped to narration beats | ✅ **LIVE** |
 | 6 | **Animation & assembly** — fixed-camera 4 s Agnes hook, moving stills, one-word captions | ✅ **LIVE** |
 | 7 | Packaging — research-honest title, thumbnail and sourced description | 🔜 to design |
@@ -126,7 +126,7 @@ No research dumps, no scripts, no voiceover, no audio, no downloading, no publis
 
 ## Current test-production contract (v3.0)
 
-For psychology Shorts, research and benchmark notes live in `research.md`; dialogue uses approved Fish voices Slax and Paula at speed 1.05 with restrained S2.1 expression tags and provider timestamps. Generate up to 10 rich, layered source scenes and attempt fixed-camera 97-frame Agnes animation where the scene has safe environmental action; only individually passed clips enter the timeline, while failed clips fall back to controlled moving stills. The hook receives the standardized post-production punch zoom. Captions must be rendered from `config/caption-style.json` through `tools/render-word-captions.py`. Add only sparse scene-motivated SFX, upload the 1080×1920 final to Cloudinary, then clean disposable media.
+For psychology Shorts, research and benchmark notes live in `research.md`; one approved ElevenLabs male narrator carries the lesson while Jessica may ask only 1–2 purposeful questions. Generate up to 10 rich, layered **full-bleed** source scenes—never prompt for a caption panel—and validate them with `tools/full-bleed-check.py` before Agnes. Attempt fixed-camera 97-frame Agnes animation where safe; only passed clips enter the timeline. The hook receives the standardized post-production punch zoom. Captions use the locked central preset. Add only sparse scene-motivated SFX and optional low instrumental music with recorded license proof, upload the final to Cloudinary, then clean disposable media.
 
 ## Legacy Step 4 — ElevenLabs multi-voice (parked during testing)
 

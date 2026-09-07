@@ -8,24 +8,20 @@ credentials:
   fish_audio: ready      # API key verified; encrypted Actions secret + local gitignored .env
   youtube: none          # none | pending | connected (future, Step 9)
 tts:
-  provider: elevenlabs   # parked production provider
-  test_provider: fish_audio
-  fish_model: s2.1-pro-free
-  fish_reference_id: c5f56a6cc2ec4fa8920cb4c5889a3fb7  # Slax — calm measured male educational narrator
-  fish_secondary_reference_id: c2623f0c075b4492ac367989aee1576f  # Paula — articulate professional female educator
-  speed: 1.05
-  model: unset           # ElevenLabs model used only after test mode ends
+  provider: elevenlabs
+  fish_audio: parked
+  model: eleven_multilingual_v2
   voices:
-    narrator: unset      # ElevenLabs voice_id — Stiles, masculine, warm storyteller (en-US)
-    secondary: unset     # ElevenLabs voice_id — Jessie, feminine, expressive (en-US)
-    extras: []           # optional extra voices, added per video only with owner approval
-plan_version: "3.1"
+    narrator: unset      # choose/audition one consistent male psychology narrator
+    secondary: cgSgspJ2msm6clMCkdW9  # Jessica — max 1–2 purposeful questions per Short
+    extras: []
+plan_version: "3.2"
 production_mode: "vertical-test"
 test_constraints:
   canvas: "1080x1920"
   max_duration_seconds: 40
   max_generated_images: 10
-  elevenlabs_tts: false
+  elevenlabs_tts: true
   animation: "up to 10 Agnes attempts at 97 frames / ~4 seconds; fixed generated camera; retain passed clips only; post-production punch on hook"
   captions: "one word at a time; word-aligned; 60 px; no background box"
 created: 2026-09-07
@@ -78,9 +74,10 @@ These rules override the older long-form defaults until the owner explicitly end
 - **Visual budget:** at most 10 generated images; usually 6–8 is enough for 40 seconds.
 - **Agnes clips:** generate up to **10 story-specific source scenes** for a ≤40 s test and, when each frame offers a safely isolated environmental action, attempt a **97-frame / ~4 s** Agnes clip. Agnes camera must remain fixed: no generated zoom, pan, dolly or reframing. Preserve Stiles anatomy and scene composition. Inspect first/middle/last frames at minimum; any body morphing, disappearance, major re-composition or camera drift fails QC and that scene falls back to its rich still with controlled editorial motion. Never include a failed clip merely to reach a count.
 - **Hook punch:** the only standard camera-motion exception is post-production, not Agnes generation: start at 100%, punch quickly to about 105% in ~0.23 s, then ease back to 100% by the end of the four-second opening clip.
-- **Narration during tests:** **do not call ElevenLabs**. Use Fish Audio `s2.1-pro-free` at default speed **1.05** with provider timestamps. Default dialogue balance is roughly 65–70% Slax (male explainer) and 30–35% Paula (female viewer question, inner thought or concise counterpoint), avoiding long uninterrupted monologues. Use restrained S2.1 `[bracket]` expression cues—normally one clear cue per sentence and never conflicting stacks.
+- **Narration:** use ElevenLabs. One consistent male narrator carries nearly the entire Short. Jessica may ask **one or at most two purposeful questions** when that genuinely improves the explanation; do not alternate voices sentence by sentence. Conserve credits by approving the script and voice before synthesis, generating each final line once, and changing pacing in the edit rather than regenerating. Fish Audio is parked.
 - **Story rhythm:** hook in the first 1–2 seconds, a visual/story change about every 4 seconds, payoff before second 36, short CTA/question only if time remains.
-- **Sound design:** use Fish expression tags for vocal performance and at most 3–5 restrained scene-motivated SFX (e.g. intro whoosh, phone click, mechanism hit, completion chime). Keep them below dialogue; never add a sound to every word. Fish lists separate cinematic SFX generation as a platform capability, but the current repository client covers TTS only, so do not send SFX prompts to `/v1/tts`.
+- **Sound design:** keep dialogue dominant. Standard opening may use one subtle whoosh synchronized to the punch zoom; add only 1–3 further scene-motivated SFX in a ~40 s Short. Background music is optional, instrumental, low and ducked under speech. Never add a sound to every caption/word. Record source URL, creator, download date and license proof for every stock audio asset.
+- **Audio sourcing:** Pixabay's official public API covers images/videos, not its music/SFX catalog; a Pixabay API key does not automate audio. Pixabay audio may be downloaded manually, but retain its page URL and license certificate and prefer tracks without the Content ID shield. YouTube Audio Library is the preferred low-risk music source for YouTube; Freesound may be considered later for an automatable SFX API.
 - **Character reference:** Stiles must match [`characters/stiles.md`](characters/stiles.md).
 
 The former 6–10 minute 16:9 format is parked for later; do not use it during vertical testing.
@@ -130,18 +127,16 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 
 ## 10. Voice direction
 
-> **Vertical test override:** do not generate new ElevenLabs audio during testing. Use Fish Audio voice **Slax** (`c5f56a6cc2ec4fa8920cb4c5889a3fb7`) with provider-native timestamps unless the owner approves another voice.
-
-- `NARRATOR` (Stiles): masculine, calm, measured educational explainer; warm and curious; never shouty; en-US.
-- `JESSIE`: feminine, expressive, quicker; can do deadpan, skeptic, and "oh no" energy; en-US.
-- Settings ballpark: `stability 0.35–0.5`, `similarity_boost 0.75–0.85` (fine-tuned once per voice, then reused).
-- Chosen voice IDs are recorded in the frontmatter above; extras per video are recorded in the script header.
-- Final pacing: merged audio at `atempo ≈ 1.07` (see README Step 4.4) — scripts must already read at that pace.
+- `NARRATOR` (Stiles): one ElevenLabs male voice, calm, trustworthy, modern educational delivery; warm and curious, never shouty. Choose once by audition and reuse.
+- `JESSICA`: ElevenLabs premade Jessica (`cgSgspJ2msm6clMCkdW9`), used only for one or at most two concise viewer questions—not continuous dialogue.
+- Start with `eleven_multilingual_v2`; record final settings after the narrator audition. Generate only from an approved script.
+- Pace primarily through writing; a small pitch-preserving edit speed-up is allowed after synthesis. Never regenerate completed narration merely to make it faster.
+- Chosen narrator ID and stable settings must remain in frontmatter so later videos sound the same.
 
 ## 11. Visual identity
 
 - **Canvas (test mode):** 9:16 vertical, 1080×1920. Flat pastel/neutral backgrounds; thin black stick figures. Stiles must match [`characters/stiles.md`](characters/stiles.md); Jessie retains her ponytail and equally minimal proportions.
-- **Composition:** premium minimalism must not become emptiness. Fill scenes with relevant foreground, midground and background elements, closer framing, lighting depth, props and character interaction. Reserve only a narrow caption-safe lane; never ask the image model for a large empty caption area or panel.
+- **Composition and full bleed:** premium minimalism must not become emptiness. Fill scenes with relevant foreground, midground and background elements, closer framing, lighting depth, props and character interaction. Every generated source must be **edge-to-edge 9:16 full bleed**: no white/cream margins, matte, border, frame, lower panel or side strip. Never mention a “caption-safe area/lane” in an image prompt—the model repeatedly turned that instruction into a visible white panel. Place captions over the art during editing. Run `tools/full-bleed-check.py` before Cloudinary/Agnes; crop/fix or regenerate any failed source, then inspect the final rendered edges again.
 - **Motion and editing:** apply the standardized intro punch to the first accepted Agnes clip. Other accepted Agnes clips receive no additional camera motion. Every fallback still gets exactly one composition-aware preset: **(A)** slow 3–5% push-in, **(B)** slow 3–5% pull-out, or **(C)** pre-scale to roughly 105–110% and drift gently left-to-right or right-to-left.
 - **Background:** clean generated scene art is preferred during testing. Ambient third-party footage is optional and must never distract from the figures.
 - **Captions:** the only approved style is central preset [`config/caption-style.json`](config/caption-style.json), currently `stiles-word-pop-v1`. Render through `tools/render-word-captions.py`; production scripts must not redefine appearance. It locks DejaVu Sans Bold 60 px, `(540,1230)`, white with selected warm-yellow words, 3 px dark outline, 1 px shadow, no box, uppercase, and pop `78% → 108% → 100%`. Use provider-native Fish timestamps and enforce zero overlaps / exactly one visible word.
@@ -196,3 +191,4 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 - **2026-09-07** — v2.5: clarified final motion language: Agnes hook is 97 frames / ~4 s with a fixed camera and meaningful scene action—no zoom. Editorial motion applies only to subsequent stills via push-in, pull-out, or gentle lateral pan. Fish Audio connected for non-ElevenLabs test narration and provider-native timestamp alignment.
 - **2026-09-07** — v3.0: channel pivoted from Reddit/true-story retellings to research-led everyday psychology. Added evidence and benchmark rules, psychology pillars, an education-not-diagnosis boundary, and approved Fish voice Slax. First test: *Why Procrastination Feels Like Relief*.
 - **2026-09-07** — v3.1: locked subtitle appearance in a central preset; added Paula as a second Fish voice, 1.05 speed and restrained expression tags/SFX. Raised visual target to 10 richer scenes, added a standardized post-production intro punch, and retained only Agnes clips that pass camera/anatomy QC.
+- **2026-09-07** — v3.2: Fish voices parked; ElevenLabs restored as production TTS with one dominant male narrator and Jessica limited to 1–2 purposeful questions. Added mandatory full-bleed image validation, banned prompt language that creates caption panels, and defined restrained music/SFX sourcing and licensing rules.

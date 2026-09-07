@@ -168,9 +168,7 @@ canonical Stiles model sheet and public ID live in [`characters/stiles.md`](char
 
 ### Fish Audio test narration
 
-`FISH_API_KEY` is stored in local gitignored `.env` and the encrypted Actions secret of the
-same name. Authentication was verified against `https://api.fish.audio`. During vertical test
-mode, use Fish instead of ElevenLabs. Approved defaults are recorded in `channel.md`: Slax for the male explainer, Paula for the female counterpoint, and speed 1.05.
+`FISH_API_KEY` remains stored in local gitignored `.env` and the encrypted Actions secret, but Fish narration is **parked** after voice-quality testing. Current productions use ElevenLabs: one approved male narrator carries almost all speech, and premade Jessica (`cgSgspJ2msm6clMCkdW9`) may ask only 1–2 purposeful questions. Do not alternate speakers sentence-by-sentence. Do not generate paid narration until the script and narrator audition are approved.
 
 Prefer the timestamp streaming endpoint because it returns provider alignment together with
 the audio, avoiding a separate ASR alignment pass:
@@ -189,8 +187,7 @@ The tool writes `narration.opus.timestamps.json`. Fish S2.1 supports `[bracket]`
 
 ### Agnes AI scene animation
 
-During vertical testing, up to 10 story-specific source scenes may be attempted as Agnes clips when each has a meaningful safely isolated environmental action. The source images must first have public Cloudinary HTTPS URLs. `AGNES_API_KEY` lives
-only in local `.env` or the encrypted Actions secret of the same name—never in git.
+During vertical testing, create up to 10 rich story-specific source scenes. Every image must be edge-to-edge 9:16 full bleed: no white/cream border, side strip, matte, frame or lower panel. Never ask the image model for a “caption-safe area/lane”; that wording repeatedly created visible white panels. Run `tools/full-bleed-check.py IMAGE` before upload, then deterministically fix/crop or regenerate failures. Only then may a scene be attempted as an Agnes clip when it has a meaningful safely isolated environmental action. Source images must have public Cloudinary HTTPS URLs. `AGNES_API_KEY` lives only in local `.env` or the encrypted Actions secret—never in git.
 
 For each attempted scene, default to Agnes Video 2.5; use the documented fallback below when required.
 
