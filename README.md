@@ -126,7 +126,7 @@ No research dumps, no scripts, no voiceover, no audio, no downloading, no publis
 
 ## Current test-production contract (v3.0)
 
-For psychology Shorts, research and benchmark notes live in `research.md`; one approved ElevenLabs male narrator carries the lesson while Jessica may ask only 1–2 purposeful questions. Generate up to 10 rich, layered **full-bleed** source scenes—never prompt for a caption panel—and validate them with `tools/full-bleed-check.py` before Agnes. Attempt fixed-camera 97-frame Agnes animation where safe; only passed clips enter the timeline. The hook receives the standardized post-production punch zoom. Captions use the locked central preset. Add only sparse scene-motivated SFX and optional low instrumental music with recorded license proof, upload the final to Cloudinary, then clean disposable media.
+For psychology Shorts, research and benchmark notes live in `research.md`; ElevenLabs **Adam** is the permanent main narrator while Jessica is optional and may ask only 1–2 purposeful questions. Generate up to 10 rich, layered **full-bleed** source scenes—never prompt for a caption panel—and validate them with `tools/full-bleed-check.py` before Agnes. Attempt fixed-camera 97-frame Agnes animation where safe; only passed clips enter the timeline. The hook receives the standardized post-production punch zoom. Captions use the locked central preset. Current audio design is SFX-only: intro whoosh plus at most 1–3 subtle motivated effects, with no continuous background music. Upload the final to Cloudinary, then clean disposable media.
 
 ## Legacy Step 4 — ElevenLabs multi-voice (parked during testing)
 

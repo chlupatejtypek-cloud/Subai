@@ -12,10 +12,12 @@ tts:
   fish_audio: parked
   model: eleven_multilingual_v2
   voices:
-    narrator: unset      # choose/audition one consistent male psychology narrator
-    secondary: cgSgspJ2msm6clMCkdW9  # Jessica — max 1–2 purposeful questions per Short
+    narrator: pNInz6obpgDQGcFmaJgB  # Adam — permanent main voice
+    secondary: cgSgspJ2msm6clMCkdW9  # Jessica — optional, max 1–2 purposeful questions
     extras: []
-plan_version: "3.2"
+  background_music: false
+  sfx: "intro whoosh plus 1–3 subtle motivated effects"
+plan_version: "3.3"
 production_mode: "vertical-test"
 test_constraints:
   canvas: "1080x1920"
@@ -76,7 +78,7 @@ These rules override the older long-form defaults until the owner explicitly end
 - **Hook punch:** the only standard camera-motion exception is post-production, not Agnes generation: start at 100%, punch quickly to about 105% in ~0.23 s, then ease back to 100% by the end of the four-second opening clip.
 - **Narration:** use ElevenLabs. One consistent male narrator carries nearly the entire Short. Jessica may ask **one or at most two purposeful questions** when that genuinely improves the explanation; do not alternate voices sentence by sentence. Conserve credits by approving the script and voice before synthesis, generating each final line once, and changing pacing in the edit rather than regenerating. Fish Audio is parked.
 - **Story rhythm:** hook in the first 1–2 seconds, a visual/story change about every 4 seconds, payoff before second 36, short CTA/question only if time remains.
-- **Sound design:** keep dialogue dominant. Standard opening may use one subtle whoosh synchronized to the punch zoom; add only 1–3 further scene-motivated SFX in a ~40 s Short. Background music is optional, instrumental, low and ducked under speech. Never add a sound to every caption/word. Record source URL, creator, download date and license proof for every stock audio asset.
+- **Sound design:** current owner choice is **SFX only, no continuous background music**. Keep dialogue dominant. Standard opening may use one subtle whoosh synchronized to the punch zoom; add only 1–3 further scene-motivated SFX in a ~40 s Short. Never add a sound to every caption/word. Record source URL, creator, download date and license proof for every stock audio asset.
 - **Audio sourcing:** Pixabay's official public API covers images/videos, not its music/SFX catalog; a Pixabay API key does not automate audio. Pixabay audio may be downloaded manually, but retain its page URL and license certificate and prefer tracks without the Content ID shield. YouTube Audio Library is the preferred low-risk music source for YouTube; Freesound may be considered later for an automatable SFX API.
 - **Character reference:** Stiles must match [`characters/stiles.md`](characters/stiles.md).
 
@@ -127,8 +129,8 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 
 ## 10. Voice direction
 
-- `NARRATOR` (Stiles): one ElevenLabs male voice, calm, trustworthy, modern educational delivery; warm and curious, never shouty. Choose once by audition and reuse.
-- `JESSICA`: ElevenLabs premade Jessica (`cgSgspJ2msm6clMCkdW9`), used only for one or at most two concise viewer questions—not continuous dialogue.
+- `NARRATOR` (Stiles): ElevenLabs premade **Adam** (`pNInz6obpgDQGcFmaJgB`) is the permanent main voice. Reuse it in every Short unless the owner explicitly changes it.
+- `JESSICA`: ElevenLabs premade Jessica (`cgSgspJ2msm6clMCkdW9`) is optional and used only for one or at most two concise viewer questions—not continuous dialogue and not necessarily every video.
 - Start with `eleven_multilingual_v2`; record final settings after the narrator audition. Generate only from an approved script.
 - Pace primarily through writing; a small pitch-preserving edit speed-up is allowed after synthesis. Never regenerate completed narration merely to make it faster.
 - Chosen narrator ID and stable settings must remain in frontmatter so later videos sound the same.
@@ -192,3 +194,4 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 - **2026-09-07** — v3.0: channel pivoted from Reddit/true-story retellings to research-led everyday psychology. Added evidence and benchmark rules, psychology pillars, an education-not-diagnosis boundary, and approved Fish voice Slax. First test: *Why Procrastination Feels Like Relief*.
 - **2026-09-07** — v3.1: locked subtitle appearance in a central preset; added Paula as a second Fish voice, 1.05 speed and restrained expression tags/SFX. Raised visual target to 10 richer scenes, added a standardized post-production intro punch, and retained only Agnes clips that pass camera/anatomy QC.
 - **2026-09-07** — v3.2: Fish voices parked; ElevenLabs restored as production TTS with one dominant male narrator and Jessica limited to 1–2 purposeful questions. Added mandatory full-bleed image validation, banned prompt language that creates caption panels, and defined restrained music/SFX sourcing and licensing rules.
+- **2026-09-07** — v3.3: restored the owner's previously selected permanent narrator Adam (`pNInz6obpgDQGcFmaJgB`); Jessica remains optional. Background music is off for now; use only a restrained intro whoosh and 1–3 motivated SFX.

@@ -168,7 +168,7 @@ canonical Stiles model sheet and public ID live in [`characters/stiles.md`](char
 
 ### Fish Audio test narration
 
-`FISH_API_KEY` remains stored in local gitignored `.env` and the encrypted Actions secret, but Fish narration is **parked** after voice-quality testing. Current productions use ElevenLabs: one approved male narrator carries almost all speech, and premade Jessica (`cgSgspJ2msm6clMCkdW9`) may ask only 1–2 purposeful questions. Do not alternate speakers sentence-by-sentence. Do not generate paid narration until the script and narrator audition are approved.
+`FISH_API_KEY` remains stored in local gitignored `.env` and the encrypted Actions secret, but Fish narration is **parked** after voice-quality testing. Current productions use ElevenLabs. **Adam** (`pNInz6obpgDQGcFmaJgB`) is the permanent main narrator and carries almost all speech. Premade Jessica (`cgSgspJ2msm6clMCkdW9`) is optional and may ask only 1–2 purposeful questions. Do not alternate speakers sentence-by-sentence. Do not generate paid narration until the script is approved.
 
 Prefer the timestamp streaming endpoint because it returns provider alignment together with
 the audio, avoiding a separate ASR alignment pass:
