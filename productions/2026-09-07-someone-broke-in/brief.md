@@ -71,11 +71,15 @@ Mounting unease → claustrophobic suspense → relief with a lasting chill.
 - Maximum 10 generated stickman scene images, animated with camera motion and caption emphasis
 - Likely background moods: dark suburban exterior, dim hallway, attic/roof ambience
 
-## Pipeline gate
+## Pipeline status
 
 - [x] Step 1 — topic chosen and brief recorded
-- [ ] Step 2 — research and outline contract must be designed/approved
-- [ ] Step 3 — speaker-tagged script must be written and approved
-- [ ] Step 4 — voice IDs must be selected and voiceover generated
-- [ ] Step 5 — rights-safe background must be selected and fetched
-- [ ] Steps 6–10 — not implemented in the repository yet
+- [x] Step 2 — complete source recovered by exact post ID; outline and accuracy guardrails recorded
+- [x] Step 3 — 452-word speaker-tagged script written and owner-approved
+- [x] Step 4 — Adam voiceover generated, merged, normalized, and paced at 1.07×
+- [x] Step 5 — intentionally replaced for this production: generated scene art instead of third-party background footage
+- [x] Step 6 — ten consistent vertical stickman scenes generated and animated in the edit
+- [x] Step 7 — title, description, source attribution, hashtags, and cover direction recorded
+- [x] Step 8 — 1080×1920 final assembled with burned captions and QC completed
+- [ ] Step 9 — YouTube upload not attempted; credentials are not configured
+- [ ] Step 10 — analytics begins after publication

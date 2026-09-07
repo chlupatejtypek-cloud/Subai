@@ -1,5 +1,5 @@
 ---
-status: "draft-awaiting-owner-approval"
+status: "owner-approved"
 working_title: "Someone Broke In and Searched for Me"
 format: "vertical 9:16"
 target_duration: "2:30-3:00"
