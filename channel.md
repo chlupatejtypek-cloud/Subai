@@ -1,6 +1,6 @@
 ---
 id: stilesguy
-name: "StilesGuy"
+name: "Stiles Psychology"
 status: active
 content_language: en-US
 credentials:
@@ -11,13 +11,13 @@ tts:
   provider: elevenlabs   # parked production provider
   test_provider: fish_audio
   fish_model: s2.1-pro-free
-  fish_reference_id: unset
+  fish_reference_id: c5f56a6cc2ec4fa8920cb4c5889a3fb7  # Slax — calm measured male educational narrator
   model: unset           # ElevenLabs model used only after test mode ends
   voices:
     narrator: unset      # ElevenLabs voice_id — Stiles, masculine, warm storyteller (en-US)
     secondary: unset     # ElevenLabs voice_id — Jessie, feminine, expressive (en-US)
     extras: []           # optional extra voices, added per video only with owner approval
-plan_version: "2.5"
+plan_version: "3.0"
 production_mode: "vertical-test"
 test_constraints:
   canvas: "1080x1920"
@@ -30,11 +30,11 @@ created: 2026-09-07
 updated: 2026-09-07
 ---
 
-# StilesGuy
+# Stiles Psychology
 
-> **Tagline:** *Stick figures. True stories. Plot twists.*
+> **Tagline:** *Tiny figures. Big psychology.*
 
-Animated-stickman storytelling channel in English. Simple stick figures act out **real, wild true-life stories** — the kind people tell on Reddit and never shut up about. One main story (or a short themed set) per video, told by **Stiles** with his sidekick **Jessie**.
+Research-led English psychology channel using premium minimalist stick-figure stories to explain why everyday minds behave the way they do. Each short opens with a relatable psychological tension, visualizes the mechanism through **Stiles**, and lands on one evidence-informed action viewers can try. Reddit-story sourcing is retired as the channel's focus.
 
 ---
 
@@ -50,17 +50,18 @@ Animated-stickman storytelling channel in English. Simple stick figures act out 
 
 ## 2. Purpose & promise
 
-- Retell real, fascinating stories so a viewer **feels the twist** ("no way", "deserved", "oh no") instead of just hearing it.
-- Make "boring" true stories cinematic: setup → doubt → twist → payoff.
-- Build a library of evergreen story videos that compound on browse and suggested feeds.
+- Turn credible psychology research into memorable, visual explanations of everyday behavior.
+- Start with a relatable surprise, explain one mechanism without jargon inflation, and give one realistic action.
+- Build an evergreen library around attention, habits, emotions, relationships and cognitive biases.
+- Educate rather than diagnose. Avoid fake neuroscience, deterministic body-language claims, mental-health labeling and individualized treatment advice.
 
 ## 3. Audience
 
 | Dimension | Value |
 |---|---|
 | Geography | Global English-speaking (US/UK/CA/AU dominant) |
-| Age | 16–34 core (plus anyone who loves Reddit storytime) |
-| Mindset | Browsers who love storytime channels, "plot twist" compilations, AskReddit videos, satisfying justice content |
+| Age | 16–34 core |
+| Mindset | Curious viewers who want evidence-informed explanations of procrastination, attention, habits, emotions, relationships and thinking errors |
 | Consumption | Mobile-heavy, suggested-feed heavy, often binged; sound on |
 
 ## 4. Format & length
@@ -88,45 +89,46 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 
 | Pillar | What it covers | Share |
 |---|---|---|
-| **Reddit Gold** | The best true-life threads (AskReddit "what's the most insane thing…", r/oddlyspecific stories) — one great thread retold, or a themed set | ~35 % |
-| **Plot Twists** | Stories with a reveal that flips everything (owner stories or public threads) | ~30 % |
-| **Wild Encounters** | Chance meetings, strangers, "only in real life" moments, mildly creepy-but-true | ~20 % |
-| **Karma & Comebacks** | Satisfying justice / instant-comeback stories | ~15 % |
+| **Everyday Mind** | Procrastination, motivation, attention, memory and decision-making | ~35 % |
+| **Emotions & Self-Regulation** | Avoidance, anxiety mechanisms, rumination, self-compassion and coping | ~25 % |
+| **Social Psychology** | Attachment, boundaries, persuasion, conformity and relationship patterns | ~25 % |
+| **Biases & Experiments** | Cognitive biases and classic findings, with limitations and replication context | ~15 % |
 
-## 7. Topic recipe (how the 5 ideas are generated)
+## 7. Topic and research recipe
 
-- **Mix pillars** — five offers never come from one pillar (e.g. 2× Reddit Gold, 1× Plot Twists, 1× Wild Encounters, 1× Karma).
-- **Concrete beats vague** — *"The roommate who wasn't real"* yes · *"Creepy stories"* no.
-- **Real & linkable** — the story must trace to a public thread or the owner; the offer names the source type.
-- **One emotion per idea** — name it in the one-liner (twist / chill / justice / laughter).
-- **Evergreen default**; trends only if the story itself is timeless.
-- **Banned:** clearly fabricated "and everyone clapped" tier stories, doxxing or identifying details, stories about real minors in sensitive contexts, hateful or graphic content, anything needing gore to tell.
-- **Honesty rule:** real Reddit stories are retold as *"shared by a Reddit user"*, never as verified news or the agent's own experience.
+- **Mix pillars** — five offers span at least three psychology pillars.
+- **Concrete beats vague** — *"Why procrastination feels like relief"* yes · *"Psychology facts"* no.
+- **Research before scripting** — use at least one primary or peer-reviewed source plus an accessible corroborating source. Record links and the claim each supports.
+- **Benchmark responsibly** — inspect current successful Shorts on the same question; borrow pacing principles and audience framing, never wording, footage or distinctive creative expression.
+- **One mechanism per short** — do not compress multiple theories into a false universal explanation.
+- **Useful ending** — offer one small evidence-informed action, with appropriate uncertainty.
+- **Banned:** fake dopamine claims, diagnosis-by-listicle, manipulative “dark psychology tricks,” deterministic body-language claims, stigma, individualized medical advice and sensationalized experiments stripped of limitations.
 
 ## 8. Script rules (feeds Step 4 voiceover)
 
-- English (en-US), conversational, present/past mix like spoken storytelling.
-- Speaker tags from the contract in README Step 4.1: `NARRATOR:`, `JESSIE:`, `EXTRA-*:` only when declared and approved.
-- **Dialogue in short lines** (≤ ~25 words); narration lines ≤ ~45 words — better TTS prosody and easier scene mapping.
-- Mark scene/mood breaks with `## Scene:` headings (used by Step 6 animation, ignored by Step 4 audio).
-- No filler ("um", "in this video we will…"), no false drama, no emoji in speech.
-- Every story beat earns its place: setup → doubt → twist → payoff.
+- English (en-US), conversational and precise.
+- Default to one calm narrator. Add dialogue or a second voice only when it materially improves the explanation.
+- Keep narration lines short enough for natural TTS and clear scene mapping.
+- Open with a surprising but defensible reframe in the first sentence; explain the causal chain visually; end with one concrete action.
+- No filler, false certainty, invented statistics, fake clinical authority, jargon dumps or emoji in speech.
+- Qualify claims when evidence is correlational, mixed, population-specific or preliminary.
 
-## 9. Story structure template (one main story)
+## 9. Vertical psychology structure
 
 | Beat | Approx. | What happens |
 |---|---|---|
-| **Cold open** | 0:00–0:35 | Start at the twist/teaser ("The apartment had one rule: never open the closet."). |
-| **Meet the cast** | ~0:35–1:30 | Set the scene; Stiles introduces the ordinary situation. |
-| **Rising weirdness** | middle | Small strange things; Jessie's asides raise the doubt ("So… you're sure about that?"). |
-| **The turn** | ~last third | The reveal — payoff of the title's promise. |
-| **Landing** | last 30 s | Quick recap, one comment question, subscribe CTA. |
+| **Hook** | 0–4 s | Relatable contradiction or surprising reframe, carried by the Agnes action shot. |
+| **Experience** | 4–12 s | Show the familiar situation and emotion without diagnosing the viewer. |
+| **Mechanism** | 12–24 s | Explain one research-grounded psychological loop in plain language. |
+| **Cost/reframe** | 24–29 s | Show why the short-term response persists or what it costs. |
+| **Action** | 29–38 s | Give one specific, small step tied directly to the mechanism. |
+| **Landing** | optional final 2 s | Memorable final line; CTA only when it does not crowd the lesson. |
 
 ## 10. Voice direction
 
-> **Vertical test override:** do not generate new ElevenLabs audio during testing. The voice qualities below remain the creative target, but use a non-ElevenLabs test voice selected for the run. Save ElevenLabs credits until the owner ends test mode.
+> **Vertical test override:** do not generate new ElevenLabs audio during testing. Use Fish Audio voice **Slax** (`c5f56a6cc2ec4fa8920cb4c5889a3fb7`) with provider-native timestamps unless the owner approves another voice.
 
-- `NARRATOR` (Stiles): masculine, warm, curious storyteller; slightly amused; never shouty; en-US.
+- `NARRATOR` (Stiles): masculine, calm, measured educational explainer; warm and curious; never shouty; en-US.
 - `JESSIE`: feminine, expressive, quicker; can do deadpan, skeptic, and "oh no" energy; en-US.
 - Settings ballpark: `stability 0.35–0.5`, `similarity_boost 0.75–0.85` (fine-tuned once per voice, then reused).
 - Chosen voice IDs are recorded in the frontmatter above; extras per video are recorded in the script header.
@@ -143,17 +145,17 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 
 ## 12. Packaging (used from Step 7 onward)
 
-- Titles English, ≤ 60 chars, twist-led but not lying ("The Roommate Who Wasn't Real" ✓, "He Ruined My Life (GONE WRONG)" ✗).
-- Description: 1–2 line hook → chapters → source link(s) → one comment question.
-- No keyword stuffing; honest thumbnail.
+- Titles English, ≤60 characters, curiosity-led but scientifically honest ("Why Procrastination Feels Like Relief" ✓, "This Brain Hack Cures Laziness" ✗).
+- Description: one-line hook → concise educational context → research source links → general-education disclaimer when relevant.
+- No keyword stuffing, clinical promises or misleading brain imagery; thumbnail must represent the actual mechanism.
 
 ## 13. Quality checklist (every video before approval)
 
-- [ ] Story is real + linkable or owner-provided; anonymity kept; source recorded.
-- [ ] Speaker tags parse cleanly; dialogue lines short enough for good TTS.
-- [ ] No banned topics; nothing presented as verified when it isn't.
-- [ ] English correct (US spelling); script reads aloud naturally at final tempo.
-- [ ] Voiceover: all lines present, ordered, one merged file, tempo 1.05–1.12, duration in target range.
+- [ ] Every factual mechanism is supported by recorded research; no source says more than it actually found.
+- [ ] Benchmark inspiration is documented without copying wording or creative assets.
+- [ ] No diagnosis, fake neuroscience, invented statistic, clinical promise or individualized treatment advice.
+- [ ] English correct (US spelling); script reads naturally and remains under 40 seconds.
+- [ ] Fish voiceover contains all lines; native word timestamps are preserved and final loudness is suitable.
 - [ ] Background clips rights-safe, subtle, source noted (when used).
 - [ ] Thumbnail/title/description consistent and honest; YouTube policy safe for general audience.
 
@@ -161,11 +163,11 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 
 | ✅ Do | ❌ Don't |
 |---|---|
-| Tell the story with a clear twist/payoff | Drone, pad runtime, or add fake drama |
-| Keep real stories real + anonymous + sourced | Present unverified posts as news/facts |
-| Short spoken lines, natural dialogue | Run-on 60-word TTS paragraphs |
-| Keep the same two voices + stickman look | Change narrator/design every video |
-| Use backgrounds subtly (Step 5) | Copy a clip as the video's main content |
+| Explain one mechanism with a clear payoff | Cram in unrelated psychology facts |
+| Research claims and preserve uncertainty | Present pop-psychology claims as settled science |
+| Use short spoken lines and visual causal chains | Read an abstract or jargon list aloud |
+| Keep the same narrator and Stiles look | Change voice/design every video |
+| Learn pacing from benchmarks | Copy wording, footage, thumbnails or signature expression |
 | Stay in English (en-US) | Mix languages in titles/scripts |
 
 ## 15. KPIs & iteration (used from Step 10 onward)
@@ -177,7 +179,7 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 
 ---
 
-*Plan v2.0 — single-channel stickman story studio. Changes bump `plan_version`.*
+*Plan v3.0 — single-channel research-led stickman psychology studio. Changes bump `plan_version`.*
 
 ## Changelog
 
@@ -187,3 +189,4 @@ The former 6–10 minute 16:9 format is parked for later; do not use it during v
 - **2026-09-07** — v2.3: captions increased from 54 px to 60 px. Future tests animate the first hook image with Agnes image-to-video, using a Cloudinary first-frame URL and falling back to the static frame after two failures.
 - **2026-09-07** — v2.4: Agnes prompt experiment used a 49-frame locked-storyboard clip to reduce morphing; this was useful for diagnosis but is superseded by v2.5.
 - **2026-09-07** — v2.5: clarified final motion language: Agnes hook is 97 frames / ~4 s with a fixed camera and meaningful scene action—no zoom. Editorial motion applies only to subsequent stills via push-in, pull-out, or gentle lateral pan. Fish Audio connected for non-ElevenLabs test narration and provider-native timestamp alignment.
+- **2026-09-07** — v3.0: channel pivoted from Reddit/true-story retellings to research-led everyday psychology. Added evidence and benchmark rules, psychology pillars, an education-not-diagnosis boundary, and approved Fish voice Slax. First test: *Why Procrastination Feels Like Relief*.

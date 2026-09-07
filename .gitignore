@@ -15,6 +15,8 @@ productions/**/audio/
 productions/**/background/
 productions/**/visuals/
 productions/**/final/
+productions/**/output/
+productions/**/qc/
 
 # OS junk
 .DS_Store

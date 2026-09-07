@@ -1,10 +1,10 @@
 # 🎬 Subai
 
-> **One channel. One stickman story studio. Fully run by an AI agent.**
+> **One channel. One research-led stickman psychology studio. Fully run by an AI agent.**
 
-Subai is the playbook for **StilesGuy** — a faceless, English-language YouTube channel where **stick figures tell real, wild true-life stories** (Reddit-thread gold, plot twists, wild encounters, satisfying comebacks). The star stickman is **Stiles**; his sidekick is **Jessie**.
+Subai is the playbook for **Stiles Psychology** — a faceless English-language YouTube channel where premium minimalist stick figures explain evidence-informed everyday psychology. **Stiles** visualizes one relatable mechanism per Short and ends with one realistic action viewers can try.
 
-This repository is the instruction manual the agent reads when it is dropped into a session. It walks the agent through the complete automation — from picking a video topic, through the script and the AI voiceover (ElevenLabs, multiple voices), all the way to grabbing background footage and (in future steps) the final animated video.
+This repository is the instruction manual the agent reads when it is dropped into a session. It covers topic research, benchmark analysis, an English script, Fish Audio narration with native timestamps, generated Stiles scenes, a fixed-camera Agnes hook, moving stills, one-word captions, quality control and durable Cloudinary delivery.
 
 The agent treats this manual as **inspiration, not 100% strict law**: it follows it, but when reality conflicts with it, it adapts, tells the owner what it changed, and keeps going.
 
@@ -13,11 +13,11 @@ The agent treats this manual as **inspiration, not 100% strict law**: it follows
 ## ⚡ Golden rules (read first)
 
 1. **"Subai is ready."** — Every fresh session on this repo starts with this exact sentence. Then the agent follows **Step 1**.
-2. **One channel.** This repo is about **StilesGuy** only — see [`channel.md`](channel.md). No other channels are managed here.
+2. **One channel.** This repo is about **Stiles Psychology** only — see [`channel.md`](channel.md). No other channels are managed here.
 3. **English, always.** All channel content — ideas, titles, scripts, narration — is **English (en-US)**. Talking *to the owner* happens in whatever language the owner uses.
 4. **Inspiration, not law.** If a step is unclear or conflicts with the owner's request, improvise sensibly — and tell the owner what you did.
 5. **When in doubt, ask.** Guessing about the topic, the story, the source, or money is worse than one short question.
-6. **Never invent.** Real-story channel: facts, stories, quotes and sources must be real. Adapted Reddit stories stay anonymous, keep their source link, and are never presented as "verified news".
+6. **Research before scripting.** Every psychological mechanism needs a recorded credible source. Never invent statistics, diagnoses, clinical promises or dopamine/neuroscience certainty.
 7. **Secrets never go into git.** This repo is **public**. API keys live in `.env` (root, gitignored) or in GitHub Actions secrets — never in committed files. (Details: [Credentials & secrets](#-credentials--secrets).)
 8. **Go step by step.** Do not jump ahead to the voiceover or to visuals while the manual only asked for a topic.
 
@@ -30,7 +30,7 @@ The agent treats this manual as **inspiration, not 100% strict law**: it follows
 
 ## 🗺️ The pipeline (overview)
 
-> **🧪 Current vertical test mode (v2.2):** until the owner explicitly ends testing, each video is
+> **🧪 Current vertical psychology test mode (v3.0):** until the owner explicitly ends testing, each video is
 > 9:16, no longer than 40 seconds, uses at most 10 generated images, uses Fish Audio rather than
 > ElevenLabs for test narration after voice approval, and shows exactly one word of captions at a time below frame center with no
 > background box. The precise settings and canonical Stiles reference are in
@@ -42,13 +42,13 @@ Only steps marked ✅ are fully specified. The others are designed together with
 | # | Step | Status |
 |---|------|--------|
 | 1 | **Topic pick** — 5 suggestions + custom option, per the channel plan | ✅ **LIVE** |
-| 2 | Research & outline (source story → brief) | 🔜 next to design |
-| 3 | Script — speaker-tagged, ready for voices | 🔜 next to design (output contract defined below) |
-| 4 | **Voiceover** — ElevenLabs, multi-voice, merged into one audio, slightly sped up | ✅ **LIVE** |
-| 5 | **Background footage** — YouTube clips pulled via GitHub Actions | ✅ **LIVE** |
-| 6 | Animation & visuals — Stiles & Jessie stick figures | 🔜 to design |
-| 7 | Packaging — title, thumbnail, description | 🔜 to design |
-| 8 | Assembly, review & owner approval | 🔜 to design |
+| 2 | **Research & benchmark** — primary evidence plus comparable successful Shorts | ✅ **LIVE** |
+| 3 | **Script** — one mechanism, ≤40 seconds, evidence-informed action | ✅ **LIVE** |
+| 4 | **Voiceover** — Fish Audio Slax with native word timestamps; ElevenLabs parked | ✅ **LIVE** |
+| 5 | **Visual plan** — ≤10 generated Stiles scenes mapped to narration beats | ✅ **LIVE** |
+| 6 | **Animation & assembly** — fixed-camera 4 s Agnes hook, moving stills, one-word captions | ✅ **LIVE** |
+| 7 | Packaging — research-honest title, thumbnail and sourced description | 🔜 to design |
+| 8 | Review, Cloudinary delivery & owner approval | ✅ **LIVE** |
 | 9 | Publish to YouTube | 🔜 to design |
 | 10 | Analytics & iteration | 🔜 to design |
 
@@ -61,7 +61,7 @@ Only steps marked ✅ are fully specified. The others are designed together with
 | Path | What it is |
 |------|------------|
 | `README.md` | This playbook |
-| `channel.md` | The single channel plan — **StilesGuy** (identity, pillars, voices, rules) |
+| `channel.md` | The single channel plan — **Stiles Psychology** (identity, research rules, pillars, voice, visual rules) |
 | `productions/` | One folder per video (scripts + generated audio/background) — see [`productions/README.md`](productions/README.md) |
 | `.github/workflows/fetch-background.yml` | GitHub Actions job that downloads background clips from YouTube (yt-dlp) |
 | `.github/workflows/test-elevenlabs.yml` | One-click key check + test TTS (key passed as a run input, never stored) |
@@ -81,35 +81,35 @@ The agent's first words in a fresh session are exactly:
 ### 1.1 · Read the plan
 
 1. Read [`channel.md`](channel.md) — the whole plan (identity, pillars, voices, rules). This is the owner's current intent; if it looks stale, say so in one line.
-2. Tell the owner in 2–3 sentences: channel = **StilesGuy**, videos = English animated stickman stories, and that all output will be in English.
+2. Tell the owner in 2–3 sentences: channel = **Stiles Psychology**, videos = English research-led animated psychology Shorts, and that all channel output will be in English.
 
 ### 1.2 · Topic trigger
 
-- **Owner gave a topic/story/source** (a YouTube comment, "make a video about X", a Reddit thread link…): treat it as chosen, restate it as a crisp English working title + angle, and finish Step 1.
+- **Owner gave a psychology topic or question**: treat it as chosen, restate it as a crisp English working title + mechanism angle, then research before scripting.
 - **Owner gave nothing** (just "go" / "make a video"): make the **topic offer** below for the channel's default pillars.
 - **Owner asks for ideas later**, mid-session: same topic offer, refreshed.
 
 ### 1.3 · The topic offer — 5 suggestions + 1 custom
 
-The agent proposes **exactly five topic ideas** following the topic recipe and pillars in [`channel.md`](channel.md). Each idea must:
+The agent proposes **exactly five psychology topic ideas** following the research recipe and pillars in [`channel.md`](channel.md). Each idea must:
 
-- be **specific and concrete** (one story / one thread / one "can you believe this happened" angle),
-- support the channel's target length (6–10 min),
-- be **real** — a public, linkable story thread or an owner-provided story,
-- have **one clear takeaway or emotion** (twist, laugh, chill, "justice!"),
-- rotate across the pillars (no pillar three times),
-- pass the banned-topics list in the channel plan.
+- ask one specific everyday question,
+- fit a ≤40-second explanation with one mechanism,
+- have credible research likely available,
+- offer one useful but non-clinical action,
+- rotate across at least three pillars,
+- pass the banned-pop-psychology list.
 
-**Presentation format** (numbered, English titles, one-liner each):
+**Presentation format**:
 
-> Here are **5 topic ideas for StilesGuy** (English content):
+> Here are **5 topic ideas for Stiles Psychology**:
 >
-> 1. **The Roommate Who Wasn't Real** — A Reddit user lived with a "roommate" for months… then found out nobody else had ever seen him. *(Pillar: Plot Twists · source: r/AskReddit thread)*
+> 1. **Why Procrastination Feels Like Relief** — Avoidance can briefly repair mood, teaching the loop to repeat. *(Pillar: Everyday Mind)*
 > 2. **…**
 > 3. **…**
 > 4. **…**
 > 5. **…**
-> 6. ✍️ **Custom topic** — type your own idea (or paste a story/thread) and I'll turn it into a video brief.
+> 6. ✍️ **Custom topic** — type a psychology question and I'll research its strongest defensible angle.
 
 ### 1.4 · After the pick
 
@@ -124,7 +124,11 @@ No research dumps, no scripts, no voiceover, no audio, no downloading, no publis
 
 ---
 
-## Step 4 — Voiceover: ElevenLabs multi-voice → one audio (LIVE)
+## Current test-production contract (v3.0)
+
+For psychology Shorts, research and benchmark notes live in `research.md`; plain narration lives in `narration.txt`; Fish Audio Slax generates Opus plus native timestamps; the first source image is animated by Agnes for 97 frames with a fixed camera; all subsequent images receive a composition-aware push, pull or lateral pan; captions use one Fish-aligned word at a time; and the 1080×1920 result is uploaded to Cloudinary before disposable media cleanup. See the latest production folder for a working render implementation.
+
+## Legacy Step 4 — ElevenLabs multi-voice (parked during testing)
 
 > Trigger: this step starts when the owner approves the **script** (`productions/<folder>/script.md`, speaker-tagged as defined in Step 3's contract below) and says "make the audio" (or the equivalent). It does **not** start from a bare topic.
 
@@ -233,7 +237,7 @@ gh run download <run-id> -n background-clip -D productions/<folder>/background/
 | **2 · Research & outline** | From chosen topic/source → verified story beats, structure, source links, ~30 % of the work done before writing |
 | **3 · Script** | English master script per [`channel.md`](channel.md) §script rules, **speaker-tagged** exactly as Step 4.1 needs it |
 | **6 · Animation & visuals** | Rendering Stiles & Jessie as stick figures, scene direction from the script, placing background clips, captions |
-| **7 · Packaging** | Title (≤ 60 chars), thumbnail (StilesGuy style), description with source links |
+| **7 · Packaging** | Title (≤60 chars), Stiles Psychology thumbnail, sourced description |
 | **8 · Assembly & review** | Final render, quality checklist from the channel plan, owner approval round |
 | **9 · Publish** | Upload to YouTube (needs the owner's YouTube/Google credentials — handled outside git) |
 | **10 · Analytics** | Retention, CTR, comments → feed back into topic offers |
@@ -274,4 +278,4 @@ The workflow reports the account tier + remaining characters, lists the first vo
 
 ---
 
-*Subai — one stickman, endless stories. 🤖🎨*
+*Subai — tiny figures, big psychology. 🤖🧠*
