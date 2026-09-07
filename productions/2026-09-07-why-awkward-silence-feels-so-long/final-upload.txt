@@ -1,0 +1,7 @@
+resource_type=video
+public_id=subai/productions/stiles-psychology/2026-09-07-awkward-silence/awkward-silence-final
+version=1788814914
+bytes=14575798
+width=1080
+height=1920
+secure_url=https://res.cloudinary.com/e5cjysjx/video/upload/v1788814914/subai/productions/stiles-psychology/2026-09-07-awkward-silence/awkward-silence-final.mp4

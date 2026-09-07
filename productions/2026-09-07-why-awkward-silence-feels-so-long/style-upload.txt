@@ -1,0 +1,7 @@
+resource_type=image
+public_id=subai/productions/stiles-psychology/2026-09-07-awkward-silence/scene-01
+version=1788814524
+bytes=2320368
+width=768
+height=1376
+secure_url=https://res.cloudinary.com/e5cjysjx/image/upload/v1788814524/subai/productions/stiles-psychology/2026-09-07-awkward-silence/scene-01.png

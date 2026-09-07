@@ -1,0 +1,31 @@
+{
+  "original_audio_seconds": 31.56,
+  "cuts": [
+    {
+      "start": 5.526625,
+      "end": 6.073375,
+      "removed_seconds": 0.5467500000000003,
+      "original_silence_seconds": 0.8267500000000005,
+      "retained_detected_silence_seconds": 0.28000000000000025
+    },
+    {
+      "start": 17.1951875,
+      "end": 17.4990625,
+      "removed_seconds": 0.30387500000000145,
+      "original_silence_seconds": 0.583874999999999,
+      "retained_detected_silence_seconds": 0.2799999999999976
+    },
+    {
+      "start": 24.924583333333334,
+      "end": 25.15020833333333,
+      "removed_seconds": 0.2256249999999973,
+      "original_silence_seconds": 0.505625000000002,
+      "retained_detected_silence_seconds": 0.2800000000000047
+    }
+  ],
+  "total_silence_removed_seconds": 1.076249999999999,
+  "pitch_preserving_speed": 1.06,
+  "new_audio_seconds": 28.766125,
+  "word_count": 100,
+  "maximum_original_detected_pause_seconds": 0.8267500000000005
+}

@@ -1,0 +1,114 @@
+{
+  "duration": 29.033333333333335,
+  "scenes": [
+    {
+      "image": "visuals/01.png",
+      "provider": "agent image generator",
+      "start": 0.0,
+      "end": 2.4,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/02.png",
+      "provider": "agent image generator",
+      "start": 2.4,
+      "end": 3.7666666666666666,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/03.png",
+      "provider": "agent image generator",
+      "start": 3.7666666666666666,
+      "end": 5.3,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/04.png",
+      "provider": "agent image generator",
+      "start": 5.3,
+      "end": 7.266666666666667,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/12.png",
+      "provider": "Agnes AI",
+      "start": 7.266666666666667,
+      "end": 9.433333333333334,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/11.png",
+      "provider": "Agnes AI",
+      "start": 9.433333333333334,
+      "end": 10.833333333333334,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/05.png",
+      "provider": "agent image generator",
+      "start": 10.833333333333334,
+      "end": 13.466666666666667,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/06.png",
+      "provider": "agent image generator",
+      "start": 13.466666666666667,
+      "end": 15.833333333333334,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/07.png",
+      "provider": "agent image generator",
+      "start": 15.833333333333334,
+      "end": 17.566666666666666,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/08.png",
+      "provider": "agent image generator",
+      "start": 17.566666666666666,
+      "end": 18.466666666666665,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/14.png",
+      "provider": "Agnes AI",
+      "start": 18.466666666666665,
+      "end": 19.7,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/13.png",
+      "provider": "Agnes AI",
+      "start": 19.7,
+      "end": 21.433333333333334,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/09.png",
+      "provider": "agent image generator",
+      "start": 21.433333333333334,
+      "end": 22.8,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/15.png",
+      "provider": "Agnes AI",
+      "start": 22.8,
+      "end": 25.666666666666668,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    },
+    {
+      "image": "visuals/10.png",
+      "provider": "agent image generator",
+      "start": 25.666666666666668,
+      "end": 29.033333333333335,
+      "motion": "gentle editorial push/pan; no generated human motion"
+    }
+  ],
+  "image_count": 15,
+  "agent_images": 10,
+  "agnes_images": 5,
+  "one_continuous_recording": true
+}

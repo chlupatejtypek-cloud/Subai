@@ -1,0 +1,13 @@
+{
+  "15": {
+    "provider": "Agnes AI",
+    "edit": "editorial 9:16 close-up crop, excluding unwanted extra cafe patrons",
+    "source": "agnes-originals/15.png",
+    "crop_xyxy": [
+      30,
+      360,
+      444,
+      1096
+    ]
+  }
+}

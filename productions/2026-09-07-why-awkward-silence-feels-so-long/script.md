@@ -1,0 +1,3 @@
+# Why a Tiny Silence Can Feel So Awkward
+
+NARRATOR: That tiny pause in a conversation can feel like you said something wrong, but silence isn't a verdict. In experiments where people imagined joining a group conversation, an interruption made them feel less accepted. Smooth back and forth can signal connection, so a sudden gap may feel like that connection slipped. But your friend might simply be thinking, sipping a drink, or finding a word, so try letting the pause breathe instead of filling it with an apology. Stay curious and ask a simple follow-up if needed: a pause can be room for a reply, not proof of rejection.

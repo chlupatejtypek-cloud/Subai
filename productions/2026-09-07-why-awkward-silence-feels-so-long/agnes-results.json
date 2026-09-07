@@ -1,0 +1,87 @@
+[
+  {
+    "provider": "Agnes AI",
+    "model": "agnes-image-2.0-flash",
+    "endpoint": "/v1/images/generations",
+    "requested_size": "768x1376",
+    "actual_size": [
+      736,
+      1312
+    ],
+    "reference_urls": [
+      "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795815/subai/characters/stiles-front-tpose-v2.png",
+      "https://res.cloudinary.com/e5cjysjx/image/upload/v1788814524/subai/productions/stiles-psychology/2026-09-07-awkward-silence/scene-01.png"
+    ],
+    "prompt": "Create ONE new FULL-BLEED vertical 9:16 FLAT textured 2D storybook illustration. Reference image 1 defines Stiles: flat beige circular head with charcoal outline, tiny eyes/mouth, pencil-thin black torso and limbs, small mitten hands, no hair or nose. Reference image 2 defines the rich muted teal/navy/amber cafe style. Do NOT copy white margins from reference 1. No 3D, no thick human bodies, no text or numbers, no borders, blank panels or margins. Every edge filled with scene. Close-up of two simple ceramic cups on a round wooden cafe table during a conversational pause, one cup beside a plain folded napkin. No people or hands in this shot. Cozy amber lamplight, soft blurred teal bookshelves and blue rainy window, plant leaves at edges. The quiet gap is a normal pause, not threatening.",
+    "http_status": 200,
+    "generated_at": "2026-09-07T20:55:50Z"
+  },
+  {
+    "provider": "Agnes AI",
+    "model": "agnes-image-2.0-flash",
+    "endpoint": "/v1/images/generations",
+    "requested_size": "768x1376",
+    "actual_size": [
+      736,
+      1312
+    ],
+    "reference_urls": [
+      "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795815/subai/characters/stiles-front-tpose-v2.png",
+      "https://res.cloudinary.com/e5cjysjx/image/upload/v1788814524/subai/productions/stiles-psychology/2026-09-07-awkward-silence/scene-01.png"
+    ],
+    "prompt": "Create ONE new FULL-BLEED vertical 9:16 FLAT textured 2D storybook illustration. Reference image 1 defines Stiles: flat beige circular head with charcoal outline, tiny eyes/mouth, pencil-thin black torso and limbs, small mitten hands, no hair or nose. Reference image 2 defines the rich muted teal/navy/amber cafe style. Do NOT copy white margins from reference 1. No 3D, no thick human bodies, no text or numbers, no borders, blank panels or margins. Every edge filled with scene. A metaphor for conversation flow: close shot of two EMPTY speech-bubble outlines hovering above a wooden cafe table, an elegant continuous amber line connecting them. The background shows a small abstract group of three thin-stick beige-head silhouettes seated in soft focus, not foreground faces. No letters, labels, punctuation or graph numbers. Warm scene, not a scientific diagram.",
+    "http_status": 200,
+    "generated_at": "2026-09-07T20:56:10Z"
+  },
+  {
+    "provider": "Agnes AI",
+    "model": "agnes-image-2.0-flash",
+    "endpoint": "/v1/images/generations",
+    "requested_size": "768x1376",
+    "actual_size": [
+      736,
+      1312
+    ],
+    "reference_urls": [
+      "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795815/subai/characters/stiles-front-tpose-v2.png",
+      "https://res.cloudinary.com/e5cjysjx/image/upload/v1788814524/subai/productions/stiles-psychology/2026-09-07-awkward-silence/scene-01.png"
+    ],
+    "prompt": "Create ONE new FULL-BLEED vertical 9:16 FLAT textured 2D storybook illustration. Reference image 1 defines Stiles: flat beige circular head with charcoal outline, tiny eyes/mouth, pencil-thin black torso and limbs, small mitten hands, no hair or nose. Reference image 2 defines the rich muted teal/navy/amber cafe style. Do NOT copy white margins from reference 1. No 3D, no thick human bodies, no text or numbers, no borders, blank panels or margins. Every edge filled with scene. Close-up of a small wooden hourglass on the cafe table next to a ceramic cup and folded napkin, no people/hands. A little sand represents giving someone a moment, not a four-second rule. Warm amber lamp, teal background and blue rainy window. Elegant real cafe objects interpreted as flat storybook art, not photoreal.",
+    "http_status": 200,
+    "generated_at": "2026-09-07T20:56:30Z"
+  },
+  {
+    "provider": "Agnes AI",
+    "model": "agnes-image-2.0-flash",
+    "endpoint": "/v1/images/generations",
+    "requested_size": "768x1376",
+    "actual_size": [
+      736,
+      1312
+    ],
+    "reference_urls": [
+      "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795815/subai/characters/stiles-front-tpose-v2.png",
+      "https://res.cloudinary.com/e5cjysjx/image/upload/v1788814524/subai/productions/stiles-psychology/2026-09-07-awkward-silence/scene-01.png"
+    ],
+    "prompt": "Create ONE new FULL-BLEED vertical 9:16 FLAT textured 2D storybook illustration. Reference image 1 defines Stiles: flat beige circular head with charcoal outline, tiny eyes/mouth, pencil-thin black torso and limbs, small mitten hands, no hair or nose. Reference image 2 defines the rich muted teal/navy/amber cafe style. Do NOT copy white margins from reference 1. No 3D, no thick human bodies, no text or numbers, no borders, blank panels or margins. Every edge filled with scene. Over-the-table composition of canonical Stiles LEFT gently listening to a ponytailed beige-head stick friend RIGHT as she looks thoughtful. Each figure two thin arms/two small hands resting on table, no held objects. A tiny EMPTY speech bubble above the friend is just appearing, suggesting a word forming. Layered cozy cafe, no words.",
+    "http_status": 200,
+    "generated_at": "2026-09-07T20:56:51Z"
+  },
+  {
+    "provider": "Agnes AI",
+    "model": "agnes-image-2.0-flash",
+    "endpoint": "/v1/images/generations",
+    "requested_size": "768x1376",
+    "actual_size": [
+      736,
+      1312
+    ],
+    "reference_urls": [
+      "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795815/subai/characters/stiles-front-tpose-v2.png",
+      "https://res.cloudinary.com/e5cjysjx/image/upload/v1788814524/subai/productions/stiles-psychology/2026-09-07-awkward-silence/scene-01.png"
+    ],
+    "prompt": "Create ONE new FULL-BLEED vertical 9:16 FLAT textured 2D storybook illustration. Reference image 1 defines Stiles: flat beige circular head with charcoal outline, tiny eyes/mouth, pencil-thin black torso and limbs, small mitten hands, no hair or nose. Reference image 2 defines the rich muted teal/navy/amber cafe style. Do NOT copy white margins from reference 1. No 3D, no thick human bodies, no text or numbers, no borders, blank panels or margins. Every edge filled with scene. Close detail of Stiles smiling softly and making ONE small open-palm curious gesture, other hand rests on table. A simple small amber question mark beside an EMPTY speech bubble represents a friendly follow-up question. Ponytailed friend visible in far background listening. No other symbols or text; warm cafe setting, correct thin stick anatomy.",
+    "http_status": 200,
+    "generated_at": "2026-09-07T20:57:13Z"
+  }
+]

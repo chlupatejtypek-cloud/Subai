@@ -1,0 +1,14 @@
+# Final QA — Why a Tiny Silence Can Feel So Awkward
+
+- 29.033333 seconds, 1080×1920, 30fps, H.264/AAC. Actual ffprobe and loudness measurements in technical-qc.json.
+- One flowing script paragraph, one Fish request with the configured voice; no sentence-by-sentence clip stitching. Provider streaming alignment chunks belong to that single request.
+- Native recording 31.56s. Removed only three measured-silence/native-gap intersections, totaling 1.07625s, then pitch-preserving 1.06×. Edited narration 28.766125s; no artificial ending padding beyond 0.267s tail.
+- Independent base.en ASR: all 100 lexical words match. Longest remaining detected silence 0.376s. Script has 99 whitespace-separated tokens; follow-up is two native/lexical words.
+- 100 locked-style word captions, no overlaps, last caption ends 28.68s. Rendered all 15 scene midpoints and visually inspected their contact sheet. Full-bleed detector passed all source images; the final scene framing and typography were inspected.
+- 10 new agent-generator stills plus 5 successful Agnes AI still requests, all 15 used once. Agnes 2.0 image endpoint HTTP 200, actual resolution 736×1312. No extra generation calls or image-to-video calls. Some Agnes compositions followed the reference scene more closely than the requested cutaways; selected them for relevant conversational beats. Shot 15 uses a documented editorial crop to exclude unwanted extra background patrons; raw output retained in durable storage.
+- Main character identity remains beige round/near-round outlined head and thin stick body in flat 2D cafe illustrations; modest secondary-character/hair/hand-style variation remains across generated scenes. No generated human animation/morphing. Visuals illustrate a concept, not a literal continuous recording or study reconstruction.
+- Six quiet original procedural SFX: reveal, connected bubbles, brief gap, cup, pause/hourglass, friendly question. Not per-word bleeps and no music bed. Final integrated loudness -16.68 LUFS; true peak -1.93dBTP. No clipping. This is technical/ASR and visual agent QA, not a claim of human real-time listening.
+- Primary paper methods/results checked. No asserted time dilation or universal silence threshold. Practical follow-up suggestion explicitly distinguished from a tested intervention in research/description.
+- Original created/AI-generated images, configured synthetic narration, and original synthesized effects; no borrowed music or third-party video footage.
+- Durable final downloaded from Cloudinary and SHA256 matched. Source assets also downloaded and verified.
+- Not uploaded to YouTube. The original 23:00 local slot was missed during production/QA; original time retained for audit rather than backdated. Automatic publisher's overdue/minimum-lead guard remains active. First phone video's immediate exception was NOT reused. Existing YouTube video unchanged.

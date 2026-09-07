@@ -71,7 +71,7 @@
       "revisions": [
         {
           "version": "v2",
-          "status": "awaiting_owner_review",
+          "status": "pacing_approved_no_reupload_requested",
           "asset_url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788813516/subai/productions/stiles-psychology/2026-09-07-phone-checking/v2/phone-checking-v2.mp4",
           "asset_sha256": "e3b46b12d11956ad9876667e323b88153a0c6c055bd95a5d7e4a0c0ddb126c54",
           "duration_seconds": 26.7,
@@ -85,23 +85,49 @@
     {
       "id": "SP-20260907-2",
       "channel_id": "stiles-psychology",
-      "title": "Why Awkward Silence Feels So Long",
+      "title": "Why a Tiny Silence Can Feel So Awkward",
       "pillar": "Emotions & Social Psychology",
-      "mechanism_to_research": "self-focused attention during pauses",
+      "mechanism_to_research": "disrupted conversational flow as a social-acceptance cue",
       "proposed_action_to_validate": "Let one pause finish before filling it",
       "scheduled_at": "2026-09-07T23:00:00+02:00",
       "publish_at_utc": "2026-09-07T21:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "planned",
-      "research_status": "pending",
-      "research_sources": [],
+      "status": "ready",
+      "research_status": "verified",
+      "research_sources": [
+        "https://www.rug.nl/staff/n.koudenburg/koudenburgetal.2011.pdf",
+        "https://www.in-mind.org/article/when-conversations-flow"
+      ],
       "production_path": "productions/2026-09-07-why-awkward-silence-feels-so-long",
-      "asset_url": null,
-      "asset_sha256": null,
-      "duration_seconds": null,
-      "description": null,
-      "qa": null,
-      "youtube_video_id": null
+      "asset_url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788814914/subai/productions/stiles-psychology/2026-09-07-awkward-silence/awkward-silence-final.mp4",
+      "asset_sha256": "2f8166e191dece6ed3c61fcf5df7b7a960e47db0be73e4600713aeb0e3d2636b",
+      "duration_seconds": 29.033333,
+      "description": "A tiny conversational pause can feel awkward without proving rejection. Research on imagined group conversations links disrupted conversational flow to feelings of acceptance; it does not demonstrate time slowing or a universal silence threshold. Giving someone room and asking a follow-up are practical suggestions, not tested treatment.\n\nSources:\nhttps://www.rug.nl/staff/n.koudenburg/koudenburgetal.2011.pdf\nhttps://www.in-mind.org/article/when-conversations-flow\n\nOriginal AI-generated illustrative characters/narration and original sound effects. Educational, not diagnostic.\n#Psychology #Conversation #Shorts",
+      "qa": {
+        "research_verified": true,
+        "script_verified": true,
+        "voice_verified": true,
+        "character_verified": true,
+        "full_bleed": true,
+        "captions_aligned": true,
+        "captions_no_overlap": true,
+        "audio_verified": true,
+        "visual_review_passed": true,
+        "rights_verified": true,
+        "reviewed_by": "agent: primary research, rendered 15-shot contact sheet, independent ASR, technical audio/caption checks; see qa.md for limitations",
+        "reviewed_at": "2026-09-07T21:02:54.149708+00:00",
+        "source_image_count": 15,
+        "voice_provider": "fish_audio",
+        "voice_reference_id": "fb7ec16ca51a45a5a4db881244d7990a"
+      },
+      "youtube_video_id": null,
+      "original_working_title": "Why Awkward Silence Feels So Long",
+      "production_notes": "One continuous Fish recording; 1.06 edit; 10 agent stills + 5 successful Agnes stills; six quiet SFX; all 100 lexical words match ASR. See production qa.md.",
+      "schedule_exception": {
+        "reason": "Original slot missed during production and QA; minimum-lead gate already closed",
+        "action_required": "Explicit future reschedule or item-specific immediate-publication decision",
+        "original_slot_retained": true
+      }
     },
     {
       "id": "SP-20260907-3",

@@ -79,17 +79,20 @@
           "target_retained_silence_seconds": 0.28,
           "phoneme_protection": "Cut only inside measured silence intersecting native inter-word gaps; preserve word edges and map timestamps",
           "review_required": "ASR word completeness + listening/owner review; never delete arbitrary low-volume speech"
-        }
+        },
+        "script_delivery": "One flowing paragraph, ONE Fish synthesis request per finalized script, not individual sentence clips. Preserve natural flow, owner-approved 1.06 edit; shorten only genuinely excessive detected silence."
       },
       "format": {
         "width": 1080,
         "height": 1920,
         "fps": 30,
         "max_seconds": 40,
-        "max_generated_images": 10,
+        "max_generated_images": 15,
         "background_music": false,
-        "target_unique_images": 10,
-        "extra_images_policy": "Owner permits additional Agnes stills if needed. Current base validator budget remains ten accepted source images; if extras are actually used, explicitly document/review the increased production budget. Agnes still-image endpoint is not yet verified; do not mistake image-to-video for still generation."
+        "target_unique_images": 15,
+        "extra_images_policy": "Owner explicitly requested ten agent-generated images PLUS five attempted Agnes AI stills on 2026-09-07. Agnes POST /v1/images/generations, model agnes-image-2.0-flash, reference inputs in extra_body.image, verified with five HTTP 200 generations. Use accepted images only; disclose failures or rejected art, never silently replace providers.",
+        "agent_generated_images": 10,
+        "agnes_still_attempts": 5
       },
       "publishing": {
         "enabled": true,

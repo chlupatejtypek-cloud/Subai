@@ -1,0 +1,44 @@
+[
+  {
+    "at": 0.02,
+    "kind": "whoosh",
+    "peak_amplitude": 0.017,
+    "motivation": "opening cafe reveal",
+    "origin": "original procedurally synthesized effect"
+  },
+  {
+    "at": 10.913333333333334,
+    "kind": "bell",
+    "peak_amplitude": 0.023,
+    "motivation": "connected speech bubbles",
+    "origin": "original procedurally synthesized effect"
+  },
+  {
+    "at": 13.546666666666667,
+    "kind": "tick",
+    "peak_amplitude": 0.012,
+    "motivation": "connection gap",
+    "origin": "original procedurally synthesized effect"
+  },
+  {
+    "at": 17.686666666666667,
+    "kind": "ceramic",
+    "peak_amplitude": 0.027,
+    "motivation": "friend and cup",
+    "origin": "original procedurally synthesized effect"
+  },
+  {
+    "at": 19.779999999999998,
+    "kind": "brush",
+    "peak_amplitude": 0.014,
+    "motivation": "pause and hourglass",
+    "origin": "original procedurally synthesized effect"
+  },
+  {
+    "at": 22.89,
+    "kind": "bell",
+    "peak_amplitude": 0.021,
+    "motivation": "friendly follow-up",
+    "origin": "original procedurally synthesized effect"
+  }
+]
