@@ -1,0 +1,58 @@
+[
+  {
+    "file": "reference-frame-final.mp4",
+    "url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788860989/subai/productions/stiles-psychology/2026-09-09-reference-frame/reference-frame-final.mp4",
+    "sha256": "c05ab8c8c2274bcfe2f2a6ac82c656cfa527995c8315c0e3619047142c9da908",
+    "bytes": 14705773,
+    "verified_http": 200
+  },
+  {
+    "file": "project-part-1.json",
+    "url": "https://res.cloudinary.com/e5cjysjx/raw/upload/v1788860992/subai/productions/stiles-psychology/2026-09-09-reference-frame/project-part-1.json",
+    "sha256": "43fb38e5a5ad51524a6e506f4b2d07ad2b50230cf095379586610a2ece7ee22c",
+    "bytes": 5333478,
+    "verified_http": 200
+  },
+  {
+    "file": "project-part-2.json",
+    "url": "https://res.cloudinary.com/e5cjysjx/raw/upload/v1788860994/subai/productions/stiles-psychology/2026-09-09-reference-frame/project-part-2.json",
+    "sha256": "8736fa22aa24bef94b2dd0c211cc2cd61e7340ea92499ebed40d4343669792a7",
+    "bytes": 5333478,
+    "verified_http": 200
+  },
+  {
+    "file": "project-part-3.json",
+    "url": "https://res.cloudinary.com/e5cjysjx/raw/upload/v1788860996/subai/productions/stiles-psychology/2026-09-09-reference-frame/project-part-3.json",
+    "sha256": "4d6285d6b938366c2e72ba03adb6a767690e55f60d1ec48e0487c67b4fb89d9d",
+    "bytes": 5333478,
+    "verified_http": 200
+  },
+  {
+    "file": "project-part-4.json",
+    "url": "https://res.cloudinary.com/e5cjysjx/raw/upload/v1788860998/subai/productions/stiles-psychology/2026-09-09-reference-frame/project-part-4.json",
+    "sha256": "d92cca8c9f48ea8bdbeaf7f2453b03a2d420dc65951c252b2bf253d2adf65d54",
+    "bytes": 5333478,
+    "verified_http": 200
+  },
+  {
+    "file": "project-part-5.json",
+    "url": "https://res.cloudinary.com/e5cjysjx/raw/upload/v1788860999/subai/productions/stiles-psychology/2026-09-09-reference-frame/project-part-5.json",
+    "sha256": "6e673f136b12c1a07d0ddcb472deafcd078dbc046523eac89340b6d05f54cb87",
+    "bytes": 5333478,
+    "verified_http": 200
+  },
+  {
+    "file": "project-part-6.json",
+    "url": "https://res.cloudinary.com/e5cjysjx/raw/upload/v1788861002/subai/productions/stiles-psychology/2026-09-09-reference-frame/project-part-6.json",
+    "sha256": "d30de0311665a089db475e858533855d801a696a54f95882b7699f648ef98800",
+    "bytes": 5333478,
+    "verified_http": 200
+  },
+  {
+    "file": "project-part-7.json",
+    "url": "https://res.cloudinary.com/e5cjysjx/raw/upload/v1788861003/subai/productions/stiles-psychology/2026-09-09-reference-frame/project-part-7.json",
+    "sha256": "3c1f4fe9a29090c05988adb6476d0739150d963055124d87a1b9c05a5917f5bd",
+    "bytes": 1685350,
+    "verified_http": 200
+  }
+]

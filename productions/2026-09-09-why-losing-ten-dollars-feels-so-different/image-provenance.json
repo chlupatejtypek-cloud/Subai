@@ -1,0 +1,21 @@
+{
+  "generated_count": 10,
+  "accepted_count": 10,
+  "used_count": 10,
+  "provider": "Arena generate_image",
+  "reference": "canonical Stiles and owner-approved corrected liking-gap style",
+  "review": "10-image contact sheet inspected; source01 inspected before actual Agnes generation",
+  "assets": [
+    "assets/01-counter.png",
+    "assets/02-gift.png",
+    "assets/03-add.png",
+    "assets/04-larger-start.png",
+    "assets/05-subtract.png",
+    "assets/06-two-wallets.png",
+    "assets/07-study.png",
+    "assets/08-reference.png",
+    "assets/09-headlines.png",
+    "assets/10-check.png"
+  ],
+  "opening": "Agnes hook.mp4 with provider metadata; actual coin/hand motion, bounded bounce; independent zoom authored in edit"
+}

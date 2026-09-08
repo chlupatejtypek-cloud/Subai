@@ -1,0 +1,93 @@
+{
+  "end": 48.3,
+  "fps": 30,
+  "distinct_used_illustrations": 10,
+  "generated_images": 10,
+  "max_illustration_hold_seconds": 4.100000000000001,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 3,
+      "source": "01-counter",
+      "purpose": "Real coin motion"
+    },
+    {
+      "start": 3,
+      "end": 6.2,
+      "source": "02-gift",
+      "purpose": "Hypothetical windfall"
+    },
+    {
+      "start": 6.2,
+      "end": 9.2,
+      "source": "03-add",
+      "purpose": "Gain framing"
+    },
+    {
+      "start": 9.2,
+      "end": 12.2,
+      "source": "04-larger-start",
+      "purpose": "Larger starting point"
+    },
+    {
+      "start": 12.2,
+      "end": 15.4,
+      "source": "05-subtract",
+      "purpose": "Same final amount"
+    },
+    {
+      "start": 15.4,
+      "end": 18.6,
+      "source": "07-study",
+      "purpose": "Original hypothetical choice study"
+    },
+    {
+      "start": 18.6,
+      "end": 22.2,
+      "source": "06-two-wallets",
+      "purpose": "Identical final prospects"
+    },
+    {
+      "start": 22.2,
+      "end": 25.2,
+      "source": "08-reference",
+      "purpose": "Reference dependence"
+    },
+    {
+      "start": 25.2,
+      "end": 28.4,
+      "source": "04-larger-start",
+      "purpose": "Starting point not just total"
+    },
+    {
+      "start": 28.4,
+      "end": 32.5,
+      "source": "09-headlines",
+      "purpose": "Calculator versus headlines joke"
+    },
+    {
+      "start": 32.5,
+      "end": 36.5,
+      "source": "05-subtract",
+      "purpose": "No universal loss multiplier"
+    },
+    {
+      "start": 36.5,
+      "end": 40.4,
+      "source": "10-check",
+      "purpose": "Compare actual terms"
+    },
+    {
+      "start": 40.4,
+      "end": 44.5,
+      "source": "06-two-wallets",
+      "purpose": "Probabilities and costs"
+    },
+    {
+      "start": 44.5,
+      "end": 48.3,
+      "source": "01-counter",
+      "purpose": "Closing same-deal perspective"
+    }
+  ]
+}

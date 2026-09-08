@@ -1,0 +1,41 @@
+{
+  "segments": [
+    [
+      6.2,
+      15.3,
+      "staged equations"
+    ],
+    [
+      19,
+      23.2,
+      "equivalent final sure/gamble prospects"
+    ],
+    [
+      38,
+      44.4,
+      "progressive checklist"
+    ]
+  ],
+  "component_transition_ms": 320,
+  "panel_translation_px": 26,
+  "text_translation_px": 22,
+  "entrances_and_exits_eased": true,
+  "blur_fade_seconds": 0.4,
+  "blur_intervals": [
+    [
+      6.2,
+      15.3
+    ],
+    [
+      38,
+      44.4
+    ]
+  ],
+  "circle_count": 1,
+  "circle_interval": [
+    12.2,
+    14.8
+  ],
+  "arithmetic": "1000+500=2000-500=1500; both gambles1000/2000 at50% each",
+  "units": "Hypothetical generic money units, no claim of modern-dollar study"
+}

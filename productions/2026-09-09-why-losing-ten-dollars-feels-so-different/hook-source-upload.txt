@@ -1,0 +1,7 @@
+resource_type=image
+public_id=subai/productions/stiles-psychology/2026-09-09-reference-frame/reference-frame-hook-source
+version=1788860080
+bytes=2138921
+width=768
+height=1376
+secure_url=https://res.cloudinary.com/e5cjysjx/image/upload/v1788860080/subai/productions/stiles-psychology/2026-09-09-reference-frame/reference-frame-hook-source.png
