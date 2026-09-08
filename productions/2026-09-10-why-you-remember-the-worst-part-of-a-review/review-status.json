@@ -1,0 +1,24 @@
+{
+  "slot": "SP-20260910-3",
+  "stage": "assets-in-progress",
+  "next_action": "Regenerate 05-asked-after (identity drift) and 11-forty-minutes; then storyboard.json, render-ui.py, build-video.py",
+  "blocker": "Arena image-generation limit of 10 per turn reached; 9 of the required 10 distinct illustrations are accepted",
+  "audio": {
+    "file": "audio/narration.wav",
+    "seconds": 49.74,
+    "words": 177,
+    "provider": "Fish Audio",
+    "reference_id": "fb7ec16ca51a45a5a4db881244d7990a",
+    "single_continuous_take": true,
+    "tempo": 1.06
+  },
+  "images": {
+    "generated": 10,
+    "accepted": 9,
+    "rejected": 1,
+    "required_minimum": 10
+  },
+  "research": "research.md \u2014 primary source Kahneman 2000 ch.37 (Redelmeier & Kahneman 1996) + 682-patient randomized trial",
+  "publication_hold": false,
+  "owner_review_required": false
+}
