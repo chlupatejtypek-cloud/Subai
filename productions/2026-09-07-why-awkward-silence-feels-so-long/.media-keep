@@ -1,30 +1,12 @@
-# Preserve current revision sources/final. Older removed artwork is checksum-verified in assets.json; current project backup is verified JSON parts.
+# Original compressed narration and native timing retained; older render outputs are regenerable.
+# Hyperframes revision cold-archived in verified38-file source package; final remains local.
 __pycache__/render.cpython-313.pyc
-audio/narration.wav
 audio/sfx.json
-audio/sfx.wav
 audio/silence-detection.log
 audio/source.opus
 audio/source.opus.timestamps.json
 audio/words-original.json
 audio/words.json
-hyperframes-v2/assets/DejaVuSans-Bold.ttf
-hyperframes-v2/assets/cafe.png
-hyperframes-v2/assets/drop_001.ogg
-hyperframes-v2/assets/drop_002.ogg
-hyperframes-v2/assets/gsap.min.js
-hyperframes-v2/assets/open_001.ogg
-hyperframes-v2/assets/study.png
-hyperframes-v2/assets/zoom-in-original.wav
-hyperframes-v2/assets/zoom-out-original.wav
-hyperframes-v2/audio/narration.wav
-hyperframes-v2/audio/silence-detection.log
-hyperframes-v2/audio/source.opus
-hyperframes-v2/audio/source.opus.timestamps.json
-hyperframes-v2/audio/words-original.json
-hyperframes-v2/audio/words.json
-hyperframes-v2/output/silence-hyperframes-final.mp4
-hyperframes-v2/render.log
 output/concat.txt
 visuals/11.metadata.json
 visuals/12.metadata.json

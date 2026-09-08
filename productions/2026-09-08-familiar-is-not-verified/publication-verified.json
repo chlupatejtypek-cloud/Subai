@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-09-08T06:12:58.231188+00:00",
+  "workflow_id": 34193639835,
+  "workflow_conclusion": "success",
+  "item_id": "SP-20260908-3",
+  "youtube": {
+    "kind": "youtube#video",
+    "etag": "nKAtqydSpTEr_Vyg4xT14tfzOEE",
+    "id": "FACZAzrfEdU",
+    "status": {
+      "uploadStatus": "processed",
+      "privacyStatus": "private",
+      "publishAt": "2026-09-08T21:00:00Z",
+      "license": "youtube",
+      "embeddable": true,
+      "publicStatsViewable": true,
+      "madeForKids": false,
+      "selfDeclaredMadeForKids": false
+    },
+    "processingDetails": {
+      "processingStatus": "succeeded",
+      "fileDetailsAvailability": "inProgress",
+      "processingIssuesAvailability": "inProgress",
+      "tagSuggestionsAvailability": "inProgress",
+      "editorSuggestionsAvailability": "inProgress",
+      "thumbnailsAvailability": "inProgress"
+    }
+  }
+}

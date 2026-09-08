@@ -1,0 +1,612 @@
+[
+  {
+    "file": "/home/user/restart-art-qc.jpg",
+    "bytes": 123267,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/contact.jpg",
+    "bytes": 148048,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/final-qc.jpg",
+    "bytes": 115865,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/hook-qc.jpg",
+    "bytes": 60657,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/hyperframes-final-qc.jpg",
+    "bytes": 195763,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/hyperframes-layout-qc.jpg",
+    "bytes": 124422,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/hyperframes-transitions-qc.jpg",
+    "bytes": 45530,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/phone-final-qc.jpg",
+    "bytes": 122292,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/phone-hook-qc.jpg",
+    "bytes": 80055,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/phone-scenes-qc.jpg",
+    "bytes": 163222,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/phone-v2-final-qc.jpg",
+    "bytes": 125560,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/phone-v2-repaired.jpg",
+    "bytes": 75339,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/phone-v2-scenes.jpg",
+    "bytes": 169662,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/silence-agnes-five.jpg",
+    "bytes": 80267,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/silence-final-qc.jpg",
+    "bytes": 273076,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/silence-scenes-qc.jpg",
+    "bytes": 205401,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/anchor-hook-qc.jpg",
+    "bytes": 160267,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/anchoring-final-qc.jpg",
+    "bytes": 242842,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/restart-hook-qc.jpg",
+    "bytes": 128516,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/restart-layout-qc.jpg",
+    "bytes": 181445,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/restart-note-final-qc.jpg",
+    "bytes": 263005,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/priced-tag-qc.jpg",
+    "bytes": 178033,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/remake-art-qc.jpg",
+    "bytes": 116347,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/remake-layout-qc.jpg",
+    "bytes": 190484,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/anchoring-remake-qc.jpg",
+    "bytes": 273396,
+    "reason": "older generated contact-sheet/QC intermediate, reproducible from backed sources/finals"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/back_001.ogg",
+    "bytes": 6997,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/back_002.ogg",
+    "bytes": 7029,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/back_003.ogg",
+    "bytes": 7208,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/back_004.ogg",
+    "bytes": 6923,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/bong_001.ogg",
+    "bytes": 4848,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/click_001.ogg",
+    "bytes": 4876,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/click_002.ogg",
+    "bytes": 4275,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/click_003.ogg",
+    "bytes": 4371,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/click_004.ogg",
+    "bytes": 4486,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/click_005.ogg",
+    "bytes": 4410,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/close_001.ogg",
+    "bytes": 9915,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/close_002.ogg",
+    "bytes": 14752,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/close_003.ogg",
+    "bytes": 15648,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/close_004.ogg",
+    "bytes": 16263,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/confirmation_001.ogg",
+    "bytes": 8968,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/confirmation_002.ogg",
+    "bytes": 14169,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/confirmation_003.ogg",
+    "bytes": 9535,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/confirmation_004.ogg",
+    "bytes": 12391,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/drop_003.ogg",
+    "bytes": 6288,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/drop_004.ogg",
+    "bytes": 7230,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/error_001.ogg",
+    "bytes": 7373,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/error_002.ogg",
+    "bytes": 7369,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/error_003.ogg",
+    "bytes": 12256,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/error_004.ogg",
+    "bytes": 6393,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/error_005.ogg",
+    "bytes": 7266,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/error_006.ogg",
+    "bytes": 8288,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/error_007.ogg",
+    "bytes": 10225,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/error_008.ogg",
+    "bytes": 9215,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/glass_001.ogg",
+    "bytes": 6103,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/glass_002.ogg",
+    "bytes": 4917,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/glass_003.ogg",
+    "bytes": 5732,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/glass_004.ogg",
+    "bytes": 8323,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/glass_005.ogg",
+    "bytes": 6206,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/glass_006.ogg",
+    "bytes": 6956,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/glitch_001.ogg",
+    "bytes": 5121,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/glitch_002.ogg",
+    "bytes": 5473,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/glitch_003.ogg",
+    "bytes": 4915,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/glitch_004.ogg",
+    "bytes": 5225,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/maximize_001.ogg",
+    "bytes": 12111,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/maximize_002.ogg",
+    "bytes": 9915,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/maximize_003.ogg",
+    "bytes": 11748,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/maximize_004.ogg",
+    "bytes": 17723,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/maximize_005.ogg",
+    "bytes": 20900,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/maximize_006.ogg",
+    "bytes": 11618,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/maximize_007.ogg",
+    "bytes": 8097,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/maximize_008.ogg",
+    "bytes": 9085,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/maximize_009.ogg",
+    "bytes": 7650,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/minimize_001.ogg",
+    "bytes": 11924,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/minimize_002.ogg",
+    "bytes": 9441,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/minimize_003.ogg",
+    "bytes": 11739,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/minimize_004.ogg",
+    "bytes": 17099,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/minimize_005.ogg",
+    "bytes": 19501,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/minimize_006.ogg",
+    "bytes": 11292,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/minimize_007.ogg",
+    "bytes": 7677,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/minimize_008.ogg",
+    "bytes": 9298,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/minimize_009.ogg",
+    "bytes": 7665,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/open_002.ogg",
+    "bytes": 14975,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/open_003.ogg",
+    "bytes": 15046,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/open_004.ogg",
+    "bytes": 15879,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/pluck_001.ogg",
+    "bytes": 6317,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/pluck_002.ogg",
+    "bytes": 6941,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/question_001.ogg",
+    "bytes": 11700,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/question_002.ogg",
+    "bytes": 9455,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/question_003.ogg",
+    "bytes": 8233,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/question_004.ogg",
+    "bytes": 9821,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/scratch_001.ogg",
+    "bytes": 8989,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/scratch_002.ogg",
+    "bytes": 9319,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/scratch_003.ogg",
+    "bytes": 8849,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/scratch_004.ogg",
+    "bytes": 16478,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/scratch_005.ogg",
+    "bytes": 15824,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/scroll_001.ogg",
+    "bytes": 21633,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/scroll_002.ogg",
+    "bytes": 24628,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/scroll_003.ogg",
+    "bytes": 29488,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/scroll_004.ogg",
+    "bytes": 20348,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/scroll_005.ogg",
+    "bytes": 20448,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/select_001.ogg",
+    "bytes": 5468,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/select_002.ogg",
+    "bytes": 5463,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/select_003.ogg",
+    "bytes": 6901,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/select_004.ogg",
+    "bytes": 6909,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/select_005.ogg",
+    "bytes": 6767,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/select_006.ogg",
+    "bytes": 8101,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/select_007.ogg",
+    "bytes": 6580,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/select_008.ogg",
+    "bytes": 6339,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/switch_001.ogg",
+    "bytes": 6753,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/switch_002.ogg",
+    "bytes": 7097,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/switch_003.ogg",
+    "bytes": 9653,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/switch_004.ogg",
+    "bytes": 7248,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/switch_005.ogg",
+    "bytes": 7814,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/switch_006.ogg",
+    "bytes": 7873,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/switch_007.ogg",
+    "bytes": 7921,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/tick_001.ogg",
+    "bytes": 4497,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/tick_002.ogg",
+    "bytes": 4514,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/tick_004.ogg",
+    "bytes": 5031,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/toggle_001.ogg",
+    "bytes": 7369,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/toggle_002.ogg",
+    "bytes": 8056,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/toggle_003.ogg",
+    "bytes": 8654,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  },
+  {
+    "file": "/home/user/sfx-library/kenney-interface/toggle_004.ogg",
+    "bytes": 6695,
+    "reason": "unused CC0 catalogue sample; redownloadable Kenney Interface Sounds; license and used samples retained"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "verified_at": "2026-09-08T06:15:12.849664+00:00",
+  "all_three_scheduled_and_processed": false,
+  "confirmed": {
+    "ZCVvPPTvKB8": {
+      "publish_at": "2026-09-08T17:00:00Z",
+      "processing": "succeeded"
+    },
+    "FACZAzrfEdU": {
+      "publish_at": "2026-09-08T21:00:00Z",
+      "processing": "succeeded"
+    }
+  },
+  "not_returned": {
+    "video_id": "bj1yP4s3CQ0",
+    "scheduled_at_local": "2026-09-08T15:00:00+02:00",
+    "checks": [
+      "batch videos.list omitted this ID",
+      "single videos.list HTTP200 items empty",
+      "authenticated channel recent uploads contain only new familiar, restart and original phone"
+    ],
+    "cause": "unknown; do not infer deletion or retry upload without owner confirmation"
+  }
+}

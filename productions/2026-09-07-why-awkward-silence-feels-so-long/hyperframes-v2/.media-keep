@@ -1,18 +1,2 @@
-# Current final and revision sources
-assets/DejaVuSans-Bold.ttf
-assets/cafe.png
-assets/drop_001.ogg
-assets/drop_002.ogg
-assets/gsap.min.js
-assets/open_001.ogg
-assets/study.png
-assets/zoom-in-original.wav
-assets/zoom-out-original.wav
-audio/narration.wav
-audio/silence-detection.log
-audio/source.opus
-audio/source.opus.timestamps.json
-audio/words-original.json
-audio/words.json
-output/silence-hyperframes-final.mp4
-render.log
+# Media cold-archived in freshly SHA256-verified source archive.
+# User-facing final remains in /home/user. Restore missing inputs from assets.json before future revision.

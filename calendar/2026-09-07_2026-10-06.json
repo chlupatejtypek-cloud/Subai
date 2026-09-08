@@ -183,7 +183,7 @@
       "scheduled_at": "2026-09-08T15:00:00+02:00",
       "publish_at_utc": "2026-09-08T13:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "scheduled",
+      "status": "needs_reconciliation",
       "research_status": "verified",
       "research_sources": [
         "https://www.cs.tufts.edu/comp/150AIH/pdf/TverskyKa74.pdf",
@@ -227,7 +227,10 @@
       "youtube_url": "https://www.youtube.com/watch?v=bj1yP4s3CQ0",
       "api_returned_publish_at": "2026-09-08T13:00:00Z",
       "api_returned_privacy": "private",
-      "uploaded_at": "2026-09-08T04:59:33.354204+00:00"
+      "uploaded_at": "2026-09-08T04:59:33.354204+00:00",
+      "last_known_status": "scheduled",
+      "reconciliation_reason": "Previously confirmed scheduled original video is now absent from authenticated direct videos.list and recent uploads. Cause unknown. Preserve ID and history; do not silently re-upload or substitute approved remake without owner confirmation.",
+      "reconciliation_checked_at": "2026-09-08T06:15:12.849664+00:00"
     },
     {
       "id": "SP-20260908-2",
