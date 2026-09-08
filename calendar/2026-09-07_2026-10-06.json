@@ -183,7 +183,7 @@
       "scheduled_at": "2026-09-08T15:00:00+02:00",
       "publish_at_utc": "2026-09-08T13:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "upload_started",
+      "status": "scheduled",
       "research_status": "verified",
       "research_sources": [
         "https://www.cs.tufts.edu/comp/150AIH/pdf/TverskyKa74.pdf",
@@ -213,7 +213,7 @@
         "asr_numbers_normalized": true,
         "actual_agnes_opening": true
       },
-      "youtube_video_id": null,
+      "youtube_video_id": "bj1yP4s3CQ0",
       "deferred_original_topic": {
         "title": "Why Switching Tasks Leaves You Stuck",
         "pillar": "Everyday Mind",
@@ -223,7 +223,11 @@
       },
       "topic_moved_from": "SP-20260907-3",
       "editorial_schedule_note": "Owner asked to proceed with next video and raised posting delay. Previously unmade anchoring topic takes today’s existing 15:00 slot; no fourth daily slot or backdated publication. Displaced task-switching topic retained in deferred_original_topic.",
-      "upload_started_at": "2026-09-08T04:59:30.140627+00:00"
+      "upload_started_at": "2026-09-08T04:59:30.140627+00:00",
+      "youtube_url": "https://www.youtube.com/watch?v=bj1yP4s3CQ0",
+      "api_returned_publish_at": "2026-09-08T13:00:00Z",
+      "api_returned_privacy": "private",
+      "uploaded_at": "2026-09-08T04:59:33.354204+00:00"
     },
     {
       "id": "SP-20260908-2",
