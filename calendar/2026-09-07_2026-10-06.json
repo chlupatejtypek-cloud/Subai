@@ -81,7 +81,7 @@
           "youtube_video_id": null
         }
       ],
-      "last_status_check_at": "2026-09-08T11:31:51.179644+00:00",
+      "last_status_check_at": "2026-09-08T11:41:49.826039+00:00",
       "remote_status": {
         "privacy": "public",
         "publish_at": null,
@@ -241,7 +241,7 @@
       "last_known_status": "scheduled",
       "reconciliation_reason": "Known video ID absent from authenticated lookup; never retry upload automatically",
       "reconciliation_checked_at": "2026-09-08T06:15:12.849664+00:00",
-      "last_status_check_at": "2026-09-08T11:31:51.179644+00:00"
+      "last_status_check_at": "2026-09-08T11:41:49.826039+00:00"
     },
     {
       "id": "SP-20260908-2",
@@ -294,10 +294,10 @@
       "api_returned_publish_at": "2026-09-08T17:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T05:48:08.191157+00:00",
-      "last_status_check_at": "2026-09-08T11:31:51.179644+00:00",
+      "last_status_check_at": "2026-09-08T11:41:49.826039+00:00",
       "remote_status": {
         "privacy": "private",
-        "publish_at": "2026-09-08T17:00:00Z",
+        "publish_at": "2026-09-08T16:00:00Z",
         "upload_status": "processed",
         "processing_status": "succeeded"
       },
@@ -361,7 +361,7 @@
         "youtube_schedule_action": "Owner authorized cancellation; videos.update failed403 insufficient authentication scopes. Existing YouTube publishAt still active until Studio change or reauthorization. No successful cancellation claimed."
       },
       "publication_hold": true,
-      "last_status_check_at": "2026-09-08T11:31:51.179644+00:00",
+      "last_status_check_at": "2026-09-08T11:41:49.826039+00:00",
       "remote_schedule_still_active": true,
       "remote_status": {
         "privacy": "private",
@@ -503,7 +503,7 @@
       "api_returned_publish_at": "2026-09-09T17:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T09:31:24.540150+00:00",
-      "last_status_check_at": "2026-09-08T11:31:51.179644+00:00",
+      "last_status_check_at": "2026-09-08T11:41:49.826039+00:00",
       "remote_status": {
         "privacy": "private",
         "publish_at": "2026-09-09T17:00:00Z",
@@ -574,7 +574,7 @@
       "api_returned_publish_at": "2026-09-09T21:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T09:52:39.822282+00:00",
-      "last_status_check_at": "2026-09-08T11:31:51.179644+00:00",
+      "last_status_check_at": "2026-09-08T11:41:49.826039+00:00",
       "remote_status": {
         "privacy": "private",
         "publish_at": "2026-09-09T21:00:00Z",
@@ -594,26 +594,52 @@
       "scheduled_at": "2026-09-10T15:00:00+02:00",
       "publish_at_utc": "2026-09-10T13:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "producing",
+      "status": "ready",
       "research_status": "verified",
       "research_sources": [
         "https://www.pnas.org/doi/10.1073/pnas.1103170108",
         "https://www.mdpi.com/2071-1050/15/16/12457"
       ],
       "production_path": "productions/2026-09-10-why-plans-work-better-with-a-when",
-      "asset_url": null,
-      "asset_sha256": null,
-      "duration_seconds": null,
-      "description": null,
-      "qa": null,
+      "asset_url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788867674/subai/productions/stiles-psychology/2026-09-10-plan-trigger/plan-trigger-final.mp4",
+      "asset_sha256": "bdf18ff4499763b0a48f47699660108fd947958a3546cfd531cd78719b5db545",
+      "duration_seconds": 48.3,
+      "description": "A goal says what you want. A concrete plan says when to act. Stiles explains implementation intentions using a real planning-prompt experiment and an illustrative plate-to-sink, shoes-on walking plan.\n\nMilkman et al.(2011), PNAS: randomized workplace flu-shot reminder trial,3272eligible employees at one US utility firm (age50+or qualifying chronic conditions). Everyone received clinic information. Chart shows RAW workplace uptake:33.1%reminder alone(n1268) vs37.1%reminder plus date/time prompt(n1270), difference4.0percentage points;95%CI for difference0.3\u20137.7. Regression-adjusted4.2points is not plotted. Predominantly male single-company sample and2009setting limit generalization. This is psychology education, not a vaccination recommendation.\nhttps://www.pnas.org/doi/10.1073/pnas.1103170108\nIndependent contextual review: Peng et al.(2023),12studies1916university students, small-to-medium physical-activity effects; longer-term findings mixed. Different outcome, not a direct replication.\nhttps://www.mdpi.com/2071-1050/15/16/12457\n\nExact walking example is practical illustration, not the trial intervention. Plans do not guarantee behavior or remove real barriers. AI-generated art, animation and selected Fish voice; authored UI and original procedural SFX, NOT Fish-generated effects. No music.\n#Psychology #Planning #Shorts",
+      "qa": {
+        "research_verified": true,
+        "script_verified": true,
+        "voice_verified": true,
+        "character_verified": true,
+        "full_bleed": true,
+        "captions_aligned": true,
+        "captions_no_overlap": true,
+        "audio_verified": true,
+        "visual_review_passed": true,
+        "rights_verified": true,
+        "opening_video_verified": true,
+        "opening_zoom_verified": true,
+        "character_proportions_verified": true,
+        "visual_coverage_verified": true,
+        "explanatory_ui_verified": true,
+        "creative_contract_version": 2,
+        "source_image_count": 10,
+        "generated_image_count": 10,
+        "longest_illustration_hold_seconds": 4.1,
+        "voice_provider": "fish_audio",
+        "voice_reference_id": "fb7ec16ca51a45a5a4db881244d7990a",
+        "reviewed_by": "Arena agent: primary study methods/results/limitations and independent review,10images, first source pre-animation,5hook samples,5UI entrance frames,16final frame samples; orthographic-normalized ASR, audio/timing checks. Not full human playback.",
+        "reviewed_at": "2026-09-08T11:41:49.862155+00:00"
+      },
       "youtube_video_id": null,
       "workflow": {
-        "stage": 6,
-        "stage_name": "rendering",
+        "stage": 8,
+        "stage_name": "backed_up_ready",
         "started_at": "2026-09-08T11:31:51.316893+00:00",
         "contract": "40\u201360 seconds;10\u201315 distinct used illustrations",
-        "next_action": "Inspect final samples, technical QA, verified archive and ready handoff"
-      }
+        "next_action": "Serialized publisher waits until within48hours of2026-09-10T13:00Z. No upload yet; not quota-blocked. Sync first, no duplicate existing IDs."
+      },
+      "publication_hold": false,
+      "owner_review_required": false
     },
     {
       "id": "SP-20260910-2",
@@ -2297,5 +2323,5 @@
       "youtube_video_id": null
     }
   ],
-  "last_remote_sync_at": "2026-09-08T11:31:51.179644+00:00"
+  "last_remote_sync_at": "2026-09-08T11:41:49.826039+00:00"
 }

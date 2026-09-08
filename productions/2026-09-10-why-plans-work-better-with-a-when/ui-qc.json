@@ -1,0 +1,37 @@
+{
+  "segments": [
+    [
+      13.2,
+      19.6,
+      "raw uptake chart"
+    ],
+    [
+      25.4,
+      32.2,
+      "cue action plan"
+    ],
+    [
+      35,
+      38.6,
+      "feasibility checklist"
+    ]
+  ],
+  "component_transition_ms": 400,
+  "panel_translation_px": 50,
+  "text_translation_px": 60,
+  "chart_growth_ms": 750,
+  "entrances_and_exits_eased": true,
+  "blur_fade_seconds": 0.4,
+  "blur_intervals": [
+    [
+      13.2,
+      19.6
+    ],
+    [
+      25.4,
+      32.2
+    ]
+  ],
+  "circle_count": 0,
+  "study_chart": "Raw33.1%control vs37.1%date/time; difference4.0percentage points; full0\u2013100%tracks; no adjusted/raw mixing"
+}
