@@ -81,7 +81,7 @@
           "youtube_video_id": null
         }
       ],
-      "last_status_check_at": "2026-09-08T12:04:50.713730+00:00",
+      "last_status_check_at": "2026-09-08T14:46:50.872944+00:00",
       "remote_status": {
         "privacy": "public",
         "publish_at": null,
@@ -241,7 +241,7 @@
       "last_known_status": "scheduled",
       "reconciliation_reason": "Known video ID absent from authenticated lookup; never retry upload automatically",
       "reconciliation_checked_at": "2026-09-08T06:15:12.849664+00:00",
-      "last_status_check_at": "2026-09-08T12:04:50.713730+00:00"
+      "last_status_check_at": "2026-09-08T14:46:50.872944+00:00"
     },
     {
       "id": "SP-20260908-2",
@@ -294,7 +294,7 @@
       "api_returned_publish_at": "2026-09-08T17:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T05:48:08.191157+00:00",
-      "last_status_check_at": "2026-09-08T12:04:50.713730+00:00",
+      "last_status_check_at": "2026-09-08T14:46:50.872944+00:00",
       "remote_status": {
         "privacy": "private",
         "publish_at": "2026-09-08T16:00:00Z",
@@ -314,7 +314,7 @@
       "scheduled_at": "2026-09-08T23:00:00+02:00",
       "publish_at_utc": "2026-09-08T21:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "scheduled",
+      "status": "published",
       "research_status": "verified",
       "research_sources": [
         "https://www.apa.org/pubs/journals/features/xge-0000098.pdf",
@@ -361,15 +361,16 @@
         "youtube_schedule_action": "Owner authorized cancellation; videos.update failed403 insufficient authentication scopes. Existing YouTube publishAt still active until Studio change or reauthorization. No successful cancellation claimed."
       },
       "publication_hold": true,
-      "last_status_check_at": "2026-09-08T12:04:50.713730+00:00",
-      "remote_schedule_still_active": true,
+      "last_status_check_at": "2026-09-08T14:46:50.872944+00:00",
+      "remote_schedule_still_active": false,
       "remote_status": {
-        "privacy": "private",
-        "publish_at": "2026-09-08T21:00:00Z",
+        "privacy": "public",
+        "publish_at": null,
         "upload_status": "processed",
         "processing_status": "succeeded"
       },
-      "release_alert": "Owner-held video is public or still scheduled; external action required"
+      "release_alert": "Owner-held video is public or still scheduled; external action required",
+      "first_observed_public_at": "2026-09-08T13:55:40.930505+00:00"
     },
     {
       "id": "SP-20260909-1",
@@ -503,7 +504,7 @@
       "api_returned_publish_at": "2026-09-09T17:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T09:31:24.540150+00:00",
-      "last_status_check_at": "2026-09-08T12:04:50.713730+00:00",
+      "last_status_check_at": "2026-09-08T14:46:50.872944+00:00",
       "remote_status": {
         "privacy": "private",
         "publish_at": "2026-09-09T17:00:00Z",
@@ -574,7 +575,7 @@
       "api_returned_publish_at": "2026-09-09T21:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T09:52:39.822282+00:00",
-      "last_status_check_at": "2026-09-08T12:04:50.713730+00:00",
+      "last_status_check_at": "2026-09-08T14:46:50.872944+00:00",
       "remote_status": {
         "privacy": "private",
         "publish_at": "2026-09-09T21:00:00Z",
@@ -645,7 +646,7 @@
       "api_returned_publish_at": "2026-09-10T13:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T11:54:31.557339+00:00",
-      "last_status_check_at": "2026-09-08T12:04:50.713730+00:00",
+      "last_status_check_at": "2026-09-08T14:46:50.872944+00:00",
       "remote_status": {
         "privacy": "private",
         "publish_at": "2026-09-10T13:00:00Z",
@@ -716,7 +717,16 @@
       "youtube_url": "https://www.youtube.com/watch?v=cHgsTOmqy2Y",
       "api_returned_publish_at": "2026-09-10T17:00:00Z",
       "api_returned_privacy": "private",
-      "uploaded_at": "2026-09-08T12:04:53.797026+00:00"
+      "uploaded_at": "2026-09-08T12:04:53.797026+00:00",
+      "last_status_check_at": "2026-09-08T14:46:50.872944+00:00",
+      "remote_status": {
+        "privacy": "private",
+        "publish_at": "2026-09-10T17:00:00Z",
+        "upload_status": "processed",
+        "processing_status": "succeeded"
+      },
+      "remote_schedule_still_active": true,
+      "release_alert": null
     },
     {
       "id": "SP-20260910-3",
@@ -728,7 +738,7 @@
       "scheduled_at": "2026-09-10T23:00:00+02:00",
       "publish_at_utc": "2026-09-10T21:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "planned",
+      "status": "researching",
       "research_status": "pending",
       "research_sources": [],
       "production_path": "productions/2026-09-10-why-you-remember-the-worst-part-of-a-review",
@@ -737,7 +747,14 @@
       "duration_seconds": null,
       "description": null,
       "qa": null,
-      "youtube_video_id": null
+      "youtube_video_id": null,
+      "workflow": {
+        "stage": 1,
+        "stage_name": "research",
+        "started_at": "2026-09-08T14:46:51.012021+00:00",
+        "contract": "40–60 seconds;10–15 distinct used illustrations",
+        "next_action": "Read RETENTION-RESEARCH.md; compare3 angles; verify primary evidence before scripting"
+      }
     },
     {
       "id": "SP-20260911-1",
@@ -2379,5 +2396,5 @@
       "youtube_video_id": null
     }
   ],
-  "last_remote_sync_at": "2026-09-08T12:04:50.713730+00:00"
+  "last_remote_sync_at": "2026-09-08T14:46:50.872944+00:00"
 }
