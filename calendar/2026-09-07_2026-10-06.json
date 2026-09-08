@@ -314,7 +314,7 @@
         "captions_aligned": true,
         "captions_no_overlap": true,
         "audio_verified": true,
-        "visual_review_passed": true,
+        "visual_review_passed": false,
         "rights_verified": true,
         "reviewed_by": "Arena agent: primary source reading, final-frame samples, motion/full-bleed checks,125-word exact ASR, technical audio/video checks; see qa.md",
         "reviewed_at": "2026-09-08T06:12:01.922186+00:00",
@@ -327,7 +327,19 @@
       "youtube_url": "https://www.youtube.com/watch?v=FACZAzrfEdU",
       "api_returned_publish_at": "2026-09-08T21:00:00Z",
       "api_returned_privacy": "private",
-      "uploaded_at": "2026-09-08T06:12:36.497679+00:00"
+      "uploaded_at": "2026-09-08T06:12:36.497679+00:00",
+      "owner_review": {
+        "status": "rejected",
+        "recorded_at": "2026-09-08T06:24:45.000321+00:00",
+        "reasons": [
+          "No actual animated opening",
+          "Missing distinct opening zoom",
+          "Oversized head and inconsistent character",
+          "Insufficient and incongruous illustration coverage",
+          "Excessive repeated illustration hold"
+        ],
+        "youtube_schedule_action": "awaiting owner confirmation; still scheduled on YouTube; no API modification performed"
+      }
     },
     {
       "id": "SP-20260909-1",

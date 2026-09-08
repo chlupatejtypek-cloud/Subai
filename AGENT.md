@@ -1,3 +1,5 @@
+> **OWNER REJECTION UPDATE2026-09-08:** Read the latest VISUAL-EDITORIAL.md section before producing. Actual animated hook + opening zoom, canonical proportions, adequate distinct visual coverage; no still-only fallback publication after provider failure. Familiar-claims video was rejected after scheduling; cancellation of its live YouTube schedule needs explicit confirmation.
+
 > **Latest owner review:** Read `VISUAL-EDITORIAL.md`: researched useful angles first, up to 60s, calculated visual beats instead of fixed 10+5 images, no near-duplicate regenerated scenes, optional smooth UI.
 
 > **CURRENT POLICY — v4.0 (2026-09-07):** Read `config/channels.json`, `channel.md`, `AUTOMATION.md` and the calendar first. The owner now selected **Fish Audio `fb7ec16ca51a45a5a4db881244d7990a`**, 3 videos/day, 7 Sep–6 Oct, with automatic publication AFTER QA. Earlier permanent-Adam, new-audition, weekly-cadence and per-script approval instructions below are historical and superseded for this calendar. No secrets in public files. Generation still requires an agent production run; the scheduled publisher never fabricates assets or reviews.

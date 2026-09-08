@@ -1,3 +1,5 @@
+> **LATEST OWNER CORRECTION — 2026-09-08, familiar-claims video REJECTED:** Actual animated opening AND the distinct opening zoom are required. A still with camera drift is not a substitute. Keep canonical head/body proportions and character identity; expressive faces must not redesign Stiles. More distinct useful illustrations and shorter holds than the rejected four-image edit. Gentle motion supplements scene variety, it does not replace it. A possible cleaner visual style is pending owner clarification. See the latest section below; it supersedes permissive fallback wording.
+
 # Editorial and visual contract — latest owner review, 2026-09-07
 Supersedes fixed ten agent + five Agnes images and the 40s ceiling. Existing voice, single-recording delivery, restrained SFX, English language and canonical captions remain.
 
@@ -51,3 +53,14 @@ The owner praised the anchoring video and approved the general UI/animated-openi
 
 ## Owner refinement — subtle movement, 2026-09-08
 Owner praised restart-note production but found illustration holds completely static. Future illustrated holds should have barely perceptible controlled motion: typically a single slow1–2% push or a few pixels of drift over the whole shot. This supersedes an absolute no-continuous-zoom reading of prior guidance: no pulsing, bouncing, repeated zoom reversals or fast camera motion. Keep canonical captions stationary, preserve overscan/full bleed, and do not warp faces. Minimal motion, not another cut or regenerated near-duplicate.
+
+## Rejection and corrective production gates — 2026-09-08
+The owner rejected familiar-claims: missing actual video opening and opening zoom, giant head, inconsistent character, unsuitable scene, too few illustrations and a long repeated final hold. Technical QA and ASR success did not constitute acceptable creative QA.
+
+- **Opening:** actual animated footage plus a separately authored, clearly perceptible opening zoom. Body-image micro-drift is a different treatment. Provider503/quota failure is a blocker, not permission to label a still-camera substitute ready. Use a bounded retry/appropriate available route; if no acceptable animated hook exists, report blocked rather than auto-publish a downgraded version.
+- **Identity:** compare every scene against the canonical reference AND approved previous treatment. Explicitly inspect relative head/body size, eye style, limbs, linework and palette at final crop. Emotional eyebrows/mouth may vary; head/body anatomy may not. Reject giant-head/chibi redesigns and incongruous scenes even if otherwise attractive.
+- **Coverage:** prepare a shot-by-shot storyboard before generation, with durations and purpose. For the next roughly40-second video, plan around6–8 genuinely distinct relevant illustrations rather than four with a long repeated ending; this is a starting plan, not a permanent quota. Reusing exactly the same scene may support continuity, but does not count as another illustration.
+- **Holds:** flag illustrated holds longer than7seconds for explicit content justification. Do not stretch an illustration beyond11seconds simply by putting new text over it. Shorten the script or add a distinct meaningful visual beat instead. Keep instructional graphics readable.
+- **Movement:** every illustrated hold may receive very slight camera movement; keep captions fixed. This must coexist with real opening animation, the opening zoom and sufficient scene variety.
+- **Sign-off:** review opening footage, opening zoom, character consistency, scene relevance, unique visual coverage and longest hold separately from technical/audio checks. Do not call an intentionally downgraded or owner-rejected creative result QA-passed.
+- **Current release:** FACZAzrfEdU has been rejected after scheduling. Request confirmation to cancel its existing YouTube publishAt and keep it private; changing local ledger alone does not cancel YouTube publication. Do not delete the video or silently replace it.
