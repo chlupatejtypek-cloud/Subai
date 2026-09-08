@@ -48,3 +48,6 @@ The owner praised the anchoring video and approved the general UI/animated-openi
 - Match expressions to the beat: curiosity, surprise, frustration/worry, concentration and relief or delight. Keep the canonical simple face and body; use eyes, brows, mouth and pose deliberately rather than a permanently bored neutral look. Do not force exaggerated emotion into every frame or regenerate near-identical scenes just to change a mouth.
 - No “Example prices” text in future opening shots. Explain hypothetical examples naturally in narration/description; preserve essential context if displaying actual study data.
 - Anchoring remake praised; this does not explicitly authorize replacing the already scheduled original.
+
+## Owner refinement — subtle movement, 2026-09-08
+Owner praised restart-note production but found illustration holds completely static. Future illustrated holds should have barely perceptible controlled motion: typically a single slow1–2% push or a few pixels of drift over the whole shot. This supersedes an absolute no-continuous-zoom reading of prior guidance: no pulsing, bouncing, repeated zoom reversals or fast camera motion. Keep canonical captions stationary, preserve overscan/full bleed, and do not warp faces. Minimal motion, not another cut or regenerated near-duplicate.

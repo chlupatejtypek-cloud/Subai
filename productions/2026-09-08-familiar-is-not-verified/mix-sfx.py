@@ -1,0 +1,7 @@
+from pathlib import Path
+import subprocess,json,numpy as np,soundfile as sf,hashlib
+p=Path(__file__).resolve().parent;c=json.loads((p/'cue-times.json').read_text());sr=48000;a=np.zeros(round(c['end']*sr));cues=[(.05,'zoom-in-original.wav',.018,'paper motion'),(c['familiar'],'open_001.ogg',.012,'familiar feeling'),(c['diagram']+.16,'open_001.ogg',.018,'three copies'),(c['source']+.15,'drop_001.ogg',.014,'one shared source'),(c['independent']+.2,'drop_002.ogg',.013,'independent support')]
+for at,name,gain,reason in cues:
+ raw=subprocess.check_output(['ffmpeg','-v','error','-i',str(p/'assets'/name),'-f','f32le','-ac','1','-ar',str(sr),'-']);v=np.frombuffer(raw,np.float32).copy()[:int(.65*sr)];v*=gain/(max(abs(v))+1e-9);f=min(240,len(v)//4);v[:f]*=np.linspace(0,1,f);v[-f:]*=np.linspace(1,0,f);i=round(at*sr);a[i:i+len(v)]+=v
+sf.write(p/'audio/sfx.wav',a,sr,subtype='PCM_16');subprocess.run(['ffmpeg','-y','-v','error','-i',str(p/'audio/narration.wav'),'-i',str(p/'audio/sfx.wav'),'-filter_complex','[0:a]loudnorm=I=-16:TP=-2:LRA=9[v];[v][1:a]amix=inputs=2:normalize=0,alimiter=limit=0.94:level=false[a]','-map','[a]','-ar','48000','-t',str(c['end']),str(p/'audio/final-mix.wav')],check=True)
+(p/'sfx.json').write_text(json.dumps({'cues':cues,'rights':'Kenney Interface Sounds CC0 + original procedural whoosh; no Fish SFX claim','narration_unchanged_sha256':hashlib.sha256((p/'audio/narration.wav').read_bytes()).hexdigest()},indent=2))

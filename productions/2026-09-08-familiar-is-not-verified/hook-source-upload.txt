@@ -1,0 +1,7 @@
+resource_type=image
+public_id=subai/productions/stiles-psychology/2026-09-08-familiar/press
+version=1788847416
+bytes=2641154
+width=768
+height=1376
+secure_url=https://res.cloudinary.com/e5cjysjx/image/upload/v1788847416/subai/productions/stiles-psychology/2026-09-08-familiar/press.png

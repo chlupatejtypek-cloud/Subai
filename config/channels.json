@@ -98,7 +98,8 @@
         "visual_focus_policy": "One focal point per beat; simplify UI, remove completed elements and long on-screen academic footers; citations in description. Use brief selective blur/dimming for important ideas, not constantly. Keep captions and essential comparison context sharp.",
         "visual_mix_policy": "Owner praised anchoring direction but requests more genuinely distinct story illustrations and less continuous UI than that two-image treatment. Alternate story and concise UI as needed; no fixed image quota or near-duplicate regeneration.",
         "character_expression_policy": "Match simple facial expression and pose to each narrative beat: surprise, curiosity, frustration, worry, concentration, relief or joy. Avoid permanently bored faces; preserve identity and do not regenerate near-identical scenes just for a different mouth.",
-        "opening_label_policy": "No Example prices overlay in future hooks. Narration/description contextualize hypothetical examples; do not remove necessary statistical context."
+        "opening_label_policy": "No Example prices overlay in future hooks. Narration/description contextualize hypothetical examples; do not remove necessary statistical context.",
+        "illustration_micro_motion": "Owner2026-09-08 requests barely perceptible motion even during illustrated holds: typically1–2% scale change or a few pixels of drift over one shot. Monotonic, not pulsing or oscillating; captions stationary; preserve full bleed and identity."
       },
       "publishing": {
         "enabled": true,

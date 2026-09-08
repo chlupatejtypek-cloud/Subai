@@ -1,0 +1,38 @@
+{
+  "duration": 39.36666666666667,
+  "unique_illustrations": 4,
+  "phases": 6,
+  "micro_motion": "Each illustration hold:1.018\u20131.038 scale with12px horizontal and8px vertical travel, no loops, stationary captions and text. Overscan protects all edges. Same check artwork reused, not regenerated.",
+  "beats": [
+    [
+      0,
+      4.29,
+      "print workshop authored slow camera drift; Agnes unavailable503"
+    ],
+    [
+      4.29,
+      11.86,
+      "reassured cafe reader / familiarity"
+    ],
+    [
+      11.86,
+      19.08,
+      "skeptical library / knowledge neglect"
+    ],
+    [
+      19.08,
+      24.41,
+      "trace evidence / focused archive"
+    ],
+    [
+      24.41,
+      28.21,
+      "conceptual three copies linked to one source; not statistical data"
+    ],
+    [
+      28.21,
+      39.36666666666667,
+      "same archive art; original evidence and independent support"
+    ]
+  ]
+}

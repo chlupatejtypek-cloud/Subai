@@ -1,0 +1,7 @@
+import puppeteer from '/home/user/hyperframes-runtime/node_modules/puppeteer-core/lib/puppeteer/puppeteer-core.js';
+import fs from 'node:fs';
+const dir='/home/user/Subai/productions/2026-09-08-familiar-is-not-verified';
+const browser=await puppeteer.launch({executablePath:'/home/user/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});const page=await browser.newPage();await page.setViewport({width:1080,height:1920});await page.goto('file://'+dir+'/index.html');await page.evaluate(()=>document.fonts.ready);const checks=[];
+for(const t of [0.5,3.8,5,11,12.5,18.5,19.7,24,29,38.8]){await page.evaluate(t=>{window.__timelines.familiar.seek(t,false);},t);checks.push(await page.evaluate(t=>{const e=[...document.querySelectorAll('.scene')].find(e=>+getComputedStyle(e).opacity>.99);const a=e.querySelector('.art');const r=a.getBoundingClientRect();return {t,scene:e.id,transform:getComputedStyle(a).transform,covered:r.left<=0&&r.top<=0&&r.right>=1080&&r.bottom>=1920,bounds:[r.left,r.top,r.right,r.bottom]};},t));}
+for(let i=0;i<checks.length;i+=2){if(!checks[i].covered||!checks[i+1].covered||checks[i].transform===checks[i+1].transform)throw Error('No movement or exposed border');}
+fs.writeFileSync(dir+'/motion-qc.json',JSON.stringify(checks,null,2));await browser.close();console.log('All five illustration holds move; all checked transforms cover the full canvas.');

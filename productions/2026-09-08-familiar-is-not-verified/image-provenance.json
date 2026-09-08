@@ -1,0 +1,12 @@
+{
+  "provider": "Arena generate_image",
+  "reference": "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795815/subai/characters/stiles-front-tpose-v2.png",
+  "generated": 4,
+  "assets": {
+    "press.png": "Teal ochre ink print workshop; curious canonical stickman; three leaflets repeat a teal circle icon; no actual claim.",
+    "cafe.png": "Reassured smiling stickman reading newspaper at sunny outdoor cafe.",
+    "library.png": "Surprised skeptical stickman checking knowledge at reference-book lectern.",
+    "check.png": "Focused satisfied stickman comparing evidence at archival workbench."
+  },
+  "motion": "Authored whole-image micro camera moves; exact source reused for continuity; no new near-duplicate generation."
+}
