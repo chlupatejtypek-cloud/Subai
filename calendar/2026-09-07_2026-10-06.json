@@ -232,7 +232,7 @@
         "production_path": "productions/2026-09-08-why-switching-tasks-leaves-you-stuck"
       },
       "topic_moved_from": "SP-20260907-3",
-      "editorial_schedule_note": "Owner asked to proceed with next video and raised posting delay. Previously unmade anchoring topic takes today’s existing 15:00 slot; no fourth daily slot or backdated publication. Displaced task-switching topic retained in deferred_original_topic.",
+      "editorial_schedule_note": "Owner asked to proceed with next video and raised posting delay. Previously unmade anchoring topic takes today\u2019s existing 15:00 slot; no fourth daily slot or backdated publication. Displaced task-switching topic retained in deferred_original_topic.",
       "upload_started_at": "2026-09-08T04:59:30.140627+00:00",
       "youtube_url": "https://www.youtube.com/watch?v=bj1yP4s3CQ0",
       "api_returned_publish_at": "2026-09-08T13:00:00Z",
@@ -421,7 +421,7 @@
         "stage": 8,
         "stage_name": "backed_up_preview_pending_review",
         "started_at": "2026-09-08T08:34:19.272026+00:00",
-        "contract": "60–80 seconds;10–15 distinct used illustrations",
+        "contract": "60\u201380 seconds;10\u201315 distinct used illustrations",
         "next_action": "Do not publish or silently revise; owner requested a new video."
       },
       "publication_hold": true,
@@ -433,7 +433,7 @@
           "No useful explanatory UI",
           "Elongated unnatural first-frame character",
           "Over-minimal empty backgrounds",
-          "Illustration holds too long; new standard40–60s"
+          "Illustration holds too long; new standard40\u201360s"
         ]
       }
     },
@@ -457,7 +457,7 @@
       "asset_url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788858877/subai/productions/stiles-psychology/2026-09-09-liking-gap/liking-gap-final.mp4",
       "asset_sha256": "61894cc421117a0d56a801f3922de4743a5c1a34cc61f8303da6dbfbdfec5e0e",
       "duration_seconds": 50.1,
-      "description": "After a conversation, your guess about their opinion may be harsher than their actual report. Stiles explores the liking gap, one possible explanation and the difference between an observation and an interpretation.\n\nChart: Boothby et al.2018 Study1a,34analyzed participants. Mean estimated liking5.17 (95%CI4.85–5.49) versus reported liking5.82 (5.49–6.14), on a1–7scale. These are mean ratings, not percentages or guarantees about an individual.\nPrimary: https://clarkrelationshiplab.yale.edu/sites/default/files/files/BoothbyCooneySandstromClark2018.pdf\nShared-author extension to groups/teams, not wholly independent replication: https://ujhykshsiskqgovg.public.blob.vercel-storage.com/Liking+Gap+Groups+&+Teams-3HOSDUao5fm9hbjujzYkniArhXFrXo.pdf\n\nFact/guess example and optional message are practical illustrations, not a tested treatment. Respect disinterest; no guaranteed reply or friendship. AI-generated illustrations, opening animation and voice; authored explanatory UI and original procedural sound effects. No music.\n#Psychology #SocialPsychology #Shorts",
+      "description": "After a conversation, your guess about their opinion may be harsher than their actual report. Stiles explores the liking gap, one possible explanation and the difference between an observation and an interpretation.\n\nChart: Boothby et al.2018 Study1a,34analyzed participants. Mean estimated liking5.17 (95%CI4.85\u20135.49) versus reported liking5.82 (5.49\u20136.14), on a1\u20137scale. These are mean ratings, not percentages or guarantees about an individual.\nPrimary: https://clarkrelationshiplab.yale.edu/sites/default/files/files/BoothbyCooneySandstromClark2018.pdf\nShared-author extension to groups/teams, not wholly independent replication: https://ujhykshsiskqgovg.public.blob.vercel-storage.com/Liking+Gap+Groups+&+Teams-3HOSDUao5fm9hbjujzYkniArhXFrXo.pdf\n\nFact/guess example and optional message are practical illustrations, not a tested treatment. Respect disinterest; no guaranteed reply or friendship. AI-generated illustrations, opening animation and voice; authored explanatory UI and original procedural sound effects. No music.\n#Psychology #SocialPsychology #Shorts",
       "qa": {
         "research_verified": true,
         "script_verified": true,
@@ -488,7 +488,7 @@
         "stage": 8,
         "stage_name": "backed_up_preview_pending_review",
         "started_at": "2026-09-08T09:01:46.519863+00:00",
-        "contract": "40–60seconds; at least10used illustrations; useful UI and meaningful backgrounds; balanced Stiles",
+        "contract": "40\u201360seconds; at least10used illustrations; useful UI and meaningful backgrounds; balanced Stiles",
         "next_action": "Serialized publisher may schedule approved final; do not reupload if ID exists."
       },
       "publication_hold": false,
@@ -533,7 +533,7 @@
       "asset_url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788860989/subai/productions/stiles-psychology/2026-09-09-reference-frame/reference-frame-final.mp4",
       "asset_sha256": "c05ab8c8c2274bcfe2f2a6ac82c656cfa527995c8315c0e3619047142c9da908",
       "duration_seconds": 48.3,
-      "description": "The same final money can look different when framed as a gain or a loss. Stiles explains reference dependence, equivalent sure/gamble choices and a practical comparison checklist.\n\nKahneman & Tversky (1979), Prospect Theory, Problems11–12. Hypothetical between-group choices, original Israeli pounds; this video illustrates generic money units, not a real-dollar experiment or same-person reversal. Both sure outcomes1500; both gambles50%1000/50%2000. Barberis review provides context, not an independent replication.\nhttps://doi.org/10.2307/1914185\nhttps://www.nber.org/papers/w18621\n\nNo universal twice-as-painful claim. Final amounts/probabilities/real costs checklist is practical advice, not a tested intervention. AI-generated illustrations, opening animation and voice; authored UI and original procedural SFX, NOT Fish-generated sound effects. No music.\n#Psychology #DecisionMaking #Shorts",
+      "description": "The same final money can look different when framed as a gain or a loss. Stiles explains reference dependence, equivalent sure/gamble choices and a practical comparison checklist.\n\nKahneman & Tversky (1979), Prospect Theory, Problems11\u201312. Hypothetical between-group choices, original Israeli pounds; this video illustrates generic money units, not a real-dollar experiment or same-person reversal. Both sure outcomes1500; both gambles50%1000/50%2000. Barberis review provides context, not an independent replication.\nhttps://doi.org/10.2307/1914185\nhttps://www.nber.org/papers/w18621\n\nNo universal twice-as-painful claim. Final amounts/probabilities/real costs checklist is practical advice, not a tested intervention. AI-generated illustrations, opening animation and voice; authored UI and original procedural SFX, NOT Fish-generated sound effects. No music.\n#Psychology #DecisionMaking #Shorts",
       "qa": {
         "research_verified": true,
         "script_verified": true,
@@ -564,7 +564,7 @@
         "stage": 8,
         "stage_name": "backed_up_ready",
         "started_at": "2026-09-08T09:32:29.714988+00:00",
-        "contract": "40–60 seconds;10–15 distinct used illustrations",
+        "contract": "40\u201360 seconds;10\u201315 distinct used illustrations",
         "next_action": "Serialized publisher may schedule ready final; sync first; never duplicate existing ID."
       },
       "publication_hold": false,
@@ -587,16 +587,19 @@
     {
       "id": "SP-20260910-1",
       "channel_id": "stiles-psychology",
-      "title": "Why Plans Work Better With a When",
+      "title": "Give Your Plan a Trigger",
       "pillar": "Everyday Mind",
-      "mechanism_to_research": "implementation intentions",
+      "mechanism_to_research": "Implementation intentions: concrete cue-action links, not task-size reduction",
       "proposed_action_to_validate": "Write one if-then plan",
       "scheduled_at": "2026-09-10T15:00:00+02:00",
       "publish_at_utc": "2026-09-10T13:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "researching",
-      "research_status": "pending",
-      "research_sources": [],
+      "status": "producing",
+      "research_status": "verified",
+      "research_sources": [
+        "https://www.pnas.org/doi/10.1073/pnas.1103170108",
+        "https://www.mdpi.com/2071-1050/15/16/12457"
+      ],
       "production_path": "productions/2026-09-10-why-plans-work-better-with-a-when",
       "asset_url": null,
       "asset_sha256": null,
@@ -605,11 +608,11 @@
       "qa": null,
       "youtube_video_id": null,
       "workflow": {
-        "stage": 1,
-        "stage_name": "research",
+        "stage": 6,
+        "stage_name": "rendering",
         "started_at": "2026-09-08T11:31:51.316893+00:00",
-        "contract": "40–60 seconds;10–15 distinct used illustrations",
-        "next_action": "Read RETENTION-RESEARCH.md; compare3 angles; verify primary evidence before scripting"
+        "contract": "40\u201360 seconds;10\u201315 distinct used illustrations",
+        "next_action": "Inspect final samples, technical QA, verified archive and ready handoff"
       }
     },
     {

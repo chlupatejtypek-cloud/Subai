@@ -1,0 +1,99 @@
+{
+  "end": 48.3,
+  "fps": 30,
+  "distinct_used_illustrations": 10,
+  "generated_images": 10,
+  "max_illustration_hold_seconds": 4.1,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 4.1,
+      "source": "01-calendar",
+      "purpose": "Real sticky-note placement and separate zoom"
+    },
+    {
+      "start": 4.1,
+      "end": 6.6,
+      "source": "02-vague",
+      "purpose": "Vague walking goal"
+    },
+    {
+      "start": 6.6,
+      "end": 9.7,
+      "source": "10-adjust",
+      "purpose": "Undecided starting moment"
+    },
+    {
+      "start": 9.7,
+      "end": 12.8,
+      "source": "04-clinic",
+      "purpose": "Workplace trial context"
+    },
+    {
+      "start": 12.8,
+      "end": 15.5,
+      "source": "03-mail",
+      "purpose": "Date/time prompt"
+    },
+    {
+      "start": 15.5,
+      "end": 18.3,
+      "source": "05-evidence",
+      "purpose": "Actual uptake comparison"
+    },
+    {
+      "start": 18.3,
+      "end": 21,
+      "source": "04-clinic",
+      "purpose": "Modest effect not magic"
+    },
+    {
+      "start": 21,
+      "end": 24.7,
+      "source": "02-vague",
+      "purpose": "Implementation intentions explanation"
+    },
+    {
+      "start": 24.7,
+      "end": 28.3,
+      "source": "06-sink",
+      "purpose": "Concrete cue"
+    },
+    {
+      "start": 28.3,
+      "end": 31,
+      "source": "07-shoes",
+      "purpose": "Specified action"
+    },
+    {
+      "start": 31,
+      "end": 34.7,
+      "source": "08-walk",
+      "purpose": "Follow-through not negotiation"
+    },
+    {
+      "start": 34.7,
+      "end": 38.7,
+      "source": "05-evidence",
+      "purpose": "Noticeable and feasible"
+    },
+    {
+      "start": 38.7,
+      "end": 42.1,
+      "source": "09-rain",
+      "purpose": "Real barriers"
+    },
+    {
+      "start": 42.1,
+      "end": 45,
+      "source": "10-adjust",
+      "purpose": "Revise when circumstances change"
+    },
+    {
+      "start": 45,
+      "end": 48.3,
+      "source": "08-walk",
+      "purpose": "Cue-to-action payoff"
+    }
+  ]
+}

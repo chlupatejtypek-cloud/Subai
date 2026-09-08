@@ -1,0 +1,23 @@
+{
+  "generated": 10,
+  "accepted": 10,
+  "used": 10,
+  "provider": "Arena generate_image",
+  "reference": "Canonical Stiles plus source01 reference consistency",
+  "source_pre_animation_review": true,
+  "ten_image_sheet_review": true,
+  "opening_provider": "Agnes v2.0",
+  "opening_seconds": 4,
+  "sources": [
+    "assets/01-calendar.png",
+    "assets/02-vague.png",
+    "assets/03-mail.png",
+    "assets/04-clinic.png",
+    "assets/05-evidence.png",
+    "assets/06-sink.png",
+    "assets/07-shoes.png",
+    "assets/08-walk.png",
+    "assets/09-rain.png",
+    "assets/10-adjust.png"
+  ]
+}
