@@ -1,0 +1,7 @@
+resource_type=image
+public_id=subai/productions/stiles-psychology/2026-09-08-restart/interrupted
+version=1788845974
+bytes=2701297
+width=768
+height=1376
+secure_url=https://res.cloudinary.com/e5cjysjx/image/upload/v1788845974/subai/productions/stiles-psychology/2026-09-08-restart/interrupted.png

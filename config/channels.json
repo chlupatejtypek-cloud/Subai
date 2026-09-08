@@ -92,11 +92,13 @@
         "target_unique_images": null,
         "extra_images_policy": "Supersedes fixed 10+5 request after owner reviewed the silence video. Agent and Agnes generators remain available; no mandatory provider count. Existing 15-image cap is a safety ceiling, NOT a target; record per-production planned/accepted/used counts.",
         "image_planning": "Derive source-image count from researched script beats and timed storyboard, not a fixed generation quota. Reuse the exact scene asset for continuity; use UI/motion to reveal new information. No near-duplicate regenerated scenes.",
-        "motion_graphics": "Hyperframes 0.8.31 locally rendered in silence hyperframes-v2 (1080x1920/30fps); use optional purposeful charts/cards/diagrams, styled to Stiles and synchronized to narration. See HYPERFRAMES.md; owner review of first treatment pending.",
-        "intro_video_policy": "Attempt actual isolated environmental motion in Agnes v2.0; lock camera/objects and avoid hands/faces. On quality failure inspect frames and make at most one targeted corrective retry. 2.5 quota rejection reconfirmed 2026-09-08; do not keep retrying 2.5 until quota/entitlement changes. First accepted hook: anchoring price-tag sway.",
+        "motion_graphics": "Hyperframes 0.8.31 local rendering, illustrated scenes plus concise useful UI synchronized to narration. Anchoring remake praised by owner 2026-09-08. No universal template quota; see HYPERFRAMES.md.",
+        "intro_video_policy": "Prefer short Agnes v2.0 motion with a stable composition. Controlled simple character micro-actions are allowed after identity/anatomy/frame review; prefer isolated object motion for difficult scenes. Inspect and trim drift; at most one targeted retry on quality failure. Do not retry 2.5 quota rejection until entitlement changes.",
         "persistent_corner_brand": false,
         "visual_focus_policy": "One focal point per beat; simplify UI, remove completed elements and long on-screen academic footers; citations in description. Use brief selective blur/dimming for important ideas, not constantly. Keep captions and essential comparison context sharp.",
-        "visual_mix_policy": "Owner praised anchoring direction but requests more genuinely distinct story illustrations and less continuous UI than that two-image treatment. Alternate story and concise UI as needed; no fixed image quota or near-duplicate regeneration."
+        "visual_mix_policy": "Owner praised anchoring direction but requests more genuinely distinct story illustrations and less continuous UI than that two-image treatment. Alternate story and concise UI as needed; no fixed image quota or near-duplicate regeneration.",
+        "character_expression_policy": "Match simple facial expression and pose to each narrative beat: surprise, curiosity, frustration, worry, concentration, relief or joy. Avoid permanently bored faces; preserve identity and do not regenerate near-identical scenes just for a different mouth.",
+        "opening_label_policy": "No Example prices overlay in future hooks. Narration/description contextualize hypothetical examples; do not remove necessary statistical context."
       },
       "publishing": {
         "enabled": true,

@@ -43,3 +43,8 @@ The owner praised the anchoring video and approved the general UI/animated-openi
 - Optional selective focus: for an important idea, keep the relevant card/number/subject sharp and briefly blur and/or dim nonessential surrounding UI or background artwork. Then restore gently as the explanation moves on. Not constant blur, pulsing, or another effect on each word. Start with restrained ~0.2–0.35s easing and a hold tied to the spoken thought; visually test actual output rather than enforce a timer.
 - Do not blur captions, essential chart units/baselines, or a second value needed for a comparison. When comparing two numbers, the pair is the focal group; isolate the pair rather than hide one.
 - Storyboard each beat with: what the viewer should look at, what can disappear/dim/blur, what is spoken, and whether UI is genuinely better than an illustration. If the intended focal point is not obvious at a glance, simplify before adding animation.
+
+## Owner refinement — expressive Stiles, 2026-09-08
+- Match expressions to the beat: curiosity, surprise, frustration/worry, concentration and relief or delight. Keep the canonical simple face and body; use eyes, brows, mouth and pose deliberately rather than a permanently bored neutral look. Do not force exaggerated emotion into every frame or regenerate near-identical scenes just to change a mouth.
+- No “Example prices” text in future opening shots. Explain hypothetical examples naturally in narration/description; preserve essential context if displaying actual study data.
+- Anchoring remake praised; this does not explicitly authorize replacing the already scheduled original.

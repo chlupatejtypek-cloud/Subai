@@ -1,3 +1,5 @@
+> **Current status — 2026-09-08:** Publication and encrypted handoff run without chat; research, scripting, generation and editorial QA still need an agent production session. `unattended_generation=false`. The owner approved the anchoring remake style and now requests context-appropriate facial expressions and no “Example prices” hook label. New ready-to-resume production is registered for today's19:00 Prague slot; actual upload state is in the calendar, not this summary. Original phone public API verification succeeded; original anchoring scheduling and processing succeeded. Historical setup observations below must not override these verified results.
+
 # Subai automation — current operational contract
 
 ## Registry and calendar

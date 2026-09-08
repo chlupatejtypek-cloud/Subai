@@ -1,0 +1,32 @@
+{
+  "duration": 36.0,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": "30/1",
+  "codecs": [
+    "h264",
+    "aac"
+  ],
+  "sha256": "99027f6e37c6390f94fd04ebc3501a07976656fb86cfb5d5dfc69a037fe04c97",
+  "bytes": 10242500,
+  "loudness": {
+    "input_i": "-16.48",
+    "input_tp": "-1.91",
+    "input_lra": "1.30",
+    "input_thresh": "-26.61",
+    "output_i": "-16.08",
+    "output_tp": "-1.50",
+    "output_lra": "1.10",
+    "output_thresh": "-26.20",
+    "normalization_type": "dynamic",
+    "target_offset": "0.08"
+  },
+  "caption_events": 127,
+  "captions_no_overlap": true,
+  "last_caption_end": 35.56,
+  "hyperframes_version": "0.8.31",
+  "source_illustrations": 4,
+  "phases": 5
+}

@@ -1,0 +1,37 @@
+{
+  "duration": 36.0,
+  "unique_generated_illustrations": 4,
+  "expressions": [
+    "surprise at interruption",
+    "distracted frustration",
+    "anticipated deadline worry",
+    "engaged confident smile"
+  ],
+  "beats": [
+    {
+      "start": 0,
+      "end": 4,
+      "visual": "Agnes animated surprise, no opening label"
+    },
+    {
+      "start": 4,
+      "end": 11,
+      "visual": "meeting / one thought then definition"
+    },
+    {
+      "start": 11,
+      "end": 19.7,
+      "visual": "hallway anticipation; briefly isolate return-plan takeaway"
+    },
+    {
+      "start": 19.7,
+      "end": 31.86,
+      "visual": "single restart note, prompts replaced by practical example; no statistical chart"
+    },
+    {
+      "start": 31.86,
+      "end": 36.0,
+      "visual": "engaged next task, smile, authored idea drawing on easel"
+    }
+  ]
+}

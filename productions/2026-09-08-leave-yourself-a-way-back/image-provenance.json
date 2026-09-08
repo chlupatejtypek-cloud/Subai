@@ -1,0 +1,14 @@
+{
+  "provider": "Arena generate_image",
+  "reference": "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795815/subai/characters/stiles-front-tpose-v2.png",
+  "generated": 4,
+  "prompt_intents": {
+    "interrupted.png": "Surprised canonical stickman at report desk, raised brows, O mouth, paused pen, doorway interruption; 9:16 teal ochre ink storybook.",
+    "meeting.png": "Distracted/frustrated canonical stickman in meeting, pinched brow, wavy mouth, other speaker represented by one hand; distinct room.",
+    "pressure.png": "Worried canonical stickman in office hallway glancing at analog clock, inner brows raised and downturned mouth, two arms.",
+    "focused.png": "Confident smiling canonical stickman engaged at easel in bright studio; no clothing, same simple stick anatomy."
+  },
+  "edits": {
+    "focused-ready.png": "Remove unintended cream picture border; perspective-map original lightbulb sketch to the blank easel paper. No statistical data."
+  }
+}
