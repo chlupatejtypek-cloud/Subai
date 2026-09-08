@@ -1,0 +1,55 @@
+{
+  "platform": "tiktok",
+  "cover": "cover.png",
+  "proof_sheet": "cover-proof.png",
+  "source_image": "productions/2026-09-10-why-you-remember-the-worst-part-of-a-review/output/final.mp4@44.0s",
+  "headline": "IT WAS THE ENDING",
+  "sub": "WHY ONE BAD MINUTE WINS",
+  "wordmark": "STILES PSYCHOLOGY",
+  "headline_px": 260,
+  "canvas": [
+    1080,
+    1920
+  ],
+  "grid_safe_box": [
+    0,
+    420,
+    1080,
+    1500
+  ],
+  "title_gutter_px": 270,
+  "checks": [
+    {
+      "name": "dimensions",
+      "ok": true,
+      "detail": "1080x1920 (want 1080x1920)"
+    },
+    {
+      "name": "headline_size",
+      "ok": true,
+      "detail": "260px (min 96)"
+    },
+    {
+      "name": "title_gutter_quiet",
+      "ok": true,
+      "detail": "edge energy 2.4 (<12 keeps the auto-title readable)"
+    },
+    {
+      "name": "legible_at_200x350",
+      "ok": true,
+      "detail": "luma spread 255 (>=110)"
+    },
+    {
+      "name": "headline_inside_grid_crop",
+      "ok": true,
+      "detail": "headline band (1104, 1460) vs grid-safe 420-1500"
+    },
+    {
+      "name": "headline_contrast",
+      "ok": true,
+      "detail": "14.6:1 against the scrim (>=4.5)"
+    }
+  ],
+  "all_checks_passed": true,
+  "bytes": 1023410
+}

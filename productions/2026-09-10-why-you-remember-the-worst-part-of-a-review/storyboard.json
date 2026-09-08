@@ -1,0 +1,105 @@
+{
+  "slot": "SP-20260910-3",
+  "duration_seconds": 49.6,
+  "fps": 30,
+  "resolution": [1080, 1920],
+  "opening": {
+    "animated_source": "01-review-room.png",
+    "provider": "Agnes v2.0 image-to-video",
+    "seconds": 4.0,
+    "separate_opening_zoom": true,
+    "zoom_note": "Real generated motion for 0-4s, then a distinct slow push-in on the still from 4.0s. Two different effects, per the standing requirement."
+  },
+  "blur_windows": [
+    {"start": 19.0, "end": 22.6, "target": "background behind the duration card",
+     "reason": "isolate the counter-intuitive 'not the length' beat"},
+    {"start": 34.3, "end": 37.5, "target": "background behind the comparison card",
+     "reason": "isolate the randomized-trial result"}
+  ],
+  "shots": [
+    {"n": 1, "start": 0.0, "end": 5.6, "image": "01-review-room.png",
+     "motion": "agnes animated opening, then separate slow zoom-in",
+     "ui": null,
+     "line": "Your review was forty minutes long. Thirty-nine of them were fine. So why does the whole thing feel like a disaster?"},
+
+    {"n": 2, "start": 5.6, "end": 10.2, "image": "03-clinic-rating.png",
+     "motion": "very subtle drift", "ui": "rate-every-minute",
+     "ui_in": 6.4,
+     "line": "Researchers asked patients to rate their pain every single minute of an uncomfortable medical procedure."},
+
+    {"n": 3, "start": 10.2, "end": 13.3, "image": "04-short-vs-long.png",
+     "motion": "very subtle drift", "ui": "four-to-sixtynine",
+     "ui_in": 10.6,
+     "line": "Some lasted four minutes. Some lasted sixty-nine."},
+
+    {"n": 4, "start": 13.3, "end": 16.8, "image": "05-asked-after.png",
+     "motion": "very subtle drift", "ui": null,
+     "line": "Then they asked how bad it was overall. Here's what predicted the answer."},
+
+    {"n": 5, "start": 16.8, "end": 22.6, "image": "04-short-vs-long.png",
+     "motion": "very subtle drift", "ui": "duration-no-link",
+     "ui_in": 17.4, "blur": true,
+     "line": "Not the length. Length had almost no relationship to the memory at all."},
+
+    {"n": 6, "start": 22.6, "end": 26.6, "image": "06-two-moments.png",
+     "motion": "very subtle drift", "ui": "peak-and-end",
+     "ui_in": 23.0,
+     "line": "What predicted it was the worst moment, and the last few minutes."},
+
+    {"n": 7, "start": 26.6, "end": 29.6, "image": "02-walking-out.png",
+     "motion": "very subtle drift", "ui": "two-points",
+     "ui_in": 26.9,
+     "line": "Two points. Everything else got averaged away."},
+
+    {"n": 8, "start": 29.6, "end": 34.3, "image": "07-extra-minute.png",
+     "motion": "very subtle drift", "ui": "trial-682",
+     "ui_in": 30.1,
+     "line": "So they tried something strange. In a trial with six hundred and eighty-two patients, half had the procedure extended by an extra minute that was uncomfortable, but gentler."},
+
+    {"n": 9, "start": 34.3, "end": 37.5, "image": "07-extra-minute.png",
+     "motion": "very subtle drift", "ui": "more-but-better",
+     "ui_in": 34.6, "blur": true,
+     "line": "More total discomfort. And those patients remembered it as better."},
+
+    {"n": 10, "start": 37.5, "end": 39.3, "image": "08-coming-back.png",
+     "motion": "very subtle drift", "ui": null,
+     "line": "They were also more likely to come back."},
+
+    {"n": 11, "start": 39.3, "end": 43.4, "image": "11-forty-minutes.png",
+     "motion": "very subtle drift", "ui": "peak-plus-ending",
+     "ui_in": 39.7,
+     "line": "Your memory is not keeping the receipts. It keeps the peak, and it keeps the ending."},
+
+    {"n": 12, "start": 43.4, "end": 46.9, "image": "09-criticism-last.png",
+     "motion": "very subtle drift", "ui": null,
+     "line": "So when the criticism lands last, that becomes the whole review."},
+
+    {"n": 13, "start": 46.9, "end": 49.6, "image": "10-read-it-all.png",
+     "motion": "very subtle drift", "ui": "read-it-all",
+     "ui_in": 47.1,
+     "line": "Go back and read the entire thing before you decide what it meant."}
+  ],
+  "distinct_images_used": [
+    "01-review-room.png", "02-walking-out.png", "03-clinic-rating.png",
+    "04-short-vs-long.png", "05-asked-after.png", "06-two-moments.png",
+    "07-extra-minute.png", "08-coming-back.png", "09-criticism-last.png",
+    "10-read-it-all.png", "11-forty-minutes.png"
+  ],
+  "distinct_image_count": 11,
+  "longest_hold_seconds": 5.8,
+  "longest_hold_justification": "Shot 5 (16.8-22.6s) carries the central counter-intuitive turn and a two-stage UI reveal; the image also has an active blur window, so it is not a static hold.",
+  "ui_cards": {
+    "rate-every-minute": {"title": "EVERY MINUTE", "rows": [["Pain rated", "0 to 10"], ["During", "the procedure"]]},
+    "four-to-sixtynine": {"title": "HOW LONG?", "rows": [["Shortest", "4 minutes"], ["Longest", "69 minutes"]]},
+    "duration-no-link": {"title": "WHAT PREDICTED THE MEMORY?", "rows": [["How long it lasted", "Almost no relationship"]]},
+    "peak-and-end": {"title": "WHAT PREDICTED THE MEMORY?", "rows": [["The worst moment", "Yes"], ["The last few minutes", "Yes"]]},
+    "two-points": {"title": "TWO POINTS", "rows": [["Everything else", "Averaged away"]]},
+    "trial-682": {"title": "682 PATIENTS", "rows": [["Half got", "An extra, gentler minute"]]},
+    "more-but-better": {"title": "THE RESULT", "rows": [["Total discomfort", "Higher"], ["Remembered as", "Better"]]},
+    "peak-plus-ending": {"title": "YOUR MEMORY KEEPS", "rows": [["The peak", ""], ["The ending", ""]]},
+    "read-it-all": {"title": "BEFORE YOU DECIDE", "rows": [["Read the whole record", ""]]}
+  },
+  "claim_discipline": "No raw coefficients on screen (r=.67 and .03 are described qualitatively). 682 is exact and sourced. No return-rate percentage. The review framing is an application of medical/lab findings, not a claimed study result.",
+  "captions": "canonical stationary word captions from audio/words.json",
+  "sfx": "quiet, sparse; no music bed"
+}

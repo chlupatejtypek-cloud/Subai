@@ -1,0 +1,39 @@
+{
+  "duration_seconds": 49.6,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1488,
+  "codecs": [
+    "h264",
+    "aac"
+  ],
+  "sha256": "412f4114877eb178cdef494d450fad54489773f42c950e2d5d3c9d6d63d733a9",
+  "bytes": 21114364,
+  "caption_events": 177,
+  "captions_no_overlap": true,
+  "last_caption_end": 49.6,
+  "distinct_illustrations_used": 11,
+  "longest_hold_seconds": 5.8,
+  "animated_opening": "Agnes video v2.0, 4.0s, locked camera micro-motion",
+  "separate_zoom": "slow push-in on the same still, 4.0-5.6s",
+  "blur_seconds_total": 6.8,
+  "ui_cards": 9,
+  "ui_entrances": "all eased over 400ms, staggered rows, nothing spawns",
+  "loudness": {
+    "input_i": "-16.56",
+    "input_tp": "-1.93",
+    "input_lra": "1.70",
+    "input_thresh": "-26.71",
+    "output_i": "-16.13",
+    "output_tp": "-1.50",
+    "output_lra": "1.70",
+    "output_thresh": "-26.29",
+    "normalization_type": "dynamic",
+    "target_offset": "0.13"
+  },
+  "sfx": "original procedural only; no meme-API media composited",
+  "review_boundary": "Technical checks plus sampled frame review. Not a claimed full human audio/video review."
+}

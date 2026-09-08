@@ -9,7 +9,7 @@ exported MP4 that we then re-host on Cloudinary/YouTube/TikTok would breach both
 
 So this is a discovery tool: it shows what exists so a human can decide, and it
 keeps the pipeline honest by not offering a one-command path to a rights problem.
-See KLIPY.md for the full reasoning and what to ask KLIPY for.
+See MEME-APIS.md for the full reasoning and what to ask KLIPY for.
 
 Reads KLIPY_API_KEY from the environment; the key is never printed.
 """
@@ -27,7 +27,7 @@ BASE = "https://api.klipy.com/api/v1"
 # Verified live on 2026-09-08: these respond for our key.
 WORKING_TYPES = ("gifs", "stickers", "clips")
 # Documented by KLIPY but returns {"result":false,...,"Route not found"} for our
-# key — the Meme product is not enabled on this app. See KLIPY.md.
+# key — the Meme product is not enabled on this app. See MEME-APIS.md.
 DISABLED_TYPES = ("memes", "meme")
 
 ATTRIBUTION = (

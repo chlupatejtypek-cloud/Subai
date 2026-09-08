@@ -1,6 +1,6 @@
 {
-  "generated": 10,
-  "accepted": 9,
+  "generated": 12,
+  "accepted": 11,
   "used": 0,
   "rejected": 1,
   "provider": "Arena generate_image",
@@ -11,7 +11,7 @@
     {
       "file": "05-asked-after.png",
       "reason": "Identity drift: Stiles rendered with a green knitted sweater, dark trousers and a thickened human torso instead of the canonical thin charcoal stick-figure body. Head/body proportions also read closer to a human figure than the model sheet.",
-      "action": "Moved to rejected/. Must be regenerated before assembly; the image-generation limit for the turn was reached."
+      "action": "Moved to rejected/. Regenerated successfully with an explicit no-clothing constraint."
     }
   ],
   "accepted_sources": [
@@ -19,15 +19,14 @@
     "02-walking-out.png",
     "03-clinic-rating.png",
     "04-short-vs-long.png",
+    "05-asked-after.png",
     "06-two-moments.png",
     "07-extra-minute.png",
     "08-coming-back.png",
     "09-criticism-last.png",
-    "10-read-it-all.png"
+    "10-read-it-all.png",
+    "11-forty-minutes.png"
   ],
-  "still_needed": [
-    "05-asked-after.png (retry, enforce stick-figure body, no clothing)",
-    "11-forty-minutes.png (closer listening shot, never generated - limit reached)"
-  ],
-  "note": "Minimum of 10 distinct accepted AND used illustrations is NOT yet met: 9 accepted. Assembly must not start until two more images are generated and accepted."
+  "still_needed": [],
+  "note": "11 distinct accepted illustrations; minimum of 10 met. 05 was regenerated after an identity-drift rejection and now shows the canonical bare stick-figure body."
 }
