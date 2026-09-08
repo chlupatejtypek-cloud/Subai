@@ -3,8 +3,8 @@
   "public_id": "subai/private-transfer/subai-agent-bootstrap-v1.enc",
   "resource_type": "raw",
   "stable_url": "https://res.cloudinary.com/e5cjysjx/raw/upload/subai/private-transfer/subai-agent-bootstrap-v1.enc",
-  "sha256": "27e81bc8496f3b59d22417cc7120a43d9e069362f51c071d1f18604348fce409",
-  "bytes": 88512,
+  "sha256": "971c45c54e196bfad506fd4b595356d8e506df423111af11bf86d7e71a008310",
+  "bytes": 89232,
   "encryption": "OpenSSL AES-256-CBC / PBKDF2-HMAC-SHA256 / 600000 iterations",
   "encryption_parameters": {
     "cipher": "aes-256-cbc",
@@ -15,10 +15,10 @@
     "envelope": "binary OpenSSL Salted__",
     "plaintext": "tar.gz"
   },
-  "repo_commit": "9ea293643c284764ca1d77875fcaab4f0e80337f",
+  "repo_commit": "2e74ad0b732a19f2be5b769516ffd55382e0888d",
   "contains": "START_HERE.md, HANDOFF.md, encrypted credentials, YouTube client/token, current tracked repo snapshot; never plaintext",
-  "updated_at": "2026-09-08T11:39:08Z",
-  "versioned_url": "https://res.cloudinary.com/e5cjysjx/raw/upload/v1788867548/subai/private-transfer/subai-agent-bootstrap-v1.enc",
-  "cloudinary_version": 1788867548,
+  "updated_at": "2026-09-08T11:44:10Z",
+  "versioned_url": "https://res.cloudinary.com/e5cjysjx/raw/upload/v1788867850/subai/private-transfer/subai-agent-bootstrap-v1.enc",
+  "cloudinary_version": 1788867850,
   "verification": "HTTP 200 + SHA256 matches locally roundtrip-tested ciphertext"
 }
