@@ -3,12 +3,12 @@
   "public_id": "subai/private-transfer/subai-agent-bootstrap-v1.enc",
   "resource_type": "raw",
   "stable_url": "https://res.cloudinary.com/e5cjysjx/raw/upload/subai/private-transfer/subai-agent-bootstrap-v1.enc",
-  "sha256": "dd0d205349403cf62fc8cefb6b2edf1e1b963a9b3e3e382b7ba99a294e759c6d",
-  "bytes": 71312,
+  "sha256": "4b3342d8863439a9e4f8dd1b18d73a0b91a8245daefb4ae25a7c0d4b593ed310",
+  "bytes": 72736,
   "encryption": "OpenSSL AES-256-CBC / PBKDF2-HMAC-SHA256 / 600000 iterations",
   "contains": "Encrypted credentials, YouTube client and refresh token, current registry/calendar/docs snapshots; never plaintext",
-  "updated_at": "2026-09-07T21:50:43Z",
-  "versioned_url": "https://res.cloudinary.com/e5cjysjx/raw/upload/v1788817843/subai/private-transfer/subai-agent-bootstrap-v1.enc",
-  "cloudinary_version": 1788817843,
+  "updated_at": "2026-09-08T04:58:53Z",
+  "versioned_url": "https://res.cloudinary.com/e5cjysjx/raw/upload/v1788843533/subai/private-transfer/subai-agent-bootstrap-v1.enc",
+  "cloudinary_version": 1788843533,
   "verification": "HTTP 200 + SHA256 matches locally roundtrip-tested ciphertext"
 }
