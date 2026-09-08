@@ -523,7 +523,7 @@
       "scheduled_at": "2026-09-09T23:00:00+02:00",
       "publish_at_utc": "2026-09-09T21:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "upload_started",
+      "status": "scheduled",
       "research_status": "verified",
       "research_sources": [
         "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Behavioral_Decision_Theory/Kahneman_Tversky_1979_Prospect_theory.pdf",
@@ -559,7 +559,7 @@
         "reviewed_by": "Arena agent: primary study sections/review,10-image sheet, source pre-animation, five hook samples,16final samples; numeric-normalized ASR and technical checks; not full human playback",
         "reviewed_at": "2026-09-08T09:50:38.763568+00:00"
       },
-      "youtube_video_id": null,
+      "youtube_video_id": "BzHgyoh1AOU",
       "workflow": {
         "stage": 8,
         "stage_name": "backed_up_ready",
@@ -569,7 +569,11 @@
       },
       "publication_hold": false,
       "owner_review_required": false,
-      "upload_started_at": "2026-09-08T09:52:35.889761+00:00"
+      "upload_started_at": "2026-09-08T09:52:35.889761+00:00",
+      "youtube_url": "https://www.youtube.com/watch?v=BzHgyoh1AOU",
+      "api_returned_publish_at": "2026-09-09T21:00:00Z",
+      "api_returned_privacy": "private",
+      "uploaded_at": "2026-09-08T09:52:39.822282+00:00"
     },
     {
       "id": "SP-20260910-1",
