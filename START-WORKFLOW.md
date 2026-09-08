@@ -1,3 +1,5 @@
+> **LATEST MOTION FEEDBACK:** Liking-gap preview approved. Future UI text/panels must animate smoothly (reveal, slide, fade, state transition), never suddenly spawn. Occasional selective blur remains welcome, never constant; use an animated circle only when useful, optional not mandatory. Remember prior constraints:40–60s,10illustrations, meaningful backgrounds, balanced Stiles, real hook + separate zoom.
+
 # `start` — one next video, step by step
 
 Latest owner contract,2026-09-08. When the owner writes `start` (case-insensitive), the receiving agent executes this workflow immediately. Do not ask for a topic, repeated keys or routine permission. This is an agent instruction plus executable state helpers, NOT a deployed chat listener or an unattended generative service. Merely discussing the word `start` does not trigger paid generation.
@@ -41,6 +43,26 @@ Populate creative contract v2 plus existing QA. `qa.source_image_count` means di
 ## 8. Backup and calendar handoff
 Upload/verify final hash; backup editable sources and verify download/restore before cleanup. Store final URL, SHA256, duration, production path, QA and review status. Only fully cleared work becomes `ready`. Videos may be generated weeks ahead and remain `ready` until the publisher's30min–48h window. Do not regenerate them on the next `start`. Commit each major stage's artifact paths and `workflow.stage/next_action` so interruptions resume from real outputs.
 
+## 8b. Mandatory cleanup after every finished video
+
+**Standing owner instruction (2026-09-08): clean up immediately after a video is finished and scheduled/published — not "later", not "when the disk fills up".** Old photos, videos, audio and render intermediates must not accumulate in the workspace.
+
+Run it as the step right after the publisher reports `scheduled` or `published`:
+
+```
+set -a; source .env; set +a
+python tools/cleanup-workspace.py            # dry run, shows exactly what goes
+python tools/cleanup-workspace.py --apply
+```
+
+What the tool guarantees, and what you must not bypass:
+- Deletes a media file only after re-downloading its recorded Cloudinary copy and matching SHA256 three ways (local, remote, manifest), or after matching its hash inside a cold archive whose `restore-verification.json` confirms every member was verified.
+- Cleans only media: rendered masters, generated stills, source/derived audio, QC contact sheets and `output/` intermediates. Scripts, research, provenance JSON and QA records always stay, so any production remains reproducible.
+- Skips a production entirely while its calendar item is still in progress, so the video being built now keeps its inputs.
+- Prints `KEEP` for anything without a verified remote copy. That is a to-do, not a pass: upload it, record it in the production's `assets.json`, verify the hash, then clean.
+
+Never delete media by hand instead of running this, and never weaken the hash checks to reclaim space faster. Restore anything later from the URLs in `assets.json`.
+
 ## 9. Upload and actual publication sync
 Serialized Actions uploads only eligible ready items; state reservation before upload prevents blind retries. `scheduled` means private with future publishAt, NOT public. The same workflow now runs youtube-sync before publication on cron17/47 and execute; it updates known IDs from YouTube and commits the result. Each `start` also syncs. Public+processed becomes `published`; `first_observed_public_at` is observation time, not claimed exact release time. Missing/failed IDs become needs_reconciliation; retain IDs and never auto-reupload. Private without schedule becomes uploaded_private, not an assertion who cancelled it. Owner-held media still scheduled/public gets an alert, not a false cancellation.
 
@@ -48,4 +70,4 @@ Serialized Actions uploads only eligible ready items; state reservation before u
 At roughly24h,72h and7days after public release, review available engaged views, stayed-to-watch, average view duration/percentage, retention drops/replays, shares and meaningful comments. Compare similar-length/channel videos and sample sizes, not invented universal viral thresholds. Record one concrete hypothesis/change for the next production in `performance-notes.md`. Retention Analytics API integration is NOT implemented/authorized by readonly Data API credentials; use supplied Studio exports or request appropriate access only if necessary. Do not block ordinary production on unavailable analytics or invent metrics.
 
 ## Completion response
-Briefly give: selected topic, completed stage, final preview link if available, duration/used-image count, QA/review state, calendar ID/slot and whether ready/scheduled/public. State actual blockers. One `start` produces/resumes one video, never the whole90-slot calendar in one hidden batch.
+Briefly give: selected topic, completed stage, final preview link if available, duration/used-image count, QA/review state, calendar ID/slot, whether ready/scheduled/public, and confirmation that cleanup-workspace.py was applied with how much space it reclaimed. State actual blockers. One `start` produces/resumes one video, never the whole90-slot calendar in one hidden batch.

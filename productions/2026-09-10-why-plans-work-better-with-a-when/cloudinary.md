@@ -1,0 +1,9 @@
+# Verified plan-trigger backup
+
+- plan-trigger-final.mp4: https://res.cloudinary.com/e5cjysjx/video/upload/v1788867674/subai/productions/stiles-psychology/2026-09-10-plan-trigger/plan-trigger-final.mp4 — downloaded SHA256 `bdf18ff4499763b0a48f47699660108fd947958a3546cfd531cd78719b5db545` matched.
+- project-part-1.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788867677/subai/productions/stiles-psychology/2026-09-10-plan-trigger/project-part-1.json — downloaded SHA256 `190a48daf63a6712fd45297773e57bcdb7f5c421dac336d59425692c312dbfcf` matched.
+- project-part-2.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788867679/subai/productions/stiles-psychology/2026-09-10-plan-trigger/project-part-2.json — downloaded SHA256 `06f30275bb8af958c204f39c130142fdcb0466ab39cc2dd97c4f631b944f4bf7` matched.
+- project-part-3.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788867681/subai/productions/stiles-psychology/2026-09-10-plan-trigger/project-part-3.json — downloaded SHA256 `a7e60a7340ae7ffbb22e5031579cb896ade3eab1d4c181e2aad6a9c781631033` matched.
+- project-part-4.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788867683/subai/productions/stiles-psychology/2026-09-10-plan-trigger/project-part-4.json — downloaded SHA256 `ba63f0295c8b932ed85c3c5ad887e83826fa3d7db2165eeab29675fc2070a656` matched.
+- project-part-5.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788867685/subai/productions/stiles-psychology/2026-09-10-plan-trigger/project-part-5.json — downloaded SHA256 `eea4319b9d24ed96b5f644f6eca8ec5f0a980cc099d5788efd3c7a42da139199` matched.
+- project-part-6.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788867686/subai/productions/stiles-psychology/2026-09-10-plan-trigger/project-part-6.json — downloaded SHA256 `9046c4d74285e5243914523e080c51910537863e68bd9e25426c072939a0d554` matched.

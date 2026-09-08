@@ -1,0 +1,23 @@
+{
+  "generated": 10,
+  "accepted": 10,
+  "used": 10,
+  "provider": "Arena generate_image",
+  "reference": "Canonical Stiles plus in-project 01-jar continuity reference",
+  "source_pre_animation_review": true,
+  "ten_image_sheet_review": true,
+  "opening_provider": "Agnes v2.0",
+  "opening_seconds": 4,
+  "sources": [
+    "01-jar.png",
+    "02-speak.png",
+    "03-reframe.png",
+    "04-distract.png",
+    "05-sensors.png",
+    "06-week.png",
+    "07-calm-body.png",
+    "08-words.png",
+    "09-phone.png",
+    "10-name-it.png"
+  ]
+}

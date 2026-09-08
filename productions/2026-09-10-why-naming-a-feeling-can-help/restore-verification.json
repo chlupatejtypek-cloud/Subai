@@ -1,0 +1,24 @@
+{
+  "archive_members": 43,
+  "all_manifest_hashes_verified": true,
+  "all_parts_redownloaded": true,
+  "safe_member_paths_checked": true,
+  "archive_sha256": "d118508cf16a4d545791c68c736253049cc2c19e546e26d103188d886f76d7d8",
+  "cold_archived_current_files": [
+    "assets/03-reframe.png",
+    "assets/04-distract.png",
+    "assets/07-calm-body.png",
+    "assets/08-words.png",
+    "assets/06-week.png",
+    "assets/02-speak.png",
+    "assets/05-sensors.png",
+    "assets/09-phone.png",
+    "assets/10-name-it.png",
+    "audio/source.wav",
+    "audio/compacted.wav",
+    "audio/narration.wav",
+    "audio/sfx.wav",
+    "audio/final-mix.wav"
+  ],
+  "final_retained": "/home/user/naming-final.mp4"
+}

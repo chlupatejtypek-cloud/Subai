@@ -1,0 +1,76 @@
+{
+  "ui_entrance_samples": [
+    {
+      "time": 13.2,
+      "alpha_extrema": [
+        0,
+        0
+      ],
+      "bbox": null
+    },
+    {
+      "time": 13.3,
+      "alpha_extrema": [
+        0,
+        40
+      ],
+      "bbox": [
+        80,
+        312,
+        1001,
+        1058
+      ]
+    },
+    {
+      "time": 13.4,
+      "alpha_extrema": [
+        0,
+        128
+      ],
+      "bbox": [
+        80,
+        295,
+        1001,
+        1041
+      ]
+    },
+    {
+      "time": 13.6,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        80,
+        270,
+        1001,
+        1016
+      ]
+    },
+    {
+      "time": 15.6,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "bbox": [
+        80,
+        270,
+        1001,
+        1016
+      ]
+    }
+  ],
+  "source_first_frame_reviewed_before_animation": true,
+  "hook_samples": [
+    0,
+    0.7,
+    1.4,
+    2.2,
+    3.4
+  ],
+  "actual_motion": "Sticky note pressed/attached, hand released and withdrawn",
+  "provider_camera_note": "Provider added a push-in despite locked-camera prompt; retained because coherent close-up with actual object action. Separate authored5%punch zoom first1s remains independent.",
+  "still_motion": "1.2% monotonic drift per shot",
+  "review_boundary": "Static samples and source interpolation checks, not human full playback"
+}

@@ -1,0 +1,24 @@
+{
+  "archive_members": 44,
+  "all_manifest_hashes_verified": true,
+  "all_parts_redownloaded": true,
+  "safe_member_paths_checked": true,
+  "archive_sha256": "c1983b4cdfddda28f25ced3b7ea75eb2a79c05412ddc354ff6081906619d0645",
+  "cold_archived_current_files": [
+    "assets/03-add.png",
+    "assets/04-larger-start.png",
+    "assets/02-gift.png",
+    "assets/10-check.png",
+    "assets/08-reference.png",
+    "assets/06-two-wallets.png",
+    "assets/07-study.png",
+    "assets/05-subtract.png",
+    "assets/09-headlines.png",
+    "audio/source.wav",
+    "audio/compacted.wav",
+    "audio/narration.wav",
+    "audio/sfx.wav",
+    "audio/final-mix.wav"
+  ],
+  "final_retained": "/home/user/reference-frame-final.mp4"
+}

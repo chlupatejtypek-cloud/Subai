@@ -1,0 +1,87 @@
+{
+  "end": 43.1,
+  "fps": 30,
+  "distinct_used_illustrations": 10,
+  "generated_images": 10,
+  "max_illustration_hold_seconds": 4.1,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 4.1,
+      "source": "01-jar",
+      "purpose": "Real reach/hesitation plus separate zoom"
+    },
+    {
+      "start": 4.1,
+      "end": 6.6,
+      "source": "09-phone",
+      "purpose": "Expectation of calm"
+    },
+    {
+      "start": 6.6,
+      "end": 9.6,
+      "source": "01-jar",
+      "purpose": "Live spider setup"
+    },
+    {
+      "start": 9.6,
+      "end": 13.4,
+      "source": "02-speak",
+      "purpose": "Saying the feeling aloud"
+    },
+    {
+      "start": 13.4,
+      "end": 16.4,
+      "source": "03-reframe",
+      "purpose": "Reappraisal comparison"
+    },
+    {
+      "start": 16.4,
+      "end": 19.2,
+      "source": "04-distract",
+      "purpose": "Distraction comparison"
+    },
+    {
+      "start": 19.2,
+      "end": 22.6,
+      "source": "06-week",
+      "purpose": "Different spider, different room"
+    },
+    {
+      "start": 22.6,
+      "end": 26.2,
+      "source": "05-sensors",
+      "purpose": "Physiological measure lowest"
+    },
+    {
+      "start": 26.2,
+      "end": 29.6,
+      "source": "07-calm-body",
+      "purpose": "Self-reported fear similar"
+    },
+    {
+      "start": 29.6,
+      "end": 33.2,
+      "source": "07-calm-body",
+      "purpose": "Body settled first"
+    },
+    {
+      "start": 33.2,
+      "end": 36.4,
+      "source": "08-words",
+      "purpose": "More specific words"
+    },
+    {
+      "start": 36.4,
+      "end": 39.4,
+      "source": "09-phone",
+      "purpose": "Chest tightens before a call"
+    },
+    {
+      "start": 39.4,
+      "end": 43.1,
+      "source": "10-name-it",
+      "purpose": "Name what is actually here"
+    }
+  ]
+}

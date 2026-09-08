@@ -138,5 +138,17 @@
     "sha256": "5626bc584c5da465a79331b4a7ab6781cc20879f54a41bc8930121fa1778126c",
     "bytes": 1190708,
     "http": 200
+  },
+  {
+    "file": "silence-hyperframes-final.mp4",
+    "url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788817627/subai/productions/stiles-psychology/2026-09-07-awkward-silence/hyperframes-v2/silence-hyperframes-final.mp4",
+    "sha256": "068b07705935d85a22dbe00dd64e5047e04b4bf6d4490a1a5adc8845d03092f3",
+    "verified": "Re-downloaded 2026-09-08; SHA256 matched the local master before workspace cleanup"
+  },
+  {
+    "file": "source.opus",
+    "url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788870557/subai/productions/stiles-psychology/legacy-sources/source-2026-09-07-why-awkward-silence-feels-so-long.ogg",
+    "sha256": "20cee019b4b79aec9da4b4aacc6ce563f74b023c044f036bda140e30d50ec3f1",
+    "verified": "Uploaded and re-downloaded 2026-09-08; SHA256 matched before cleanup"
   }
 ]

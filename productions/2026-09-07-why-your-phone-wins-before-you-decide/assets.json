@@ -1,0 +1,26 @@
+[
+  {
+    "file": "phone-checking-final.mp4",
+    "url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788812577/subai/productions/stiles-psychology/2026-09-07-phone-checking/phone-checking-final.mp4",
+    "sha256": "4d0dee0ac7a00875045388c6dd93a33687638811fcffb6beb1bca46b17ed5c98",
+    "verified": "Re-downloaded 2026-09-08; SHA256 matched the local master before workspace cleanup"
+  },
+  {
+    "file": "phone-checking-v2.mp4",
+    "url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788813516/subai/productions/stiles-psychology/2026-09-07-phone-checking/v2/phone-checking-v2.mp4",
+    "sha256": "e3b46b12d11956ad9876667e323b88153a0c6c055bd95a5d7e4a0c0ddb126c54",
+    "verified": "Re-downloaded 2026-09-08; SHA256 matched the local master before workspace cleanup"
+  },
+  {
+    "file": "narration.opus",
+    "url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788870559/subai/productions/stiles-psychology/legacy-sources/narration-2026-09-07-why-your-phone-wins-before-you-decide.ogg",
+    "sha256": "2f94939ab5e3bb539d93e27e79a6449755915284dc3b090edc946932a5ee4da0",
+    "verified": "Uploaded and re-downloaded 2026-09-08; SHA256 matched before cleanup"
+  },
+  {
+    "file": "narration-v2.wav",
+    "url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788870560/subai/productions/stiles-psychology/legacy-sources/narration-v2-v2.wav",
+    "sha256": "82298f8a658a1570cd720902098b61e5aacdca82f4b01bffd663c6481e2d185d",
+    "verified": "Uploaded and re-downloaded 2026-09-08; SHA256 matched before cleanup"
+  }
+]

@@ -33,5 +33,11 @@
     "sha256": "6e822ae9344bae8f563f0383392b34fab0104d45f1e5bc32dd62d900ab0fe83c",
     "bytes": 1657990,
     "verified_http": 200
+  },
+  {
+    "file": "anchoring-remake.mp4",
+    "url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788845271/subai/productions/stiles-psychology/2026-09-08-anchoring/remake/anchoring-remake.mp4",
+    "sha256": "a78ed6343e80e01c0e6018d533c62cd4576c05843f6991bbcf8bd0690351982a",
+    "verified": "Re-downloaded 2026-09-08; SHA256 matched the local master before workspace cleanup"
   }
 ]

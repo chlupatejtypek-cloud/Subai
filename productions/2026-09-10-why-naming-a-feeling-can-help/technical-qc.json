@@ -1,0 +1,35 @@
+{
+  "duration_seconds": 43.1,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1293,
+  "codecs": [
+    "h264",
+    "aac"
+  ],
+  "sha256": "8d7e7b89c4d9f9491a192ea89c72075da81ee8a7a0a376047f7591b64de0a9d8",
+  "bytes": 10697165,
+  "caption_events": 141,
+  "captions_no_overlap": true,
+  "last_caption_end": 42.63,
+  "ui_explanatory_sequences": 3,
+  "loudness": {
+    "input_i": "-16.66",
+    "input_tp": "-1.88",
+    "input_lra": "1.60",
+    "input_thresh": "-26.83",
+    "output_i": "-16.16",
+    "output_tp": "-1.50",
+    "output_lra": "1.60",
+    "output_thresh": "-26.32",
+    "normalization_type": "dynamic",
+    "target_offset": "0.16"
+  },
+  "asr": true,
+  "generated_and_used_illustrations": 10,
+  "longest_illustration_hold_seconds": 4.1,
+  "review_boundary": "Technical checks and inspected frame samples, not claimed full human audio/video review; approved style; sampled visual review only"
+}

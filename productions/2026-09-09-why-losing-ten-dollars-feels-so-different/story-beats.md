@@ -1,0 +1,5 @@
+# Script and motion plan
+Hook candidates:1)Would you rather gain500orlose500, until both end at same balance? SELECTED concrete puzzle.2)Losses hurt twice as much: REJECTED universalism.3)Your brain hates losing: REJECTED generic.
+10new illustrations, meaningful shop/home/bank environments, balanced canonical black-line Stiles.40–60s, maxroughly4.5s static source holds. Real opening hand/coin motion + independent5%zoom.
+UI: every panel/label/number enters with250–350ms fade and upward slide. Equations unfold operand→change→total with staged motion, then matched sure/gamble outcomes demonstrated. Final checklist reveals rows rather than spawns. Optional SINGLE circle draws around final amount to emphasize equivalence, then disappears. Blur transitions in/out smoothly only under selected UI panels, not whole video.
+One continuous Fish narration, subtle original sound effects because Fish SFX web login/API access is not currently available. Do not call them Fish-generated. Joke: brain hired two headline writers. Evidence measured choices, not emotions.

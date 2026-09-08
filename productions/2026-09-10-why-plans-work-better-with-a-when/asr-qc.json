@@ -1,0 +1,23 @@
+{
+  "transcript": "your calendar has Monday, Tuesday, and Wednesday. It does not have some day. That's the problem with plans like, I'll walk more. They name a goal, but leave the starting moment undecided. In a randomized workplace study, a reminder that prompted employees to write down a vaccination date and time increased flu shot uptake compared with a reminder alone. Not magic, just a more concrete plan. Psychologists call these implementation intentions, linking a specific situation to an action. Try this, when I put my lunch plate in the sink, I'll put on my shoes and walk around the block. The plate becomes the cue, not a negotiation about whether you feel inspired. Choose a cue you'll actually encounter, and an action you can realistically do. A plan won't create spare time or remove every obstacle. If circumstances change, adjust it. Don't just decide what you want. Decide what will tell you it's time to act.",
+  "expected_words": 154,
+  "actual_words": 155,
+  "exact_match": false,
+  "similarity": 0.9902912621359223,
+  "diff": [
+    "--- \n",
+    "+++ \n",
+    "@@ -9,7 +9,8 @@\n",
+    " does",
+    " not",
+    " have",
+    "-someday",
+    "+some",
+    "+day",
+    " that's",
+    " the",
+    " problem"
+  ],
+  "orthographic_normalized_match": true,
+  "normalization_note": "Bilateral some day\u2192someday normalization only; raw mismatch preserved."
+}

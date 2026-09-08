@@ -1,0 +1,20 @@
+[
+  {
+    "file": "spotlight-effect.mp4",
+    "url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788809908/subai/productions/2026-09-07-spotlight-effect/spotlight-effect-final.mp4",
+    "sha256": "a6cabdf91da9e814450a68d7713238af1e0380f3926d0f49ab25e1cdb9174821",
+    "verified": "Re-downloaded 2026-09-08; SHA256 matched the local master before workspace cleanup"
+  },
+  {
+    "file": "adam.mp3",
+    "url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788870554/subai/productions/stiles-psychology/legacy-sources/adam-2026-09-07-spotlight-effect.mp3",
+    "sha256": "17f8fc2dbe722a0009ce31ffbce6f349f7f0eb4e90f61db5de37032f2682c92b",
+    "verified": "Uploaded and re-downloaded 2026-09-08; SHA256 matched before cleanup"
+  },
+  {
+    "file": "hook-agnes.mp4",
+    "url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788870556/subai/productions/stiles-psychology/legacy-sources/hook-agnes-2026-09-07-spotlight-effect.mp4",
+    "sha256": "ceb2260bf4acf8bad25784097e51f96db0843aacbf9083d1f8457213abf0c6f4",
+    "verified": "Uploaded and re-downloaded 2026-09-08; SHA256 matched before cleanup"
+  }
+]
