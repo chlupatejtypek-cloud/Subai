@@ -23,3 +23,6 @@ Hyperframes 0.8.31 + Node 22.23.2 + GSAP 3.15.0. Full 1080×1920, 30fps local HT
 ## Sound
 Fish's official REST schema was inspected: no dedicated SFX generation/search endpoint found. Do not confuse voice model search or similarly named third-party sites with a sound library. Use Fish only for narration unless a real SFX endpoint is later documented/verified.
 Kenney Interface Sounds provides CC0 UI assets. This project uses open_001, drop_001 and drop_002, mixed quietly, plus original procedural zoom-in/out whooshes. They are not Fish-generated. Discovery links and API/Agnes diagnostics are in the project's provider-findings.md.
+
+## Next-template changes after anchoring owner review
+Remove the persistent brand node in NEW compositions, not archived render sources. Replace dense all-at-once layouts with successive focal groups. Prototype a temporary GSAP blur/dimming treatment on nonessential layers, preserving captions and data context; use it only for important moments. Alternate UI with distinct narrative illustrations. UI direction is owner-praised, not a reason to fill the entire running time with UI.

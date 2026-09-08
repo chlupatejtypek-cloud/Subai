@@ -31,3 +31,15 @@ HTML/CSS/JS compositions with a seekable timeline can render to video. Candidate
 Review the storyboard for semantic repetition BEFORE generation. Review the edit for continuity, useful visual change, readable UI, smooth transitions and sound restraint. Fifteen successful image requests do not constitute successful creative QA.
 
 Before cleanup, enumerate originals/finals/pending revision assets, verify durable backups and populate .media-keep with actual paths (an empty file protects NOTHING). Run tools/cleanup-production.py dry-run, then --apply only on reviewed regenerable or durably backed disposable files. Never delete the sole copy of a final or pending revision source; do not remove remote backups or publishing records. Keep scripts/timelines/provenance and final user-facing downloads.
+
+
+## Owner approval and refinements — 2026-09-08, anchoring review
+The owner praised the anchoring video and approved the general UI/animated-opening direction, with these corrections for subsequent work. This is not authorization to replace its already scheduled upload.
+
+- Remove the persistent top-left STILES / PSYCHOLOGY label from future videos. It adds visual competition, not useful explanation. Keep historical render sources unchanged for reproducibility.
+- One clear focal point at a time. Do not stack a title, subtitle, instruction pill, chart, source footer, definition badge and action cards just because space is available. Reveal what is being explained and retire what has finished its job.
+- Long academic citations (Historical experiment / author names / year) belong in the video description and production research notes, not tiny persistent screen footers. Retain necessary on-screen context: units, scale, whether values are medians/estimates, and illustrative-data labels. Simplification must not make a graph misleading.
+- More genuinely distinct story illustrations than in the two-image anchoring treatment when the storyboard needs them. Do NOT return to fifteen near-identical pictures or introduce another fixed quota. Alternate illustration/short meaningful animation with brief UI explanations, then return to the story. UI is not the default full-video background.
+- Optional selective focus: for an important idea, keep the relevant card/number/subject sharp and briefly blur and/or dim nonessential surrounding UI or background artwork. Then restore gently as the explanation moves on. Not constant blur, pulsing, or another effect on each word. Start with restrained ~0.2–0.35s easing and a hold tied to the spoken thought; visually test actual output rather than enforce a timer.
+- Do not blur captions, essential chart units/baselines, or a second value needed for a comparison. When comparing two numbers, the pair is the focal group; isolate the pair rather than hide one.
+- Storyboard each beat with: what the viewer should look at, what can disappear/dim/blur, what is spoken, and whether UI is genuinely better than an illustration. If the intended focal point is not obvious at a glance, simplify before adding animation.

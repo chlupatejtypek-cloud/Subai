@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-07",
+  "updated": "2026-09-08",
   "credential_policy": "Public metadata only. Secret values are in GitHub Actions secrets and the encrypted transfer bundle, never in this file.",
   "cloudinary_accounts": {
     "primary": {
@@ -93,7 +93,10 @@
         "extra_images_policy": "Supersedes fixed 10+5 request after owner reviewed the silence video. Agent and Agnes generators remain available; no mandatory provider count. Existing 15-image cap is a safety ceiling, NOT a target; record per-production planned/accepted/used counts.",
         "image_planning": "Derive source-image count from researched script beats and timed storyboard, not a fixed generation quota. Reuse the exact scene asset for continuity; use UI/motion to reveal new information. No near-duplicate regenerated scenes.",
         "motion_graphics": "Hyperframes 0.8.31 locally rendered in silence hyperframes-v2 (1080x1920/30fps); use optional purposeful charts/cards/diagrams, styled to Stiles and synchronized to narration. See HYPERFRAMES.md; owner review of first treatment pending.",
-        "intro_video_policy": "Attempt actual isolated environmental motion in Agnes v2.0; lock camera/objects and avoid hands/faces. On quality failure inspect frames and make at most one targeted corrective retry. 2.5 quota rejection reconfirmed 2026-09-08; do not keep retrying 2.5 until quota/entitlement changes. First accepted hook: anchoring price-tag sway."
+        "intro_video_policy": "Attempt actual isolated environmental motion in Agnes v2.0; lock camera/objects and avoid hands/faces. On quality failure inspect frames and make at most one targeted corrective retry. 2.5 quota rejection reconfirmed 2026-09-08; do not keep retrying 2.5 until quota/entitlement changes. First accepted hook: anchoring price-tag sway.",
+        "persistent_corner_brand": false,
+        "visual_focus_policy": "One focal point per beat; simplify UI, remove completed elements and long on-screen academic footers; citations in description. Use brief selective blur/dimming for important ideas, not constantly. Keep captions and essential comparison context sharp.",
+        "visual_mix_policy": "Owner praised anchoring direction but requests more genuinely distinct story illustrations and less continuous UI than that two-image treatment. Alternate story and concise UI as needed; no fixed image quota or near-duplicate regeneration."
       },
       "publishing": {
         "enabled": true,

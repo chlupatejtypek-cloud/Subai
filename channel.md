@@ -80,3 +80,6 @@ Read `VISUAL-EDITORIAL.md` before topic selection or scripting. Research FIRST; 
 
 ## Animated opening — latest owner request, 2026-09-08
 Try a real Agnes opening with a deliberately simple moving element and frozen scene geometry. If anatomy/geometry fails, inspect it and use one targeted improved-prompt retry, not the same prompt blindly. Latest price-tag sway succeeded with v2.0; no human character in the shot. Model 2.5 still returned insufficient_user_quota on Sep 8, so do not retest it each production without a quota change. No prompt can fix a quota rejection. See hook-provenance.json in the anchoring production.
+
+## Focus hierarchy — anchoring owner review, 2026-09-08
+UI/animated-opening direction approved, but simplify: remove the persistent top-left brand label; put long academic citations in the description, retain necessary data context. One visual focal group at a time. Alternate more distinct story illustrations with short useful UI segments, not continuous dashboards or near-duplicate image cuts. Brief selective blur/dimming may isolate an important thought; keep captions/essential comparison context sharp. See VISUAL-EDITORIAL.md. This feedback does not replace the scheduled anchoring upload.
