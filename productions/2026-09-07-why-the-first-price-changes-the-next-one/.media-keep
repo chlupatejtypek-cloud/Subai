@@ -1,22 +1,3 @@
-# Protect current final and sources; source archive parts were downloaded and reconstructed successfully before cleanup.
-agnes-25.log
-assets/DejaVuSans-Bold.ttf
-assets/drop_001.ogg
-assets/drop_002.ogg
-assets/gsap.min.js
-assets/hook-ready.mp4
-assets/hook.mp4
-assets/hook.mp4.json
-assets/open_001.ogg
-assets/shop.png
-assets/stiles.png
-assets/zoom-in-original.wav
-assets/zoom-out-original.wav
-audio/narration.wav
-audio/silence-detection.log
-audio/source.opus
-audio/source.opus.timestamps.json
-audio/words-original.json
-audio/words.json
-output/anchoring-final.mp4
-render.log
+# Completed production media now cold-archived in the verified assets.json source package.
+# Final user-facing MP4 remains in /home/user; tracked edit scripts/provenance remain local.
+# Before a future revision, restore missing files using tools/restore-hyperframes-project.py --apply.

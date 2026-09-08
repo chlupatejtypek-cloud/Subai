@@ -1,0 +1,22 @@
+# Current editable production inputs; backup verified before cleanup
+assets/DejaVuSans-Bold.ttf
+assets/drop_001.ogg
+assets/drop_002.ogg
+assets/focused-ready.png
+assets/focused.png
+assets/gsap.min.js
+assets/hook-ready.mp4
+assets/hook.mp4
+assets/hook.mp4.json
+assets/interrupted.png
+assets/meeting.png
+assets/open_001.ogg
+assets/pressure.png
+assets/zoom-in-original.wav
+assets/zoom-out-original.wav
+audio/narration.wav
+audio/silence-detection.log
+audio/source.opus
+audio/source.opus.timestamps.json
+audio/words-original.json
+audio/words.json
