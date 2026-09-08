@@ -1,0 +1,6 @@
+# Script review before synthesis
+Hooks compared: (1) Why can a two-minute task sit on your list for three days? SELECTED: specific familiar paradox, then an early answer. (2) Your to-do list might be a wish list: concise but generic. (3) You don't need motivation, you need instructions: REJECTED for overclaim.
+Main question: why small is not sufficient when first action remains unclear. Payoff: concrete observable move, keep goal, distinguish other barriers.
+Every phase adds value: paradox / choice ambiguity / comic avoidance / goal-action distinction / evidence and measured outcome / limits / practical rewrite / observable finish / brief permission for roughness / avoid planning-as-avoidance / boundary / closure.
+Humor: two brief content-linked dry observations; no laugh track or audience insult. Europe line intentionally playful hyperbole; marriage-proposal contrast signals a rough sentence need not be perfect. Cut if delivered awkwardly in voice.
+Written flow checked; no human-listening claim before synthesized audio is reviewed. Single paragraph; final duration determined from actual audio, not word count. Original research limitations preserved. Expected retention risk: evidence paragraph; use fresh illustrations and concise comparative card rather than tiny source text.

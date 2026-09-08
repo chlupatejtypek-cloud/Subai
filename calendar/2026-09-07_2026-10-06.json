@@ -81,7 +81,7 @@
           "youtube_video_id": null
         }
       ],
-      "last_status_check_at": "2026-09-08T08:34:19.123405+00:00",
+      "last_status_check_at": "2026-09-08T08:48:27.451640+00:00",
       "remote_status": {
         "privacy": "public",
         "publish_at": null,
@@ -241,7 +241,7 @@
       "last_known_status": "scheduled",
       "reconciliation_reason": "Known video ID absent from authenticated lookup; never retry upload automatically",
       "reconciliation_checked_at": "2026-09-08T06:15:12.849664+00:00",
-      "last_status_check_at": "2026-09-08T08:34:19.123405+00:00"
+      "last_status_check_at": "2026-09-08T08:48:27.451640+00:00"
     },
     {
       "id": "SP-20260908-2",
@@ -294,7 +294,7 @@
       "api_returned_publish_at": "2026-09-08T17:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T05:48:08.191157+00:00",
-      "last_status_check_at": "2026-09-08T08:34:19.123405+00:00",
+      "last_status_check_at": "2026-09-08T08:48:27.451640+00:00",
       "remote_status": {
         "privacy": "private",
         "publish_at": "2026-09-08T17:00:00Z",
@@ -361,7 +361,7 @@
         "youtube_schedule_action": "Owner authorized cancellation; videos.update failed403 insufficient authentication scopes. Existing YouTube publishAt still active until Studio change or reauthorization. No successful cancellation claimed."
       },
       "publication_hold": true,
-      "last_status_check_at": "2026-09-08T08:34:19.123405+00:00",
+      "last_status_check_at": "2026-09-08T08:48:27.451640+00:00",
       "remote_schedule_still_active": true,
       "remote_status": {
         "privacy": "private",
@@ -374,29 +374,61 @@
     {
       "id": "SP-20260909-1",
       "channel_id": "stiles-psychology",
-      "title": "Why a Tiny First Step Helps You Start",
+      "title": "Why a Tiny Task Still Won't Get Started",
       "pillar": "Everyday Mind",
       "mechanism_to_research": "reducing task-initiation friction",
       "proposed_action_to_validate": "Define a two-minute opening action",
       "scheduled_at": "2026-09-09T15:00:00+02:00",
       "publish_at_utc": "2026-09-09T13:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "researching",
-      "research_status": "pending",
-      "research_sources": [],
+      "status": "preview_pending_owner_review",
+      "research_status": "verified",
+      "research_sources": [
+        "https://kops.uni-konstanz.de/server/api/core/bitstreams/3b8b10e2-4fff-4cb8-bc49-4d3e2f1a405c/content",
+        "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.00327/full"
+      ],
       "production_path": "productions/2026-09-09-why-a-tiny-first-step-helps-you-start",
-      "asset_url": null,
-      "asset_sha256": null,
-      "duration_seconds": null,
-      "description": null,
-      "qa": null,
+      "asset_url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788857188/subai/productions/stiles-psychology/2026-09-09-first-step/first-step-final.mp4",
+      "asset_sha256": "4842a8180cf8811329c46c6b1a909f45663f5fd60a9c17902eb0cf295b873514",
+      "duration_seconds": 68.2,
+      "description": "A small task can still have a fuzzy first move. Stiles explores concrete versus abstract task thinking, what small questionnaire experiments actually measured, and a practical first-action experiment. The two-minute/three-day opening is hypothetical, not a study statistic. This is not a cure for procrastination, anxiety or exhaustion.\n\nResearch: McCrea et al.2008, DOI10.1111/j.1467-9280.2008.02240.x. https://kops.uni-konstanz.de/server/api/core/bitstreams/3b8b10e2-4fff-4cb8-bc49-4d3e2f1a405c/content\nBroader context (not a direct replication): Steel et al.2018. https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.00327/full\n\nGeneral psychology education. AI-generated illustrations, opening animation and narration; original procedural sound effects, no music.\n#Psychology #Procrastination #Shorts",
+      "qa": {
+        "research_verified": true,
+        "script_verified": true,
+        "voice_verified": true,
+        "character_verified": true,
+        "full_bleed": true,
+        "captions_aligned": true,
+        "captions_no_overlap": true,
+        "audio_verified": true,
+        "visual_review_passed": true,
+        "rights_verified": true,
+        "opening_video_verified": true,
+        "opening_zoom_verified": true,
+        "character_proportions_verified": true,
+        "visual_coverage_verified": true,
+        "creative_contract_version": 2,
+        "source_image_count": 10,
+        "generated_image_count": 10,
+        "longest_illustration_hold_seconds": 6.9666666670000055,
+        "voice_provider": "fish_audio",
+        "voice_reference_id": "fb7ec16ca51a45a5a4db881244d7990a",
+        "reviewed_by": "Arena agent: source reading,10-image contact sheet, hook samples,16final frames, ASR and technical checks; not claimed full human playback",
+        "reviewed_at": "2026-09-08T08:47:55.434969+00:00"
+      },
       "youtube_video_id": null,
       "workflow": {
-        "stage": 1,
-        "stage_name": "research",
+        "stage": 8,
+        "stage_name": "backed_up_preview_pending_review",
         "started_at": "2026-09-08T08:34:19.272026+00:00",
         "contract": "60–80 seconds;10–15 distinct used illustrations",
-        "next_action": "Read RETENTION-RESEARCH.md; compare3 angles; verify primary evidence before scripting"
+        "next_action": "Owner style review; no upload while held. After approval, confirm future slot/QA, clear hold deliberately and mark ready."
+      },
+      "publication_hold": true,
+      "owner_review_required": true,
+      "owner_review": {
+        "status": "pending",
+        "reason": "Cleaner visual direction still awaiting approval"
       }
     },
     {
@@ -1090,7 +1122,8 @@
       "duration_seconds": null,
       "description": null,
       "qa": null,
-      "youtube_video_id": null
+      "youtube_video_id": null,
+      "editorial_replan_required": "Strong semantic overlap with SP-20260909-1 concrete first action. Research a different angle before scripting; do not repeat."
     },
     {
       "id": "SP-20260920-2",
@@ -2143,5 +2176,5 @@
       "youtube_video_id": null
     }
   ],
-  "last_remote_sync_at": "2026-09-08T08:34:19.123405+00:00"
+  "last_remote_sync_at": "2026-09-08T08:48:27.451640+00:00"
 }

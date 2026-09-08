@@ -31,3 +31,6 @@ Thumbs.db
 # Python generated caches
 __pycache__/
 *.pyc
+
+# Generated illustration/animation inputs: durable verified project archives, not Git
+productions/**/assets/

@@ -1,0 +1,7 @@
+resource_type=image
+public_id=subai/productions/stiles-psychology/2026-09-09-first-step/first-step-hook-source
+version=1788856801
+bytes=1003315
+width=768
+height=1376
+secure_url=https://res.cloudinary.com/e5cjysjx/image/upload/v1788856801/subai/productions/stiles-psychology/2026-09-09-first-step/first-step-hook-source.png

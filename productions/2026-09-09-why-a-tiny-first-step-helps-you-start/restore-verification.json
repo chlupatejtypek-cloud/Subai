@@ -1,0 +1,7 @@
+{
+  "archive_members": 45,
+  "all_manifest_hashes_verified": true,
+  "restore_dry_run": "all ordinary members read and checked in memory",
+  "final_retained": "/home/user/first-step-final.mp4",
+  "narration_wav": "archived; reproducible from source.opus using prepare-audio.py"
+}

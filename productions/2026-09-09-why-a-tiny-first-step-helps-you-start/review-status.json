@@ -1,0 +1,8 @@
+{
+  "status": "preview_pending_owner_review",
+  "owner_review_required": true,
+  "publication_hold": true,
+  "reason": "Cleaner style still awaits owner acceptance. Start authorized production, not a silent override of existing style-review hold.",
+  "technical_qa": "passed",
+  "youtube_uploaded": false
+}

@@ -1,0 +1,93 @@
+{
+  "end": 68.2,
+  "fps": 30,
+  "distinct_used_illustrations": 10,
+  "generated_images": 10,
+  "max_illustration_hold_seconds": 6.9666666670000055,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 3.2,
+      "source": "01-waiting",
+      "purpose": "Animated waiting"
+    },
+    {
+      "start": 3.2,
+      "end": 5.4,
+      "source": "02-small-unclear",
+      "purpose": "Small is not clear"
+    },
+    {
+      "start": 5.4,
+      "end": 12.333333333,
+      "source": "03-choices",
+      "purpose": "Which physical action?"
+    },
+    {
+      "start": 12.333333333,
+      "end": 16.2,
+      "source": "04-cleanest-desk",
+      "purpose": "Comic avoidance"
+    },
+    {
+      "start": 16.2,
+      "end": 21.4,
+      "source": "05-goal-action",
+      "purpose": "Goal versus action"
+    },
+    {
+      "start": 21.4,
+      "end": 27.733333333,
+      "source": "06-questionnaire",
+      "purpose": "Small experiments"
+    },
+    {
+      "start": 27.733333333,
+      "end": 31.5,
+      "source": "07-email-arrival",
+      "purpose": "Measured submission, not motivation"
+    },
+    {
+      "start": 31.5,
+      "end": 35.4,
+      "source": "02-small-unclear",
+      "purpose": "No magic cure"
+    },
+    {
+      "start": 35.4,
+      "end": 39.2,
+      "source": "05-goal-action",
+      "purpose": "Keep goal, change instruction"
+    },
+    {
+      "start": 39.2,
+      "end": 45.8,
+      "source": "08-first-sentence",
+      "purpose": "Concrete writing example"
+    },
+    {
+      "start": 45.8,
+      "end": 51.6,
+      "source": "09-rough-draft",
+      "purpose": "Observable rough output, joke"
+    },
+    {
+      "start": 51.6,
+      "end": 56,
+      "source": "08-first-sentence",
+      "purpose": "Continue action, not planning"
+    },
+    {
+      "start": 56,
+      "end": 61.233333333,
+      "source": "10-exhaustion",
+      "purpose": "Limits and compassion"
+    },
+    {
+      "start": 61.233333333,
+      "end": 68.2,
+      "source": "05-goal-action",
+      "purpose": "Resolve the opening question"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "opening_video_verified": true,
+  "evidence": "Inspected source frames0,.8,1.6,2.4,3.2s: hand lowers pencil onto page and withdraws, independent object motion visible. Used only first2.4s slowed to3.2s to avoid later provider camera push/cropping. Calendar flip not reliably observed and not claimed.",
+  "opening_zoom_verified": true,
+  "zoom": "Authored independent1.00\u21921.05\u21921.00 in first30output frames, on top of actual image-to-video clip",
+  "stills": "Monotonic1.018\u20131.030 scale, center-cropped from2160x3840 intermediate raster; no pulsation",
+  "longest_illustration_hold_seconds": 6.966666667,
+  "sampled_final_review": "16final frame samples inspected; header width adjusted54px font to fit950px safe region; no persistent branding or source footnotes"
+}

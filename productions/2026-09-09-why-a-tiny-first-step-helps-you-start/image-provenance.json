@@ -1,0 +1,51 @@
+{
+  "provider": "Arena generate_image",
+  "reference": "canonical stiles-front-tpose-v2",
+  "generated": 10,
+  "accepted": 10,
+  "used": 10,
+  "optional_eleventh_attempt": "tool refused generation:10-image per-turn limit; no eleventh image exists",
+  "files": [
+    {
+      "file": "assets/01-waiting.png",
+      "sha256": "1b074ba09492915994b3c7f62fe16ba441388ddb380dd5d3808fe1734306cf8b"
+    },
+    {
+      "file": "assets/02-small-unclear.png",
+      "sha256": "abcf92e5df50e9fda8fcde350a3bf60c285f646cbc9208addeaa0c3491faef41"
+    },
+    {
+      "file": "assets/03-choices.png",
+      "sha256": "bfa44c21698738d788cdea0962c1a3c3a2cd2bdafeb34756765439b3f70741f9"
+    },
+    {
+      "file": "assets/04-cleanest-desk.png",
+      "sha256": "5b0a8b0dd59f1d1008983c45f0bf60e4c28daabb0cf38f428d2f835b98c58e09"
+    },
+    {
+      "file": "assets/05-goal-action.png",
+      "sha256": "613e19fdeee1eb2b0562c663795c5c3f88ad257374250acf9703824678d57ee9"
+    },
+    {
+      "file": "assets/06-questionnaire.png",
+      "sha256": "54f0f4a25856477d42848d1774aafc15733f4205285d37cfa7dd14c165ff2d87"
+    },
+    {
+      "file": "assets/07-email-arrival.png",
+      "sha256": "d342fda3ce38f1cab22bb31ae558e7d1388c3d88e4b2b33409e6c72a18cc5047"
+    },
+    {
+      "file": "assets/08-first-sentence.png",
+      "sha256": "cb9376116f9a6c89252e93ebf8641f2048a14b078b8f679cc002fc097e4e0aff"
+    },
+    {
+      "file": "assets/09-rough-draft.png",
+      "sha256": "605a16e435dc9b76f3a1b45b51d654e044aa01b9fe0f061c6b086b327fa88fee"
+    },
+    {
+      "file": "assets/10-exhaustion.png",
+      "sha256": "dad9a17f5a7c26ff1f2f0fad712f2cf0001a8629dfb1105cc85a849df3a7d2e1"
+    }
+  ],
+  "inspection": "All10 source images inspected in contact sheet for subject relevance, simple facial expressions, thin limbs, no giant-head redesign; minor rendering variation remains possible; style approval pending"
+}
