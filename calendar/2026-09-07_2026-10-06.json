@@ -447,7 +447,7 @@
       "scheduled_at": "2026-09-09T19:00:00+02:00",
       "publish_at_utc": "2026-09-09T17:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "upload_started",
+      "status": "scheduled",
       "research_status": "verified",
       "research_sources": [
         "https://clarkrelationshiplab.yale.edu/sites/default/files/files/BoothbyCooneySandstromClark2018.pdf",
@@ -483,7 +483,7 @@
         "reviewed_by": "Arena agent: primary sections, exact chart means/CI,10-image sheet, first-frame pre-animation review, hook samples,16final-frame samples, ASR and technical checks. Not full human playback.",
         "reviewed_at": "2026-09-08T09:16:18.534341+00:00"
       },
-      "youtube_video_id": null,
+      "youtube_video_id": "kAB8J54BPBw",
       "workflow": {
         "stage": 8,
         "stage_name": "backed_up_preview_pending_review",
@@ -498,7 +498,11 @@
         "recorded_at": "2026-09-08T09:30:37.596471+00:00",
         "evidence": "Owner: Hezke, UI se mi taky libi; asks why not scheduled; next-video refinements only."
       },
-      "upload_started_at": "2026-09-08T09:31:20.565377+00:00"
+      "upload_started_at": "2026-09-08T09:31:20.565377+00:00",
+      "youtube_url": "https://www.youtube.com/watch?v=kAB8J54BPBw",
+      "api_returned_publish_at": "2026-09-09T17:00:00Z",
+      "api_returned_privacy": "private",
+      "uploaded_at": "2026-09-08T09:31:24.540150+00:00"
     },
     {
       "id": "SP-20260909-3",
