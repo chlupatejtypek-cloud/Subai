@@ -1,0 +1,24 @@
+{
+  "generated_outputs": 11,
+  "accepted_used_unique": 10,
+  "providers": {
+    "Arena generate_image": 10,
+    "Agnes image2.0flash": 1
+  },
+  "rejected_output": "01-cafe-goodbye.png: filled beige anatomical body; never animated or used",
+  "corrected_before_animation": "01-cafe-fixed.png: thin single-line torso/limbs, approximate21%head/full standing height vs canonical22.6%; complete feet visible in starting frame; inspected before image-to-video",
+  "accepted": [
+    "01-cafe-fixed.png",
+    "02-walk-home.png",
+    "03-cafe-chat.png",
+    "04-study.png",
+    "05-other-view.png",
+    "06-film-critic.png",
+    "07-not-everyone.png",
+    "08-journal.png",
+    "09-next-day.png",
+    "10-phone.png"
+  ],
+  "reference": "stiles-front-tpose-v2 + corrected cafe scene for continuity",
+  "inspection": "10-image contact sheet: real environments, jointed compact seated poses, expressive faces; no elongated first-frame seated body; owner review still required"
+}

@@ -106,7 +106,8 @@
         "owner_rejected_production": "2026-09-08-familiar-is-not-verified rejected; cleaner style chosen; close-book preview still pending review.",
         "visual_style_direction": "Owner rejected near-empty minimalism and elongated figure on2026-09-08: restore meaningful scene backgrounds with cream/teal/ochre Stiles, balanced canonical proportions and useful animated explanatory UI.",
         "min_seconds": 40,
-        "min_generated_images": 10
+        "min_generated_images": 10,
+        "explanatory_ui_required": true
       },
       "publishing": {
         "enabled": true,

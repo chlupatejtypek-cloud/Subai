@@ -1,0 +1,27 @@
+{
+  "archive_members": 49,
+  "all_manifest_hashes_verified": true,
+  "all_parts_redownloaded": true,
+  "safe_member_paths_checked": true,
+  "final_retained": "/home/user/liking-gap-final.mp4",
+  "cold_archived_current_files": [
+    "assets/01-cafe-goodbye.png",
+    "assets/10-phone.png",
+    "assets/10-phone.metadata.json",
+    "assets/02-walk-home.png",
+    "assets/03-cafe-chat.png",
+    "assets/07-not-everyone.png",
+    "assets/05-other-view.png",
+    "assets/06-film-critic.png",
+    "assets/04-study.png",
+    "assets/08-journal.png",
+    "assets/09-next-day.png",
+    "assets/DejaVuSans-Bold.ttf",
+    "audio/source.wav",
+    "audio/compacted.wav",
+    "audio/narration.wav",
+    "audio/sfx.wav",
+    "audio/final-mix.wav"
+  ],
+  "previous_rejected_media_files_archived": 18
+}

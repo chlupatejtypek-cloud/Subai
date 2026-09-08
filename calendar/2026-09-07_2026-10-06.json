@@ -81,7 +81,7 @@
           "youtube_video_id": null
         }
       ],
-      "last_status_check_at": "2026-09-08T09:01:46.378863+00:00",
+      "last_status_check_at": "2026-09-08T09:16:18.821209+00:00",
       "remote_status": {
         "privacy": "public",
         "publish_at": null,
@@ -241,7 +241,7 @@
       "last_known_status": "scheduled",
       "reconciliation_reason": "Known video ID absent from authenticated lookup; never retry upload automatically",
       "reconciliation_checked_at": "2026-09-08T06:15:12.849664+00:00",
-      "last_status_check_at": "2026-09-08T09:01:46.378863+00:00"
+      "last_status_check_at": "2026-09-08T09:16:18.821209+00:00"
     },
     {
       "id": "SP-20260908-2",
@@ -294,7 +294,7 @@
       "api_returned_publish_at": "2026-09-08T17:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T05:48:08.191157+00:00",
-      "last_status_check_at": "2026-09-08T09:01:46.378863+00:00",
+      "last_status_check_at": "2026-09-08T09:16:18.821209+00:00",
       "remote_status": {
         "privacy": "private",
         "publish_at": "2026-09-08T17:00:00Z",
@@ -361,7 +361,7 @@
         "youtube_schedule_action": "Owner authorized cancellation; videos.update failed403 insufficient authentication scopes. Existing YouTube publishAt still active until Studio change or reauthorization. No successful cancellation claimed."
       },
       "publication_hold": true,
-      "last_status_check_at": "2026-09-08T09:01:46.378863+00:00",
+      "last_status_check_at": "2026-09-08T09:16:18.821209+00:00",
       "remote_schedule_still_active": true,
       "remote_status": {
         "privacy": "private",
@@ -440,29 +440,62 @@
     {
       "id": "SP-20260909-2",
       "channel_id": "stiles-psychology",
-      "title": "Why Everyone Else Looks More Confident",
+      "title": "Your Guess Is Not Their Opinion",
       "pillar": "Emotions & Social Psychology",
       "mechanism_to_research": "limited access to others uncertainty",
       "proposed_action_to_validate": "Separate visible behavior from guessed confidence",
       "scheduled_at": "2026-09-09T19:00:00+02:00",
       "publish_at_utc": "2026-09-09T17:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "researching",
-      "research_status": "pending",
-      "research_sources": [],
+      "status": "preview_pending_owner_review",
+      "research_status": "verified",
+      "research_sources": [
+        "https://clarkrelationshiplab.yale.edu/sites/default/files/files/BoothbyCooneySandstromClark2018.pdf",
+        "https://ujhykshsiskqgovg.public.blob.vercel-storage.com/Liking+Gap+Groups+&+Teams-3HOSDUao5fm9hbjujzYkniArhXFrXo.pdf"
+      ],
       "production_path": "productions/2026-09-09-why-everyone-else-looks-more-confident",
-      "asset_url": null,
-      "asset_sha256": null,
-      "duration_seconds": null,
-      "description": null,
-      "qa": null,
+      "asset_url": "https://res.cloudinary.com/e5cjysjx/video/upload/v1788858877/subai/productions/stiles-psychology/2026-09-09-liking-gap/liking-gap-final.mp4",
+      "asset_sha256": "61894cc421117a0d56a801f3922de4743a5c1a34cc61f8303da6dbfbdfec5e0e",
+      "duration_seconds": 50.1,
+      "description": "After a conversation, your guess about their opinion may be harsher than their actual report. Stiles explores the liking gap, one possible explanation and the difference between an observation and an interpretation.\n\nChart: Boothby et al.2018 Study1a,34analyzed participants. Mean estimated liking5.17 (95%CI4.85–5.49) versus reported liking5.82 (5.49–6.14), on a1–7scale. These are mean ratings, not percentages or guarantees about an individual.\nPrimary: https://clarkrelationshiplab.yale.edu/sites/default/files/files/BoothbyCooneySandstromClark2018.pdf\nShared-author extension to groups/teams, not wholly independent replication: https://ujhykshsiskqgovg.public.blob.vercel-storage.com/Liking+Gap+Groups+&+Teams-3HOSDUao5fm9hbjujzYkniArhXFrXo.pdf\n\nFact/guess example and optional message are practical illustrations, not a tested treatment. Respect disinterest; no guaranteed reply or friendship. AI-generated illustrations, opening animation and voice; authored explanatory UI and original procedural sound effects. No music.\n#Psychology #SocialPsychology #Shorts",
+      "qa": {
+        "research_verified": true,
+        "script_verified": true,
+        "voice_verified": true,
+        "character_verified": true,
+        "full_bleed": true,
+        "captions_aligned": true,
+        "captions_no_overlap": true,
+        "audio_verified": true,
+        "visual_review_passed": true,
+        "rights_verified": true,
+        "opening_video_verified": true,
+        "opening_zoom_verified": true,
+        "character_proportions_verified": true,
+        "visual_coverage_verified": true,
+        "explanatory_ui_verified": true,
+        "creative_contract_version": 2,
+        "source_image_count": 10,
+        "generated_image_count": 11,
+        "longest_illustration_hold_seconds": 4.2,
+        "voice_provider": "fish_audio",
+        "voice_reference_id": "fb7ec16ca51a45a5a4db881244d7990a",
+        "reviewed_by": "Arena agent: primary sections, exact chart means/CI,10-image sheet, first-frame pre-animation review, hook samples,16final-frame samples, ASR and technical checks. Not full human playback.",
+        "reviewed_at": "2026-09-08T09:16:18.534341+00:00"
+      },
       "youtube_video_id": null,
       "workflow": {
-        "stage": 1,
-        "stage_name": "research",
+        "stage": 8,
+        "stage_name": "backed_up_preview_pending_review",
         "started_at": "2026-09-08T09:01:46.519863+00:00",
-        "contract": "40–60 seconds;10–15 distinct used illustrations",
-        "next_action": "Read RETENTION-RESEARCH.md; compare3 angles; verify primary evidence before scripting"
+        "contract": "40–60seconds; at least10used illustrations; useful UI and meaningful backgrounds; balanced Stiles",
+        "next_action": "Review revised style; do not publish while held. After approval confirm slot and release gates."
+      },
+      "publication_hold": true,
+      "owner_review_required": true,
+      "owner_review": {
+        "status": "pending",
+        "reason": "New40–60s background/UI-rich direction following rejected previous preview"
       }
     },
     {
@@ -2189,5 +2222,5 @@
       "youtube_video_id": null
     }
   ],
-  "last_remote_sync_at": "2026-09-08T09:01:46.378863+00:00"
+  "last_remote_sync_at": "2026-09-08T09:16:18.821209+00:00"
 }

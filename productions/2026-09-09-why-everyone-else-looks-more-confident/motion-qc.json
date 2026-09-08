@@ -1,0 +1,8 @@
+{
+  "real_hook": "Source samples0,.6,1.2s show wrist/hand pose movement; used first1.5s only to avoid later generated push/cropping",
+  "opening_zoom": "Independent authored1.00\u21921.05\u21921.00 over first30frames",
+  "still_motion": "1.018\u20131.030 monotonic scale; no pulsing",
+  "source_hold_max_seconds": 4.2,
+  "ui": "Animated paired-rating reveal, fact/interpretation verification state, typed optional follow-up",
+  "review_scope": "sampled visual inspection, not full human playback"
+}

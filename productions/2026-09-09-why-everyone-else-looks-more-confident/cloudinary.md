@@ -1,0 +1,11 @@
+# Verified liking-gap backup
+
+- liking-gap-final.mp4: https://res.cloudinary.com/e5cjysjx/video/upload/v1788858877/subai/productions/stiles-psychology/2026-09-09-liking-gap/liking-gap-final.mp4 — downloaded SHA256 `61894cc421117a0d56a801f3922de4743a5c1a34cc61f8303da6dbfbdfec5e0e` matched.
+- project-part-1.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788858880/subai/productions/stiles-psychology/2026-09-09-liking-gap/project-part-1.json — downloaded SHA256 `1941a0d12bd77b78642e1571d08c265a28e03d8b9e54d278c6d873eb70d586b5` matched.
+- project-part-2.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788858882/subai/productions/stiles-psychology/2026-09-09-liking-gap/project-part-2.json — downloaded SHA256 `c91483d8cbf49d40b5e4595689e7d1b710084d95e12b9582a25245e802e9cd97` matched.
+- project-part-3.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788858884/subai/productions/stiles-psychology/2026-09-09-liking-gap/project-part-3.json — downloaded SHA256 `039f6803e1bcd52f4e7a1194cde6098a12fb1ba03174a60e7556fea540e48176` matched.
+- project-part-4.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788858885/subai/productions/stiles-psychology/2026-09-09-liking-gap/project-part-4.json — downloaded SHA256 `bb1aec2ae79912fc2f9f05fba5537e1e8ab9898aae7a9b48f95d251e0727813e` matched.
+- project-part-5.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788858887/subai/productions/stiles-psychology/2026-09-09-liking-gap/project-part-5.json — downloaded SHA256 `40ad5b6689eec9decb8c67a1ebef7d2089f2ffc5ba76d7ea72d179c0343ab0e2` matched.
+- project-part-6.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788858889/subai/productions/stiles-psychology/2026-09-09-liking-gap/project-part-6.json — downloaded SHA256 `50eb3ab93022ce48dfad8eba30445644258a7096ba1892d6b812bb167919698b` matched.
+- project-part-7.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788858891/subai/productions/stiles-psychology/2026-09-09-liking-gap/project-part-7.json — downloaded SHA256 `9cbe85bbe7f5e54d4260bb0770e13f3dfe9b3c53c39a41ff0d031c94473e35d4` matched.
+- project-part-8.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788858892/subai/productions/stiles-psychology/2026-09-09-liking-gap/project-part-8.json — downloaded SHA256 `325a87c592fc1ccff4b639fa8f5b9cc736184aabc7d10bcd756cfd2f69071920` matched.

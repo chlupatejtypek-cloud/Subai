@@ -1,0 +1,99 @@
+{
+  "end": 50.1,
+  "fps": 30,
+  "distinct_used_illustrations": 10,
+  "generated_images": 10,
+  "max_illustration_hold_seconds": 4.200000000000003,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 2.8,
+      "source": "01-cafe-fixed",
+      "purpose": "Real cafe farewell"
+    },
+    {
+      "start": 2.8,
+      "end": 6.4,
+      "source": "02-walk-home",
+      "purpose": "Post-chat worry"
+    },
+    {
+      "start": 6.4,
+      "end": 9.2,
+      "source": "03-cafe-chat",
+      "purpose": "Liking gap setup"
+    },
+    {
+      "start": 9.2,
+      "end": 12.8,
+      "source": "04-study",
+      "purpose": "Independent ratings"
+    },
+    {
+      "start": 12.8,
+      "end": 16.8,
+      "source": "05-other-view",
+      "purpose": "Reported versus estimated liking"
+    },
+    {
+      "start": 16.8,
+      "end": 20.2,
+      "source": "02-walk-home",
+      "purpose": "Internal commentary"
+    },
+    {
+      "start": 20.2,
+      "end": 23.4,
+      "source": "05-other-view",
+      "purpose": "Actual conversation"
+    },
+    {
+      "start": 23.4,
+      "end": 26.2,
+      "source": "06-film-critic",
+      "purpose": "Brief situational joke"
+    },
+    {
+      "start": 26.2,
+      "end": 29.6,
+      "source": "07-not-everyone",
+      "purpose": "Not universal"
+    },
+    {
+      "start": 29.6,
+      "end": 32.6,
+      "source": "04-study",
+      "purpose": "Average not individual verdict"
+    },
+    {
+      "start": 32.6,
+      "end": 36.2,
+      "source": "08-journal",
+      "purpose": "Separate fact and guess"
+    },
+    {
+      "start": 36.2,
+      "end": 40.4,
+      "source": "03-cafe-chat",
+      "purpose": "Observation and interpretation UI"
+    },
+    {
+      "start": 40.4,
+      "end": 44.6,
+      "source": "10-phone",
+      "purpose": "Optional low-pressure message"
+    },
+    {
+      "start": 44.6,
+      "end": 47.3,
+      "source": "09-next-day",
+      "purpose": "No perfection required"
+    },
+    {
+      "start": 47.3,
+      "end": 50.1,
+      "source": "01-cafe-fixed",
+      "purpose": "Closing perspective"
+    }
+  ]
+}

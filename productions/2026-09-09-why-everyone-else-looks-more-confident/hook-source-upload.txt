@@ -1,0 +1,7 @@
+resource_type=image
+public_id=subai/productions/stiles-psychology/2026-09-09-liking-gap/liking-gap-hook-source
+version=1788858350
+bytes=2175663
+width=768
+height=1376
+secure_url=https://res.cloudinary.com/e5cjysjx/image/upload/v1788858350/subai/productions/stiles-psychology/2026-09-09-liking-gap/liking-gap-hook-source.png

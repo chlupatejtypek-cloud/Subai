@@ -43,6 +43,7 @@ def validate(item,c,cloud):
   hold=qa.get('longest_illustration_hold_seconds')
   if isinstance(hold,bool) or not isinstance(hold,(int,float)) or not 0<hold<=c['format']['max_seconds']:raise ValueError('Longest illustration hold must be measured')
   if hold>7 and not str(qa.get('long_hold_justification') or '').strip():raise ValueError('Long illustration hold needs justification')
+ if c['format'].get('explanatory_ui_required') and qa.get('explanatory_ui_verified') is not True:raise ValueError('Useful explanatory UI review required; headings alone are insufficient')
  if not qa.get('reviewed_by') or not qa.get('reviewed_at'):raise ValueError('Missing review provenance')
  if qa.get('voice_provider')!=c['voice']['provider'] or qa.get('voice_reference_id')!=c['voice']['reference_id']:raise ValueError('Narration provider or voice does not match current channel')
  if not c['format'].get('min_generated_images',1)<=qa.get('source_image_count',0)<=c['format']['max_generated_images']:raise ValueError('Invalid source image count')

@@ -1,0 +1,9 @@
+# Current continuity reference, hook and compact original voice retained; all sources in verified archive.
+assets/01-cafe-fixed.png
+assets/hook.mp4
+assets/hook.mp4.json
+audio/silence-detection.log
+audio/source.opus
+audio/source.opus.timestamps.json
+audio/words-original.json
+audio/words.json

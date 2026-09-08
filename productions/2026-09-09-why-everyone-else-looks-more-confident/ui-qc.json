@@ -1,0 +1,38 @@
+{
+  "segments": [
+    [
+      9.5,
+      16.8,
+      "actual study comparison, animated paired ratings"
+    ],
+    [
+      34,
+      40.4,
+      "observed versus assumed, revealed verification state"
+    ],
+    [
+      41,
+      44.6,
+      "typed optional follow-up, no invented reply"
+    ]
+  ],
+  "study_data": {
+    "n": 34,
+    "scale": [
+      1,
+      7
+    ],
+    "estimate": 5.17,
+    "estimate_ci": [
+      4.85,
+      5.49
+    ],
+    "report": 5.82,
+    "report_ci": [
+      5.49,
+      6.14
+    ]
+  },
+  "background_blur": "Only first two UI segments; UI and captions composited afterwards remain sharp",
+  "not_just_headings": true
+}
