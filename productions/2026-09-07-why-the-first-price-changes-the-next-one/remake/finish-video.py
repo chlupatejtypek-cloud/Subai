@@ -1,0 +1,12 @@
+from pathlib import Path
+import subprocess,json,hashlib
+from PIL import Image,ImageOps,ImageDraw
+p=Path(__file__).resolve().parent;c=json.loads((p/'cue-times.json').read_text());out=p/'output/anchoring-remake.mp4'
+subprocess.run(['ffmpeg','-y','-v','error','-i',str(p/'output/hyperframes-picture.mp4'),'-i',str(p/'audio/final-mix.wav'),'-vf',f"ass={p/'captions.ass'}",'-map','0:v','-map','1:a','-c:v','libx264','-preset','fast','-crf','19','-threads','2','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-ar','48000','-t',str(c['end']),'-movflags','+faststart',str(out)],check=True)
+d=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_format','-show_streams','-of','json',str(out)]));v=next(x for x in d['streams'] if x['codec_type']=='video');a=next(x for x in d['streams'] if x['codec_type']=='audio');assert v['width']==1080 and v['height']==1920 and v['r_frame_rate']=='30/1';assert float(d['format']['duration'])<=60
+r=subprocess.run(['ffmpeg','-hide_banner','-i',str(out),'-af','loudnorm=I=-16:TP=-1.5:LRA=11:print_format=json','-f','null','-'],capture_output=True,text=True);loud=json.JSONDecoder().raw_decode(r.stderr[r.stderr.rfind('{'):])[0]
+lines=[x for x in (p/'captions.ass').read_text().splitlines() if x.startswith('Dialogue:')];tm=lambda s:sum(float(x)*k for x,k in zip(s.split(':'),(3600,60,1)));caps=[(tm(x.split(',')[1]),tm(x.split(',')[2])) for x in lines];assert len(caps)==129 and all(b>a for a,b in caps) and all(caps[i][1]<=caps[i+1][0] for i in range(len(caps)-1));qc={'duration':float(d['format']['duration']),'resolution':[v['width'],v['height']],'fps':v['r_frame_rate'],'codecs':[v['codec_name'],a['codec_name']],'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'bytes':out.stat().st_size,'loudness':loud,'caption_events':len(caps),'captions_no_overlap':True,'last_caption_end':caps[-1][1],'hyperframes_version':'0.8.31','source_illustrations':5,'phases':7};(p/'technical-qc.json').write_text(json.dumps(qc,indent=2));print(json.dumps(qc),flush=True)
+times=[.4,1.5,3.7,7.5,11.5,15.8,17.3,20.7,25,29.5,31.4,34.7];sheet=Image.new('RGB',(1120,1560),'#102b2d')
+for i,t in enumerate(times):
+ f=p/'output'/f'qc-{t}.jpg';subprocess.run(['ffmpeg','-y','-v','error','-ss',str(t),'-i',str(out),'-frames:v','1',str(f)],check=True);sheet.paste(ImageOps.fit(Image.open(f),(270,480)),((i%4)*280,(i//4)*520));ImageDraw.Draw(sheet).text(((i%4)*280,(i//4)*520+484),f'{t}s',fill='white')
+sheet.save('/home/user/anchoring-remake-qc.jpg')

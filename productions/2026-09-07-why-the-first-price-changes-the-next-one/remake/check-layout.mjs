@@ -1,0 +1,6 @@
+import puppeteer from '/home/user/hyperframes-runtime/node_modules/puppeteer-core/lib/puppeteer/puppeteer-core.js';
+import fs from 'node:fs';
+const dir='/home/user/Subai/productions/2026-09-07-why-the-first-price-changes-the-next-one/remake';
+const browser=await puppeteer.launch({executablePath:'/home/user/.cache/hyperframes/chrome/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});const page=await browser.newPage();await page.setViewport({width:1080,height:1920});await page.goto('file://'+dir+'/index.html');await page.evaluate(()=>document.fonts.ready);const checks=[];
+for(const t of [1.2,7.8,11.5,17.3,20.3,25,29.5,34.8]){await page.evaluate(t=>{window.__timelines["anchor-remake"].seek(t,false);},t);await page.screenshot({path:dir+'/output/layout-'+t+'.png'});checks.push(await page.evaluate(()=>({overflow:[...document.querySelectorAll('h1,.card,.chip,.bubble')].filter(e=>e.scrollWidth>e.clientWidth+2).map(e=>({text:e.innerText,sw:e.scrollWidth,cw:e.clientWidth})),visible:[...document.querySelectorAll('.scene')].filter(e=>+getComputedStyle(e).opacity>.9).map(e=>e.id)})));}
+fs.writeFileSync(dir+'/layout-qc.json',JSON.stringify(checks,null,2));await browser.close();

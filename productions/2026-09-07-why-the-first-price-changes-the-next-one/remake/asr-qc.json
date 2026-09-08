@@ -1,0 +1,17 @@
+{
+  "transcript": "that crossed out price can make an ordinary deal feel amazing, but the surprising part is that an anchor doesn't even have to be a price. In a classic experiment, people saw a number from a wheel, compared it with the share of United Nations members that were African countries, then estimated that share. The group shown 10 gave a median estimate of 25%. The group shown 65 gave 45%. The wheel offered no useful evidence, yet estimates shifted toward it. That's anchoring. A starting number can pull your judgment. So before opening a sale page, write down what the item is worth to you, and compare real alternatives. A big discount from someone else's starting price isn't the same as a good deal.",
+  "expected_words": 129,
+  "actual_words": 120,
+  "exact_match": false,
+  "similarity": 0.963855421686747,
+  "numeric_normalization": {
+    "25%": "twenty five percent",
+    "45%": "forty five percent",
+    "65": "sixty five",
+    "10": "ten"
+  },
+  "normalized_transcript": "that crossed out price can make an ordinary deal feel amazing, but the surprising part is that an anchor doesn't even have to be a price. In a classic experiment, people saw a number from a wheel, compared it with the share of United Nations members that were African countries, then estimated that share. The group shown ten gave a median estimate of twenty five percent. The group shown sixty five gave forty five percent. The wheel offered no useful evidence, yet estimates shifted toward it. That's anchoring. A starting number can pull your judgment. So before opening a sale page, write down what the item is worth to you, and compare real alternatives. A big discount from someone else's starting price isn't the same as a good deal.",
+  "normalized_expected_words": 129,
+  "normalized_actual_words": 129,
+  "normalized_exact_match": true
+}

@@ -1,0 +1,45 @@
+{
+  "duration": 36.333333333333336,
+  "unique_source_illustrations": 5,
+  "new_generated_illustrations": 3,
+  "ui_comparison_seconds": 8.033333333333333,
+  "narration": "Exact previous approved recording, no new synthesis or speed change",
+  "phases": [
+    {
+      "name": "priced Agnes hook",
+      "start": 0,
+      "end": 4.0
+    },
+    {
+      "name": "illustrated number-wheel experiment",
+      "start": 4.0,
+      "end": 9.433333333333334
+    },
+    {
+      "name": "globe context",
+      "start": 9.433333333333334,
+      "end": 14.4
+    },
+    {
+      "name": "one simple two-row comparison",
+      "start": 14.4,
+      "end": 22.433333333333334
+    },
+    {
+      "name": "meaning and selective focus",
+      "start": 22.433333333333334,
+      "end": 26.9
+    },
+    {
+      "name": "own value and alternatives",
+      "start": 26.9,
+      "end": 32.233333333333334
+    },
+    {
+      "name": "shop landing",
+      "start": 32.233333333333334,
+      "end": 36.333333333333336
+    }
+  ],
+  "focus": "Printed price remains sharp over blurred surroundings; later isolate one takeaway. Captions and comparison pair remain sharp. No persistent corner brand, progress bar or on-screen academic citation."
+}

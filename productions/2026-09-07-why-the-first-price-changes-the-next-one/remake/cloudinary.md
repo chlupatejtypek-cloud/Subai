@@ -1,0 +1,8 @@
+# Verified remake backup
+
+- anchoring-remake.mp4: https://res.cloudinary.com/e5cjysjx/video/upload/v1788845271/subai/productions/stiles-psychology/2026-09-08-anchoring/remake/anchoring-remake.mp4 — downloaded SHA256 `a78ed6343e80e01c0e6018d533c62cd4576c05843f6991bbcf8bd0690351982a` matched.
+- project-part-1.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788845274/subai/productions/stiles-psychology/2026-09-08-anchoring/remake/project-part-1.json — downloaded SHA256 `9f94fd38c46eeb5991bfb62266f7d750ecdf7d77117f559a98c4e91fb8c168c2` matched.
+- project-part-2.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788845275/subai/productions/stiles-psychology/2026-09-08-anchoring/remake/project-part-2.json — downloaded SHA256 `1ba0a150fbb7350f0f7a198a354e2808cd4f173f4469c8b367369e59da3e94ad` matched.
+- project-part-3.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788845277/subai/productions/stiles-psychology/2026-09-08-anchoring/remake/project-part-3.json — downloaded SHA256 `62c11333de5aa93fb615bdea86d0ce56af145ee60a850a774fa9dbda1a459022` matched.
+- project-part-4.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788845279/subai/productions/stiles-psychology/2026-09-08-anchoring/remake/project-part-4.json — downloaded SHA256 `50a6bd6232d5751b1d20f5abb8721626ab30a90d2c1e801cc5c57aa11a01a8c8` matched.
+- project-part-5.json: https://res.cloudinary.com/e5cjysjx/raw/upload/v1788845280/subai/productions/stiles-psychology/2026-09-08-anchoring/remake/project-part-5.json — downloaded SHA256 `9315cf57837cea3c8ff5e4b68cfa7778171a59aadd4a3be8cb3a5136797f7395` matched.
