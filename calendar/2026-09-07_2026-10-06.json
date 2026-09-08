@@ -291,7 +291,7 @@
       "scheduled_at": "2026-09-08T23:00:00+02:00",
       "publish_at_utc": "2026-09-08T21:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "upload_started",
+      "status": "scheduled",
       "research_status": "verified",
       "research_sources": [
         "https://www.apa.org/pubs/journals/features/xge-0000098.pdf",
@@ -319,8 +319,12 @@
         "voice_provider": "fish_audio",
         "voice_reference_id": "fb7ec16ca51a45a5a4db881244d7990a"
       },
-      "youtube_video_id": null,
-      "upload_started_at": "2026-09-08T06:12:33.170827+00:00"
+      "youtube_video_id": "FACZAzrfEdU",
+      "upload_started_at": "2026-09-08T06:12:33.170827+00:00",
+      "youtube_url": "https://www.youtube.com/watch?v=FACZAzrfEdU",
+      "api_returned_publish_at": "2026-09-08T21:00:00Z",
+      "api_returned_privacy": "private",
+      "uploaded_at": "2026-09-08T06:12:36.497679+00:00"
     },
     {
       "id": "SP-20260909-1",
