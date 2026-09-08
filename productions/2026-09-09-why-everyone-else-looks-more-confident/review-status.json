@@ -1,7 +1,8 @@
 {
-  "status": "preview_pending_owner_review",
-  "publication_hold": true,
+  "status": "approved",
+  "publication_hold": false,
   "owner_review_required": true,
-  "reason": "First result after owner changed duration/background/UI/proportion requirements; prior previews not approved",
-  "youtube_uploaded": false
+  "reason": "Owner approved video/UI; future-only animation refinements recorded",
+  "youtube_uploaded": false,
+  "approved_at": "2026-09-08T09:30:37.596471+00:00"
 }

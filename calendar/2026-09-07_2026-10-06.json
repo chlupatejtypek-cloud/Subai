@@ -81,7 +81,7 @@
           "youtube_video_id": null
         }
       ],
-      "last_status_check_at": "2026-09-08T09:16:18.821209+00:00",
+      "last_status_check_at": "2026-09-08T09:30:37.570231+00:00",
       "remote_status": {
         "privacy": "public",
         "publish_at": null,
@@ -241,7 +241,7 @@
       "last_known_status": "scheduled",
       "reconciliation_reason": "Known video ID absent from authenticated lookup; never retry upload automatically",
       "reconciliation_checked_at": "2026-09-08T06:15:12.849664+00:00",
-      "last_status_check_at": "2026-09-08T09:16:18.821209+00:00"
+      "last_status_check_at": "2026-09-08T09:30:37.570231+00:00"
     },
     {
       "id": "SP-20260908-2",
@@ -294,10 +294,10 @@
       "api_returned_publish_at": "2026-09-08T17:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T05:48:08.191157+00:00",
-      "last_status_check_at": "2026-09-08T09:16:18.821209+00:00",
+      "last_status_check_at": "2026-09-08T09:30:37.570231+00:00",
       "remote_status": {
         "privacy": "private",
-        "publish_at": "2026-09-08T17:00:00Z",
+        "publish_at": "2026-09-08T16:00:00Z",
         "upload_status": "processed",
         "processing_status": "succeeded"
       },
@@ -361,7 +361,7 @@
         "youtube_schedule_action": "Owner authorized cancellation; videos.update failed403 insufficient authentication scopes. Existing YouTube publishAt still active until Studio change or reauthorization. No successful cancellation claimed."
       },
       "publication_hold": true,
-      "last_status_check_at": "2026-09-08T09:16:18.821209+00:00",
+      "last_status_check_at": "2026-09-08T09:30:37.570231+00:00",
       "remote_schedule_still_active": true,
       "remote_status": {
         "privacy": "private",
@@ -447,7 +447,7 @@
       "scheduled_at": "2026-09-09T19:00:00+02:00",
       "publish_at_utc": "2026-09-09T17:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "preview_pending_owner_review",
+      "status": "ready",
       "research_status": "verified",
       "research_sources": [
         "https://clarkrelationshiplab.yale.edu/sites/default/files/files/BoothbyCooneySandstromClark2018.pdf",
@@ -489,13 +489,14 @@
         "stage_name": "backed_up_preview_pending_review",
         "started_at": "2026-09-08T09:01:46.519863+00:00",
         "contract": "40–60seconds; at least10used illustrations; useful UI and meaningful backgrounds; balanced Stiles",
-        "next_action": "Review revised style; do not publish while held. After approval confirm slot and release gates."
+        "next_action": "Serialized publisher may schedule approved final; do not reupload if ID exists."
       },
-      "publication_hold": true,
+      "publication_hold": false,
       "owner_review_required": true,
       "owner_review": {
-        "status": "pending",
-        "reason": "New40–60s background/UI-rich direction following rejected previous preview"
+        "status": "approved",
+        "recorded_at": "2026-09-08T09:30:37.596471+00:00",
+        "evidence": "Owner: Hezke, UI se mi taky libi; asks why not scheduled; next-video refinements only."
       }
     },
     {
@@ -2222,5 +2223,5 @@
       "youtube_video_id": null
     }
   ],
-  "last_remote_sync_at": "2026-09-08T09:16:18.821209+00:00"
+  "last_remote_sync_at": "2026-09-08T09:30:37.570231+00:00"
 }

@@ -1,3 +1,5 @@
+> **LATEST MOTION FEEDBACK:** Liking-gap preview approved. Future UI text/panels must animate smoothly (reveal, slide, fade, state transition), never suddenly spawn. Occasional selective blur remains welcome, never constant; use an animated circle only when useful, optional not mandatory. Remember prior constraints:40–60s,10illustrations, meaningful backgrounds, balanced Stiles, real hook + separate zoom.
+
 # `start` — one next video, step by step
 
 Latest owner contract,2026-09-08. When the owner writes `start` (case-insensitive), the receiving agent executes this workflow immediately. Do not ask for a topic, repeated keys or routine permission. This is an agent instruction plus executable state helpers, NOT a deployed chat listener or an unattended generative service. Merely discussing the word `start` does not trigger paid generation.

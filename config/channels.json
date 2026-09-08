@@ -104,10 +104,11 @@
         "character_identity_gate": "Reject elongated seated torso/legs and tiny head as well as giant heads. Standing equivalent about4.4head diameters total; jointed seated pose must preserve those segment lengths. Inspect first frame before any animation spend.",
         "visual_coverage_gate": "Future40–60s; at least10 distinct used illustrations. Aim2.5–5s source holds; longer holds must deliver visible explanatory progression, not idle still drift.",
         "owner_rejected_production": "2026-09-08-familiar-is-not-verified rejected; cleaner style chosen; close-book preview still pending review.",
-        "visual_style_direction": "Owner rejected near-empty minimalism and elongated figure on2026-09-08: restore meaningful scene backgrounds with cream/teal/ochre Stiles, balanced canonical proportions and useful animated explanatory UI.",
+        "visual_style_direction": "Owner approved liking-gap environment/UI direction; continue40–60s, contextual backgrounds and balanced canonical Stiles. Future UI entrances need smooth motion; selective blur moderate.",
         "min_seconds": 40,
         "min_generated_images": 10,
-        "explanatory_ui_required": true
+        "explanatory_ui_required": true,
+        "ui_motion_policy": "Smooth entrance/exit for every UI text/panel/state:200–400ms fade+slide/reveal, no abrupt spawn. Occasional selective blur; optional bounded circle emphasis, not mandatory."
       },
       "publishing": {
         "enabled": true,
