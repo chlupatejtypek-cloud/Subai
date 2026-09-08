@@ -1,0 +1,81 @@
+{
+  "at": "2026-09-08T07:56:46.494683+00:00",
+  "credential_install": "applied; missing keys merged; matching existing JSON preserved",
+  "youtube_identity_verified": true,
+  "cloudinary_authenticated_read_http": 200,
+  "videos": [
+    {
+      "kind": "youtube#video",
+      "etag": "s_Edh8kxbnYJ7zgtmvPuJS98kqc",
+      "id": "OYEY9ZKOitA",
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false,
+        "selfDeclaredMadeForKids": false
+      },
+      "processingDetails": {
+        "processingStatus": "succeeded",
+        "fileDetailsAvailability": "available",
+        "processingIssuesAvailability": "available",
+        "tagSuggestionsAvailability": "inProgress",
+        "editorSuggestionsAvailability": "inProgress",
+        "thumbnailsAvailability": "available"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "dpNIH0f6liY8HAa38KXq2iCLvcw",
+      "id": "ZCVvPPTvKB8",
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "private",
+        "publishAt": "2026-09-08T17:00:00Z",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false,
+        "selfDeclaredMadeForKids": false
+      },
+      "processingDetails": {
+        "processingStatus": "succeeded",
+        "fileDetailsAvailability": "available",
+        "processingIssuesAvailability": "available",
+        "tagSuggestionsAvailability": "inProgress",
+        "editorSuggestionsAvailability": "inProgress",
+        "thumbnailsAvailability": "available"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "qMqWjxC-EnyB0mmRUU-y6zGJycw",
+      "id": "FACZAzrfEdU",
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "private",
+        "publishAt": "2026-09-08T21:00:00Z",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false,
+        "selfDeclaredMadeForKids": false
+      },
+      "processingDetails": {
+        "processingStatus": "succeeded",
+        "fileDetailsAvailability": "available",
+        "processingIssuesAvailability": "available",
+        "tagSuggestionsAvailability": "inProgress",
+        "editorSuggestionsAvailability": "inProgress",
+        "thumbnailsAvailability": "available"
+      }
+    }
+  ],
+  "missing_ids": [
+    "bj1yP4s3CQ0"
+  ],
+  "youtube_edit_scope": "previously observed403; not retried and not expanded",
+  "audit_has_mutated_youtube": false
+}

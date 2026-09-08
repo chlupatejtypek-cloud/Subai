@@ -12,11 +12,21 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE='https://res.cloudinary.com/e5cjysjx/raw/upload/subai/private-transfer/subai-agent-bootstrap-v1.enc'
 KEYS=['GITHUB_PAT','ELEVENLABS_API_KEY','CLOUDINARY_CLOUD_NAME','CLOUDINARY_API_KEY','CLOUDINARY_API_SECRET','FISH_API_KEY','FISH_API_BASE','FISH_REFERENCE_ID','AGNES_API_KEY','AGNES_API_BASE','YOUTUBE_STILES_CLIENT_ID','YOUTUBE_STILES_CLIENT_SECRET','YOUTUBE_STILES_REFRESH_TOKEN']
 def parse_env(raw):
+ import shlex,re
  out={}
  for line in raw.decode().splitlines():
-  if '=' in line and not line.lstrip().startswith('#'):
-   k,v=line.removeprefix('export ').split('=',1)
-   if k in KEYS:out[k]=v.strip().strip('\"\'')
+  line=line.strip()
+  if not line or line.startswith('#'):continue
+  if line.startswith('export '):line=line[7:]
+  if '=' not in line:raise ValueError('Invalid environment entry')
+  k,v=line.split('=',1)
+  if not re.fullmatch(r'[A-Z_][A-Z0-9_]*',k):raise ValueError('Invalid environment key')
+  values=shlex.split(v,comments=True,posix=True)
+  if len(values)>1:raise ValueError('Unquoted environment value')
+  value=values[0] if values else ''
+  if k in KEYS:
+   if k in out and out[k]!=value:raise ValueError('Conflicting environment key')
+   out[k]=value
  return out
 def openssl(data,password,decrypt=False):
  # stdin carries the passphrase, while data is a mode-600 temporary file.
@@ -24,6 +34,8 @@ def openssl(data,password,decrypt=False):
  with tempfile.TemporaryDirectory(dir=ROOT/'credentials') as d:
   source=Path(d)/'input';source.write_bytes(data);source.chmod(0o600)
   cmd=['openssl','enc','-aes-256-cbc','-pbkdf2','-iter','600000','-md','sha256','-in',str(source),'-pass','stdin']
+  help_result=subprocess.run(['openssl','enc','-help'],capture_output=True)
+  if b'-saltlen' in help_result.stdout+help_result.stderr:cmd.extend(['-saltlen','8'])
   if decrypt:cmd.insert(2,'-d')
   r=subprocess.run(cmd,input=(password+'\n').encode(),capture_output=True)
   if r.returncode:raise ValueError('Encryption/decryption failed; no plaintext output disclosed')
@@ -58,42 +70,14 @@ def main():
   local=json.loads((ROOT/'.git/credentials').read_text());env.setdefault('YOUTUBE_STILES_REFRESH_TOKEN',local['token']['refresh_token'])
  required=['CLOUDINARY_CLOUD_NAME','CLOUDINARY_API_KEY','CLOUDINARY_API_SECRET','FISH_API_KEY','YOUTUBE_STILES_CLIENT_ID','YOUTUBE_STILES_CLIENT_SECRET','YOUTUBE_STILES_REFRESH_TOKEN']
  if any(not env.get(k) for k in required):raise ValueError('Required handoff credential missing')
+ if client['installed']['client_id']!=env['YOUTUBE_STILES_CLIENT_ID'] or client['installed']['client_secret']!=env['YOUTUBE_STILES_CLIENT_SECRET']:raise ValueError('Client JSON conflicts with environment credentials')
  # Keep shell-compatible values without evaluating incoming .env. No newline-bearing secret values.
  import shlex
  if any('\n' in v or '\r' in v for v in env.values()):raise ValueError('Unexpected multiline credential')
  envbytes=('\n'.join(k+'='+shlex.quote(v) for k,v in sorted(env.items()))+'\n').encode()
  yt={'token':{'refresh_token':env['YOUTUBE_STILES_REFRESH_TOKEN'],'scope':' '.join(c['youtube']['scopes']),'token_type':'Bearer'},'channel':{'id':c['youtube']['channel_id'],'title':c['youtube']['authenticated_display_name']},'client_id':env['YOUTUBE_STILES_CLIENT_ID']}
- start='''# Subai confidential handoff v2 — 2026-09-07
-This ciphertext deliberately reuses the original public ID. Its contents are confidential.
-Repository: https://github.com/chlupatejtypek-cloud/Subai (main is authoritative).
-
-Read current README.md, AGENT.md, channel.md, AUTOMATION.md, YOUTUBE.md,
-config/channels.json and calendar/2026-09-07_2026-10-06.json before work.
-One channel: brand Stiles Psychology; authenticated YouTube channel Chlupatej Typek,
-UCcWp-VFQ1zzI8Bl3n7krB6w. Cloudinary account e5cjysjx.
-Default Fish voice fb7ec16ca51a45a5a4db881244d7990a; native speed.
-90 planned videos, 3/day, 7 September through 6 October. Auto-publish only QA-passed
-ready videos. Calendar proposals are not generated videos or verified research.
-
-Secrets: copy credentials.env to gitignored .env (chmod 600),
-youtube-client.json to credentials/youtube-client.json (chmod 600),
-youtube-token.json to .git/credentials (chmod 600; excluded from workspace snapshots).
-Verify .env and credentials/ are gitignored before using. Refresh the YouTube access
-token with the client and refresh token; this bundle deliberately omits short-lived
-access tokens. Verify channels.list(mine=true) matches the registered channel ID.
-Never print, commit or publicly upload plaintext credentials or this decrypted bundle.
-Never use .git/credentials as a git credential-store file; here it is private JSON.
-GitHub Actions secrets hold runtime credentials. GITHUB_TOKEN handles workflow Git pushes.
-
-The compatible encryption format is OpenSSL AES-256-CBC, PBKDF2-HMAC-SHA256,
-600000 iterations, salted binary. Ask the owner for the passphrase; do not place it
-in this archive or public repository. The owner chose to retain the old weak passphrase;
-recommend rotation. SHA256 in transfer.json identifies ciphertext, not a secret key.
-Google OAuth Testing-mode refresh tokens may expire after 7 days; external project
-public-upload audit restrictions are not confirmed. Neither restriction can be fixed
-by encrypting the token again. Reauthorize as needed.
-'''
- files={'START_HERE.md':start.encode(),'credentials.env':envbytes,'youtube-client.json':json.dumps(client).encode(),'youtube-token.json':json.dumps(yt).encode()}
+ start=(ROOT/'START_HERE.md').read_text()
+ files={'START_HERE.md':start.encode(),'HANDOFF.md':(ROOT/'HANDOFF.md').read_bytes(),'credentials.env':envbytes,'youtube-client.json':json.dumps(client).encode(),'youtube-token.json':json.dumps(yt).encode()}
  tracked=subprocess.check_output(['git','ls-files'],cwd=ROOT,text=True).splitlines()
  for name in tracked:
   path=ROOT/name
@@ -107,7 +91,7 @@ by encrypting the token again. Reauthorize as needed.
  plain=buffer.getvalue();encrypted=openssl(plain,password)
  if openssl(encrypted,password,True)!=plain:raise ValueError('Encrypted roundtrip verification failed')
  output=ROOT/args.output;output.parent.mkdir(exist_ok=True,parents=True);output.write_bytes(encrypted);output.chmod(0o600)
- info={'schema_version':2,'public_id':'subai/private-transfer/subai-agent-bootstrap-v1.enc','resource_type':'raw','stable_url':SOURCE,'sha256':hashlib.sha256(encrypted).hexdigest(),'bytes':len(encrypted),'encryption':'OpenSSL AES-256-CBC / PBKDF2-HMAC-SHA256 / 600000 iterations','contains':'Encrypted credentials, YouTube client and refresh token, current registry/calendar/docs snapshots; never plaintext','updated_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
+ info={'schema_version':2,'public_id':'subai/private-transfer/subai-agent-bootstrap-v1.enc','resource_type':'raw','stable_url':SOURCE,'sha256':hashlib.sha256(encrypted).hexdigest(),'bytes':len(encrypted),'encryption':'OpenSSL AES-256-CBC / PBKDF2-HMAC-SHA256 / 600000 iterations','encryption_parameters':{'cipher':'aes-256-cbc','kdf':'PBKDF2','digest':'sha256','iterations':600000,'salt_bytes':8,'envelope':'binary OpenSSL Salted__','plaintext':'tar.gz'},'repo_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'contains':'START_HERE.md, HANDOFF.md, encrypted credentials, YouTube client/token, current tracked repo snapshot; never plaintext','updated_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
  if args.upload:
   timestamp=str(int(time.time()));public_id='subai-agent-bootstrap-v1.enc';folder='subai/private-transfer';params=f'folder={folder}&overwrite=true&public_id={public_id}&timestamp={timestamp}';sig=hashlib.sha1((params+env['CLOUDINARY_API_SECRET']).encode()).hexdigest()
   r=requests.post(f"https://api.cloudinary.com/v1_1/{env['CLOUDINARY_CLOUD_NAME']}/raw/upload",data={'folder':folder,'public_id':public_id,'overwrite':'true','timestamp':timestamp,'signature':sig,'api_key':env['CLOUDINARY_API_KEY']},files={'file':(public_id,encrypted,'application/octet-stream')},timeout=90)

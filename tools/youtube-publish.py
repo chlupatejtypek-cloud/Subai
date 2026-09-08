@@ -26,11 +26,22 @@ def validate(item,c,cloud):
  if not c['active'] or not c['publishing']['enabled']:raise ValueError('Publishing disabled')
  if not (1<=len(item['title'])<=60):raise ValueError('Title must have 1–60 characters')
  if not item.get('description') or len(item['description'])>5000:raise ValueError('Missing/long description')
+ review=item.get('owner_review')
+ review_status=review.get('status') if isinstance(review,dict) else review
+ if review_status=='rejected' or item.get('publication_hold'):raise ValueError('Owner rejection or publication hold blocks release')
+ if item.get('owner_review_required') and review_status!='approved':raise ValueError('Required owner review is pending')
  sources=item.get('research_sources',[])
  if item.get('research_status')!='verified' or len(sources)<2:raise ValueError('Research not verified with primary and corroborating sources')
  if not all(isinstance(s,str) and s.startswith('https://') for s in sources):raise ValueError('Invalid research links')
  qa=item.get('qa') or {}
  if any(qa.get(k) is not True for k in REQUIRED_QA):raise ValueError('Incomplete quality gate')
+ if c['publishing'].get('creative_contract_version',0)>=2:
+  if qa.get('creative_contract_version')!=2:raise ValueError('Creative release contract v2 required')
+  for k in ('opening_video_verified','opening_zoom_verified','character_proportions_verified','visual_coverage_verified'):
+   if qa.get(k) is not True:raise ValueError('Creative gate missing: '+k)
+  hold=qa.get('longest_illustration_hold_seconds')
+  if isinstance(hold,bool) or not isinstance(hold,(int,float)) or not 0<hold<=60:raise ValueError('Longest illustration hold must be measured')
+  if hold>7 and not str(qa.get('long_hold_justification') or '').strip():raise ValueError('Long illustration hold needs justification')
  if not qa.get('reviewed_by') or not qa.get('reviewed_at'):raise ValueError('Missing review provenance')
  if qa.get('voice_provider')!=c['voice']['provider'] or qa.get('voice_reference_id')!=c['voice']['reference_id']:raise ValueError('Narration provider or voice does not match current channel')
  if not 1<=qa.get('source_image_count',0)<=c['format']['max_generated_images']:raise ValueError('Invalid source image count')

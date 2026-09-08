@@ -1,21 +1,20 @@
-# YouTube account connection
+# YouTube account connection and limits
 
-## Verified connection — 2026-09-07
-- Owner completed Google OAuth consent with `youtube.upload` and `youtube.readonly`.
-- A subsequent live channels.list(mine=true) request returned HTTP 200.
-- Connected channel: **Chlupatej Typek** (`UCcWp-VFQ1zzI8Bl3n7krB6w`).
-- This is the authenticated channel; do not assume it is a different Stiles Psychology channel.
-- Access and refresh tokens are stored only in `.git/credentials`, mode 600. This JSON file is excluded from workspace snapshots, never tracked in Git. Do not configure git credential-store to use it.
-- OAuth client configuration remains in gitignored `credentials/youtube-client.json`.
-- The owner requested removal of the connection webpage. Its server was stopped and its source was deleted from the current branch. No authorization code or token is recorded here.
+Registered channel: Chlupatej Typek, UCcWp-VFQ1zzI8Bl3n7krB6w; brand Stiles Psychology. Verify channels.list(mine=true), never assume a Google email identifies the right channel.
 
-## Future authorization
-The owner prefers a direct Google authorization link in chat rather than a separate form. Explain that a callback URL contains a short-lived sensitive code; never repeat or store it in project files or logs. Retain state and PKCE verifier securely for the exchange, validate state, and use only Google's OAuth token endpoint. A fresh login will be required if the environment loses its token files. Testing-mode refresh tokens for these scopes can expire after seven days.
+## Existing credentials
+Owner supplied OAuth with youtube.upload + youtube.readonly. Private client JSON: credentials/youtube-client.json. Private token JSON: .git/credentials (not Git credential-store). Both mode600. If the sandbox loses a file, restore the owner-supplied encrypted handoff before asking for another login. Access tokens are refreshed on demand, not stored as durable credentials.
 
-## Upload/publication gate
-Connection alone does not upload or publish anything. Confirm the intended channel, video, metadata and visibility with the owner. Prefer a private test upload followed by explicit publication approval. An unverified YouTube API project may be restricted to private uploads and may require audit before public uploads.
+## Capability distinction
+- Upload and readonly account/video checks were successfully exercised. Original phone OYEY9ZKOitA was verified public and processed.
+- **Existing-video status edits/cancelling publishAt failed403 ACCESS_TOKEN_SCOPE_INSUFFICIENT on2026-09-08.** Upload permission is not update permission. The owner authorized cancelling FACZAzrfEdU, but that API operation did NOT succeed. Its last recorded lookup still had23:00 Prague publishAt; check live state, do not assume cancellation.
+- To cancel now, owner can change visibility to Private in Studio. For agent-side edits, request Google's consent for an appropriate documented videos.update scope, preserving existing necessary scopes. A new refresh token must then be verified and propagated to local files, Actions secrets and encrypted handoff. Merely editing a scope string or re-encrypting the old token grants nothing.
+- Do not issue more identical update requests after an insufficient-scope response. Do not delete/reupload as a permission workaround.
 
-No video has been uploaded by the connection/configuration workflows. The guarded scheduled uploader is now implemented in `tools/youtube-publish.py`; see `AUTOMATION.md`. OAuth refresh and identity verification passed; actual video-upload/publication eligibility still needs a real test. The owner authorized automatic publication of QA-passed items in the new 90-video calendar.
+## Authorization UX
+Owner prefers a direct Google authorization link in chat, not a separate OAuth webpage. Securely retain state/PKCE, validate callbacks and use Google's token endpoint. Never echo authorization codes, access tokens, refresh tokens or full callbacks into public records. External consent cannot be automated away.
 
-## First public upload confirmed
-On 2026-09-07T20:24:11.909609+00:00, video `OYEY9ZKOitA` was verified via videos.list as public, processed and processing succeeded on the registered channel. See the phone-checking production publish-report.md. This supersedes earlier "no test upload yet" status; formal project audit and OAuth consent-screen mode are still not inferred.
+## Publishing and verification
+The90-video calendar has delegated publication after QA; do not ask approval for every routine topic/script. Respect rejected work, new-style preview holds, specific replacement permissions and owner cancellation requests. Check actual post-upload processing/schedule; an unavailable video ID is a reconciliation problem, not a reason for blind retries. Do not make test uploads during an audit.
+
+Consent-screen mode and formal audit state remain unknown. Testing-mode tokens may expire; a previously successful public upload is not proof that all future credentials/permissions remain valid.

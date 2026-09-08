@@ -1,0 +1,43 @@
+# End-to-end pipeline audit and operating checklist
+
+Audit date: 2026-09-08. Live checks: `config/pipeline-audit.json` at07:56UTC (09:56 Prague). This is an audit of code, records and selected live services, not a claim that every external API or future creative decision has been tested. Start with START_HERE.md; do not interview the owner about instructions already supplied.
+
+## Immediate state and genuine blockers
+- Local handoff installation was actually applied after a dry run: missing environment keys restored, same-identity existing client metadata preserved, token JSON restored privately. YouTube refresh + expected-channel identity check passed. Authenticated Cloudinary read returned200. No credentials are printed in the audit receipt.
+- Phone `OYEY9ZKOitA`: API confirms public, processed.
+- Restart note `ZCVvPPTvKB8`: API confirms private, processed, scheduled today19:00 Prague.
+- **Rejected familiarity `FACZAzrfEdU`: API still confirms publishAt today23:00 Prague. Cancellation is NOT complete.** Previous update failed403 insufficient scopes; no identical update was retried in this audit. Owner must cancel in Studio or grant an appropriate existing-video edit scope. A local hold cannot remove the remote schedule.
+- Anchoring `bj1yP4s3CQ0`: absent from authenticated lookup again. Needs reconciliation; no duplicate/replacement upload is authorized by that absence.
+- Cleaner `productions/2026-09-08-close-the-book`: completed40s preview, backed up, awaiting owner style review, NOT uploaded. Do not mark it ready merely because technical QA passed.
+
+## From first step to last
+| Stage | What is implemented / required | Evidence and remaining boundary |
+|---|---|---|
+| 1. Receive/decrypt | Versioned ciphertext URL + SHA256; exact AES256CBC/PBKDF2-SHA256/600000/8-byte salt; TAR.GZ | HANDOFF.md. Builder now pins salt8 where supported and tests decrypt roundtrip. Password remains owner-selected; CBC is not authenticated encryption and the weak password remains a security limitation. |
+| 2. Local bootstrap | START_HERE instructs immediate current-main read and authorized local installation, not repeated token requests | `tools/install-handoff.py`: no shell evaluation; validate all destinations before writes; refuse conflicting identities/secrets, symlinks, tracked/unignored files; atomic per-file writes, mode600. Not a cross-file transaction if the filesystem fails midway; re-run safely after inspection. |
+| 3. Verify accounts | Git fetch/write as authorized; Cloudinary expected account; refresh OAuth and verify exact YouTube channel | Local restore and live read checks passed. Git push/CI results are separate execution evidence. Upload scope does not grant edit scope. No paid generation/API test uploads in this audit. |
+| 4. Choose topic/slot |90 editorial proposals,3/day, Europe/Prague; choose routine topics autonomously | Read full calendar and previous productions first; check conceptual overlap, not just titles. Semantic deduplication and research selection are agent tasks, not implemented classifiers. Missed slots are not automatically backfilled. |
+| 5. Research/script | Primary evidence plus corroborating material; limitations and actionable value; research before script | Production `research.md`/`narration.txt`. Publisher checks recorded links/attestations, NOT whether sources actually support claims. That requires reading and review; avoid treating same-author summaries as independent replications. |
+| 6. Narration | Fish reference from registry, one continuous synthesis; alignment, silence/pacing inspection | Existing production scripts/QA demonstrate this. Do not splice separately synthesized sentence clips or restore old voice defaults. No fresh paid synthesis required for this audit. |
+| 7. Visual planning/assets | Cleaner Stiles/palette, canonical proportions, context-specific expressions, dynamic scene count | VISUAL-EDITORIAL.md. Distinct relevant illustrations, not drifting clones; UI only where useful. Character/proportion/content coverage review remains semantic. |
+| 8. Opening/assembly | Real animated hook AND distinct opening zoom; minimal movement on later stills; selective blur when helpful | Recent cleaner preview demonstrates actual generated page motion plus authored zoom. Failed/quota-denied provider output does not authorize a still-only substitute; retry appropriately or block. Hyperframes is optional for suitable composition/UI, not a promise every render uses it. |
+| 9. QA/owner review | ffprobe, aspect/fps/audio/duration/hash, caption/ASR and sampled/full-playback creative review | Future releases require creative contract v2 below. Technical success is not owner approval. New-style pending review and owner rejection must be carried into calendar holds, not left only in a chat. |
+| 10. Backup/cleanup | Upload final and editable project archives, download/verify hashes and restore inventory before deleting covered intermediates | Recent cleaner production records58 source files,5 archive parts and a verified restore dry run. Prior manifests are evidence, not a fresh full disaster recovery exercise in this audit. See active assets.json/backup scripts; preserve .media-keep and all unbacked inputs. |
+| 11. Upload/schedule | Serialized Actions publisher; ready-only30min–48h window; download/hash/ffprobe; reserve state in Git before upload; capture ID/status | `tools/youtube-publish.py`, AUTOMATION.md. Ambiguous outcomes stop as needs_reconciliation. Automated response verification is not indefinite processing/publication monitoring. Never replace/delete existing media without specific authority. |
+| 12. Verify/reconcile/handoff | Check actual YouTube processing/privacy/publishAt; update ledger, commit intended files, refresh encrypted bundle under shared lock | Current live audit above; no autonomous continuous status reconciler is implemented. CI rebuild embeds current START_HERE/HANDOFF and tracked non-production snapshot. Download versioned ciphertext and verify hash/decrypt/content after refresh. Git metadata alone is not proof the actual bundle changed. |
+
+## Improvements applied by this change
+1. Replaced contradictory historical startup/voice/publication defaults in README, AGENT, channel, AUTOMATION and YOUTUBE; current instructions link this complete checklist.
+2. Added START_HERE.md and HANDOFF.md, included directly inside the encrypted bundle. The builder reads the actual current START_HERE file rather than an obsolete hardcoded message.
+3. Added a safe local secrets installer; same OAuth identity with richer existing metadata is retained rather than overwritten. Conflicting keys require freshness investigation, not blind replacement.
+4. Fixed shell-quoted credential parsing, pinned8-byte OpenSSL salt, exposed exact public format metadata, and added regression tests including independent salt8 decryption.
+5. Added publisher release-contract v2 and rejection/hold checks; activated v2 in the channel registry. Old uploaded items are not retroactively certified/reuploaded.
+6. Expanded handoff workflow path triggers to all root Markdown operating docs and added tests before archive construction.
+
+## Future-ready release contract
+Record in calendar `qa`: `creative_contract_version:2`, true `opening_video_verified`, `opening_zoom_verified`, `character_proportions_verified`, `visual_coverage_verified`, numeric `longest_illustration_hold_seconds`; if over7s, include `long_hold_justification`. Keep evidence in production motion/layout/review files. These are evidence-backed attestations, not machine proof of taste or character consistency.
+
+Carry `publication_hold:true` for a hold; `owner_review.status:rejected` always blocks. When owner review is required, set `owner_review_required:true` and do not release until `owner_review.status:approved`. Do not automatically infer approval from silence. Existing REQUIRED_QA, voice identity, source links, review provenance, final hash and media checks remain mandatory.
+
+## Test and deployment procedure
+`python -m unittest discover -s tests -v` tests installer safety, quoting/encryption, calendar constraints, ambiguous-upload handling, upload modes and creative holds. Run calendar report and publisher dry run. Inspect diff/secret exposure; fetch main; stage intended files only; push without force. Let the shared-lock handoff workflow complete, then independently verify the new downloaded archive includes START_HERE, HANDOFF, this audit and the new installer. No genuine scope/consent blocker is considered fixed merely by updating documentation.

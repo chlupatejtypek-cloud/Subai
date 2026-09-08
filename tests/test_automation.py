@@ -47,3 +47,27 @@ class UploadModeTests(unittest.TestCase):
     self.assertEqual(result['id'],'test-id')
  def test_immediate_omits_schedule(self):self.check_mode(True)
  def test_default_keeps_private_schedule(self):self.check_mode(False)
+
+class CreativeGateTests(unittest.TestCase):
+ def setUp(self):
+  self.c,self.cloud=p.config('stiles-psychology');self.item=json.loads(json.dumps(p.read(ROOT/'calendar/2026-09-07_2026-10-06.json')['items'][0]));self.item['qa'].update({'creative_contract_version':2,'opening_video_verified':True,'opening_zoom_verified':True,'character_proportions_verified':True,'visual_coverage_verified':True,'longest_illustration_hold_seconds':6.9})
+ def test_valid_contract(self):p.validate(self.item,self.c,self.cloud)
+ def test_missing_real_hook(self):
+  self.item['qa']['opening_video_verified']=False
+  with self.assertRaises(ValueError):p.validate(self.item,self.c,self.cloud)
+ def test_missing_zoom(self):
+  self.item['qa']['opening_zoom_verified']=False
+  with self.assertRaises(ValueError):p.validate(self.item,self.c,self.cloud)
+ def test_rejection_overrides_old_qa(self):
+  self.item['owner_review']={'status':'rejected'}
+  with self.assertRaises(ValueError):p.validate(self.item,self.c,self.cloud)
+ def test_pending_style(self):
+  self.item['owner_review_required']=True
+  with self.assertRaises(ValueError):p.validate(self.item,self.c,self.cloud)
+ def test_long_hold_needs_justification(self):
+  self.item['qa']['longest_illustration_hold_seconds']=11
+  with self.assertRaises(ValueError):p.validate(self.item,self.c,self.cloud)
+  self.item['qa']['long_hold_justification']='Readable multi-step demonstration, reviewed';p.validate(self.item,self.c,self.cloud)
+ def test_new_contract_required(self):
+  del self.item['qa']['creative_contract_version']
+  with self.assertRaises(ValueError):p.validate(self.item,self.c,self.cloud)

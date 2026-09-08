@@ -128,7 +128,8 @@
         "missed_slot_policy": "mark/report overdue; do not backdate or dump overdue videos in a burst",
         "calendar": "calendar/2026-09-07_2026-10-06.json",
         "generation_mode": "agent production; publisher only uploads completed QA-passed assets",
-        "unattended_generation": false
+        "unattended_generation": false,
+        "creative_contract_version": 2
       }
     }
   ]

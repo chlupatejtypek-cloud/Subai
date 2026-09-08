@@ -339,7 +339,10 @@
           "Excessive repeated illustration hold"
         ],
         "youtube_schedule_action": "Owner authorized cancellation; videos.update failed403 insufficient authentication scopes. Existing YouTube publishAt still active until Studio change or reauthorization. No successful cancellation claimed."
-      }
+      },
+      "publication_hold": true,
+      "last_status_check_at": "2026-09-08T07:56:46+00:00",
+      "remote_schedule_still_active": true
     },
     {
       "id": "SP-20260909-1",

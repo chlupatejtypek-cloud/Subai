@@ -1,265 +1,30 @@
-> **OWNER REJECTION UPDATE2026-09-08:** Read the latest VISUAL-EDITORIAL.md section before producing. Actual animated hook + opening zoom, canonical proportions, adequate distinct visual coverage; no still-only fallback publication after provider failure. Familiar-claims video was rejected after scheduling; cancellation of its live YouTube schedule needs explicit confirmation.
+# Agent operating contract — current,2026-09-08
 
-> **Latest owner review:** Read `VISUAL-EDITORIAL.md`: researched useful angles first, up to 60s, calculated visual beats instead of fixed 10+5 images, no near-duplicate regenerated scenes, optional smooth UI.
+## Begin, do not repeatedly ask for setup
+Read START_HERE.md and install the credentials deliberately supplied in the owner's encrypted handoff. This is authorized local setup, not a reason to request the same keys again. Existing valid private local credentials also count; credentials need not have been pasted into this particular chat turn. Never search unrelated accounts/files for credentials.
 
-> **CURRENT POLICY — v4.0 (2026-09-07):** Read `config/channels.json`, `channel.md`, `AUTOMATION.md` and the calendar first. The owner now selected **Fish Audio `fb7ec16ca51a45a5a4db881244d7990a`**, 3 videos/day, 7 Sep–6 Oct, with automatic publication AFTER QA. Earlier permanent-Adam, new-audition, weekly-cadence and per-script approval instructions below are historical and superseded for this calendar. No secrets in public files. Generation still requires an agent production run; the scheduled publisher never fabricates assets or reviews.
+Then read PIPELINE.md, registry, channel specification, latest editorial corrections, automation, YouTube and active production records. Fetch current main and preserve unrelated local changes. Verify actual permissions before claiming access.
 
-# 🤖 AGENT.md — how an AI agent gets write access to this repo
+## Authority and sources of truth
+1. Current system/platform constraints and the owner's latest explicit request.
+2. Current operating docs and registry on main. Latest editorial corrections supersede older advice; historic render sources stay reproducible.
+3. Live provider state for factual availability/publication; calendar is a ledger, not proof that a video still exists.
+4. Decrypted repo snapshot is fallback context, not authority over newer main.
 
-> **Read this first if you are an AI agent dropped into a fresh session on this repo.**
->
-> Short version: **you can edit this repo — but only with credentials the owner hands you in the
-> current session.** There is deliberately **no token stored in this repository**, and you must
-> not go looking for one. See [Why no token in the repo](#why-there-is-no-token-in-this-repo).
+Routine research, topic choice, scripting, single Fish synthesis, visuals, rendering, QA and publication of genuinely ready calendar items were delegated. Ask only for unresolved material decisions, scope/cost expansion, conflicting secrets or required external consent. Do not improvise away hard creative requirements to hit a slot.
 
----
+## Secrets and Git
+`.env` and `credentials/` must be gitignored; use mode600, private directories, no plaintext logs. `.git/credentials` is this project's YouTube token JSON, NOT Git credential-store. Both it and `.git/config` may disappear across Arena snapshots; restore from the verified bundle rather than demanding new authorization automatically.
 
-## 1. Your access, honestly stated
+Non-secret origin: https://github.com/chlupatejtypek-cloud/Subai.git . Use the supplied PAT via a private credential helper or per-command header; never embed it in the remote URL. Verify the repository write permission, fetch before pushing and stage only intended changes. Do not force-push, sweep unrelated files into a commit, or expose short-lived auth codes/resumable-upload URLs.
 
-| Capability | Available? | How |
-|---|---|---|
-| **Read** the repo | ✅ Always | It is public. `git clone` works with no credentials. |
-| **Write / commit / branch / PR** | ⚠️ Only this session | Owner pastes a GitHub PAT into the chat. You configure it locally. |
-| **ElevenLabs voiceover** | ⚠️ Only this session | Owner pastes the `sk_...` key. You write it to gitignored `.env`. |
-| **ElevenLabs inside GitHub Actions** | ✅ Always | Stored as repo secret `ELEVENLABS_API_KEY` (encrypted, not in git). |
+Do not move secrets into a private Git repository either; GitHub Actions secrets and the owner's encrypted handoff are the designated durable stores. Do not print decrypted credentials in chat to prove they work.
 
-**If the owner has not pasted credentials this session, you have read-only access.**
-Do not guess, do not fabricate, do not claim write access you have not verified. Say plainly:
-*"I can read the repo, but I need a token from you to push changes."*
+## Critical creative gates
+Actual animated hook AND separate100→105→100% opening zoom; no still-only provider-failure substitute. Canonical Stiles proportions, context-appropriate expressions, enough distinct relevant imagery and justified hold durations. Micro-drift supplements variety. Latest cleaner-style preview needs owner review before release. A successful render or ASR match does not prove creative quality.
 
-### Verify before you claim
+## Honest reporting
+Distinguish planned, generated, technically checked, creatively approved, uploaded, processed, scheduled and public. A local hold does not cancel an existing YouTube schedule. HTTP403 insufficient scopes requires consent or Studio action, not repeated requests with the same token. Never claim cancellation, restored credentials, uploaded files or autonomous generation without evidence.
 
-Never assume write access works. Test it:
-
-```bash
-TOKEN="<paste>"
-curl -s -o /dev/null -w "%{http_code}\n" https://api.github.com/user \
-  -H "Authorization: Bearer $TOKEN"        # expect 200
-```
-
-Then confirm `push: true`:
-
-```bash
-curl -s "https://api.github.com/repos/chlupatejtypek-cloud/Subai" \
-  -H "Authorization: Bearer $TOKEN" | python3 -c \
-  "import json,sys; print(json.load(sys.stdin)['permissions'])"
-```
-
----
-
-## 2. Configuring git push (⚠️ the part everyone gets wrong)
-
-A classic GitHub PAT (`ghp_...`) must be used as the **username**, with an **empty password**.
-
-```bash
-# ✅ CORRECT — token in the username position
-git remote set-url origin "https://$TOKEN@github.com/chlupatejtypek-cloud/Subai.git"
-
-# ❌ WRONG — this fails with "Invalid username or token"
-git remote set-url origin "https://x-access-token:$TOKEN@github.com/chlupatejtypek-cloud/Subai.git"
-```
-
-`x-access-token:` as the username is only for **GitHub App** installation tokens (`ghs_`),
-not for personal access tokens. Mixing them up produces a confusing auth failure.
-
-Also set an identity, or the commit fails with `empty ident name`:
-
-```bash
-git config user.name  "Arena Agent"
-git config user.email "arena-agent@users.noreply.github.com"
-```
-
-> **Sandbox note:** in ephemeral agent sandboxes, `.git/config` may not persist between
-> sessions (it is treated as a credential file). If `git remote -v` comes back empty,
-> re-add the remote — the repo itself is fine.
-
-### Or skip git entirely — the Contents API
-
-For single-file changes this is simpler and needs no local clone:
-
-```bash
-# create or update
-curl -X PUT \
-  "https://api.github.com/repos/chlupatejtypek-cloud/Subai/contents/README.md" \
-  -H "Authorization: Bearer $TOKEN" \
-  -d "{\"message\":\"docs: update\",\"content\":\"$(printf '%s' "$NEW" | base64 -w0)\",\"branch\":\"main\"}"
-
-# delete (needs the blob sha from a prior GET)
-curl -X DELETE \
-  "https://api.github.com/repos/chlupatejtypek-cloud/Subai/contents/some-file.txt" \
-  -H "Authorization: Bearer $TOKEN" \
-  -d "{\"message\":\"remove\",\"sha\":\"$SHA\",\"branch\":\"main\"}"
-```
-
----
-
-## 3. Why there is no token in this repo
-
-The owner asked for a token to be committed so a fresh agent could self-authorize. It was not
-done, because **it does not work** — not because of squeamishness:
-
-1. **GitHub auto-revokes it.** Per [GitHub's own docs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/token-expiration-and-revocation):
-   *"If a valid OAuth token, GitHub App token, or personal access token is pushed to a public
-   repository or public gist, the token will be automatically revoked."*
-   The string would sit in the repo, but it would be **dead** — a future agent reading it
-   would get `401` and be worse off than before.
-2. **Push protection blocks the push first.** `ghp_` is a high-confidence pattern and
-   *push protection for users* is on by default, so the push is rejected with `GH013`
-   before it ever lands.
-3. **This repo is public.** Anything committed is scraped by bots within seconds.
-4. **It harms people beyond this account.** The token carries `admin:org`,
-   `admin:enterprise`, `delete_repo` and `user` scopes. Whoever found it could run
-   spam/phishing repos or mine on GitHub Actions minutes under a real account.
-
-### What actually works instead
-
-- **This session:** owner pastes the token → agent works → sandbox dies → nothing persists. ✅
-- **If a stored token is genuinely required:** make the repo **private** first. The
-  auto-revoke rule applies to *public* repos and gists, so a token in a private repo survives.
-  Trade-off: it stops being a public playbook, and flipping it back to public instantly
-  revokes the token.
-- **Reduce blast radius either way:** use a *fine-grained* PAT scoped to `Subai` only,
-  with `Contents: Read and write` + `Metadata: Read`. Not a classic PAT with `admin:*`.
-
----
-
-## 4. ElevenLabs key handling
-
-| Destination | Status | Used by |
-|---|---|---|
-| GitHub Actions secret `ELEVENLABS_API_KEY` | ✅ stored, encrypted | CI workflows |
-| `.env` in the repo root | ⚠️ per session, gitignored | the agent, locally |
-| Committed into git | ❌ never | — |
-
-Write the key to `.env` without ever echoing it back:
-
-```bash
-umask 077
-printf 'ELEVENLABS_API_KEY=%s\n' "$KEY" > .env
-```
-
-Never print the key, never put it in a commit message, a branch name, a log line, or a
-workflow file. `.env` is gitignored — verify with `git check-ignore -v .env` if unsure.
-
-To use the stored secret from a workflow:
-
-```yaml
-env:
-  XI: ${{ secrets.ELEVENLABS_API_KEY }}
-```
-
-Secrets are **write-only** through the API — you can list their names but never read their
-values back. That is why an agent still needs the key pasted in-session for local TTS.
-
-### Cloudinary image/video uploads
-
-Cloudinary is configured for generated assets:
-
-| Setting | Location |
-|---|---|
-| Cloud name | Actions variable `CLOUDINARY_CLOUD_NAME` / local `.env` |
-| API key | Actions variable `CLOUDINARY_API_KEY` / local `.env` |
-| API secret | encrypted Actions secret `CLOUDINARY_API_SECRET` / local gitignored `.env` |
-
-Never commit the API secret. For a local upload, load `.env` and use the signed uploader:
-
-```bash
-set -a; source .env; set +a
-tools/upload-cloudinary.sh IMAGE PUBLIC_ID subai/characters
-```
-
-The uploader prints only non-secret response metadata and the final HTTPS URL. Verify the
-returned URL with HTTP 200 before recording it in a character/production document. The
-canonical Stiles model sheet and public ID live in [`characters/stiles.md`](characters/stiles.md).
-
-### Fish Audio production narration
-
-`FISH_API_KEY` lives in local gitignored `.env` and encrypted Actions secrets. Default reference is **fb7ec16ca51a45a5a4db881244d7990a** from `config/channels.json`. Adam/ElevenLabs are parked; no silent fallback. Owner authorized scheduled production without separate per-script approval, but research and script QA must pass before synthesis. Generate once per finalized script and preserve native alignment.
-
-Prefer the timestamp streaming endpoint because it returns provider alignment together with
-the audio, avoiding a separate ASR alignment pass:
-
-```bash
-set -a; source .env; set +a
-python3 tools/fish-tts-with-timestamps.py \
-  --text-file productions/<folder>/narration.txt \
-  --reference-id "$FISH_REFERENCE_ID" \
-  --model s2.1-pro-free \
-  --format opus \
-  --output productions/<folder>/audio/narration.opus
-```
-
-The tool writes `narration.opus.timestamps.json`. Fish S2.1 supports `[bracket]` natural-language expression cues; use them sparingly, normally one compatible direction per sentence. For multi-voice dialogue, synthesize each tagged line with its assigned reference, concatenate decoded PCM with short pauses, and offset each provider alignment by the measured segment duration. Render captions only through `tools/render-word-captions.py` and the locked `config/caption-style.json`; never redefine the style in a production script.
-
-### Agnes AI scene animation
-
-During vertical testing, create up to 10 rich story-specific source scenes. Every image must be edge-to-edge 9:16 full bleed: no white/cream border, side strip, matte, frame or lower panel. Never ask the image model for a “caption-safe area/lane”; that wording repeatedly created visible white panels. Run `tools/full-bleed-check.py IMAGE` before upload, then deterministically fix/crop or regenerate failures. Only then may a scene be attempted as an Agnes clip when it has a meaningful safely isolated environmental action. Source images must have public Cloudinary HTTPS URLs. `AGNES_API_KEY` lives only in local `.env` or the encrypted Actions secret—never in git.
-
-For each attempted scene, default to Agnes Video 2.5; use the documented fallback below when required.
-
-```bash
-set -a; source .env; set +a
-python3 tools/agnes-image-to-video.py \
-  --image-url "https://res.cloudinary.com/.../first-frame.png" \
-  --prompt "LOCKED STORYBOARD FRAME. Fixed camera, no zoom or pan. Preserve the exact stickman anatomy and composition. The closet door slowly opens and warm light moves across the floor; the character remains frozen. No morphing, no new limbs, no text." \
-  --model agnes-video-v2.0 --num-frames 97 --seconds 4 \
-  --output productions/<folder>/visuals/hook-agnes.mp4
-```
-
-The API is asynchronous; the tool creates a task, polls by `video_id`, downloads the finished
-MP4 and writes non-secret metadata beside it. Default polling is **15 seconds**—three-second polling produced HTTP 429. Free-tier task creation is effectively sequential: concurrent generation attempts caused HTTP 429, so create one task at a time and allow a short cooldown. Use `--resume-id VIDEO_ID` after a polling/network failure; never create a duplicate generation merely because status retrieval failed.
-
-Default to `agnes-video-2.5`. If it rejects task creation with `insufficient_user_quota`, one
-fallback attempt with `--model agnes-video-v2.0` is allowed; the tool automatically switches
-to its frame-based request format. The production target is `--num-frames 97` (~4 s at 24 fps).
-Begin with `LOCKED STORYBOARD FRAME`, explicitly separate visible people/objects, and freeze
-all character anatomy. **Do not ask Agnes for zoom, pull-out or pan.** The camera stays fixed;
-request one meaningful environmental action designed into the first frame (door opening,
-shadow crossing, flashlight sweep, rain, dust or light change). If no such action exists,
-redesign the still instead of generating pointless motion. Avoid `breathing`, `trembling`, and
-`weight shift`: those terms caused subject merging. Inspect every result frame-by-frame for
-morphing, extra limbs, vanished objects, text artifacts and unwanted camera movement. Try at
-most twice total.
-If a scene fails QC, use its rich source still with a composition-aware editorial push, pull or lateral pan. Multiple Agnes clips may be retained, but only individually passed clips enter the timeline. The opening clip alone receives the standardized post-production 100%→105% quick punch and return to 100%; Agnes generation itself always remains fixed-camera.
-
-### Arena workspace media cleanup
-
-Arena's workspace disk is finite. Generated images, audio segments, QC frames and old renders
-must not accumulate across productions.
-
-1. Upload durable results (canonical character references, accepted hook frames/clips and final
-   videos) to Cloudinary with `tools/upload-cloudinary.sh`.
-2. Record each versioned URL and public ID in the production's `cloudinary.md`.
-3. Fetch every recorded URL and require HTTP 200 **before deleting the local source**.
-4. List media still needed by pending work in `productions/<folder>/.media-keep`.
-5. Preview cleanup, inspect the list, then apply it:
-
-```bash
-python3 tools/cleanup-production.py productions/<folder>
-python3 tools/cleanup-production.py productions/<folder> --apply
-```
-
-The cleanup tool only considers untracked, gitignored files and never deletes tracked briefs,
-scripts or reports. Keep the newest local final long enough to present/review it. Once its
-Cloudinary copy is accepted, remove it from `.media-keep` and clean it too. Delete superseded
-character PNGs from `characters/` after their canonical Cloudinary URLs are documented.
-Never delete an input while an asynchronous Agnes task still depends on its public URL or a
-local final assembly still depends on the file.
-
----
-
-## 5. House rules for agents working here
-
-1. **Verify, then report.** Quote the actual status code or file listing, not an assumption.
-2. **Clean up test artifacts.** If you push a test branch or file, delete it and confirm
-   the deletion. A `&& echo "deleted"` prints success even when the command failed —
-   check the real state afterwards.
-3. **Never commit secrets.** Golden rule #7 in `README.md` is not negotiable.
-4. **Ask before destructive or expensive actions** — deleting branches, force-pushing,
-   mass-rewriting history, or spending ElevenLabs credits.
-5. **Secrets pasted in chat are already partly exposed.** If the owner pastes a key,
-   suggest rotating it once the work is done.
-
----
-
-*Owner-facing docs live in [`README.md`](README.md). Channel specifics in [`channel.md`](channel.md).*
+## Current production constraints
+Use channel.md and VISUAL-EDITORIAL.md; do not restore historical ElevenLabs/Jessica/40s/fixed10+5 defaults. Existing published or scheduled videos are not silently replaced. Owner-rejected media cannot be automatically republished, even if stale QA flags were accidentally set true.

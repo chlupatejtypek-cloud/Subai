@@ -1,67 +1,32 @@
-> **Current status — 2026-09-08:** Publication and encrypted handoff run without chat; research, scripting, generation and editorial QA still need an agent production session. `unattended_generation=false`. The owner approved the anchoring remake style and now requests context-appropriate facial expressions and no “Example prices” hook label. New ready-to-resume production is registered for today's19:00 Prague slot; actual upload state is in the calendar, not this summary. Original phone public API verification succeeded; original anchoring scheduling and processing succeeded. Historical setup observations below must not override these verified results.
+# Automation — current,2026-09-08
 
-# Subai automation — current operational contract
+## Runs without chat
+- publish-calendar.yml: GitHub cron at minutes17/47 each hour, plus manual dispatch. GitHub may delay jobs. Only `ready` items30minutes–48hours ahead may upload; YouTube's future publishAt performs release timing.
+- Before uploading: validate registry/channel, evidence/QA, approved Cloudinary URL, SHA256, actual dimensions/fps/audio/duration; refresh OAuth and verify channel identity.
+- Commit/push `upload_started` BEFORE upload. Ambiguous completion becomes `needs_reconciliation`; no blind retry. Capture the returned video ID and verify schedule instead of assuming success.
+- refresh-handoff.yml: relevant main changes, manual dispatch and daily04:13UTC. It preserves supplied credentials, merges runtime secrets, encrypts current instructions/config/calendar and uploads ciphertext only.
+- Both workflows share one concurrency group. Fetch state commits before pushing; no force pushes. A workflow's GITHUB_TOKEN push does not trigger another workflow, so explicit/daily handoff refresh captures publisher state.
 
-## Registry and calendar
-`config/channels.json` is the public account registry. A channel links to a Cloudinary account by key, names the exact YouTube channel ID, and references secret NAMES only. The brand Stiles Psychology currently uses authenticated display name Chlupatej Typek; neither is silently renamed. Do not infer a Google email address from channel metadata.
+## Does NOT run autonomously
+Research, scriptwriting, hosted image generation, assembly decisions and semantic/creative review still require an agent session. `unattended_generation=false`. The90-slot calendar is not90 completed videos. No scheduling analytics/viral guarantee or automatic semantic-topic deduplication is implemented.
 
-Canonical live calendar: `calendar/2026-09-07_2026-10-06.json`. CSV and Markdown are initial editorial exports, not the live upload ledger. 90 English topics, three/day, September 7–October 6 inclusive. Slots in Europe/Prague; explicit UTC timestamps included. First-day late-evening exceptions reflect setup at ~22:00; they are targets, not promises. Research/action proposals must be validated before scripting. Normal times 15:00, 19:00, 23:00 are initial test slots, not evidence of optimal performance.
+## State and gates
+Typical sequence: planned → researching → scripted → producing → ready → upload_started → scheduled. Public status requires an actual API check; clock passage alone is not proof. Blocked/missed/needs_reconciliation states require investigation. A scheduled item may additionally have owner rejection or a cancellation blocker; its remote publishAt is not removed by a local status change.
 
-## What runs without the chat
-1. `publish-calendar.yml` runs at minute 17 and 47 each hour (GitHub cron UTC). It validates config, reports unfinished overdue slots and uploads ONLY `ready`, QA-passed finals scheduled 30 minutes–48 hours ahead. GitHub can delay scheduled jobs; it is not an exact-minute scheduler. YouTube's future `publishAt` does the final timing.
-2. The uploader refreshes OAuth, verifies the exact registered channel, downloads only a registered Cloudinary MP4, verifies SHA256 and probes actual dimensions, fps, duration and audio. It uploads privately with future publication time. It checks the returned schedule rather than assuming success.
-3. A durable `upload_started` marker is pushed before upload. If response/state saving is ambiguous, automatic retries are blocked (`needs_reconciliation`) to prevent duplicates. Inspect YouTube Studio/API before clearing the marker. No public resumable-session URLs or OAuth values are stored.
-4. `refresh-handoff.yml` refreshes the encrypted bootstrap on relevant main changes, by manual dispatch and daily at 04:13 UTC. Existing owner credentials are decrypted IN MEMORY, current runtime secrets are merged, current tracked docs/config/calendar are added, and only ciphertext is uploaded to Cloudinary. This preserves the original owner-supplied Git PAT without making a second separate broad PAT secret. Workflows with permission to decrypt the handoff must be treated as highly trusted.
-5. Both workflows share a concurrency group to avoid racing main's state commits. No force pushes. A GitHub-token calendar commit does not itself trigger another workflow, so the daily handoff refresh captures scheduled state updates.
+Before ready, provide title≤60chars, accurate description, at least2 recorded HTTPS sources including primary evidence, verified final URL/SHA256/duration and QA provenance. Existing REQUIRED_QA includes research/script, voice/character, fullbleed, caption alignment/no-overlap, audio/visual review and rights. Actual code is tools/youtube-publish.py.
 
-## What is NOT autonomous yet
-**The 90 videos are not generated.** Current hosted image-generation tools require an agent session; GitHub Actions cannot call those chat tools. Research, script writing, image generation, assembly and semantic audiovisual review still require an agent production run. Merely running a cron cannot invent these capabilities. This release automates handoff/account configuration and publication of completed work, not unattended 90-video manufacturing. No paid Fish audio, images or Agnes jobs were generated during this configuration task.
+**Release contract v2 for future ready items:** qa.creative_contract_version=2; true opening_video_verified, opening_zoom_verified, character_proportions_verified and visual_coverage_verified; record longest_illustration_hold_seconds and, if over7s, a content-specific long_hold_justification. These are review attestations supported by artifacts, not automatically inferred facts. Rejected or explicitly held items fail validation regardless of old flags. If owner_review_required=true, owner_review.status must be approved. Existing uploaded/published items are not retroactively reuploaded or certified against v2.
 
-To close this gap later, provision a trusted production runner with documented model endpoints, source/research access, cost limits and resumable job IDs; do not scrape browser sessions or silently reuse an old video's art for unrelated topics. Monthly credit consumption is unknown until actual production measurements exist. The owner authorized three productions per day, not unlimited failure retries.
-
-## Production handoff and QA
-Each calendar item progresses `planned -> researching -> scripted -> producing -> ready -> upload_started -> scheduled`. `published` requires a later actual API/Studio check; it is not inferred from the calendar clock. `blocked` and `needs_reconciliation` require investigation. JSON is the live state. Research/production stages are set by the producer, not the publisher.
-
-Before `ready`, set:
-- `research_status: verified`, at least two HTTPS `research_sources` (one primary/peer-reviewed, one corroborating).
-- Accurate `description`, title ≤60 chars, `asset_url` on this channel's Cloudinary cloud, lowercase hex `asset_sha256`, measured `duration_seconds` ≤60.
-- `qa` with true values for `research_verified`, `script_verified`, `voice_verified`, `character_verified`, `full_bleed`, `captions_aligned`, `captions_no_overlap`, `audio_verified`, `visual_review_passed`, `rights_verified`.
-- `qa.reviewed_by`, ISO `qa.reviewed_at`, `qa.source_image_count` 1–15 (safety ceiling, not a target; actual count comes from the storyboard), `qa.voice_provider: fish_audio`, `qa.voice_reference_id: fb7ec16ca51a45a5a4db881244d7990a`.
-- These are attested findings, not flags to auto-fill. Record supporting evidence in the production folder.
-
-Narrate through `tools/fish-tts-with-timestamps.py --text-file ... --output ...`. Default reference comes from the registry. Preserve native alignment and use the locked caption renderer. Adam is parked; its approved +5% edit speed does not silently alter the new Fish voice. Existing accepted video is not remade or automatically inserted into the new Fish-only calendar.
-
-## Commands
-```bash
-pip install -r automation/requirements.txt
+## Safe commands
+```sh
 python -m unittest discover -s tests -v
 python tools/calendar-report.py
-python tools/youtube-publish.py                     # safe dry run
-python tools/youtube-publish.py --verify-auth        # no upload
-# Runtime execution normally belongs to the serialized Actions workflow:
-python tools/youtube-publish.py --execute --commit-state
+python tools/youtube-publish.py                 # dry run
+python tools/youtube-publish.py --verify-auth   # identity check, no upload
 ```
-Never run multiple local publishers simultaneously. Production workflow serializes all publication jobs; local `--execute` without durable committed state is for a controlled single operator only.
+Actual execution normally belongs to the serialized workflow. Do not run competing local publishers. Immediate publication needs a specific owner override; automatic calendar authorization is not permission to backdate or burst-fill missed slots.
 
-## Secret provisioning
-Owner-run `tools/configure-automation-secrets.py` requires `.env` loaded into environment, PyNaCl, gitignored `credentials/youtube-client.json`, token JSON in `.git/credentials`, and `HANDOFF_PASSPHRASE` provided separately. It sets encrypted Actions secrets for Fish, Cloudinary, YouTube client/refresh token, handoff passphrase and other existing media providers. It never outputs secret values.
+## Known boundaries
+YouTube upload+readonly scopes work for uploads/read checks, but existing-video status edits failed403 insufficient scopes. Owner-authorized cancellation therefore needs Studio or Google reauthorization; do not repeat the same failed update. Consent-screen Testing/Production mode and formal project audit status are not inferred. Public phone upload was verified, which supersedes older “no public test yet” notes, but does not prove indefinite token validity.
 
-`tools/build-handoff.py --upload` refreshes the same raw Cloudinary public ID. `config/transfer.json` records the NEW versioned URL and SHA256. Use that version, not the old immutable link. Encryption remains compatible OpenSSL AES-256-CBC with PBKDF2-SHA256 / 600000 iterations. The owner expressly chose the original weak password; rotation remains recommended. A public SHA256 checks identity/corruption, not secrecy or strong password entropy.
-
-## External blockers and recovery
-- Successful refresh and channels.list were verified, but OAuth consent Testing/Production status cannot be inferred. Testing-mode offline tokens can expire after seven days. Reauthorization needs the owner; re-encrypting a token does not extend its validity.
-- Project upload-audit status is unknown. Unverified YouTube API projects can restrict API uploads to private. A scheduled metadata response is not proof a public audit restriction has been lifted. An actual future-public test/audit check is still needed; this task made no test upload.
-- No new Google consent for unrelated scopes, automatic account renaming, deletions, comments or channel changes.
-- On error: fail closed, report in Actions, preserve ledger. Do not lower QA, switch voices, backdate dates or upload duplicates.
-- Revoke/rotate compromised credentials at their provider, then reprovision Actions and rebuild handoff. Old publicly accessible ciphertext versions may remain cached; replacing the latest file does not revoke old tokens.
-
-## Owner-authorized immediate release
-For an explicit owner request to publish a specific video now, record the item's `publication_override` (`mode: immediate_public`, `authorized_by: owner`, date/reason) without rewriting its historical planned slot. With all normal content/technical QA passed and status `ready`, use `tools/youtube-publish.py --execute --commit-state --publish-now-id ITEM_ID`. This uploads with public visibility and omits `publishAt`. The default scheduled workflow remains unchanged. The immediate response is recorded as `uploaded_public_pending_processing` or `uploaded_private`; only a subsequent videos.list status/processing verification can mark it `published`. Never treat a private/API-restricted upload as a public success, or upload it again as a workaround.
-
-## Owner pacing feedback — phone-checking V2
-Default future Fish post-edit is now 1.06× without pitch shift, after measured long-pause trimming. Preserve short breaths and never cut inferred word gaps unless actual waveform silence confirms them. Remap captions through every cut and speed change, then verify all words by ASR. New production targets ten unique scene images rather than repeatedly revisiting seven. This does not authorize re-uploading revisions to an already public video: keep the published ledger intact and store alternate renders under revision records pending owner review. The existing TTS helper now collapses script layout whitespace to avoid extra paragraph pauses.
-
-## Continuous narration and Agnes stills — owner clarification 2026-09-07
-Write the entire script as one flowing paragraph and make one Fish synthesis request, not one request per sentence. Keep accepted 1.06 post-edit tempo; preserve normal pauses. The earlier fixed ten-plus-five rule is now superseded by the owner’s subsequent review: compute actual asset needs from distinct visual beats; never use fifteen near-duplicate pictures just because they exist. `tools/agnes-image.py` uses the verified image endpoint, not image-to-video. Five requests succeeded for SP-20260907-2; no claim this establishes unlimited future free quota. Original quiet scene-motivated procedural SFX are permitted; no music bed.
-
-Latest editorial contract: `VISUAL-EDITORIAL.md`. Maximum duration 60s, research before script, dynamic semantic pacing, stable source art and optional useful UI. First Hyperframes local render completed; see HYPERFRAMES.md. First treatment remains a preview pending owner feedback. Preserve existing final/publication states; do not auto-publish the rejected silence edit.
+See PIPELINE.md for current unresolved releases and the full audit, YOUTUBE.md for account permissions, HANDOFF.md for restoring credentials. Secrets stay out of public Git, including upload session URLs and auth codes.
