@@ -17,7 +17,7 @@ def main():
  if a.commit_state and not a.apply:raise ValueError('--commit-state requires --apply')
  c,_=p.config('stiles-psychology');path=p.ROOT/c['publishing']['calendar'];data=p.read(path);item,resume=select(data,p.now())
  if a.apply and not resume:
-  item['status']='researching';item['production_path']=item.get('production_path') or 'productions/'+item['id'].lower();item['workflow']={'stage':1,'stage_name':'research','started_at':p.now().isoformat(),'contract':'60–80 seconds;10–15 distinct used illustrations','next_action':'Read RETENTION-RESEARCH.md; compare3 angles; verify primary evidence before scripting'}
+  item['status']='researching';item['production_path']=item.get('production_path') or 'productions/'+item['id'].lower();item['workflow']={'stage':1,'stage_name':'research','started_at':p.now().isoformat(),'contract':'40–60 seconds;10–15 distinct used illustrations','next_action':'Read RETENTION-RESEARCH.md; compare3 angles; verify primary evidence before scripting'}
   p.persist(path,data,'production: reserve '+item['id']+' for research',a.commit_state)
  print(json.dumps({'mode':'applied' if a.apply else 'dry_run','resume':resume,'item':item['id'],'topic_proposal':item['title'],'instructions':'START-WORKFLOW.md','action':'Continue agent production now; do not stop at reservation or ask routine topic approval'}))
 if __name__=='__main__':

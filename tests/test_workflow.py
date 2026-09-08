@@ -23,13 +23,13 @@ class WorkflowTests(unittest.TestCase):
  def test_resume(self):
   now=datetime.now(timezone.utc);data={'last_remote_sync_at':now.isoformat(),'items':[{'id':'a','status':'producing'}]};self.assertTrue(start.select(data,now)[1])
  def fixture(self):
-  c,cloud=p.config('stiles-psychology');x=p.read(ROOT/c['publishing']['calendar'])['items'][0];x.pop('youtube_video_id',None);x['duration_seconds']=70;x['qa'].update(source_image_count=10,creative_contract_version=2,opening_video_verified=True,opening_zoom_verified=True,character_proportions_verified=True,visual_coverage_verified=True,longest_illustration_hold_seconds=7);return x,c,cloud
+  c,cloud=p.config('stiles-psychology');x=p.read(ROOT/c['publishing']['calendar'])['items'][0];x.pop('youtube_video_id',None);x['duration_seconds']=50;x['qa'].update(source_image_count=10,creative_contract_version=2,opening_video_verified=True,opening_zoom_verified=True,character_proportions_verified=True,visual_coverage_verified=True,longest_illustration_hold_seconds=7);return x,c,cloud
  def test_new_format_valid(self):p.validate(*self.fixture())
  def test_short_rejected(self):
-  x,c,cloud=self.fixture();x['duration_seconds']=59
+  x,c,cloud=self.fixture();x['duration_seconds']=39
   with self.assertRaises(ValueError):p.validate(x,c,cloud)
  def test_long_rejected(self):
-  x,c,cloud=self.fixture();x['duration_seconds']=81
+  x,c,cloud=self.fixture();x['duration_seconds']=61
   with self.assertRaises(ValueError):p.validate(x,c,cloud)
  def test_nine_images_rejected(self):
   x,c,cloud=self.fixture();x['qa']['source_image_count']=9

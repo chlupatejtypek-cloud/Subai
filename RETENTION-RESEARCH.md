@@ -1,6 +1,6 @@
 # Research-informed retention playbook
 
-Reviewed2026-09-08. Goal: useful, satisfying60–80s psychology stories that viewers want to finish and share. No scientific paper establishes a guaranteed viral formula, an optimal joke quota, a mandatory10-image rhythm or a universal retention threshold.60–80s and minimum10 used images are owner production requirements, not scientific findings.
+Reviewed2026-09-08. Goal: useful, satisfying40–60s psychology stories that viewers want to finish and share. No scientific paper establishes a guaranteed viral formula, an optimal joke quota, a mandatory10-image rhythm or a universal retention threshold.40–60s and minimum10 used images are owner production requirements, not scientific findings.
 
 ## What the evidence supports — and does not
 
@@ -29,7 +29,7 @@ Application: measure early choice to stay separately from how long engaged viewe
 - Surprise must come from true evidence or a clearly hypothetical demonstration, never distorted study results.
 - Humor: dry, brief, relevant, occasional; omit when forced. Stiles can react with mild disbelief without ridiculing the audience. No recycled catchphrase every video.
 - Shareability: a useful observation viewers recognize in themselves, a clear demonstration, or advice they could send to one specific person. No fabricated outrage or universal diagnoses.
-- Pacing: vary idea/visual rhythm without overwhelming viewers.10–15 meaningful illustrations over60–80s can support coherence; no rule that every few seconds needs a gimmick.
+- Pacing: vary idea/visual rhythm without overwhelming viewers.10–15 meaningful illustrations over40–60s can support coherence; no rule that every few seconds needs a gimmick.
 - Ending: resolve the question and leave a practical thought, not a long subscribe speech. A natural callback can reward rewatching; never design a confusing accidental loop that withholds closure.
 
 ## Required research/script artifacts

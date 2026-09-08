@@ -81,7 +81,7 @@
           "youtube_video_id": null
         }
       ],
-      "last_status_check_at": "2026-09-08T08:48:27.451640+00:00",
+      "last_status_check_at": "2026-09-08T09:01:46.378863+00:00",
       "remote_status": {
         "privacy": "public",
         "publish_at": null,
@@ -241,7 +241,7 @@
       "last_known_status": "scheduled",
       "reconciliation_reason": "Known video ID absent from authenticated lookup; never retry upload automatically",
       "reconciliation_checked_at": "2026-09-08T06:15:12.849664+00:00",
-      "last_status_check_at": "2026-09-08T08:48:27.451640+00:00"
+      "last_status_check_at": "2026-09-08T09:01:46.378863+00:00"
     },
     {
       "id": "SP-20260908-2",
@@ -294,7 +294,7 @@
       "api_returned_publish_at": "2026-09-08T17:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T05:48:08.191157+00:00",
-      "last_status_check_at": "2026-09-08T08:48:27.451640+00:00",
+      "last_status_check_at": "2026-09-08T09:01:46.378863+00:00",
       "remote_status": {
         "privacy": "private",
         "publish_at": "2026-09-08T17:00:00Z",
@@ -361,7 +361,7 @@
         "youtube_schedule_action": "Owner authorized cancellation; videos.update failed403 insufficient authentication scopes. Existing YouTube publishAt still active until Studio change or reauthorization. No successful cancellation claimed."
       },
       "publication_hold": true,
-      "last_status_check_at": "2026-09-08T08:48:27.451640+00:00",
+      "last_status_check_at": "2026-09-08T09:01:46.378863+00:00",
       "remote_schedule_still_active": true,
       "remote_status": {
         "privacy": "private",
@@ -381,7 +381,7 @@
       "scheduled_at": "2026-09-09T15:00:00+02:00",
       "publish_at_utc": "2026-09-09T13:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "preview_pending_owner_review",
+      "status": "rejected",
       "research_status": "verified",
       "research_sources": [
         "https://kops.uni-konstanz.de/server/api/core/bitstreams/3b8b10e2-4fff-4cb8-bc49-4d3e2f1a405c/content",
@@ -401,7 +401,7 @@
         "captions_aligned": true,
         "captions_no_overlap": true,
         "audio_verified": true,
-        "visual_review_passed": true,
+        "visual_review_passed": false,
         "rights_verified": true,
         "opening_video_verified": true,
         "opening_zoom_verified": true,
@@ -422,13 +422,19 @@
         "stage_name": "backed_up_preview_pending_review",
         "started_at": "2026-09-08T08:34:19.272026+00:00",
         "contract": "60–80 seconds;10–15 distinct used illustrations",
-        "next_action": "Owner style review; no upload while held. After approval, confirm future slot/QA, clear hold deliberately and mark ready."
+        "next_action": "Do not publish or silently revise; owner requested a new video."
       },
       "publication_hold": true,
       "owner_review_required": true,
       "owner_review": {
-        "status": "pending",
-        "reason": "Cleaner visual direction still awaiting approval"
+        "status": "rejected",
+        "recorded_at": "2026-09-08T09:01:46.042681+00:00",
+        "reasons": [
+          "No useful explanatory UI",
+          "Elongated unnatural first-frame character",
+          "Over-minimal empty backgrounds",
+          "Illustration holds too long; new standard40–60s"
+        ]
       }
     },
     {
@@ -441,7 +447,7 @@
       "scheduled_at": "2026-09-09T19:00:00+02:00",
       "publish_at_utc": "2026-09-09T17:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "planned",
+      "status": "researching",
       "research_status": "pending",
       "research_sources": [],
       "production_path": "productions/2026-09-09-why-everyone-else-looks-more-confident",
@@ -450,7 +456,14 @@
       "duration_seconds": null,
       "description": null,
       "qa": null,
-      "youtube_video_id": null
+      "youtube_video_id": null,
+      "workflow": {
+        "stage": 1,
+        "stage_name": "research",
+        "started_at": "2026-09-08T09:01:46.519863+00:00",
+        "contract": "40–60 seconds;10–15 distinct used illustrations",
+        "next_action": "Read RETENTION-RESEARCH.md; compare3 angles; verify primary evidence before scripting"
+      }
     },
     {
       "id": "SP-20260909-3",
@@ -2176,5 +2189,5 @@
       "youtube_video_id": null
     }
   ],
-  "last_remote_sync_at": "2026-09-08T08:48:27.451640+00:00"
+  "last_remote_sync_at": "2026-09-08T09:01:46.378863+00:00"
 }

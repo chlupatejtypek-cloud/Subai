@@ -50,7 +50,7 @@ class UploadModeTests(unittest.TestCase):
 
 class CreativeGateTests(unittest.TestCase):
  def setUp(self):
-  self.c,self.cloud=p.config('stiles-psychology');self.item=json.loads(json.dumps(p.read(ROOT/'calendar/2026-09-07_2026-10-06.json')['items'][0]));self.item.pop('youtube_video_id',None);self.item['duration_seconds']=70;self.item['qa']['source_image_count']=10;self.item['qa'].update({'creative_contract_version':2,'opening_video_verified':True,'opening_zoom_verified':True,'character_proportions_verified':True,'visual_coverage_verified':True,'longest_illustration_hold_seconds':6.9})
+  self.c,self.cloud=p.config('stiles-psychology');self.item=json.loads(json.dumps(p.read(ROOT/'calendar/2026-09-07_2026-10-06.json')['items'][0]));self.item.pop('youtube_video_id',None);self.item['duration_seconds']=50;self.item['qa']['source_image_count']=10;self.item['qa'].update({'creative_contract_version':2,'opening_video_verified':True,'opening_zoom_verified':True,'character_proportions_verified':True,'visual_coverage_verified':True,'longest_illustration_hold_seconds':6.9})
  def test_valid_contract(self):p.validate(self.item,self.c,self.cloud)
  def test_missing_real_hook(self):
   self.item['qa']['opening_video_verified']=False
