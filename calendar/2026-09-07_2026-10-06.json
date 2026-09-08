@@ -183,7 +183,7 @@
       "scheduled_at": "2026-09-08T15:00:00+02:00",
       "publish_at_utc": "2026-09-08T13:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "ready",
+      "status": "upload_started",
       "research_status": "verified",
       "research_sources": [
         "https://www.cs.tufts.edu/comp/150AIH/pdf/TverskyKa74.pdf",
@@ -222,7 +222,8 @@
         "production_path": "productions/2026-09-08-why-switching-tasks-leaves-you-stuck"
       },
       "topic_moved_from": "SP-20260907-3",
-      "editorial_schedule_note": "Owner asked to proceed with next video and raised posting delay. Previously unmade anchoring topic takes today\u2019s existing 15:00 slot; no fourth daily slot or backdated publication. Displaced task-switching topic retained in deferred_original_topic."
+      "editorial_schedule_note": "Owner asked to proceed with next video and raised posting delay. Previously unmade anchoring topic takes today’s existing 15:00 slot; no fourth daily slot or backdated publication. Displaced task-switching topic retained in deferred_original_topic.",
+      "upload_started_at": "2026-09-08T04:59:30.140627+00:00"
     },
     {
       "id": "SP-20260908-2",
