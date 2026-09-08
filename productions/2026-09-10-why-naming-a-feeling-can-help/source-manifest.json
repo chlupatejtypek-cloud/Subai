@@ -1,0 +1,212 @@
+[
+  {
+    "file": "DEJAVU-LICENSE.txt",
+    "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9",
+    "bytes": 3859
+  },
+  {
+    "file": "README.md",
+    "sha256": "ae40fdde2ac0a3c463655ee02564dff22d994004b8c72e4b38499cc2d125c3d9",
+    "bytes": 1151
+  },
+  {
+    "file": "asr-qc.json",
+    "sha256": "dd04c7b64a56d85f9cac94e6506abc8296514d388c6338e4f1be27451d5b2138",
+    "bytes": 1297
+  },
+  {
+    "file": "assets/01-jar.png",
+    "sha256": "14423168076fa581ff4b523683c7b30446a68756dcebc25f889d0d6d4884d834",
+    "bytes": 1379689
+  },
+  {
+    "file": "assets/02-speak.png",
+    "sha256": "7f4fde9acf7481969a9610861b9cd7ddba16de9cd1a070e1897ccc05ae444f2e",
+    "bytes": 1667495
+  },
+  {
+    "file": "assets/03-reframe.png",
+    "sha256": "473e3b2c4f47fc7685618076fbe090755fddd10f67410c0d143c2b52ee3ebad0",
+    "bytes": 1367465
+  },
+  {
+    "file": "assets/04-distract.png",
+    "sha256": "2eb1e576aee2ab00941db16069bdca7bf1334dd5db583cd35cc13d4388900e33",
+    "bytes": 1576474
+  },
+  {
+    "file": "assets/05-sensors.png",
+    "sha256": "15c718c5ca98033b4b31b6f9ea0cb6ac23d40fbc3f6c2bf6f788a94f0ad68535",
+    "bytes": 1699562
+  },
+  {
+    "file": "assets/06-week.png",
+    "sha256": "27ae2d17ea34b104281f45b10ae7b4f09642296037aa38c7c45a139ae4678be9",
+    "bytes": 1362368
+  },
+  {
+    "file": "assets/07-calm-body.png",
+    "sha256": "fee3bc3d0fd161024bd0fa501b1661ebec075cded95edaa99e8651e088d0e56c",
+    "bytes": 1587747
+  },
+  {
+    "file": "assets/08-words.png",
+    "sha256": "1edd596262f326800e8e08d5c7d3fcda3d3caca27ba066512830eb0c7a3a75d5",
+    "bytes": 1608917
+  },
+  {
+    "file": "assets/09-phone.png",
+    "sha256": "cc26d09a081704cb502d362e47c4bb2dbfddecaa2779beead4f25f48d5efb434",
+    "bytes": 1422641
+  },
+  {
+    "file": "assets/10-name-it.png",
+    "sha256": "b029100f28f3e7c7b0b322d6803dc77f173af5ce04e6ef4fe3b28955458c9bbf",
+    "bytes": 1321561
+  },
+  {
+    "file": "assets/hook.mp4",
+    "sha256": "332a89060440331063c01e06e74b2f19d1547bdd8aad3c0b87b93856c1c7b8eb",
+    "bytes": 382533
+  },
+  {
+    "file": "assets/hook.mp4.json",
+    "sha256": "e77a443dccf31f5b62a039eccd4d9300c706050655e2042cfb90a513a371c3fc",
+    "bytes": 1206
+  },
+  {
+    "file": "audio/narration.wav",
+    "sha256": "a09325bcdf9ab8aa9c57a29994fceed9f8666e34fd4dd61750739a7ee7dec547",
+    "bytes": 4106886
+  },
+  {
+    "file": "audio/silence-detection.log",
+    "sha256": "f0a6895eab7be6775a5d9d074054d24f53df3e7f15637304a616992343b6f0ce",
+    "bytes": 3278
+  },
+  {
+    "file": "audio/source.opus",
+    "sha256": "696db792c1601b597f1d59f120b0e832c36088ef5347f0d38905a010b4eaa2e3",
+    "bytes": 375457
+  },
+  {
+    "file": "audio/source.opus.timestamps.json",
+    "sha256": "dd229e6a7cb8f77b452723b0d7793655facd69acbef2e742bfade9d985f2573e",
+    "bytes": 22450
+  },
+  {
+    "file": "audio/words-original.json",
+    "sha256": "2a8a8130e934a01545c3f41102da43afd2a309f0d594175af36523d07d278590",
+    "bytes": 13224
+  },
+  {
+    "file": "audio/words.json",
+    "sha256": "434f2380279ae329f219f50f6a5cea71408224409b4615cf81211a599c79a32f",
+    "bytes": 14436
+  },
+  {
+    "file": "audio-edit.json",
+    "sha256": "9f68cde708d6b4a33fab69030feaa47928834d75d12b7be1063472012ec0582f",
+    "bytes": 3290
+  },
+  {
+    "file": "backup-project.py",
+    "sha256": "1a18a1e64365832df5b75bdbdefc47d3137d356125c8b0a26321bdd21891119d",
+    "bytes": 2547
+  },
+  {
+    "file": "build-video.py",
+    "sha256": "914198c7a84fb4db204e0eabfa5afff81b0daea5e89d664838e45836059e711d",
+    "bytes": 3835
+  },
+  {
+    "file": "captions.ass",
+    "sha256": "41d3d183c28bb79b4db485e5c9ec59afd388fb95cc51cd9573a372a6a6659f7a",
+    "bytes": 23583
+  },
+  {
+    "file": "check-asr.py",
+    "sha256": "61abb91037517bd1926e07f69975f4612efb583adea5845ffbed49d354d5f03d",
+    "bytes": 661
+  },
+  {
+    "file": "extract-words.py",
+    "sha256": "8d92890e9623d65baf8906cad9b9378de4642a7339dd925927cd11fcbd2784f4",
+    "bytes": 980
+  },
+  {
+    "file": "image-provenance.json",
+    "sha256": "ef615d8d1248123e64c67a0465a6ce8b71e4334bad21bd92da1b1fdea612d1b8",
+    "bytes": 532
+  },
+  {
+    "file": "mix-sfx.py",
+    "sha256": "d78b65419baad054559e6bd1fd0d34fc6dc966dff16315ca4697a1680afd9319",
+    "bytes": 1236
+  },
+  {
+    "file": "narration.txt",
+    "sha256": "4c5937b8c2abf2385fb97c7c4fbdff89dc7fa4dc61ee100ef450f68d5a902080",
+    "bytes": 840
+  },
+  {
+    "file": "prepare-audio.py",
+    "sha256": "a87b23c2d44bd46fa71dc738e1d26f09ef98df119afdaf9d1bd9a1b30b5617cb",
+    "bytes": 3236
+  },
+  {
+    "file": "qa.md",
+    "sha256": "b19e46050f57c2c9e6b06bb7fa1ef766f334be18c47c7c379787c1df159b450e",
+    "bytes": 1172
+  },
+  {
+    "file": "quality-check.py",
+    "sha256": "e655c082260ae9d28dfec66b3294a29925d3604425088729c524bad8fbf35a2c",
+    "bytes": 2596
+  },
+  {
+    "file": "render-ui.py",
+    "sha256": "88254ea5269a66709dcf5b234040a1a6fd13de62ab57a821d73ec71b8cfb2ede",
+    "bytes": 3009
+  },
+  {
+    "file": "research.md",
+    "sha256": "58289811df4ecb8b84bda2bb950f03154131bdb23c7b06fa80ea60f5c783ea81",
+    "bytes": 3147
+  },
+  {
+    "file": "review-status.json",
+    "sha256": "1ccfaa335f806b170e1e5ada7f7e88d7be9aa72a8a77363570c84d4c207185f7",
+    "bytes": 228
+  },
+  {
+    "file": "script-review.md",
+    "sha256": "5ef1aff0adf3497a15583b764f1992b7eabf9a56480fc21961be558a1b3833e3",
+    "bytes": 922
+  },
+  {
+    "file": "sfx.json",
+    "sha256": "e7be320cdb7770fba464e3127fe5a8cc838a252cbea233ec3acffe45eff79424",
+    "bytes": 562
+  },
+  {
+    "file": "story-beats.md",
+    "sha256": "393f64d11cea230c1c43c5a4d620cee88a7b65e3682f52c12239dde6d7e408ed",
+    "bytes": 699
+  },
+  {
+    "file": "storyboard.json",
+    "sha256": "9fc59a85ad2ad09693a8906feb5fdef01692571e2d6cc45d33d1d8bd0a4c1782",
+    "bytes": 1788
+  },
+  {
+    "file": "technical-qc.json",
+    "sha256": "e0b730536518f62b5ae94e87920540cbfc5eb6ccedcb5fda22ed9c10afa5c161",
+    "bytes": 920
+  },
+  {
+    "file": "ui-qc.json",
+    "sha256": "2861580a1b38e48359cb5c6e7efb1bf5e61aeb8d50a7d3fa0faa14306486c7e0",
+    "bytes": 635
+  }
+]

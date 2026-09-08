@@ -1,0 +1,1 @@
+Verified all archive member hashes after downloading all5parts. Cold-archived bulky illustration/derived audio inputs; final retained at /home/user/naming-final.mp4. Restore via assets.json before edits; no regeneration needed. Output intermediates removed.

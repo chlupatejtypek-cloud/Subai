@@ -1,0 +1,32 @@
+{
+  "segments": [
+    [
+      22.9,
+      29.8,
+      "one-week outcome contrast"
+    ],
+    [
+      33.4,
+      36.6,
+      "be specific card"
+    ]
+  ],
+  "component_transition_ms": 400,
+  "panel_translation_px": 50,
+  "text_translation_px": 60,
+  "underline_growth_ms": 600,
+  "entrances_and_exits_eased": true,
+  "blur_fade_seconds": 0.4,
+  "blur_intervals": [
+    [
+      22.9,
+      29.8
+    ],
+    [
+      33.4,
+      36.6
+    ]
+  ],
+  "underline_count": 1,
+  "claims": "Qualitative only: lowest physiological response after labeling, self-reported fear about the same. No invented numbers, no percentages, no amygdala claim."
+}
