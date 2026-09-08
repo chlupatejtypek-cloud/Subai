@@ -239,7 +239,7 @@
       "scheduled_at": "2026-09-08T19:00:00+02:00",
       "publish_at_utc": "2026-09-08T17:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "upload_started",
+      "status": "scheduled",
       "research_status": "verified",
       "research_sources": [
         "https://experts.umn.edu/en/publications/tasks-interrupted-how-anticipating-time-pressure-on-resumption-of/",
@@ -267,7 +267,7 @@
         "voice_provider": "fish_audio",
         "voice_reference_id": "fb7ec16ca51a45a5a4db881244d7990a"
       },
-      "youtube_video_id": null,
+      "youtube_video_id": "ZCVvPPTvKB8",
       "deferred_editorial_item": {
         "title": "Why Avoiding a Worry Feels Like Relief",
         "pillar": "Emotions & Social Psychology",
@@ -275,7 +275,11 @@
         "proposed_action_to_validate": "Notice the relief without treating it as a solution"
       },
       "editorial_change_note": "2026-09-08 owner requested next production after praising anchoring remake. Ready-to-resume angle selected from displaced task-switching backlog; worry topic preserved, not discarded. Regular19:00 local slot unchanged.",
-      "upload_started_at": "2026-09-08T05:48:05.475289+00:00"
+      "upload_started_at": "2026-09-08T05:48:05.475289+00:00",
+      "youtube_url": "https://www.youtube.com/watch?v=ZCVvPPTvKB8",
+      "api_returned_publish_at": "2026-09-08T17:00:00Z",
+      "api_returned_privacy": "private",
+      "uploaded_at": "2026-09-08T05:48:08.191157+00:00"
     },
     {
       "id": "SP-20260908-3",
