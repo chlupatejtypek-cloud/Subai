@@ -41,6 +41,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          if [ "$EVENT_NAME" = "schedule" ] || [ "$MODE" = "execute" ]; then
+            python tools/youtube-sync.py --apply --commit-state
+          fi
           if [ "$MODE" = "verify-auth" ]; then
             python tools/youtube-publish.py --verify-auth
           elif [ "$EVENT_NAME" = "schedule" ] || [ "$MODE" = "execute" ]; then

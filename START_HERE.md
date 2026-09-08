@@ -1,3 +1,5 @@
+> **LATEST OWNER CONTRACT (2026-09-08):** `start` means produce ONE next video using START-WORKFLOW.md; first creative step is research. Future videos60–80s, at least10 distinct generated/accepted/used illustrations. Read RETENTION-RESEARCH.md. This supersedes older duration/image-count advice below. YouTube state now syncs via tools/youtube-sync.py before scheduled publisher runs and before each start; uploaded is not published. Existing media/holds are unchanged.
+
 # START HERE — owner-authorized Subai handoff
 
 ## If you are reading this, begin work instead of interviewing the owner

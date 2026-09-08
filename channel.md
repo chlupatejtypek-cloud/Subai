@@ -8,11 +8,11 @@ English en-US; psychology education, not diagnosis or exaggerated neuroscience. 
 ## Character and visual direction
 Owner selected cleaner cream/teal/ochre illustrations: less background detail/grain, same canonical Stiles. Inspect relative head/body size, dot eyes, limbs, proportions and scene relevance against reference. Expressions can change; identity must not. First cleaner `close-the-book` render is preview-only until reviewed.
 
-Plan visual coverage after drafting and time it against actual narration. For a roughly40s next production,6–8 distinct illustrations are a starting plan, not a permanent quota. Flag holds over7s for justification. Reuse exact source for continuity when purposeful; regenerated near-duplicates are not meaningful variety. Registry15-image maximum is a safety ceiling, not a target.
+Future videos are60–80 seconds with at least10 distinct generated, accepted and actually used illustrations (up to existing15-image cap). Plan around meaningful script beats, not padding or drifting duplicates. Count used distinct sources separately from generation attempts. Flag holds over7s for justification. See START-WORKFLOW.md and RETENTION-RESEARCH.md.
 
 Actual animated hook required, with separate100→105→100% punch zoom. Prefer Agnes v2.0;2.5 quota rejection is known, do not repeatedly retry it. At most one targeted corrective retry per shot. Provider failure/invalid footage is a blocker, not permission for a camera-only still substitute. Other illustrated holds: barely perceptible monotonic1–2% move, no oscillation, stationary captions and full bleed.
 
-One focal thought at a time; concise UI only when useful. No persistent corner branding, tiny academic footers or “Example prices” opening label. Brief selective blur is optional and must preserve essential comparisons and captions. Max60s,1080×1920,30fps. Do not stretch scenes to fill the limit.
+One focal thought at a time; concise UI only when useful. No persistent corner branding, tiny academic footers or “Example prices” opening label. Brief selective blur is optional and must preserve essential comparisons and captions. 60–80s,1080×1920,30fps. Do not stretch scenes to fill the limit.
 
 ## Voice, captions, sound
 One continuous Fish call, reference fb7ec16ca51a45a5a4db881244d7990a, model/settings from registry, native synthesis speed1.0. Measured silence editing and pitch-preserving1.06× tempo; remap timestamps. Streaming alignment updates may repeat a chunk; retain its complete update rather than duplicate words. Preserve original recording and provider alignment. Adam is parked; no silent voice substitution.

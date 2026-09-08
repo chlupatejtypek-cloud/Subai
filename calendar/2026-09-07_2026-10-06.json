@@ -80,7 +80,17 @@
           "created_at": "2026-09-07T20:38:38.490793+00:00",
           "youtube_video_id": null
         }
-      ]
+      ],
+      "last_status_check_at": "2026-09-08T08:29:53.009030+00:00",
+      "remote_status": {
+        "privacy": "public",
+        "publish_at": null,
+        "upload_status": "processed",
+        "processing_status": "succeeded"
+      },
+      "remote_schedule_still_active": false,
+      "first_observed_public_at": "2026-09-08T08:29:53.009030+00:00",
+      "release_alert": null
     },
     {
       "id": "SP-20260907-2",
@@ -229,8 +239,9 @@
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T04:59:33.354204+00:00",
       "last_known_status": "scheduled",
-      "reconciliation_reason": "Previously confirmed scheduled original video is now absent from authenticated direct videos.list and recent uploads. Cause unknown. Preserve ID and history; do not silently re-upload or substitute approved remake without owner confirmation.",
-      "reconciliation_checked_at": "2026-09-08T06:15:12.849664+00:00"
+      "reconciliation_reason": "Known video ID absent from authenticated lookup; never retry upload automatically",
+      "reconciliation_checked_at": "2026-09-08T06:15:12.849664+00:00",
+      "last_status_check_at": "2026-09-08T08:29:53.009030+00:00"
     },
     {
       "id": "SP-20260908-2",
@@ -282,7 +293,16 @@
       "youtube_url": "https://www.youtube.com/watch?v=ZCVvPPTvKB8",
       "api_returned_publish_at": "2026-09-08T17:00:00Z",
       "api_returned_privacy": "private",
-      "uploaded_at": "2026-09-08T05:48:08.191157+00:00"
+      "uploaded_at": "2026-09-08T05:48:08.191157+00:00",
+      "last_status_check_at": "2026-09-08T08:29:53.009030+00:00",
+      "remote_status": {
+        "privacy": "private",
+        "publish_at": "2026-09-08T17:00:00Z",
+        "upload_status": "processed",
+        "processing_status": "succeeded"
+      },
+      "remote_schedule_still_active": true,
+      "release_alert": null
     },
     {
       "id": "SP-20260908-3",
@@ -341,8 +361,15 @@
         "youtube_schedule_action": "Owner authorized cancellation; videos.update failed403 insufficient authentication scopes. Existing YouTube publishAt still active until Studio change or reauthorization. No successful cancellation claimed."
       },
       "publication_hold": true,
-      "last_status_check_at": "2026-09-08T07:56:46+00:00",
-      "remote_schedule_still_active": true
+      "last_status_check_at": "2026-09-08T08:29:53.009030+00:00",
+      "remote_schedule_still_active": true,
+      "remote_status": {
+        "privacy": "private",
+        "publish_at": "2026-09-08T21:00:00Z",
+        "upload_status": "processed",
+        "processing_status": "succeeded"
+      },
+      "release_alert": "Owner-held video is public or still scheduled; external action required"
     },
     {
       "id": "SP-20260909-1",
@@ -2108,5 +2135,6 @@
       "qa": null,
       "youtube_video_id": null
     }
-  ]
+  ],
+  "last_remote_sync_at": "2026-09-08T08:29:53.009030+00:00"
 }

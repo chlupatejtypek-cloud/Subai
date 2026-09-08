@@ -22,6 +22,7 @@ def eligible(item,c,t):
  p=c['publishing']
  return item['status']=='ready' and t+timedelta(minutes=p['minimum_lead_minutes'])<=dt(item['publish_at_utc'])<=t+timedelta(hours=p['schedule_lookahead_hours'])
 def validate(item,c,cloud):
+ if item.get('youtube_video_id'):raise ValueError('Existing YouTube ID blocks duplicate upload; reconcile instead')
  if item['channel_id']!=c['id']:raise ValueError('Channel mismatch')
  if not c['active'] or not c['publishing']['enabled']:raise ValueError('Publishing disabled')
  if not (1<=len(item['title'])<=60):raise ValueError('Title must have 1–60 characters')
@@ -40,16 +41,16 @@ def validate(item,c,cloud):
   for k in ('opening_video_verified','opening_zoom_verified','character_proportions_verified','visual_coverage_verified'):
    if qa.get(k) is not True:raise ValueError('Creative gate missing: '+k)
   hold=qa.get('longest_illustration_hold_seconds')
-  if isinstance(hold,bool) or not isinstance(hold,(int,float)) or not 0<hold<=60:raise ValueError('Longest illustration hold must be measured')
+  if isinstance(hold,bool) or not isinstance(hold,(int,float)) or not 0<hold<=c['format']['max_seconds']:raise ValueError('Longest illustration hold must be measured')
   if hold>7 and not str(qa.get('long_hold_justification') or '').strip():raise ValueError('Long illustration hold needs justification')
  if not qa.get('reviewed_by') or not qa.get('reviewed_at'):raise ValueError('Missing review provenance')
  if qa.get('voice_provider')!=c['voice']['provider'] or qa.get('voice_reference_id')!=c['voice']['reference_id']:raise ValueError('Narration provider or voice does not match current channel')
- if not 1<=qa.get('source_image_count',0)<=c['format']['max_generated_images']:raise ValueError('Invalid source image count')
+ if not c['format'].get('min_generated_images',1)<=qa.get('source_image_count',0)<=c['format']['max_generated_images']:raise ValueError('Invalid source image count')
  u=urlparse(item.get('asset_url') or '')
  if u.scheme!='https' or u.netloc!='res.cloudinary.com' or not u.path.startswith('/'+cloud['cloud_name']+'/video/upload/') or not u.path.lower().endswith('.mp4') or u.query:raise ValueError('Final asset must be an approved Cloudinary MP4 URL')
  digest=item.get('asset_sha256') or ''
  if len(digest)!=64 or any(x not in '0123456789abcdef' for x in digest):raise ValueError('Missing SHA256')
- if not 0<float(item.get('duration_seconds') or 0)<=c['format']['max_seconds']:raise ValueError('Duration over limit or absent')
+ if not c['format'].get('min_seconds',0)<=float(item.get('duration_seconds') or 0)<=c['format']['max_seconds']:raise ValueError('Duration over limit or absent')
 def access_token(c):
  y=c['youtube']
  cid=os.environ.get(y['oauth_client_id_secret']);secret=os.environ.get(y['oauth_client_secret_secret']);refresh=os.environ.get(y['oauth_refresh_token_secret'])
@@ -81,7 +82,7 @@ def download(item,path,c):
  if sha.hexdigest()!=item['asset_sha256']:raise ValueError('Final asset checksum mismatch')
  probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(path)]))
  v=next(x for x in probe['streams'] if x['codec_type']=='video');audio=any(x['codec_type']=='audio' for x in probe['streams']);duration=float(probe['format']['duration']);num,den=map(float,v['r_frame_rate'].split('/'))
- if v['width']!=1080 or v['height']!=1920 or abs(num/den-30)>.01 or not audio or not 0<duration<=float(c['format']['max_seconds'])+.001:raise ValueError('Final file failed technical QC')
+ if v['width']!=1080 or v['height']!=1920 or abs(num/den-30)>.01 or not audio or not float(c['format'].get('min_seconds',0))-.001<=duration<=float(c['format']['max_seconds'])+.001:raise ValueError('Final file failed technical QC')
  if abs(duration-float(item['duration_seconds']))>.1:raise ValueError('Duration does not match signed-off final')
  return total
 def upload(item,c,token,path,size,immediate=False):

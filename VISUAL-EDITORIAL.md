@@ -1,3 +1,5 @@
+> **LATEST OWNER CONTRACT (2026-09-08):** `start` means produce ONE next video using START-WORKFLOW.md; first creative step is research. Future videos60–80s, at least10 distinct generated/accepted/used illustrations. Read RETENTION-RESEARCH.md. This supersedes older duration/image-count advice below. YouTube state now syncs via tools/youtube-sync.py before scheduled publisher runs and before each start; uploaded is not published. Existing media/holds are unchanged.
+
 > **LATEST OWNER CORRECTION — 2026-09-08, familiar-claims video REJECTED:** Actual animated opening AND the distinct opening zoom are required. A still with camera drift is not a substitute. Keep canonical head/body proportions and character identity; expressive faces must not redesign Stiles. More distinct useful illustrations and shorter holds than the rejected four-image edit. Gentle motion supplements scene variety, it does not replace it. A possible cleaner visual style is pending owner clarification. See the latest section below; it supersedes permissive fallback wording.
 
 # Editorial and visual contract — latest owner review, 2026-09-07

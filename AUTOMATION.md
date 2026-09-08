@@ -1,3 +1,5 @@
+> **LATEST OWNER CONTRACT (2026-09-08):** `start` means produce ONE next video using START-WORKFLOW.md; first creative step is research. Future videos60–80s, at least10 distinct generated/accepted/used illustrations. Read RETENTION-RESEARCH.md. This supersedes older duration/image-count advice below. YouTube state now syncs via tools/youtube-sync.py before scheduled publisher runs and before each start; uploaded is not published. Existing media/holds are unchanged.
+
 # Automation — current,2026-09-08
 
 ## Runs without chat
@@ -8,7 +10,7 @@
 - Both workflows share one concurrency group. Fetch state commits before pushing; no force pushes. A workflow's GITHUB_TOKEN push does not trigger another workflow, so explicit/daily handoff refresh captures publisher state.
 
 ## Does NOT run autonomously
-Research, scriptwriting, hosted image generation, assembly decisions and semantic/creative review still require an agent session. `unattended_generation=false`. The90-slot calendar is not90 completed videos. No scheduling analytics/viral guarantee or automatic semantic-topic deduplication is implemented.
+Research, scriptwriting, hosted image generation, assembly decisions and semantic/creative review still require an agent session. `unattended_generation=false`. The90-slot calendar is not90 completed videos. No automated retention analytics/viral guarantee or automatic semantic-topic deduplication is implemented.
 
 ## State and gates
 Typical sequence: planned → researching → scripted → producing → ready → upload_started → scheduled. Public status requires an actual API check; clock passage alone is not proof. Blocked/missed/needs_reconciliation states require investigation. A scheduled item may additionally have owner rejection or a cancellation blocker; its remote publishAt is not removed by a local status change.

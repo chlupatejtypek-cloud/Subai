@@ -13,3 +13,10 @@ late=[x for x in d['items'] if datetime.fromisoformat(x['publish_at_utc'].replac
 for x in late:print(f"- {x['id']}: {x['title']} — {x['status']}; manual rescheduling required")
 if not late:print('None.')
 print('\nA calendar entry is not a generated video. No asset is uploaded until it is ready and passes all quality gates. Exact YouTube public-upload eligibility and long-term OAuth validity still depend on Google project settings.')
+print('\n## Ready inventory (already produced; do not regenerate)')
+for x in d['items']:
+ if x['status']=='ready':print(f"- {x['id']}: {x['title']} — {x['scheduled_at']}")
+print('\n## Release alerts / holds')
+for x in d['items']:
+ if x.get('release_alert') or x.get('publication_hold'):print(f"- {x['id']}: {x.get('release_alert') or 'Publication hold'}")
+print('\nLast authenticated YouTube sync:',d.get('last_remote_sync_at','not recorded'))
