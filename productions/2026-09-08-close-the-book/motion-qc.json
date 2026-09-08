@@ -1,0 +1,122 @@
+{
+  "opening_zoom": [
+    {
+      "scale": 1,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)"
+    },
+    {
+      "scale": 1.05,
+      "transform": "matrix(1.05, 0, 0, 1.05, 0, 0)"
+    },
+    {
+      "scale": 1,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)"
+    }
+  ],
+  "illustrations": [
+    {
+      "scene": 1,
+      "samples": [
+        {
+          "transform": "matrix(1.0201, 0, 0, 1.0201, -2.804, 0)",
+          "covered": true
+        },
+        {
+          "transform": "matrix(1.0308, 0, 0, 1.0308, 3.309, 0)",
+          "covered": true
+        }
+      ]
+    },
+    {
+      "scene": 2,
+      "samples": [
+        {
+          "transform": "matrix(1.0302, 0, 0, 1.0302, 2.9856, 0)",
+          "covered": true
+        },
+        {
+          "transform": "matrix(1.0193, 0, 0, 1.0193, -3.2392, 0)",
+          "covered": true
+        }
+      ]
+    },
+    {
+      "scene": 3,
+      "samples": [
+        {
+          "transform": "matrix(1.0189, 0, 0, 1.0189, -3.4605, 0)",
+          "covered": true
+        },
+        {
+          "transform": "matrix(1.0314, 0, 0, 1.0314, 3.6557, 0)",
+          "covered": true
+        }
+      ]
+    },
+    {
+      "scene": 4,
+      "samples": [
+        {
+          "transform": "matrix(1.0305, 0, 0, 1.0305, 3.1471, 0)",
+          "covered": true
+        },
+        {
+          "transform": "matrix(1.0189, 0, 0, 1.0189, -3.5053, 0)",
+          "covered": true
+        }
+      ]
+    },
+    {
+      "scene": 5,
+      "samples": [
+        {
+          "transform": "matrix(1.0196, 0, 0, 1.0196, -3.0621, 0)",
+          "covered": true
+        },
+        {
+          "transform": "matrix(1.0309, 0, 0, 1.0309, 3.3747, 0)",
+          "covered": true
+        }
+      ]
+    },
+    {
+      "scene": 6,
+      "samples": [
+        {
+          "transform": "matrix(1.0298, 0, 0, 1.0298, 2.7651, 0)",
+          "covered": true
+        },
+        {
+          "transform": "matrix(1.0195, 0, 0, 1.0195, -3.1409, 0)",
+          "covered": true
+        }
+      ]
+    },
+    {
+      "scene": 7,
+      "samples": [
+        {
+          "transform": "matrix(1.0194, 0, 0, 1.0194, -3.2227, 0)",
+          "covered": true
+        },
+        {
+          "transform": "matrix(1.031, 0, 0, 1.031, 3.417, 0)",
+          "covered": true
+        }
+      ]
+    },
+    {
+      "scene": 8,
+      "samples": [
+        {
+          "transform": "matrix(1.0308, 0, 0, 1.0308, 3.3394, 0)",
+          "covered": true
+        },
+        {
+          "transform": "matrix(1.0189, 0, 0, 1.0189, -3.5107, 0)",
+          "covered": true
+        }
+      ]
+    }
+  ]
+}

@@ -338,7 +338,7 @@
           "Insufficient and incongruous illustration coverage",
           "Excessive repeated illustration hold"
         ],
-        "youtube_schedule_action": "awaiting owner confirmation; still scheduled on YouTube; no API modification performed"
+        "youtube_schedule_action": "Owner authorized cancellation; videos.update failed403 insufficient authentication scopes. Existing YouTube publishAt still active until Studio change or reauthorization. No successful cancellation claimed."
       }
     },
     {

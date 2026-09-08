@@ -1,0 +1,8 @@
+{
+  "at": "2026-09-08T06:35:46.181513+00:00",
+  "owner_authorized": true,
+  "http": 403,
+  "reason": "ACCESS_TOKEN_SCOPE_INSUFFICIENT",
+  "youtube_update_performed": false,
+  "owner_notified": "Change existing scheduled video to Private in Studio; token must be reauthorized for future status edits"
+}

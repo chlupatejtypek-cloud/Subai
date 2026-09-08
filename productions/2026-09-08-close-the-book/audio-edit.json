@@ -1,0 +1,87 @@
+{
+  "original_audio_seconds": 46.98,
+  "cuts": [
+    {
+      "start": 0.8223125,
+      "end": 1.4176875,
+      "removed_seconds": 0.595375,
+      "original_silence_seconds": 0.875395,
+      "retained_detected_silence_seconds": 0.28002000000000005
+    },
+    {
+      "start": 3.2024791666666665,
+      "end": 3.906229166666667,
+      "removed_seconds": 0.7037500000000003,
+      "original_silence_seconds": 0.9837500000000001,
+      "retained_detected_silence_seconds": 0.2799999999999998
+    },
+    {
+      "start": 7.622708333333334,
+      "end": 8.063416666666667,
+      "removed_seconds": 0.44070833333333326,
+      "original_silence_seconds": 0.7206879999999991,
+      "retained_detected_silence_seconds": 0.27997966666666585
+    },
+    {
+      "start": 19.602333333333334,
+      "end": 20.010458333333332,
+      "removed_seconds": 0.4081249999999983,
+      "original_silence_seconds": 0.6881249999999994,
+      "retained_detected_silence_seconds": 0.28000000000000114
+    },
+    {
+      "start": 24.492375,
+      "end": 25.030083333333334,
+      "removed_seconds": 0.5377083333333346,
+      "original_silence_seconds": 0.8177080000000032,
+      "retained_detected_silence_seconds": 0.27999966666666865
+    },
+    {
+      "start": 26.98175,
+      "end": 27.395666666666667,
+      "removed_seconds": 0.4139166666666654,
+      "original_silence_seconds": 0.693916999999999,
+      "retained_detected_silence_seconds": 0.28000033333333363
+    },
+    {
+      "start": 30.057375,
+      "end": 30.2384375,
+      "removed_seconds": 0.18106249999999946,
+      "original_silence_seconds": 0.4610619999999983,
+      "retained_detected_silence_seconds": 0.27999949999999885
+    },
+    {
+      "start": 33.411520833333334,
+      "end": 34.094145833333336,
+      "removed_seconds": 0.6826250000000016,
+      "original_silence_seconds": 0.9626250000000027,
+      "retained_detected_silence_seconds": 0.28000000000000114
+    },
+    {
+      "start": 36.27225,
+      "end": 36.7804375,
+      "removed_seconds": 0.5081874999999982,
+      "original_silence_seconds": 0.7881870000000006,
+      "retained_detected_silence_seconds": 0.2799995000000024
+    },
+    {
+      "start": 39.84110416666667,
+      "end": 40.097145833333336,
+      "removed_seconds": 0.2560416666666683,
+      "original_silence_seconds": 0.5360410000000044,
+      "retained_detected_silence_seconds": 0.27999933333333615
+    },
+    {
+      "start": 43.20104166666667,
+      "end": 43.3905625,
+      "removed_seconds": 0.18952083333333292,
+      "original_silence_seconds": 0.4695210000000003,
+      "retained_detected_silence_seconds": 0.2800001666666674
+    }
+  ],
+  "total_silence_removed_seconds": 4.917020833333332,
+  "pitch_preserving_speed": 1.06,
+  "new_audio_seconds": 39.688667,
+  "word_count": 138,
+  "maximum_original_detected_pause_seconds": 0.9837500000000001
+}

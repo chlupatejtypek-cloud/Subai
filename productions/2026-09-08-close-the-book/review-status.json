@@ -1,0 +1,7 @@
+{
+  "status": "preview_pending_owner_style_review",
+  "youtube_uploaded": false,
+  "reason": "First cleaner style after explicit rejection; no silent replacement or automatic new upload.",
+  "previous_rejected_video": "FACZAzrfEdU",
+  "cancellation": "owner authorized but API403 insufficient scopes; owner notified Studio action required"
+}

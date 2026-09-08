@@ -1,0 +1,66 @@
+{
+  "duration": 40.0,
+  "generated_images": 8,
+  "used_unique_images": 8,
+  "shots": 9,
+  "longest_hold": 6.970000000000001,
+  "phases": [
+    {
+      "start": 0,
+      "end": 3.05,
+      "source": "book",
+      "seconds": 3.05
+    },
+    {
+      "start": 3.05,
+      "end": 6.06,
+      "source": "reading",
+      "seconds": 3.01
+    },
+    {
+      "start": 6.06,
+      "end": 9.53,
+      "source": "blank",
+      "seconds": 3.4699999999999998
+    },
+    {
+      "start": 9.53,
+      "end": 16.5,
+      "source": "experiment",
+      "seconds": 6.970000000000001
+    },
+    {
+      "start": 16.5,
+      "end": 21.19,
+      "source": "confidence",
+      "seconds": 4.690000000000001
+    },
+    {
+      "start": 21.19,
+      "end": 25.54,
+      "source": "recall",
+      "seconds": 4.349999999999998
+    },
+    {
+      "start": 25.54,
+      "end": 28.52,
+      "source": "correct",
+      "seconds": 2.9800000000000004
+    },
+    {
+      "start": 28.52,
+      "end": 33.46,
+      "source": "later",
+      "seconds": 4.940000000000001
+    },
+    {
+      "start": 33.46,
+      "end": 40.0,
+      "source": "recall",
+      "seconds": 6.539999999999999
+    }
+  ],
+  "ending_reuse": "Brief callback to the exact same recall-practice artwork, not a regenerated duplicate; under7s.",
+  "style": "Cleaner flat cream teal ochre, restrained context and canonical proportions.",
+  "opening_zoom": "100\u2192105\u2192100%, authored separately over actual Agnes object footage"
+}

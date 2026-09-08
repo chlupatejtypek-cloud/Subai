@@ -1,0 +1,20 @@
+{
+  "reading": 3.05,
+  "easy": 4.13,
+  "blank": 6.06,
+  "recognize": 7.57,
+  "experiment": 9.53,
+  "immediate": 11.94,
+  "delayed": 14.01,
+  "confidence": 16.5,
+  "confidenceText": 18.53,
+  "recall": 21.19,
+  "recallText": 23.06,
+  "correct": 25.54,
+  "correctText": 26.6,
+  "later": 28.52,
+  "laterText": 28.82,
+  "ending": 33.46,
+  "landing": 36.4,
+  "end": 40.0
+}

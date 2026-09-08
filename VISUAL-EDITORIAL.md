@@ -64,3 +64,6 @@ The owner rejected familiar-claims: missing actual video opening and opening zoo
 - **Movement:** every illustrated hold may receive very slight camera movement; keep captions fixed. This must coexist with real opening animation, the opening zoom and sufficient scene variety.
 - **Sign-off:** review opening footage, opening zoom, character consistency, scene relevance, unique visual coverage and longest hold separately from technical/audio checks. Do not call an intentionally downgraded or owner-rejected creative result QA-passed.
 - **Current release:** FACZAzrfEdU has been rejected after scheduling. Request confirmation to cancel its existing YouTube publishAt and keep it private; changing local ledger alone does not cancel YouTube publication. Do not delete the video or silently replace it.
+
+## Clarified direction and cancellation blocker
+Owner selected CLEANER style: preserve Stiles, simplify background and texture, maintain warm cream/teal/ochre. First close-book production is preview-only pending review. Owner authorized cancelling rejected FACZAzrfEdU, but videos.update failed403 insufficient authentication scopes. The remote schedule has NOT been cancelled by the agent. Owner notified to change visibility in Studio; do not retry the same insufficient token or silently schedule a replacement.

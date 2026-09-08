@@ -48,7 +48,8 @@
           "privacy_status": "public",
           "upload_status": "processed",
           "processing_status": "succeeded"
-        }
+        },
+        "existing_video_status_updates": "403 insufficient authentication scopes confirmed2026-09-08. Current upload+readonly token cannot cancel existing publishAt; Studio action or expanded OAuth authorization required."
       },
       "cloudinary_account": "primary",
       "cloudinary_folder": "subai/productions/stiles-psychology",
@@ -102,7 +103,8 @@
         "illustration_micro_motion": "Owner2026-09-08 requests barely perceptible motion even during illustrated holds: typically1–2% scale change or a few pixels of drift over one shot. Monotonic, not pulsing or oscillating; captions stationary; preserve full bleed and identity.",
         "character_identity_gate": "Compare each final-cropped scene to canonical and approved references for head/body ratio, eye style, limbs and linework. Reject giant heads, redesigned characters and incongruous settings. Expressive brows/mouth do not permit identity drift.",
         "visual_coverage_gate": "Next approximately40s production: start with6–8 distinct meaningful illustrations, timed from narration; not a permanent quota. Flag holds over7s for explicit justification. Repeated source does not increase unique-image count. Micro-motion cannot substitute for visual coverage.",
-        "owner_rejected_production": "2026-09-08-familiar-is-not-verified: creative QA rejected; revised visual style awaits clarification."
+        "owner_rejected_production": "2026-09-08-familiar-is-not-verified: creative QA rejected; revised visual style awaits clarification.",
+        "visual_style_direction": "Owner selected cleaner style2026-09-08: same Stiles, warm cream/teal/ochre, less background detail and texture, canonical proportions; first close-book render awaits owner review."
       },
       "publishing": {
         "enabled": true,

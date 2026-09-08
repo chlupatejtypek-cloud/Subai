@@ -1,0 +1,36 @@
+{
+  "cues": [
+    [
+      0.08,
+      "zoom-in-original.wav",
+      0.025,
+      "distinct opening zoom"
+    ],
+    [
+      0.8,
+      "zoom-out-original.wav",
+      0.013,
+      "zoom return"
+    ],
+    [
+      6.22,
+      "open_001.ogg",
+      0.014,
+      "recall question"
+    ],
+    [
+      14.19,
+      "drop_001.ogg",
+      0.013,
+      "delayed-test finding"
+    ],
+    [
+      26.700000000000003,
+      "drop_002.ogg",
+      0.012,
+      "check your answer"
+    ]
+  ],
+  "rights": "Kenney Interface Sounds CC0 + original procedural whoosh; no Fish SFX claim",
+  "narration_unchanged_sha256": "9848302e296192e8e056aa439c372e306b4095030fe101d69e528568c057a8fc"
+}

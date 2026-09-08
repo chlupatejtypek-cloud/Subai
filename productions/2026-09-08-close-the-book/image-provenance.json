@@ -1,0 +1,24 @@
+{
+  "provider": "Arena generate_image",
+  "reference": "https://res.cloudinary.com/e5cjysjx/image/upload/v1788795815/subai/characters/stiles-front-tpose-v2.png",
+  "generated": 8,
+  "style": "Clean flat cream muted teal ochre, thin ink, sparse background. Canonical head diameter~22% standing figure height, fullbody/mediumwide framing.",
+  "assets": [
+    "book.png",
+    "reading.png",
+    "blank.png",
+    "experiment.png",
+    "confidence.png",
+    "recall.png",
+    "correct.png",
+    "later.png"
+  ],
+  "expressions": [
+    "pleased",
+    "puzzled",
+    "disappointed surprise",
+    "focused",
+    "neutral engaged gesture"
+  ],
+  "book_animation": "Agnes v2.0 initial failed visual QC; one targeted retry used; both originals retained in backup."
+}

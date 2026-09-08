@@ -1,0 +1,287 @@
+[
+  {
+    "file": ".gitignore",
+    "sha256": "4dd4919c01d6b640542182b56dea42be47a3e72a13dbd4bdefc1a973d6db71b7",
+    "bytes": 23
+  },
+  {
+    "file": "DEJAVU-LICENSE.txt",
+    "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9",
+    "bytes": 3859
+  },
+  {
+    "file": "KENNEY-LICENSE.txt",
+    "sha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9",
+    "bytes": 574
+  },
+  {
+    "file": "README.md",
+    "sha256": "4cff99719aa1749c45c525b88160c8a15fe5bda42f093cc12bad390d5df8db40",
+    "bytes": 2041
+  },
+  {
+    "file": "asr-qc.json",
+    "sha256": "955a90aa79d212bbfaaf6a8be8103e9cdb66069d786f0b489abfa82c13e2918e",
+    "bytes": 963
+  },
+  {
+    "file": "assets/DejaVuSans-Bold.ttf",
+    "sha256": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+    "bytes": 708920
+  },
+  {
+    "file": "assets/blank.png",
+    "sha256": "18cc2d63d83e6e6462b4b4d8f9af0faadb4881603cb9d4681495198a09d58745",
+    "bytes": 1320958
+  },
+  {
+    "file": "assets/book.png",
+    "sha256": "d7b13e672570e0a2062416937fb04e841d9765c157e778472a531c128e088ece",
+    "bytes": 1387151
+  },
+  {
+    "file": "assets/confidence.png",
+    "sha256": "435899bd314d30bdc3f701d9076c91f21c8877318365017671d4ec156f722891",
+    "bytes": 1352054
+  },
+  {
+    "file": "assets/correct.png",
+    "sha256": "821a71a7e60ef9822358b1b51be92d9d3792b4f602c3d6a24d0682fb8d91a6da",
+    "bytes": 1171394
+  },
+  {
+    "file": "assets/drop_001.ogg",
+    "sha256": "692ee3a6f1821402ca649ff735bee9591dc4846c8098fc7d6a90fd15fa57c1af",
+    "bytes": 5859
+  },
+  {
+    "file": "assets/drop_002.ogg",
+    "sha256": "4ac4d1cef7e936965cbf795852ca2020300b9e2ba7daa59f2bf4f1f7bf416218",
+    "bytes": 6411
+  },
+  {
+    "file": "assets/experiment.png",
+    "sha256": "961be7736295c0da6154afbd73e808d47eab553fc456c00344dadc54534887d0",
+    "bytes": 1465807
+  },
+  {
+    "file": "assets/gsap.min.js",
+    "sha256": "92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb",
+    "bytes": 72927
+  },
+  {
+    "file": "assets/hook-ready.mp4",
+    "sha256": "5d0912b2f923617cd28b24365b50de18a1e827e9acfa95351e8cfc03877ce910",
+    "bytes": 1576603
+  },
+  {
+    "file": "assets/hook-retry.mp4",
+    "sha256": "25ff83f3d2ce68920cea688ad1a3f6330a6f13987eae37f260aac82a1524c460",
+    "bytes": 347899
+  },
+  {
+    "file": "assets/hook-retry.mp4.json",
+    "sha256": "d32c3d9e48d58009fb96981de6f120c40176845fe19be3b48d1bf12299f6aa71",
+    "bytes": 1281
+  },
+  {
+    "file": "assets/hook.mp4",
+    "sha256": "7b8f1335ee86a50cb3f0280161f1c51096382ede47a6a41e174fc9a6e59d95d0",
+    "bytes": 364285
+  },
+  {
+    "file": "assets/hook.mp4.json",
+    "sha256": "0bcf95aa789a5a7e2ae27483137e345f8024afa30ab8faedb7538547923edca9",
+    "bytes": 1197
+  },
+  {
+    "file": "assets/later.png",
+    "sha256": "ee6c1ee9ade68b08769ae3c41f8864f3c2d2bb2e5631adbc165dc4dbc716c4a9",
+    "bytes": 1062925
+  },
+  {
+    "file": "assets/open_001.ogg",
+    "sha256": "a27c6bb0df7da1e6af5dd5937593c98bc58b6e513f42fe6a3254cd6a6949c648",
+    "bytes": 9834
+  },
+  {
+    "file": "assets/reading.png",
+    "sha256": "a2c329b3ff848689f05592011c40171b16312b4ab5f3cd7f3a724bb65b87582b",
+    "bytes": 1002788
+  },
+  {
+    "file": "assets/recall.png",
+    "sha256": "efea433372db586b47c858d27aa3c0f91203dd09d1886b6a02ab6fa8740a3be0",
+    "bytes": 1171098
+  },
+  {
+    "file": "assets/zoom-in-original.wav",
+    "sha256": "ecbb2242cc7ef4370f514625fc884bd32aa6cf098a412eeeb117b65713bf28bb",
+    "bytes": 44204
+  },
+  {
+    "file": "assets/zoom-out-original.wav",
+    "sha256": "96a979fb4219a0d48930d98034181778944b1195868ed489e0d4b3dbf78e4259",
+    "bytes": 44204
+  },
+  {
+    "file": "audio/narration.wav",
+    "sha256": "9848302e296192e8e056aa439c372e306b4095030fe101d69e528568c057a8fc",
+    "bytes": 3810190
+  },
+  {
+    "file": "audio/silence-detection.log",
+    "sha256": "2db7c3ca7755f5f7a74fa0dcd59767fede3f77e83ea9b2ccacb4903331a44493",
+    "bytes": 2837
+  },
+  {
+    "file": "audio/source.opus",
+    "sha256": "4f982493ef1fa3d85b4965b743f9c8e920c24880b2014073620f14b30bb4c974",
+    "bytes": 348051
+  },
+  {
+    "file": "audio/source.opus.timestamps.json",
+    "sha256": "7275a182b2f569dc2c181620ac536bef221e187ea5d9a4c30d5a667ffbfabda2",
+    "bytes": 17838
+  },
+  {
+    "file": "audio/words-original.json",
+    "sha256": "6397df0c2db185805a4cfa22bdc6ded3c4e54d010aa6e5192f001df5974224d8",
+    "bytes": 12936
+  },
+  {
+    "file": "audio/words.json",
+    "sha256": "e7a261157f3adeccc26cdd306b16e9fa5be5d6222fecd7e5a9fa4c5dd7aaec02",
+    "bytes": 14137
+  },
+  {
+    "file": "audio-edit.json",
+    "sha256": "03388c5609909747afc9502dc37801299877bac5c0b8609950be5649264946dd",
+    "bytes": 2829
+  },
+  {
+    "file": "backup-project.py",
+    "sha256": "faca137fd941253ed5abe39e5d88e9c75c3b583e86f8c3ed51136cb8c8166ce5",
+    "bytes": 2564
+  },
+  {
+    "file": "build-composition.py",
+    "sha256": "31e985cf3665c497cac146fa06601d0c53d8dda907d54c3bcff5c3804ea10307",
+    "bytes": 5504
+  },
+  {
+    "file": "captions.ass",
+    "sha256": "204d4dbdfd8c33e2b3fe108db6319e198a997660490996bf6a9b9d112a1ac7f9",
+    "bytes": 23078
+  },
+  {
+    "file": "check-asr.py",
+    "sha256": "61abb91037517bd1926e07f69975f4612efb583adea5845ffbed49d354d5f03d",
+    "bytes": 661
+  },
+  {
+    "file": "check-layout.mjs",
+    "sha256": "4c145611c79002ac7710fd2e0fd55410507a9809ff4ea03f2da0dd38df9f16df",
+    "bytes": 1260
+  },
+  {
+    "file": "check-motion.mjs",
+    "sha256": "cb9e8a598cb30f20e166b9296e77976fb4dccaddbf026085df24700a79867baa",
+    "bytes": 1875
+  },
+  {
+    "file": "cue-times.json",
+    "sha256": "1d516f5cf96d7517e2b4ee75776eccbe7c00e62576745c747cac02130b6f5a53",
+    "bytes": 366
+  },
+  {
+    "file": "extract-words.py",
+    "sha256": "8d92890e9623d65baf8906cad9b9378de4642a7339dd925927cd11fcbd2784f4",
+    "bytes": 980
+  },
+  {
+    "file": "finish-video.py",
+    "sha256": "f2fdad651ccb36cf3bc4117315707409f30e42f956b7399bd2c4ed672d2de904",
+    "bytes": 2467
+  },
+  {
+    "file": "hook-source-upload.txt",
+    "sha256": "cc0d4a4dfd82788cebefba04ca6ed446be6dc0252957fc4b081c751687f7f99e",
+    "bytes": 287
+  },
+  {
+    "file": "image-provenance.json",
+    "sha256": "591dfebe79dbe35b93274d5fbd0aac36884caa469ba250cb990ac22a03f0b06d",
+    "bytes": 755
+  },
+  {
+    "file": "index.html",
+    "sha256": "7a5f5fd281737ab0afa32d4d93ccb6b1091073f9ffe083a8a51c200c55e38792",
+    "bytes": 5590
+  },
+  {
+    "file": "layout-qc.json",
+    "sha256": "e738b3e1926c218f1641ac1c88f50546698ad5854596ce1f0c6d168081b33930",
+    "bytes": 632
+  },
+  {
+    "file": "mix-sfx.py",
+    "sha256": "2c5cfc130333057167f69d1e30659fcffa4ba6f7d8027814c27e77e2dcaaac94",
+    "bytes": 1448
+  },
+  {
+    "file": "motion-qc.json",
+    "sha256": "ddd594292b799e81af57f984334227591aa56c5fbabb229a551ce11fe93080d0",
+    "bytes": 2558
+  },
+  {
+    "file": "narration.txt",
+    "sha256": "8c94a8cb4c0d0c3624f1699dd9c01b52ef95b97ffe5d611ec7571dec0047279b",
+    "bytes": 838
+  },
+  {
+    "file": "prepare-audio.py",
+    "sha256": "a87b23c2d44bd46fa71dc738e1d26f09ef98df119afdaf9d1bd9a1b30b5617cb",
+    "bytes": 3236
+  },
+  {
+    "file": "prepare-hook.sh",
+    "sha256": "f74fcc03ef7fcb500b94791b86657d211b3ffcb5d4f7956c1a15c3bfc9db0c65",
+    "bytes": 262
+  },
+  {
+    "file": "qa.md",
+    "sha256": "a46e74e30872945bc5549407a4947d1f5a0dec101ecf34e9a7431e3dbb5a1f77",
+    "bytes": 1645
+  },
+  {
+    "file": "render-picture.sh",
+    "sha256": "e43d7780627284f4b01f7135f47d36d22b72c12475543e255280dc3acd44fdc3",
+    "bytes": 396
+  },
+  {
+    "file": "research.md",
+    "sha256": "26c92e9511670692bcc4f65457e4f58adc9639d9c31effeaa53239587f6f8f93",
+    "bytes": 1057
+  },
+  {
+    "file": "review-status.json",
+    "sha256": "797e8b15e0fb614b9da703aa5610a5b5a232cc3c85df2fed126cc4c99ac7de45",
+    "bytes": 341
+  },
+  {
+    "file": "sfx.json",
+    "sha256": "72cc2015670e40d6b367bae052209cf9ba6c7f4790a695191efb13d5e0529311",
+    "bytes": 669
+  },
+  {
+    "file": "storyboard.json",
+    "sha256": "0362dcdb325e08c610f5979db3d997c49fc7687e21bf5ebb916fc552b228ef01",
+    "bytes": 1462
+  },
+  {
+    "file": "technical-qc.json",
+    "sha256": "ffb1adf9ba0b58f36f7e9cd7b80c2fce6301f7d801e590a6b909476d08e64af4",
+    "bytes": 687
+  }
+]
