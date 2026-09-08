@@ -8,9 +8,11 @@ class AutomationTests(unittest.TestCase):
  def setUp(self):
   self.data=p.read(ROOT/'calendar/2026-09-07_2026-10-06.json');self.c,self.cloud=p.config('stiles-psychology')
  def test_calendar(self):
-  items=self.data['items'];self.assertEqual(len(items),90);self.assertEqual(len({x['id'] for x in items}),90);self.assertEqual(len({x['title'] for x in items}),90)
+  items=self.data['items'];self.assertEqual(len(items),90);self.assertEqual(len({x['id'] for x in items}),90);active=[x for x in items if x['status'] not in {'missed','cancelled'}];self.assertEqual(len({x['title'] for x in active}),len(active))
   days=Counter(x['scheduled_at'][:10] for x in items);self.assertEqual(len(days),30);self.assertTrue(all(v==3 for v in days.values()))
   for x in items:self.assertEqual(p.dt(x['scheduled_at']),p.dt(x['publish_at_utc']));self.assertLessEqual(len(x['title']),60)
+ def test_missed_cannot_upload(self):
+  item=dict(self.data['items'][0]);item['status']='missed';item['publish_at_utc']=(p.now()+timedelta(hours=2)).isoformat();self.assertFalse(p.eligible(item,self.c,p.now()))
  def test_planned_cannot_upload(self):
   item=dict(self.data['items'][0]);item['status']='planned';item['publish_at_utc']=(p.now()+timedelta(hours=2)).isoformat();self.assertFalse(p.eligible(item,self.c,p.now()))
  def test_overdue_cannot_upload(self):

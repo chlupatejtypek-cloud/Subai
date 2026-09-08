@@ -92,7 +92,8 @@
         "target_unique_images": null,
         "extra_images_policy": "Supersedes fixed 10+5 request after owner reviewed the silence video. Agent and Agnes generators remain available; no mandatory provider count. Existing 15-image cap is a safety ceiling, NOT a target; record per-production planned/accepted/used counts.",
         "image_planning": "Derive source-image count from researched script beats and timed storyboard, not a fixed generation quota. Reuse the exact scene asset for continuity; use UI/motion to reveal new information. No near-duplicate regenerated scenes.",
-        "motion_graphics": "Hyperframes 0.8.31 locally rendered in silence hyperframes-v2 (1080x1920/30fps); use optional purposeful charts/cards/diagrams, styled to Stiles and synchronized to narration. See HYPERFRAMES.md; owner review of first treatment pending."
+        "motion_graphics": "Hyperframes 0.8.31 locally rendered in silence hyperframes-v2 (1080x1920/30fps); use optional purposeful charts/cards/diagrams, styled to Stiles and synchronized to narration. See HYPERFRAMES.md; owner review of first treatment pending.",
+        "intro_video_policy": "Attempt actual isolated environmental motion in Agnes v2.0; lock camera/objects and avoid hands/faces. On quality failure inspect frames and make at most one targeted corrective retry. 2.5 quota rejection reconfirmed 2026-09-08; do not keep retrying 2.5 until quota/entitlement changes. First accepted hook: anchoring price-tag sway."
       },
       "publishing": {
         "enabled": true,

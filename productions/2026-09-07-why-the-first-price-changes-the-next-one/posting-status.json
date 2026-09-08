@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-09-08T04:52:49.313393+00:00",
+  "yesterday_planned": 3,
+  "yesterday_published_in_ledger": 1,
+  "missed_publication_slots": 2,
+  "phone_api_status": [
+    {
+      "kind": "youtube#video",
+      "etag": "s_Edh8kxbnYJ7zgtmvPuJS98kqc",
+      "id": "OYEY9ZKOitA",
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false,
+        "selfDeclaredMadeForKids": false
+      },
+      "processingDetails": {
+        "processingStatus": "succeeded",
+        "fileDetailsAvailability": "available",
+        "processingIssuesAvailability": "available",
+        "tagSuggestionsAvailability": "inProgress",
+        "editorSuggestionsAvailability": "inProgress",
+        "thumbnailsAvailability": "available"
+      }
+    }
+  ],
+  "next_target_local": "2026-09-08T15:00:00+02:00"
+}

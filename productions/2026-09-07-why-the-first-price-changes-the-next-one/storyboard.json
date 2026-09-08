@@ -1,0 +1,35 @@
+{
+  "duration": 36.333333333333336,
+  "source_illustrations": 2,
+  "generated_video_hook_seconds": 4,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 4,
+      "visual": "Agnes tag sway + hypothetical price overlay"
+    },
+    {
+      "start": 4,
+      "end": 26.9,
+      "visual": "One stable study UI: question, animated medians, then mechanism; semantic sub-beats change only relevant elements"
+    },
+    {
+      "start": 26.9,
+      "end": 36.333333333333336,
+      "visual": "Stiles compares alternatives; two practical cards"
+    }
+  ],
+  "cues": {
+    "study": 4.0,
+    "question": 6.366666666666666,
+    "low": 16.566666666666666,
+    "high": 19.2,
+    "insight": 20.5,
+    "name": 24.033333333333335,
+    "ending": 26.9,
+    "fact": 28.566666666666666,
+    "guess": 30.6,
+    "landing": 32.233333333333334,
+    "duration": 36.333333333333336
+  }
+}

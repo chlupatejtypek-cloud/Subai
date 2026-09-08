@@ -1,0 +1,7 @@
+resource_type=image
+public_id=subai/productions/stiles-psychology/2026-09-08-anchoring/shop-source
+version=1788842688
+bytes=2677931
+width=768
+height=1376
+secure_url=https://res.cloudinary.com/e5cjysjx/image/upload/v1788842688/subai/productions/stiles-psychology/2026-09-08-anchoring/shop-source.png

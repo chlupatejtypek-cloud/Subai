@@ -1,0 +1,12 @@
+{
+  "model": "agnes-video-v2.0",
+  "video_id": "video_bGl0ZWxsbTpjdXN0b21fbGxtX3Byb3ZpZGVyOm9wZW5haTttb2RlbF9pZDphZ25lcy12aWRlby12Mi4wO3ZpZGVvX2lkOnZpZGVvX2JiYTNhNmY5NjU0ZTQ4NjZhNDdlOWQwNTlhMzY2ZDk2",
+  "image_url": "https://res.cloudinary.com/e5cjysjx/image/upload/v1788842688/subai/productions/stiles-psychology/2026-09-08-anchoring/shop-source.png",
+  "prompt": "Locked camera. Preserve this exact flat 2D drawing and all object shapes. Animate ONLY the empty cream price tag: a gentle clearly visible pendulum sway, about five degrees left and right around the string attachment. String stays attached to the stand. The notebook, wood counter, shelves, lamp and window remain perfectly still. No people, hands, faces, text, digits or new objects. No zoom, scene change, morphing, melting, stretching or lighting flashes. One continuous four-second shot.",
+  "requested_seconds": 4,
+  "aspect_ratio": "9:16",
+  "output": "productions/2026-09-07-why-the-first-price-changes-the-next-one/assets/hook.mp4",
+  "bytes": 706294,
+  "qa": "Accepted after eight-frame source review: clearly swaying blank tag, no person/anatomy to drift; modest background drift does not disrupt meaning. Native 448x832/24fps upscaled/cropped to delivery format; original audio discarded.",
+  "higher_model_attempt": "agnes-video-2.5 returned insufficient_user_quota again on 2026-09-08; no blind prompt retries for quota rejection."
+}

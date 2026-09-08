@@ -77,3 +77,6 @@ v3.0 pivoted to research-led psychology; v3.1 locked captions; v3.2 restored Ele
 
 ## Latest editorial feedback
 Read `VISUAL-EDITORIAL.md` before topic selection or scripting. Research FIRST; an everyday topic needs a non-obvious, useful, evidence-backed angle. Reject trivia and generic advice even if a calendar title exists. Hyperframes now has a locally rendered first project with animated study data and fact/guess cards; see `HYPERFRAMES.md`. Owner review of the first treatment is pending. Use it only when it explains something.
+
+## Animated opening — latest owner request, 2026-09-08
+Try a real Agnes opening with a deliberately simple moving element and frozen scene geometry. If anatomy/geometry fails, inspect it and use one targeted improved-prompt retry, not the same prompt blindly. Latest price-tag sway succeeded with v2.0; no human character in the shot. Model 2.5 still returned insufficient_user_quota on Sep 8, so do not retest it each production without a quota change. No prompt can fix a quota rejection. See hook-provenance.json in the anchoring production.

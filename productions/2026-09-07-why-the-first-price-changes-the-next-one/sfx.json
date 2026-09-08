@@ -1,0 +1,32 @@
+[
+  {
+    "at": 0.03,
+    "source": "zoom-in-original.wav",
+    "peak": 0.024,
+    "purpose_and_rights": "Opening push, original procedural synthesis"
+  },
+  {
+    "at": 4.05,
+    "source": "open_001.ogg",
+    "peak": 0.02,
+    "purpose_and_rights": "Research panel, Kenney Interface Sounds CC0"
+  },
+  {
+    "at": 28.636666666666667,
+    "source": "drop_001.ogg",
+    "peak": 0.026,
+    "purpose_and_rights": "Fact card landing, Kenney CC0"
+  },
+  {
+    "at": 30.67,
+    "source": "drop_002.ogg",
+    "peak": 0.023,
+    "purpose_and_rights": "Guess card landing, Kenney CC0"
+  },
+  {
+    "at": 26.939999999999998,
+    "source": "zoom-out-original.wav",
+    "peak": 0.022,
+    "purpose_and_rights": "Return to same cafe/pull out, original procedural synthesis"
+  }
+]
