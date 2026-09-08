@@ -91,8 +91,8 @@
         "max_generated_images": 15,
         "background_music": false,
         "target_unique_images": 10,
-        "extra_images_policy": "Latest owner request: at least10 distinct generated, accepted and used illustrations per future video;10–15 within existing safety cap; no provider split required.",
-        "image_planning": "Plan10–15 distinct meaningful illustrations from research/script; count only accepted images actually used, not rejected attempts or near-duplicate crops.",
+        "extra_images_policy": "Latest owner request: at least10 distinct generated, accepted and used illustrations per future video;10\u201315 within existing safety cap; no provider split required.",
+        "image_planning": "Plan10\u201315 distinct meaningful illustrations from research/script; count only accepted images actually used, not rejected attempts or near-duplicate crops.",
         "motion_graphics": "Hyperframes 0.8.31 local rendering, illustrated scenes plus concise useful UI synchronized to narration. Anchoring remake praised by owner 2026-09-08. No universal template quota; see HYPERFRAMES.md.",
         "intro_video_policy": "REQUIRED: actual animated opening plus a distinct authored opening zoom. Micro-camera movement on a still is not an acceptable substitute. If provider failure prevents a valid animated hook, report blocked; do not publish a downgraded opening. Bounded retries only; verify actual footage and zoom.",
         "persistent_corner_brand": false,
@@ -100,15 +100,15 @@
         "visual_mix_policy": "Meaningful illustrated environments plus animated UI demonstrating comparisons, state changes or evidence. Headings alone do not count as explanatory UI. Avoid empty backgrounds, visual overload and unreadable footnotes.",
         "character_expression_policy": "Match simple facial expression and pose to each narrative beat: surprise, curiosity, frustration, worry, concentration, relief or joy. Avoid permanently bored faces; preserve identity and do not regenerate near-identical scenes just for a different mouth.",
         "opening_label_policy": "No Example prices overlay in future hooks. Narration/description contextualize hypothetical examples; do not remove necessary statistical context.",
-        "illustration_micro_motion": "Owner2026-09-08 requests barely perceptible motion even during illustrated holds: typically1–2% scale change or a few pixels of drift over one shot. Monotonic, not pulsing or oscillating; captions stationary; preserve full bleed and identity.",
+        "illustration_micro_motion": "Owner2026-09-08 requests barely perceptible motion even during illustrated holds: typically1\u20132% scale change or a few pixels of drift over one shot. Monotonic, not pulsing or oscillating; captions stationary; preserve full bleed and identity.",
         "character_identity_gate": "Reject elongated seated torso/legs and tiny head as well as giant heads. Standing equivalent about4.4head diameters total; jointed seated pose must preserve those segment lengths. Inspect first frame before any animation spend.",
-        "visual_coverage_gate": "Future40–60s; at least10 distinct used illustrations. Aim2.5–5s source holds; longer holds must deliver visible explanatory progression, not idle still drift.",
+        "visual_coverage_gate": "Future40\u201360s; at least10 distinct used illustrations. Aim2.5\u20135s source holds; longer holds must deliver visible explanatory progression, not idle still drift.",
         "owner_rejected_production": "2026-09-08-familiar-is-not-verified rejected; cleaner style chosen; close-book preview still pending review.",
-        "visual_style_direction": "Owner approved liking-gap environment/UI direction; continue40–60s, contextual backgrounds and balanced canonical Stiles. Future UI entrances need smooth motion; selective blur moderate.",
+        "visual_style_direction": "Owner approved liking-gap environment/UI direction; continue40\u201360s, contextual backgrounds and balanced canonical Stiles. Future UI entrances need smooth motion; selective blur moderate.",
         "min_seconds": 40,
         "min_generated_images": 10,
         "explanatory_ui_required": true,
-        "ui_motion_policy": "Smooth entrance/exit for every UI text/panel/state:200–400ms fade+slide/reveal, no abrupt spawn. Occasional selective blur; optional bounded circle emphasis, not mandatory."
+        "ui_motion_policy": "Smooth entrance/exit for every UI text/panel/state:200\u2013400ms fade+slide/reveal, no abrupt spawn. Occasional selective blur; optional bounded circle emphasis, not mandatory."
       },
       "publishing": {
         "enabled": true,
@@ -126,14 +126,15 @@
           "23:00",
           "23:30"
         ],
-        "schedule_lookahead_hours": 48,
+        "schedule_lookahead_hours": 72,
         "minimum_lead_minutes": 30,
         "visibility": "private with future publishAt -> public",
         "missed_slot_policy": "mark/report overdue; do not backdate or dump overdue videos in a burst",
         "calendar": "calendar/2026-09-07_2026-10-06.json",
         "generation_mode": "agent production; publisher only uploads completed QA-passed assets",
         "unattended_generation": false,
-        "creative_contract_version": 2
+        "creative_contract_version": 2,
+        "lookahead_note": "Raised to72h on2026-09-08 at owner request so a finished video is uploaded and scheduled as soon as it passes QA, not only within48h."
       }
     }
   ]
