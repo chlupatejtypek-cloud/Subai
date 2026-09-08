@@ -81,7 +81,7 @@
           "youtube_video_id": null
         }
       ],
-      "last_status_check_at": "2026-09-08T09:30:37.570231+00:00",
+      "last_status_check_at": "2026-09-08T09:31:17.886661+00:00",
       "remote_status": {
         "privacy": "public",
         "publish_at": null,
@@ -241,7 +241,7 @@
       "last_known_status": "scheduled",
       "reconciliation_reason": "Known video ID absent from authenticated lookup; never retry upload automatically",
       "reconciliation_checked_at": "2026-09-08T06:15:12.849664+00:00",
-      "last_status_check_at": "2026-09-08T09:30:37.570231+00:00"
+      "last_status_check_at": "2026-09-08T09:31:17.886661+00:00"
     },
     {
       "id": "SP-20260908-2",
@@ -294,7 +294,7 @@
       "api_returned_publish_at": "2026-09-08T17:00:00Z",
       "api_returned_privacy": "private",
       "uploaded_at": "2026-09-08T05:48:08.191157+00:00",
-      "last_status_check_at": "2026-09-08T09:30:37.570231+00:00",
+      "last_status_check_at": "2026-09-08T09:31:17.886661+00:00",
       "remote_status": {
         "privacy": "private",
         "publish_at": "2026-09-08T16:00:00Z",
@@ -361,7 +361,7 @@
         "youtube_schedule_action": "Owner authorized cancellation; videos.update failed403 insufficient authentication scopes. Existing YouTube publishAt still active until Studio change or reauthorization. No successful cancellation claimed."
       },
       "publication_hold": true,
-      "last_status_check_at": "2026-09-08T09:30:37.570231+00:00",
+      "last_status_check_at": "2026-09-08T09:31:17.886661+00:00",
       "remote_schedule_still_active": true,
       "remote_status": {
         "privacy": "private",
@@ -2223,5 +2223,5 @@
       "youtube_video_id": null
     }
   ],
-  "last_remote_sync_at": "2026-09-08T09:30:37.570231+00:00"
+  "last_remote_sync_at": "2026-09-08T09:31:17.886661+00:00"
 }
