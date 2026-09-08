@@ -239,7 +239,7 @@
       "scheduled_at": "2026-09-08T19:00:00+02:00",
       "publish_at_utc": "2026-09-08T17:00:00Z",
       "timezone": "Europe/Prague",
-      "status": "ready",
+      "status": "upload_started",
       "research_status": "verified",
       "research_sources": [
         "https://experts.umn.edu/en/publications/tasks-interrupted-how-anticipating-time-pressure-on-resumption-of/",
@@ -274,7 +274,8 @@
         "mechanism_to_research": "short-term relief reinforces avoidance",
         "proposed_action_to_validate": "Notice the relief without treating it as a solution"
       },
-      "editorial_change_note": "2026-09-08 owner requested next production after praising anchoring remake. Ready-to-resume angle selected from displaced task-switching backlog; worry topic preserved, not discarded. Regular19:00 local slot unchanged."
+      "editorial_change_note": "2026-09-08 owner requested next production after praising anchoring remake. Ready-to-resume angle selected from displaced task-switching backlog; worry topic preserved, not discarded. Regular19:00 local slot unchanged.",
+      "upload_started_at": "2026-09-08T05:48:05.475289+00:00"
     },
     {
       "id": "SP-20260908-3",
