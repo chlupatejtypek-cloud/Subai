@@ -47,5 +47,13 @@
     "sha256": "9046c4d74285e5243914523e080c51910537863e68bd9e25426c072939a0d554",
     "bytes": 2357470,
     "verified_http": 200
+  },
+  {
+    "file": "cover.png",
+    "url": "https://res.cloudinary.com/e5cjysjx/image/upload/v1788875403/subai/productions/stiles-psychology/2026-09-10-plan-trigger/cover.png",
+    "sha256": "b82e6d957b3fb453c023726b19e60c3ac71abca11066cff9c4acf647598e8c00",
+    "bytes": 1300935,
+    "verified_http": 200,
+    "purpose": "TikTok cover"
   }
 ]

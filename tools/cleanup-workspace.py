@@ -61,13 +61,28 @@ def human(n: float) -> str:
     return f"{n:.1f} GB"
 
 
-def remote_index() -> dict[str, dict]:
-    """Map file name -> {url, sha256} from every production's assets.json."""
-    index: dict[str, dict] = {}
+def remote_index() -> dict[Path, dict]:
+    """Map absolute path -> {url, sha256} from every production's assets.json.
+
+    Keyed by resolved path, never by bare file name: several productions own a
+    file called cover.png, and matching one production's local file against
+    another's remote copy would be a data-loss bug.
+
+    Legacy root-level masters are recorded in the assets.json of the production
+    they belong to, so an entry is also allowed to name a path relative to the
+    workspace root.
+    """
+    index: dict[Path, dict] = {}
     for manifest in sorted(ROOT.glob("productions/*/assets.json")):
         for entry in json.loads(manifest.read_text()):
-            if entry.get("file") and entry.get("url") and entry.get("sha256"):
-                index[entry["file"]] = entry
+            if not (entry.get("file") and entry.get("url") and entry.get("sha256")):
+                continue
+            local = manifest.parent / entry["file"]
+            if not local.exists():
+                alt = HOME / entry["file"]
+                if alt.exists():
+                    local = alt
+            index[local.resolve()] = entry
     return index
 
 
@@ -148,7 +163,7 @@ def main() -> int:
 
     for path in candidates(done, states):
         size = path.stat().st_size
-        entry = index.get(path.name)
+        entry = index.get(path.resolve())
         if entry:
             try:
                 ok = verified_remote(entry, sha256_file(path), session)
@@ -158,14 +173,24 @@ def main() -> int:
             if not ok:
                 print(f"KEEP  {path.relative_to(HOME)} — remote copy does not match; investigate")
                 continue
+            if path.name == "cover.png" and not (path.parent / "tiktok.json").exists():
+                # The cover is still needed on disk: TikTok's API cannot accept a
+                # custom cover image, so it is attached by hand in the app. Keep
+                # it until tiktok.json records that the post exists.
+                print(f"KEEP  {path.relative_to(HOME)} — cover still needed for the "
+                      "TikTok post (no tiktok.json yet)")
+                continue
             deleted.append((path, size))
         elif path in archived:
             if sha256_file(path) == archived[path]:
                 deleted.append((path, size))
             else:
                 print(f"KEEP  {path.relative_to(HOME)} — differs from the verified cold archive; investigate")
-        elif path.name.endswith("-qc.jpg") or path.parent.name == "output":
-            # Regenerable review artefacts: contact sheets and render intermediates.
+        elif (path.name.endswith("-qc.jpg") or path.parent.name == "output"
+              or path.name == "cover-proof.png"):
+            # Regenerable review artefacts: QC contact sheets, render
+            # intermediates and cover proof sheets (make-cover.py rebuilds
+            # these from cover.json at any time).
             kept_qc.append((path, size))
         else:
             unbacked.append(path)

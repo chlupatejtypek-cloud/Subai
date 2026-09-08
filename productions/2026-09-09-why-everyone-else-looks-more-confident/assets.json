@@ -61,5 +61,13 @@
     "sha256": "325a87c592fc1ccff4b639fa8f5b9cc736184aabc7d10bcd756cfd2f69071920",
     "bytes": 1948890,
     "verified_http": 200
+  },
+  {
+    "file": "cover.png",
+    "url": "https://res.cloudinary.com/e5cjysjx/image/upload/v1788875399/subai/productions/stiles-psychology/2026-09-09-liking-gap/cover.png",
+    "sha256": "981f656330eb6d502ec57f755d5e8ae847e7b8371d647f30d46887d298903175",
+    "bytes": 1124740,
+    "verified_http": 200,
+    "purpose": "TikTok cover"
   }
 ]

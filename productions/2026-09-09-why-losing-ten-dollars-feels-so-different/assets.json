@@ -54,5 +54,13 @@
     "sha256": "3c1f4fe9a29090c05988adb6476d0739150d963055124d87a1b9c05a5917f5bd",
     "bytes": 1685350,
     "verified_http": 200
+  },
+  {
+    "file": "cover.png",
+    "url": "https://res.cloudinary.com/e5cjysjx/image/upload/v1788875401/subai/productions/stiles-psychology/2026-09-09-reference-frame/cover.png",
+    "sha256": "06e2d59722c7d90c092d48746beff4640318db4cefcd1a806a18dded6e77a0e5",
+    "bytes": 1337710,
+    "verified_http": 200,
+    "purpose": "TikTok cover"
   }
 ]

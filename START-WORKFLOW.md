@@ -63,6 +63,28 @@ What the tool guarantees, and what you must not bypass:
 
 Never delete media by hand instead of running this, and never weaken the hash checks to reclaim space faster. Restore anything later from the URLs in `assets.json`.
 
+## 8c. TikTok cover and cross-post
+
+**Standing owner instruction (2026-09-08): every video also goes to TikTok, and the cover is a first-class deliverable, not an afterthought.** Read TIKTOK.md before making one.
+
+```
+python tools/make-cover.py PRODUCTION_DIR --from-video FINAL.mp4 --ss 18 \
+    --headline "Say it out loud" --sub "The spider test, one week later"   # preview
+python tools/make-cover.py ... --apply                                     # cover.png + cover.json
+python tools/tiktok-publish.py --production PRODUCTION_DIR                 # dry run
+```
+
+Non-negotiable design rules, all enforced by the tool, which exits non-zero on failure:
+- 1080x1920 sRGB, everything meaningful inside the **centre 1080x1080 grid-safe square** — that is the only region visible in both the full cover and the profile-grid crop.
+- The **bottom 270 px stays empty and quiet**: TikTok overprints the caption's first line there in white.
+- Headline **3–5 words**, at least 96 px, stating the promise not the topic; kicker carries the setup. No numbers or claims the video does not support.
+- Cream type on a dark bed, ochre accent, Stiles palette, wordmark in the same place every time. The profile grid must read as one publication.
+- Pick a frame where Stiles is actually reacting, never a motion-blurred one.
+
+**Always open `cover-proof.png` and look at it.** It shows the full cover, the grid crop and the 200x350 legibility test with the caption gutter marked. The automated checks catch geometry and contrast; only your eyes catch a headline sitting on Stiles' face.
+
+The TikTok v2 API cannot accept a custom cover image — only a frame timestamp. So either point `--cover-ms` at a genuinely cover-worthy frame, or use `--draft` to send the video to the TikTok inbox and attach `cover.png` by hand in the app (preferred while the account is small; see TIKTOK.md section 5).
+
 ## 9. Upload and actual publication sync
 Serialized Actions uploads only eligible ready items; state reservation before upload prevents blind retries. `scheduled` means private with future publishAt, NOT public. The same workflow now runs youtube-sync before publication on cron17/47 and execute; it updates known IDs from YouTube and commits the result. Each `start` also syncs. Public+processed becomes `published`; `first_observed_public_at` is observation time, not claimed exact release time. Missing/failed IDs become needs_reconciliation; retain IDs and never auto-reupload. Private without schedule becomes uploaded_private, not an assertion who cancelled it. Owner-held media still scheduled/public gets an alert, not a false cancellation.
 
@@ -70,4 +92,4 @@ Serialized Actions uploads only eligible ready items; state reservation before u
 At roughly24h,72h and7days after public release, review available engaged views, stayed-to-watch, average view duration/percentage, retention drops/replays, shares and meaningful comments. Compare similar-length/channel videos and sample sizes, not invented universal viral thresholds. Record one concrete hypothesis/change for the next production in `performance-notes.md`. Retention Analytics API integration is NOT implemented/authorized by readonly Data API credentials; use supplied Studio exports or request appropriate access only if necessary. Do not block ordinary production on unavailable analytics or invent metrics.
 
 ## Completion response
-Briefly give: selected topic, completed stage, final preview link if available, duration/used-image count, QA/review state, calendar ID/slot, whether ready/scheduled/public, and confirmation that cleanup-workspace.py was applied with how much space it reclaimed. State actual blockers. One `start` produces/resumes one video, never the whole90-slot calendar in one hidden batch.
+Briefly give: selected topic, completed stage, final preview link if available, duration/used-image count, QA/review state, calendar ID/slot, whether ready/scheduled/public, the TikTok cover headline plus whether all its checks passed and whether the TikTok post is direct/draft/pending credentials, and confirmation that cleanup-workspace.py was applied with how much space it reclaimed. State actual blockers. One `start` produces/resumes one video, never the whole90-slot calendar in one hidden batch.
